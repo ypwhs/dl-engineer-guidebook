@@ -23,7 +23,7 @@ wget https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh
 bash Anaconda3-2019.03-MacOSX-x86_64.sh
 ```
 
-提示：这里需要使用 brew 安装的 wget 命令。
+**提示：**安装 brew 之后才能使用 wget 命令。
 
 #### 使用 Anaconda 创建其他 Python 环境
 
