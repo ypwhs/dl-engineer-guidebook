@@ -15,7 +15,7 @@
 
 ## 本地设备
 
-### 选 Windows、Linux 还是 macOS？
+### [选 Windows、Linux 还是 macOS？](windows-linux-or-macos.md)
 
 ### Apple
 
@@ -36,7 +36,7 @@
 
 此处的软件指的是桌面软件。
 
-### macOS
+### [macOS 软件](macos-software.md)
 
 #### 终端
 
@@ -76,7 +76,7 @@
 
 * Parallels Desktop
 
-### 本地环境
+## 本地环境
 
 * homebrew
 * anaconda
@@ -99,6 +99,57 @@
 
 ## 常用 Linux 命令
 
+* tar
+* grep
+* find
+* ssh
+* sed
+* awk
+* vim
+* diff
+* sort
+* export
+* echo
+* args
+* ls
+* pwd
+* cd
+* gzip
+* bzip2
+* unzip
+* shutdown
+* ftp
+* crontab
+* service
+* ps
+* free
+* top
+* df
+* kill
+* rm
+* cp
+* mv
+* cat
+* mount
+* chmod
+* chown
+* passwd
+* mkdir
+* ifconfig
+* uname
+* whereis
+* whatis
+* locate
+* man
+* tail
+* less
+* su
+* mysql
+* apt
+* ping
+* date
+* wget
+
 ## 服务器环境
 
 ### 驱动相关
@@ -106,7 +157,13 @@
 * CUDA
 * cuDNN
 
-### Python 环境
+### 并行计算
+
+* openmpi
+* nccl
+* horovod
+
+## [Python 环境](python-environment.md)
 
 * anaconda
 * Python 3
@@ -123,14 +180,6 @@
 * tqdm
 * `jupyter_contrib_nbextensions`
 * 其他常用库
-
-### 并行计算
-
-* openmpi
-* nccl
-* horovod
-
-## Python 常用库
 
 ## 常用数据集
 
