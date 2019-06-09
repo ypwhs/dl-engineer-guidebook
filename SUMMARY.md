@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [深度学习工程师生存指南](README.md)
 
