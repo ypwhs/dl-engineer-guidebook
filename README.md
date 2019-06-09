@@ -17,14 +17,18 @@
 
 ### [选 Windows、Linux 还是 macOS？](windows-linux-or-macos.md)
 
-### Apple
+### Mac
 
-* iMac
 * MacBook
-* 触控板
+* MacBook Air
+* MacBook Pro
+* iMac
+* iMac Pro
+* Mac Pro
 
 ### 其他
 
+* 触控板
 * 机械键盘
 * iPad Pro
 * ASUS 路由器
@@ -41,7 +45,6 @@
 #### 终端
 
 * iTerm
-* oh my zsh
 
 #### 浏览器
 
@@ -92,6 +95,7 @@
 * 显卡
 * 电源
 * 网卡
+* 机箱
 * 显示器
 * 键盘鼠标
 
@@ -151,6 +155,8 @@
 * wget
 
 ## 服务器环境
+
+* oh my zsh
 
 ### 驱动相关
 
