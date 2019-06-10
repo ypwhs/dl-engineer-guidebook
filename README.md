@@ -17,11 +17,12 @@
 
 ### [选 Windows、Linux 还是 macOS？](windows-linux-or-macos.md)
 
-### Mac
+### [Mac](mac.md)
 
 * MacBook
 * MacBook Air
 * MacBook Pro
+* Mac mini
 * iMac
 * iMac Pro
 * Mac Pro
