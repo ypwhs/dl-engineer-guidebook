@@ -17,7 +17,7 @@
 
 ### [选 Windows、Linux 还是 macOS？](windows-linux-or-macos.md)
 
-### [Mac](mac.md)
+### [Mac 对比](mac-compare.md)
 
 * MacBook
 * MacBook Air
