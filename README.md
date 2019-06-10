@@ -75,7 +75,7 @@
 * oh my zsh
 * anaconda
 
-## 如何配置一台深度学习工作站
+## [如何配置一台深度学习工作站](how-to-build-deep-learning-workstation)
 
 * CPU
 * 主板
@@ -88,9 +88,9 @@
 * 显示器
 * 键盘鼠标
 
-## 如何安装 Ubuntu
+## [如何安装 Ubuntu](how-to-install-ubuntu.md)
 
-## 常用 Linux 命令
+## [常用 Linux 命令](linux-command.md)
 
 * tar
 * grep
@@ -143,7 +143,7 @@
 * date
 * wget
 
-## 服务器环境
+## [服务器环境](server-environment)
 
 * oh my zsh
 
