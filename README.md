@@ -15,7 +15,7 @@
 
 ## 本地设备
 
-### [选 Windows、Linux 还是 macOS？](windows-linux-or-macos.md)
+### [Windows、Linux 还是 macOS？](windows-linux-or-macos.md)
 
 ### [Mac 对比](mac-compare.md)
 
