@@ -43,46 +43,36 @@
 
 ### [macOS 软件](macos-software.md)
 
-#### 终端
-
-* iTerm
-
-#### 浏览器
-
-* Chrome
-* Chrome 插件
-
-#### 编辑器
-
-* Sublime Text
-* Macdown
-* Hex Fiend
-
-#### 开发工具
-
-* Xcode
-* Pycharm
-* Clion
-* Visual Studio Code
-* Github Desktop
-
-#### 实用工具
-
-* Karabiner
-* The Unarchiver
-* iStat Menus
-* Caffeine
-* Turbo Boost Switcher
-* DaisyDisk
-* Netron
-
-#### 虚拟机
-
-* Parallels Desktop
+* 终端
+  * iTerm
+* 浏览器
+  * Chrome
+  * Chrome 插件
+* 编辑器
+  * Sublime Text
+  * Macdown
+  * Hex Fiend
+* 开发工具
+  * Xcode
+  * Pycharm
+  * Clion
+  * Visual Studio Code
+  * Github Desktop
+* 实用工具
+  * Karabiner
+  * The Unarchiver
+  * iStat Menus
+  * Caffeine
+  * Turbo Boost Switcher
+  * DaisyDisk
+  * Netron
+* 虚拟机
+  * Parallels Desktop
 
 ## 本地环境
 
 * homebrew
+* oh my zsh
 * anaconda
 
 ## 如何配置一台深度学习工作站
