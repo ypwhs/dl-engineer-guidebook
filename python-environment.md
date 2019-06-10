@@ -4,6 +4,8 @@
 
 ## Anaconda
 
+{% embed url="https://www.anaconda.com/" %}
+
 Anaconda 是一个 Pyhton 的包管理器，它可以简化 Python 环境的安装。由于 Ubuntu 系统、macOS 系统的局限性，我们尽量不要在系统自带的环境里安装深度学习库，不然可能会出现一些不可预料的问题。
 
 Anaconda 不需要 root 权限，所以可以很方便地安装在用户目录下，只要配置好环境变量即可使用，当你不需要它的时候，只需要直接删除它的目录，然后将对应的环境变量一起删除即可。
@@ -68,6 +70,8 @@ python -m ipykernel install --user --name python2 --display-name "Python 2"
 
 ### jupyter
 
+{% embed url="https://jupyter.org/" %}
+
 在实验阶段，强烈建议你使用 jupyter notebook 编写实验代码，因为它与写 Python 脚本的逻辑完全不同。
 
 官方介绍：
@@ -83,6 +87,8 @@ python -m ipykernel install --user --name python2 --display-name "Python 2"
 
 ### jupyter\_contrib\_nbextensions
 
+{% embed url="https://github.com/ipython-contrib/jupyter\_contrib\_nbextensions" %}
+
 Jupyter Notebook 插件。
 
 > 该`jupyter_contrib_nbextensions`软件包包含一系列社区贡献的非官方扩展，可为Jupyter笔记本添加功能。这些扩展大多是用Javascript编写的，将在您的浏览器中本地加载。
@@ -91,17 +97,23 @@ Jupyter Notebook 插件。
 
 ### numpy
 
+{% embed url="https://www.numpy.org/" %}
+
 科学计算必备库。
 
 > NumPy是Python语言的一个扩展程序库。支持高端大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。
 
 ### pandas
 
+{% embed url="https://pandas.pydata.org/" %}
+
 操作 csv 非常方便，python 里的 excel。
 
 > _pandas_是一个开源的，BSD许可的库，为Python编程语言提供高性能，易于使用的数据结构和数据分析工具。
 
 ### sklearn
+
+{% embed url="https://scikit-learn.org/" %}
 
 机器学习模型大全。
 
@@ -114,17 +126,23 @@ Jupyter Notebook 插件。
 
 ### matplotlib
 
+{% embed url="https://matplotlib.org/" %}
+
 画图工具。
 
 > Matplotlib是一个Python 2D绘图库，可以生成各种硬拷贝格式和跨平台的交互式环境的出版物质量数据。Matplotlib可用于Python脚本、IPython shell、Jupyter Notebook 和 Web应用程序服务器和四个图形用户界面工具包。
 
 ### opencv-python
 
+{% embed url="https://opencv.org/" %}
+
 OpenCV 的 Python 库，图像处理必备。
 
 > OpenCV的全称是Open Source Computer Vision Library，是一个跨平台的计算机视觉库。
 
 ### pillow
+
+{% embed url="https://pillow.readthedocs.io/en/stable/" %}
 
 PIL，另一个图像处理库，PyTorch 里的数据增强需要使用它读取图片。
 
@@ -134,6 +152,8 @@ PIL，另一个图像处理库，PyTorch 里的数据增强需要使用它读取
 
 ### tqdm
 
+{% embed url="https://github.com/tqdm/tqdm" %}
+
 进度条库，耗时长的函数最好在外面包一个 tqdm。
 
 > `tqdm`在阿拉伯语中是“进步”（_taqadum_，تقدم）的意思，在西班牙语中是“我太爱你了”（_te quiero demasiado_）的缩写。
@@ -142,11 +162,15 @@ PIL，另一个图像处理库，PyTorch 里的数据增强需要使用它读取
 
 ### torch
 
+{% embed url="https://pytorch.org/" %}
+
 深度学习库，推荐使用。
 
 > 一个开源深度学习平台，提供从研究原型到生产部署的无缝路径。
 
 ### torchvision
+
+{% embed url="https://pytorch.org/docs/stable/torchvision/index.html" %}
 
 和 PyTorch 配套使用。
 
@@ -154,11 +178,15 @@ PIL，另一个图像处理库，PyTorch 里的数据增强需要使用它读取
 
 ### tensorflow-gpu
 
+{% embed url="https://www.tensorflow.org/" %}
+
 深度学习库，大而全。
 
 > TensorFlow是一个用于机器学习的端到端开源平台。 它拥有全面、灵活的工具、库和社区资源生态系统，可让研究人员推动ML的最新技术，开发人员可轻松构建和部署ML驱动的应用程序。
 
 ### keras
+
+{% embed url="https://keras.io/" %}
 
 更高级的 API，和 tensorflow 联合使用很方便。
 
