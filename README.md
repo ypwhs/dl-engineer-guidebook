@@ -164,21 +164,27 @@ description: 持续更新中……
 
 ## [Python 环境](python-environment.md)
 
-* anaconda
-* Python 3
+### Anaconda
+
+* 安装 Anaconda
+* 使用 Anaconda 创建其他 Python 环境
+* 把 Conda 的 Python 环境添加到 jupyter 里
+
+### Python 库
+
 * jupyter
+* `jupyter_contrib_nbextensions`
 * numpy
 * pandas
-* tensorflow-gpu
-* keras
-* pytorch
 * sklearn
 * matplotlib
 * opencv-python
 * pillow
 * tqdm
-* `jupyter_contrib_nbextensions`
-* 其他常用库
+* torch
+* torchvision
+* tensorflow-gpu
+* keras
 
 ## 常用数据集
 
