@@ -13,7 +13,7 @@
 
 最大的好处是可以分屏使用，比如：
 
-![iTerm2](.gitbook/assets/image%20%285%29.png)
+![iTerm2](.gitbook/assets/image%20%287%29.png)
 
 ### oh my zsh
 
@@ -61,51 +61,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 取消勾选`Preferences -> Appearance -> Dim inactive split panes`即可。
 
-## 浏览器
-
-* Chrome
-* Chrome 插件
-
-### Chrome
-
-目前 Chrome 应该是最受欢迎的浏览器：
-
-![&#x56FE;&#x7247;&#x6765;&#x81EA;&#x7EF4;&#x57FA;&#x767E;&#x79D1;](.gitbook/assets/image%20%289%29.png)
-
-这里建议使用 Chrome 作为主力浏览器，原因如下：
-
-* 简洁
-* 插件强大且免费（Safari 的某些插件是收费的）
-
-### 常用插件
-
-* [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb)
-* [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-* [Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif)
-* [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
-
-#### Adblock Plus
-
-拦截广告的好工具。
-
-#### Tampermonkey
-
-脚本管理器，你可以找到支持各种功能的脚本，比如：
-
-* 去广告
-* 下载视频
-* 你可以自己写 js 脚本以实现一切功能
-
-上面这几个是比较大众化的插件，此外下面还有几个对我个人比较有用的插件：
-
-* [baidu-dl](https://chrome.google.com/webstore/detail/baidu-dl/lflnkcmjnhfedgibjackiibmcdnnoadb)
-* [YAAW for Chrome](https://chrome.google.com/webstore/detail/yaaw-for-chrome/dennnbdlpgjgbcjfgaohdahloollfgoc)
-* [v2ex plus](https://chrome.google.com/webstore/detail/v2ex-plus/daeclijmnojoemooblcbfeeceopnkolo)
-* [1password](https://1password.com/)
-* [京价保 - 京东价保助手](https://chrome.google.com/webstore/detail/京价保-京东价保助手/gfgkebiommjpiaomalcbfefimhhanlfd)
-
-可以根据自己的需求对 Chrome 进行配置。
-
 ## 编辑器
 
 * [Sublime Text](https://www.sublimetext.com/)
@@ -118,11 +73,11 @@ Sublime Text 是一个非常轻量化的文本编辑器，启动迅速，支持�
 
 ### MacDown
 
-MacDown 是一个 markdown 编辑器，我现在正在用它写文章，官方网址：[https://macdown.uranusjr.com/](https://macdown.uranusjr.com/)
+MacDown 是一个 markdown 编辑器，官方网址：[https://macdown.uranusjr.com/](https://macdown.uranusjr.com/)
 
 ### Hex Fiend
 
-![Hex Fiend](.gitbook/assets/image%20%286%29.png)
+![Hex Fiend](.gitbook/assets/image%20%288%29.png)
 
 Hex Fiend 是一个十六进制编辑器，当你想查看一个二进制文件的内容的时候就可以使用它，比如我会用它来检查我写出的模型权值文件。因为它可以秒开任何大小的文件，有时候我也会用它来查看几百兆的文本文件。官方网址：[http://ridiculousfish.com/hexfiend/](http://ridiculousfish.com/hexfiend/)
 
@@ -152,17 +107,85 @@ GitHub Desktop 是 GitHub 官方客户端，新手必备。
 
 官方网址：[https://desktop.github.com/](https://desktop.github.com/)
 
+## 浏览器
+
+* Chrome
+* Chrome 插件
+
+### Chrome
+
+目前 Chrome 应该是最受欢迎的浏览器：
+
+![&#x56FE;&#x7247;&#x6765;&#x81EA;&#x7EF4;&#x57FA;&#x767E;&#x79D1;](.gitbook/assets/image%20%2812%29.png)
+
+这里建议使用 Chrome 作为主力浏览器，原因如下：
+
+* 简洁
+* 插件强大且免费（Safari 的某些插件是收费的）
+
+### 常用插件
+
+#### [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb)
+
+拦截广告的好工具。
+
+#### [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+
+脚本管理器，你可以找到支持各种功能的脚本，比如：
+
+* 去广告
+* 下载视频
+* 你可以自己写 js 脚本以实现一切功能
+
+#### [Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif)
+
+可以很方便地切换代理服务器。
+
+#### [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
+
+可以在 GitHub 页面展示代码文件结构，非常方便，如图：
+
+![Octotree](.gitbook/assets/image%20%281%29.png)
+
 ## 实用工具
 
-* Karabiner
+* Netron
+* Karabiner-Elements
 * The Unarchiver
 * iStat Menus
 * Caffeine
-* Turbo Boost Switcher
 * DaisyDisk
-* Netron
 * TimeMachineEditor
+* Turbo Boost Switcher
 * Intel® Power Gadget
+
+### Netron
+
+{% embed url="https://github.com/lutzroeder/netron" %}
+
+它是一个可视化模型结构的软件，支持的模型文件格式有：**ONNX** \(`.onnx`, `.pb`, `.pbtxt`\), **Keras** \(`.h5`, `.keras`\), **Core ML** \(`.mlmodel`\), **Caffe2**\(`predict_net.pb`, `predict_net.pbtxt`\), **MXNet** \(`.model`, `-symbol.json`\) and **TensorFlow Lite** \(`.tflite`\). Netron has experimental support for **Caffe** \(`.caffemodel`, `.prototxt`\), **PyTorch** \(`.pth`\), **Torch** \(`.t7`\), **CNTK** \(`.model`, `.cntk`\), **PaddlePaddle** \(`__model__`\), **Darknet** \(`.cfg`\), **scikit-learn** \(`.pkl`\), **TensorFlow.js** \(`model.json`, `.pb`\) and **TensorFlow**\(`.pb`, `.meta`, `.pbtxt`\).
+
+![Netron](https://raw.githubusercontent.com/lutzroeder/netron/master/media/screenshot.png)
+
+### Karabiner-Elements
+
+{% embed url="https://pqrs.org/osx/karabiner/" %}
+
+Karabiner-Elements 是一个改键工具，机械键盘必备软件。
+
+> 适用于macOS的功能强大且稳定的键盘定制器。
+
+![Karabiner-Elements](.gitbook/assets/image%20%286%29.png)
+
+我把我的机械键盘的 Command 键和 Option 键替换了，这样就可以像使用原生键盘一样使用我的机械键盘。你还可以把键盘上的 Windows 键和 Alt 键交换位置。
+
+### The Unarchiver
+
+{% embed url="https://theunarchiver.com/" %}
+
+这是一个解压缩软件，可以直接在 App Store 上下载，免费，支持 zip、rar、tar 等格式。
+
+> The Unarchiver 是一款简单易用的小程序，可以解压许多不同类型的存档文件。 它能够打开 Zip、RAR（包括 v5）、7-zip、Tar、Gzip 和 Bzip2 等常见格式。 它还能打开许多旧格式，例如 StuffIt、DiskDoubler、LZH、ARJ 和 ARC。 它还能打开其他各种文件，例如 ISO 和 BIN 磁盘镜像、部分 Windows .EXE 安装程序。 该列表实际上很长 - 有关完整列表，请查看程序主页。
 
 ## 虚拟机
 

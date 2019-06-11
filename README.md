@@ -63,13 +63,15 @@ description: 持续更新中……
   * Visual Studio Code
   * Github Desktop
 * 实用工具
+  * Netron
   * Karabiner
   * The Unarchiver
   * iStat Menus
   * Caffeine
-  * Turbo Boost Switcher
   * DaisyDisk
-  * Netron
+  * TimeMachineEditor
+  * Turbo Boost Switcher
+  * Intel® Power Gadget
 * 虚拟机
   * Parallels Desktop
 
