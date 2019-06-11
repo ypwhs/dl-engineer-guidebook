@@ -45,7 +45,7 @@
 
 ### MacBook Air
 
-![MacBook Air](.gitbook/assets/image%20%289%29.png)
+![MacBook Air](.gitbook/assets/image%20%2810%29.png)
 
 MacBook Air 的价格比 MacBook 便宜一点，性能比 MacBook 好一点，但是重量重一点，多一个 USB-C 口，然后就没有其他的优势了。即使是 MacBook Pro 的双核入门款，重量与 MacBook Air 差不多，CPU 却好了不少，所以我没有买过这一款。
 

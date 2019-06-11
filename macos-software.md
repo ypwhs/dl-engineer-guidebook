@@ -68,12 +68,33 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ### Chrome
 
+目前 Chrome 应该是最受欢迎的浏览器：
+
+![&#x56FE;&#x7247;&#x6765;&#x81EA;&#x7EF4;&#x57FA;&#x767E;&#x79D1;](.gitbook/assets/image%20%289%29.png)
+
+这里建议使用 Chrome 作为主力浏览器，原因如下：
+
+* 简洁
+* 插件强大且免费（Safari 的某些插件是收费的）
+
 ### 常用插件
 
 * [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb)
 * [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 * [Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif)
 * [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
+
+#### Adblock Plus
+
+拦截广告的好工具。
+
+#### Tampermonkey
+
+脚本管理器，你可以找到支持各种功能的脚本，比如：
+
+* 去广告
+* 下载视频
+* 你可以自己写 js 脚本以实现一切功能
 
 上面这几个是比较大众化的插件，此外下面还有几个对我个人比较有用的插件：
 
