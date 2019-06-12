@@ -103,10 +103,6 @@ Hex Fiend 是一个十六进制编辑器，当你想查看一个二进制文件�
 
 ## 开发工具
 
-* [Xcode](https://developer.apple.com/xcode/)
-* [PyCharm](https://www.jetbrains.com/pycharm/)
-* [GitHub Desktop](https://desktop.github.com/)
-
 ### Xcode
 
 {% embed url="https://developer.apple.com/xcode/" %}
@@ -151,11 +147,15 @@ GitHub Desktop 是 GitHub 官方客户端，新手必备。
 
 ### 常用插件
 
-#### [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb)
+#### Adblock Plus
+
+{% embed url="https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb" %}
 
 拦截广告的好工具。
 
-#### [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+#### Tampermonkey
+
+{% embed url="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" %}
 
 脚本管理器，你可以找到支持各种功能的脚本，比如：
 
@@ -163,11 +163,15 @@ GitHub Desktop 是 GitHub 官方客户端，新手必备。
 * 下载视频
 * 你可以自己写 js 脚本以实现一切功能
 
-#### [Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif)
+#### Proxy SwitchyOmega
+
+{% embed url="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif" %}
 
 可以很方便地切换代理服务器。
 
-#### [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
+#### Octotree
+
+{% embed url="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc" %}
 
 可以在 GitHub 页面展示代码文件结构，非常方便，如图：
 
