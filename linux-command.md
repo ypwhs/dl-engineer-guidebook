@@ -1,102 +1,136 @@
 # 常用 Linux 命令
 
-## tar
+### ssh 
 
-## grep
+连接远程服务器的命令。
 
-## find
+例如： `ssh user@192.168.1.100`
 
-## ssh
+### ls
 
-## sed
+`ls` 是 list 的缩写，用来显示目标列表。
 
-## awk
+`ll` 是 `ls -lh` 的别名，列出的信息更加详细。
 
-## vim
+### **screen**
 
-## diff
+使得可以同时连接多个本地或远程的命令行会话，并在其间自由切换。
 
-## sort
+### pwd
 
-## export
+`pwd` 命令以绝对路径的方式显示用户当前工作目录。
 
-## echo
+### mkdir
 
-## args
+创建文件夹。
 
-## ls
+### rm
 
-## pwd
+移除文件。移除文件夹时需要使用 `rm -r`，没有权限时需要`rm -rf` 。
 
-## cd
+此命令比较危险，注意不要写成这样：`rm -rf / tmp`，这样会删除`/`下的所有文件，属于删库跑路行为。
 
-## gzip
+### mv
 
-## bzip2
+移动命令，如`mv source destination`。
 
-## unzip
+### cd
 
-## shutdown
+切换工作目录。
 
-## ftp
+`~` 是 home directory的意思，`.`表示目前所在的目录，`..`表示目前目录位置的上一层目录。
 
-## crontab
+`cd ..` 返回上一层目录。
 
-## service
+### ping
 
-## ps
+测试主机之间网络的连通性。
 
-## free
+例如：`ping baidu.com`
 
-## top
+### zip
 
-## df
+压缩命令，通过 `zip file.zip file`可以压缩一个文件，通过`zip files.zip -r dir`可以压缩整个文件夹
 
-## kill
+### unzip
 
-## rm
+解压由 `zip` 命令压缩的 .zip 文件，如 `unzip files.zip`。
 
-## cp
+### tar
 
-## mv
+### grep
 
-## cat
+### find
 
-## mount
+### sed
 
-## chmod
+### awk
 
-## chown
+### vim
 
-## passwd
+### diff
 
-## mkdir
+### sort
 
-## ifconfig
+### export
 
-## uname
+### echo
 
-## whereis
+### args
 
-## whatis
+### shutdown
 
-## locate
+### ftp
 
-## man
+### crontab
 
-## tail
+### service
 
-## less
+### ps
 
-## su
+### free
 
-## mysql
+### top
 
-## apt
+### df
 
-## ping
+### kill
 
-## date
+### cp
 
-## wget
+### cat
+
+### mount
+
+### chmod
+
+### chown
+
+### passwd
+
+### ifconfig
+
+### uname
+
+### whereis
+
+### whatis
+
+### locate
+
+### man
+
+### tail
+
+### less
+
+### su
+
+### mysql
+
+### apt
+
+### date
+
+### wget
 
