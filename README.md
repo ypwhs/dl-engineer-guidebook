@@ -81,7 +81,7 @@ description: 持续更新中……
 * oh my zsh
 * anaconda
 
-## [如何配置一台深度学习工作站](how-to-build-deep-learning-workstation)
+## [如何配置一台深度学习工作站](how-to-build-deep-learning-workstation.md)
 
 * CPU
 * 主板
