@@ -20,7 +20,7 @@
 
 首先打开 iTerm2 的偏好设置（Preferences），然后切换到 Profiles，在右边找到 Keys 快捷键配置：
 
-![iTerm2-&amp;gt;Prefences-&amp;gt;Profiles-&amp;gt;Keys](.gitbook/assets/image%20%2815%29.png)
+![iTerm2-&amp;gt;Prefences-&amp;gt;Profiles-&amp;gt;Keys](.gitbook/assets/image%20%2816%29.png)
 
 点击 Key Mappings 下面的加号（+），按下面的表格添加快捷键：
 
@@ -115,7 +115,7 @@ MacDown 是一个 markdown 编辑器，支持 Markdown 以及 LaTeX，写文章�
 
 ### Hex Fiend
 
-![Hex Fiend](.gitbook/assets/image%20%2814%29.png)
+![Hex Fiend](.gitbook/assets/image%20%2815%29.png)
 
 {% embed url="http://ridiculousfish.com/hexfiend/" %}
 
@@ -158,7 +158,7 @@ GitHub Desktop 是 GitHub 官方客户端，新手必备。
 
 目前 Chrome 应该是最受欢迎的浏览器：
 
-![&#x56FE;&#x7247;&#x6765;&#x81EA;&#x7EF4;&#x57FA;&#x767E;&#x79D1;](.gitbook/assets/image%20%2818%29.png)
+![&#x56FE;&#x7247;&#x6765;&#x81EA;&#x7EF4;&#x57FA;&#x767E;&#x79D1;](.gitbook/assets/image%20%2819%29.png)
 
 这里建议使用 Chrome 作为主力浏览器，原因如下：
 

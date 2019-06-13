@@ -45,7 +45,7 @@
 
 ### MacBook Air
 
-![MacBook Air](.gitbook/assets/image%20%2819%29.png)
+![MacBook Air](.gitbook/assets/image%20%2820%29.png)
 
 MacBook Air 的价格比 MacBook 便宜一点，性能比 MacBook 好一点，但是重量重一点，多一个 USB-C 口，然后就没有其他的优势了。即使是 MacBook Pro 的双核入门款，重量与 MacBook Air 差不多，CPU 却好了不少，所以我没有买过这一款。
 
@@ -67,7 +67,7 @@ MacBook Air 的价格比 MacBook 便宜一点，性能比 MacBook 好一点，�
 
 ### Mac mini
 
-![Mac mini](.gitbook/assets/image%20%2817%29.png)
+![Mac mini](.gitbook/assets/image%20%2818%29.png)
 
 此款上班族可以考虑，它的价格便宜，性价比却很高，八千的价格可以比得上一万八的 MacBook Pro 的性能，不过我没有买过，所以不做过多的评论了。
 
@@ -91,9 +91,7 @@ MacBook Air 的价格比 MacBook 便宜一点，性能比 MacBook 好一点，�
 
 ### Mac Pro
 
-
-
-![Mac Pro](.gitbook/assets/mac_pro.png)
+![Mac Pro](.gitbook/assets/image%20%2814%29.png)
 
 性能很强大，但是现在买不到，单看低配版的性能比不过 iMac 定制版。
 
