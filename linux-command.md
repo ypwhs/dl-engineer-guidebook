@@ -1,5 +1,13 @@
 # 常用 Linux 命令
 
+### cd
+
+切换工作目录。
+
+`~` 是 home directory的意思，`.`表示目前所在的目录，`..`表示目前目录位置的上一层目录。
+
+`cd ..` 返回上一层目录。
+
 ### ssh 
 
 连接远程服务器的命令。
@@ -12,9 +20,7 @@
 
 `ll` 是 `ls -lh` 的别名，列出的信息更加详细。
 
-### **screen**
-
-使得可以同时连接多个本地或远程的命令行会话，并在其间自由切换。
+### apt
 
 ### pwd
 
@@ -34,13 +40,9 @@
 
 移动命令，如`mv source destination`。
 
-### cd
+### cp
 
-切换工作目录。
-
-`~` 是 home directory的意思，`.`表示目前所在的目录，`..`表示目前目录位置的上一层目录。
-
-`cd ..` 返回上一层目录。
+### cat
 
 ### ping
 
@@ -58,6 +60,42 @@
 
 ### tar
 
+### 
+
+### export
+
+### echo
+
+### shutdown
+
+### crontab
+
+### service
+
+### ps
+
+### top
+
+### htop
+
+### kill
+
+
+
+### **screen**
+
+使得可以同时连接多个本地或远程的命令行会话，并在其间自由切换。
+
+### tmux
+
+
+
+### sudo
+
+### su
+
+
+
 ### grep
 
 ### find
@@ -66,39 +104,23 @@
 
 ### awk
 
-### vim
-
 ### diff
+
+### vim
 
 ### sort
 
-### export
-
-### echo
-
 ### args
-
-### shutdown
 
 ### ftp
 
-### crontab
-
-### service
-
-### ps
-
 ### free
-
-### top
 
 ### df
 
-### kill
+### du
 
-### cp
-
-### cat
+### ifconfig
 
 ### mount
 
@@ -107,8 +129,6 @@
 ### chown
 
 ### passwd
-
-### ifconfig
 
 ### uname
 
@@ -120,17 +140,9 @@
 
 ### man
 
+### head
+
 ### tail
-
-### less
-
-### su
-
-### mysql
-
-### apt
-
-### date
 
 ### wget
 
