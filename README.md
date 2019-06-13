@@ -79,7 +79,7 @@ description: 持续更新中……
 
 * homebrew
 * oh my zsh
-* anaconda
+* [Python 环境](python-environment.md)
 
 ## [如何配置一台深度学习工作站](how-to-build-deep-learning-workstation.md)
 
@@ -96,58 +96,18 @@ description: 持续更新中……
 
 ## [如何安装 Ubuntu](how-to-install-ubuntu.md)
 
+* 在 Windows 上制作 Ubuntu 系统盘
+* 在 macOS 上制作 Ubuntu 系统盘
+* 安装 Ubuntu
+
 ## [常用 Linux 命令](linux-command.md)
 
-* tar
-* grep
-* find
-* ssh
-* sed
-* awk
-* vim
-* diff
-* sort
-* export
-* echo
-* args
-* ls
-* pwd
-* cd
-* gzip
-* bzip2
-* unzip
-* shutdown
-* ftp
-* crontab
-* service
-* ps
-* free
-* top
-* df
-* kill
-* rm
-* cp
-* mv
-* cat
-* mount
-* chmod
-* chown
-* passwd
-* mkdir
-* ifconfig
-* uname
-* whereis
-* whatis
-* locate
-* man
-* tail
-* less
-* su
-* mysql
-* apt
-* ping
-* date
-* wget
+* 文件目录
+* 权限管理
+* 进程管理
+* 磁盘管理
+* 系统监测
+* 网络通信
 
 ## [服务器环境](server-environment)
 
