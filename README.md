@@ -4,6 +4,10 @@ description: 持续更新中……
 
 # 深度学习工程师生存指南
 
+GitBook 在线阅读：[https://dl.ypw.io](https://dl.ypw.io/)
+
+GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://github.com/ypwhs/dl-engineer-guidebook)
+
 本书会讲述一个深度学习工程师所需的所有东西：
 
 * 本地设备
