@@ -149,13 +149,43 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 从指定的URL下载文件。
 
-### ps
+下载单个文件：`wget url`
+
+下载并修改文件名：`wget -O filename.zip url`
 
 ### top
 
+实时查看系统的运行状态，如 CPU、内存、进程的信息。
+
 ### htop
 
+`top` 命令的增强版，使用更加简便，支持鼠标操作，可以纵向横向滑动鼠标浏览。
+
+### uname
+
+显示当前的系统信息。
+
+`uname -a` 显示全部的信息，如内核版本号、硬件架构、主机名称和操作系统类型等。
+
 ### kill
+
+删除执行中的进程或程序。
+
+### head
+
+显示文件开头的内容。
+
+### tail
+
+显示文件尾部的内容。`tail` 和 `head` 默认显示 10 行。
+
+### find
+
+在指定目录下查找文件。
+
+### man
+
+Linux 下的帮助命令，可以查看 Linux 中的指令帮助、配置文件帮助和编程帮助等信息。
 
 ### **screen**
 
@@ -170,8 +200,6 @@ export PATH=/usr/local/cuda/bin:$PATH
 ### service
 
 ### grep
-
-### find
 
 ### sed
 
@@ -199,11 +227,9 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 ### chmod
 
-### chown
+### chow
 
 ### passwd
-
-### uname
 
 ### whereis
 
@@ -211,11 +237,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 ### locate
 
-### man
-
-### head
-
-### tail
+### ps
 
 ### 
 
