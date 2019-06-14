@@ -14,7 +14,7 @@ CPU 瓶颈没有那么大，一般以一个 GPU 对应四个 CPU 核比较好，
 
 除了核数，你还需要注意 PCIE 支持情况，一般显卡是 PCI-E 3.0 x16，比如 [i9-9820X](https://ark.intel.com/content/www/cn/zh/ark/products/189121/intel-core-i9-9820x-x-series-processor-16-5m-cache-up-to-4-20-ghz.html) 的 PCI-E 通道数是 44 ，配置四卡的话，只能支持 1x16+3x8+1x4，也就是单卡全速，三卡半速，一个 NVMe 固态硬盘。
 
-AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper-2990wx) 支持虽然有 64条 PCI-E，但是只支持 x16/x8/x16/x8 的四卡配置。
+AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper-2990wx) 有 64条 PCI-E，但是只支持 x16/x8/x16/x8 的四卡配置。
 
 ## 主板
 
