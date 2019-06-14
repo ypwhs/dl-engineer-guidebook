@@ -12,9 +12,9 @@ description: >-
 
 CPU 瓶颈没有那么大，一般以一个 GPU 对应四个 CPU 核比较好，比如单卡机器买四核 CPU，四卡机器买 16核 CPU。
 
-除了核数，你还需要注意 PCIE 支持情况，一般显卡是 PCI-E 3.0 x16，比如 [i9-9900K](https://www.intel.cn/content/www/cn/zh/products/processors/core/i9-processors/i9-9900k.html) 支持 1x16, 2x8, 1x8+2x4 的配置，也就是说配置四卡的话，有一张卡是全速的，其他卡是半速的，可以插两个 NVMe 固态硬盘。
+除了核数，你还需要注意 PCIE 支持情况，一般显卡是 PCI-E 3.0 x16，比如 [i9-9820X](https://ark.intel.com/content/www/cn/zh/ark/products/189121/intel-core-i9-9820x-x-series-processor-16-5m-cache-up-to-4-20-ghz.html) 的 PCI-E 通道数是 44 ，配置四卡的话，只能支持 1x16+3x8+1x4，也就是单卡全速，三卡半速，一个 NVMe 固态硬盘。
 
-AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper-2990wx) 支持 64 条 PCI-E 通道，如果不插 NVMe 固态硬盘，可以支持四卡全速。
+AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper-2990wx) 支持虽然有 64条 PCI-E，但是只支持 x16/x8/x16/x8 的四卡配置。
 
 ## 主板
 
@@ -23,6 +23,8 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 * CPU 接口是否能对上
 * 显卡是否能插上
 * PCI-E 同时可以支持几张卡以什么样的速度运行
+
+有的主板如 [WS X299 SAGE](https://www.asus.com.cn/Motherboards/WS-X299-SAGE/overview/) 带有 PLX 桥接芯片，可以在 CPU 没有足够 PCI-E 的情况下达到四卡 x16 的速度。
 
 ## 硬盘
 
