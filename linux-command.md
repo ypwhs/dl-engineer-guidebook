@@ -10,27 +10,27 @@
 
 ### ssh 
 
-连接远程服务器： `ssh user@192.168.1.100`
+连接远程服务器：`ssh user@192.168.1.100`
 
 映射远程端口：`ssh -L 本地端口:远程服务器:远程端口 远程服务器`
 
-如：`ssh -L 8888:localhost:8888 192.168.1.100` 可以把服务器上的 jupyter 监听的 8888 端口映射到本地的 8888 端口，然后只需要在浏览器里输入 `http://localhost:8888` 就可以连接远程服务器的 jupyter 了。
+例如：`ssh -L 8888:localhost:8888 192.168.1.100` 可以把服务器上的 jupyter 监听的 8888 端口映射到本地的 8888 端口，然后只需要在浏览器里输入`http://localhost:8888` 就可以连接远程服务器的 jupyter 了。
 
 ### scp
 
-复制文件/文件夹到远程服务器，用法：`scp 文件 用户名@目标主机:目标主机路径`
+复制文件/文件夹到远程服务器，例如：`scp 文件 用户名@目标主机:目标主机路径`
 
 复制文件：`scp file user@192.168.1.100:/data`
 
 复制文件夹：`scp -r dir user@192.168.1.100:/data`
 
-当你复制大量小文件时，请使用 `rsync` 命令。
+当你复制大量小文件时，请使用`rsync` 命令。
 
 ### ls
 
 `ls` 是 list 的缩写，用来显示目标列表。
 
-`ll` 是 `ls -lh` 的别名，列出的信息更加详细。
+`ll` 是`ls -lh` 的别名，列出的信息更加详细。
 
 ### apt
 
@@ -50,13 +50,15 @@ Ubuntu 系统的包管理器，用于安装和卸载软件包。
 
 ### rm
 
-移除文件。移除文件夹时需要使用 `rm -r`，没有权限时需要`rm -rf` 。
+移除文件。移除文件夹时需要使用`rm -r`，没有权限时需要`rm -rf` 。
 
 此命令比较危险，注意不要写成这样：`rm -rf / tmp`，这样会删除`/`下的所有文件，属于删库跑路行为。
 
 ### mv
 
-移动命令，如`mv source destination`。
+移动命令。
+
+例如：`mv source destination`
 
 ### cp
 
@@ -78,11 +80,13 @@ Ubuntu 系统的包管理器，用于安装和卸载软件包。
 
 ### zip
 
-压缩命令，通过 `zip file.zip file`可以压缩一个文件，通过`zip files.zip -r dir`可以压缩整个文件夹。
+压缩命令，通过`zip file.zip file`可以压缩一个文件，通过`zip files.zip -r dir`可以压缩整个文件夹。
 
 ### unzip
 
-解压由 `zip` 命令压缩的 .zip 文件，如 `unzip files.zip`。
+解压由`zip` 命令压缩的 .zip 文件。
+
+例如：`unzip files.zip`
 
 ### tar
 
@@ -96,13 +100,13 @@ Ubuntu 系统的包管理器，用于安装和卸载软件包。
 * f：指定打包文件
 * z：使用 gzip 压缩格式
 
-`tar -cvf files.tar dir` 打包文件夹
+打包文件夹：`tar -cvf files.tar dir` 
 
-`tar -xvf files.tar` 解包
+解包：`tar -xvf files.tar` 
 
-`tar -czvf files.tar.gz dir` 压缩文件夹
+压缩文件夹：`tar -czvf files.tar.gz dir` 
 
-`tar -xzvf files.tar.gz` 解压
+解压：`tar -xzvf files.tar.gz` 
 
 ### rsync
 
@@ -121,21 +125,29 @@ Ubuntu 系统的包管理器，用于安装和卸载软件包。
 
 ### export
 
-设置环境变量命令，一般写在 `.bashrc` 或 `.zshrc` 文件中，如：
+设置环境变量命令，一般写在 `.bashrc` 或 `.zshrc` 文件中，例如：
 
 ```bash
 export PATH=/usr/local/cuda/bin:$PATH
 ```
 
-意思是把 `/usr/local/cuda/bin` 目录添加到 `PATH` 的最前面，这样就可以直接在命令行使用 `/usr/local/cuda/bin` 目录下的 `nvcc` 命令了。
+的功能是把 `/usr/local/cuda/bin` 目录添加到 `PATH` 的最前面，这样就可以直接在命令行使用 `/usr/local/cuda/bin` 目录下的 `nvcc` 命令。
 
 ### echo
 
-可以输出环境变量，如 `echo $PATH`
+可以输出环境变量。
+
+例如：`echo $PATH`
 
 ### shutdown
 
-关机命令，如 `sudo shutdown -t 0`
+关机命令。
+
+例如：`sudo shutdown -t 0`
+
+### wget
+
+从指定的URL下载文件。
 
 ### ps
 
@@ -205,5 +217,5 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 ### tail
 
-### wget
+### 
 
