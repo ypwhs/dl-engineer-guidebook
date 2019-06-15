@@ -12,7 +12,7 @@ description: >-
 
 CPU 瓶颈没有那么大，一般以一个 GPU 对应四个 CPU 核比较好，比如单卡机器买四核 CPU，四卡机器买 16核 CPU。
 
-除了核数，你还需要注意 PCIE 支持情况，一般显卡是 PCI-E 3.0 x16，比如 [i9-9820X](https://ark.intel.com/content/www/cn/zh/ark/products/189121/intel-core-i9-9820x-x-series-processor-16-5m-cache-up-to-4-20-ghz.html) 的 PCI-E 通道数是 44 ，配置四卡的话，只能支持 1x16+3x8+1x4，也就是单卡全速，三卡半速，一个 NVMe 固态硬盘。
+除了核数，你还需要注意 PCI-E 支持情况，一般显卡是 PCI-E 3.0 x16，比如 [i9-9820X](https://ark.intel.com/content/www/cn/zh/ark/products/189121/intel-core-i9-9820x-x-series-processor-16-5m-cache-up-to-4-20-ghz.html) 的 PCI-E 通道数是 44 ，配置四卡的话，只能支持 1x16+3x8+1x4，也就是单卡全速，三卡半速，一个 NVMe 固态硬盘。
 
 AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper-2990wx) 有 64条 PCI-E，但是只支持 x16/x8/x16/x8 的四卡配置。
 
@@ -20,11 +20,21 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 
 主板需要注意：
 
-* CPU 接口是否能对上
-* 显卡是否能插上
-* PCI-E 同时可以支持几张卡以什么样的速度运行
+* CPU 接口是否能对上，如 LGA2066 和 SocketTR4
+* PCI-E 插槽的高度是否够插显卡，比如 PCI-E 插口之间的距离至少要满足双槽宽显卡的高度
+* PCI-E 同时可以支持几张卡以什么样的速度运行，如 1x16 + 3x8 是常见的配置
 
-有的主板如 [WS X299 SAGE](https://www.asus.com.cn/Motherboards/WS-X299-SAGE/overview/) 带有 PLX 桥接芯片，可以在 CPU 没有足够 PCI-E 的情况下达到四卡 x16 的速度。
+[GIGABYTE X299 AORUS MASTER \(rev. 1.0\)](https://www.gigabyte.cn/Motherboard/X299-AORUS-MASTER-rev-10) 使用了 4 组 2 槽间距显卡插槽设计，支持 1x16、2x16、2x16 + 1x8、1x16 + 3x8 四种配置（需要十核以上的 CPU），这里请参阅说明书安装显卡，安装在不同位置的速度是不一样的：
+
+![GIGABYTE X299 AORUS MASTER \(rev. 1.0\)](.gitbook/assets/image%20%281%29.png)
+
+![GIGABYTE X299 AORUS MASTER manual](.gitbook/assets/image%20%283%29.png)
+
+有的主板如 [WS X299 SAGE](https://www.asus.com.cn/Motherboards/WS-X299-SAGE/overview/) 带有 PLX 桥接芯片，可以在 CPU 没有足够 PCI-E 的情况下达到四卡 x16 的速度：
+
+![WS X299 SAGE](.gitbook/assets/image%20%2810%29.png)
+
+![WS X299 SAGE User Guide](.gitbook/assets/image%20%2823%29.png)
 
 ## 硬盘
 
@@ -46,8 +56,8 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 
 * 4K 随机读写的队列深度为 32
 * SATA3 机械硬盘没有太好的数据来源，所以数据是经验值
-* SATA3 固态硬盘型号为 [三星（SAMSUNG）1TB SSD固态硬盘 SATA3.0接口 860 EVO](https://item.jd.com/6301071.html)
-* NVMe 固态硬盘型号为 [英特尔（Intel）1TB SSD固态硬盘 M.2接口\(NVMe协议\) 760P系](https://item.jd.com/7591647.html)
+* SATA3 固态硬盘数据来源：[三星（SAMSUNG）1TB SSD固态硬盘 SATA3.0接口 860 EVO](https://item.jd.com/6301071.html)
+* NVMe 固态硬盘数据来源：[英特尔（Intel）1TB SSD固态硬盘 M.2接口\(NVMe协议\) 760P系](https://item.jd.com/7591647.html)
 
 在面对大量小文件的时候，使用 NVMe 硬盘可以一分钟扫完 1000万文件，如果使用普通硬盘，那么就需要一天时间。为了节省生命，简化代码，硬盘建议选择 NVMe 协议的固态硬盘。
 
@@ -77,11 +87,11 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 
 ## 电源
 
-先计算功率总和，如单卡 CPU 100W，显卡 250W，加上其他的大概 400W，那么就买 550W 的电源。
+先计算功率总和，如单卡 CPU 100W，显卡 250W，加上其他的大概 400W，那么就买 650W 的电源。
 
-双卡最好买 1000W 的电源，四卡最好买 1600W 的电源，我这里实测过 1500W 的电源，跑起来所有的卡以后会因为电源不足而自动关机。
+双卡最好买 1000W 以上的电源，四卡最好买 1600W 的电源，我这里实测过 1500W 的电源，跑起来所有的卡以后会因为电源不足而自动关机。
 
-一般墙上的插座只支持 220V 10A，也就是 2200W 的交流电，由于电源要把交流电转直流电，所以会有一些损耗，最高只有 1600W，因此如果想要支持八卡，最好不要在家尝试。八卡一般是双电源，并且需要使用专用的PDU插座，并且使用的是 16A 插口。
+一般墙上的插座只支持 220V 10A，也就是 2200W 的交流电，由于电源要把交流电转直流电，所以会有一些损耗，最高只有 1600W，因此如果想要支持八卡，最好不要在家尝试。八卡一般是双电源，并且需要使用专用的PDU插座，并且使用的是 16A 插口，如果在家使用，会插不上墙上的插座。
 
 ## 网卡
 
@@ -95,9 +105,9 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 
 ## 显示器
 
-深度学习工作站装好系统以后就不需要显示器了，随便接一个显示器就行。
+深度学习工作站装好系统以后就不需要显示器了，使用手边的显示器就行。
 
 ## 键盘鼠标
 
-深度学习工作站装好系统以后就不需要键盘鼠标了，随便接一个键盘鼠标就行。
+深度学习工作站装好系统以后就不需要键盘鼠标了，使用手边的键盘鼠标就行。
 

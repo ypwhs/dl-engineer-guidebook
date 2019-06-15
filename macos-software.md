@@ -10,7 +10,7 @@
 
 终端首选 iTerm，最大的好处是可以结合 tmux 分屏使用，比如：
 
-![iTerm2](.gitbook/assets/image%20%2813%29.png)
+![iTerm2](.gitbook/assets/image%20%2817%29.png)
 
 ### oh my zsh
 
@@ -20,7 +20,7 @@
 
 首先打开 iTerm2 的偏好设置（Preferences），然后切换到 Profiles，在右边找到 Keys 快捷键配置：
 
-![iTerm2-&amp;gt;Prefences-&amp;gt;Profiles-&amp;gt;Keys](.gitbook/assets/image%20%2816%29.png)
+![iTerm2-&amp;gt;Prefences-&amp;gt;Profiles-&amp;gt;Keys](.gitbook/assets/image%20%2820%29.png)
 
 点击 Key Mappings 下面的加号（+），按下面的表格添加快捷键：
 
@@ -33,7 +33,7 @@
 
 如图：
 
-![](.gitbook/assets/image%20%282%29.png)
+![](.gitbook/assets/image%20%285%29.png)
 
 如果弹出 Warning，直接点确定即可，如果点了确定没反应，退出再打开就行，配置会加进去。
 
@@ -115,7 +115,7 @@ MacDown 是一个 markdown 编辑器，支持 Markdown 以及 LaTeX，写文章�
 
 ### Hex Fiend
 
-![Hex Fiend](.gitbook/assets/image%20%2815%29.png)
+![Hex Fiend](.gitbook/assets/image%20%2819%29.png)
 
 {% embed url="http://ridiculousfish.com/hexfiend/" %}
 
@@ -158,7 +158,7 @@ GitHub Desktop 是 GitHub 官方客户端，新手必备。
 
 目前 Chrome 应该是最受欢迎的浏览器：
 
-![&#x56FE;&#x7247;&#x6765;&#x81EA;&#x7EF4;&#x57FA;&#x767E;&#x79D1;](.gitbook/assets/image%20%2819%29.png)
+![&#x56FE;&#x7247;&#x6765;&#x81EA;&#x7EF4;&#x57FA;&#x767E;&#x79D1;](.gitbook/assets/image%20%2824%29.png)
 
 这里建议使用 Chrome 作为主力浏览器，原因如下：
 
@@ -195,7 +195,7 @@ GitHub Desktop 是 GitHub 官方客户端，新手必备。
 
 可以在 GitHub 页面展示代码文件结构，非常方便，如图：
 
-![Octotree](.gitbook/assets/image%20%281%29.png)
+![Octotree](.gitbook/assets/image%20%284%29.png)
 
 ## 实用工具
 
@@ -225,7 +225,7 @@ Karabiner-Elements 是一个改键工具，机械键盘必备软件。
 
 > 适用于macOS的功能强大且稳定的键盘定制器。
 
-![Karabiner-Elements](.gitbook/assets/image%20%2811%29.png)
+![Karabiner-Elements](.gitbook/assets/image%20%2815%29.png)
 
 我把我的机械键盘的 Command 键和 Option 键替换了，这样就可以像使用原生键盘一样使用我的机械键盘。你还可以把键盘上的 Windows 键和 Alt 键交换位置。
 
@@ -257,7 +257,7 @@ Karabiner-Elements 是一个改键工具，机械键盘必备软件。
 
 这是一个非常好用的磁盘空间整理工具，你可以检查你的 Mac 上占用空间较大的文件都在哪里，收费。
 
-![DaisyDisk](.gitbook/assets/image%20%2812%29.png)
+![DaisyDisk](.gitbook/assets/image%20%2816%29.png)
 
 ### TimeMachineEditor
 
@@ -279,7 +279,7 @@ Karabiner-Elements 是一个改键工具，机械键盘必备软件。
 
 {% embed url="https://software.intel.com/en-us/articles/intel-power-gadget" %}
 
-![Intel&#xAE; Power Gadget](.gitbook/assets/image%20%285%29.png)
+![Intel&#xAE; Power Gadget](.gitbook/assets/image%20%288%29.png)
 
 如图所示，一开始我是关闭睿频的，CPU 频率始终压着灰色的线，4.2GHz，开启睿频以后 CPU 频率上升到了 4.4GHz，并且 CPU 温度上升到了 93 度，相应的功耗也上升了不少。因此在没有足够的电量，或者只是想减少发热以降低风扇噪音的情况下，可以使用上面的 Turbo Boost Switcher 关闭手动关闭睿频。
 
@@ -293,7 +293,7 @@ Karabiner-Elements 是一个改键工具，机械键盘必备软件。
 
 它创新的融合模式可以让你在 Mac 桌面下，在使用 Windows 软件的时候感觉像在使用 Mac 原生的软件，比如：
 
-![Coherence View mode](.gitbook/assets/image%20%283%29.png)
+![Coherence View mode](.gitbook/assets/image%20%286%29.png)
 
 后面的窗口是 Finder，前面的窗口是一个 Windows 应用，使用 Parallels Desktop 可以让你无缝使用 Mac 和 Windows 的应用。
 
