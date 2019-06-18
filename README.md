@@ -11,7 +11,7 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
 本书会讲述一个深度学习工程师所需的所有东西：
 
 * 本地设备
-  * \*\*\*\*[Windows、Linux 还是 macOS？](windows-linux-or-macos.md)
+  * [Windows、Linux 还是 macOS？](windows-linux-or-macos.md)
   * [Mac 对比](mac-compare.md)
   * 其他
     * 触控板
