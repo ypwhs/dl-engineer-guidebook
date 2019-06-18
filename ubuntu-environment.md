@@ -1,4 +1,4 @@
-# 服务器环境
+# Ubuntu 环境
 
 ## oh my zsh
 
