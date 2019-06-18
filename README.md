@@ -85,7 +85,7 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
 * oh my zsh
 * [Python 环境](python-environment.md)
 
-## [如何配置一台深度学习工作站](how-to-build-deep-learning-workstation.md)
+## [如何配置一台深度学习工作站](/how-to-build-deep-learning-workstation)
 
 * CPU
 * 主板
@@ -113,7 +113,7 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
 * 系统监测
 * 网络通信
 
-## [服务器环境](server-environment)
+## [服务器环境](/server-environment)
 
 * oh my zsh
 
