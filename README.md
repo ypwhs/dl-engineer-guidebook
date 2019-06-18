@@ -30,7 +30,7 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
     * 实用工具
     * 虚拟机
 * 本地环境
-  * 本地环境
+  * [macOS 环境](macos-huan-jing.md)
     * Homebrew
     * oh my zsh
   * [Python 环境](python-environment.md)
@@ -63,8 +63,8 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
   * 系统监测
   * 网络通信
 * [Python 环境](python-environment.md)
-  * **Anaconda**
-  * **Python 库**
+  * Anaconda
+  * Python 库
 * 常用数据集
   * MNIST
   * CIFAR-10

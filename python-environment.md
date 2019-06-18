@@ -87,7 +87,7 @@ python -m ipykernel install --user --name python2 --display-name "Python 2"
 
 ### jupyter\_contrib\_nbextensions
 
-{% embed url="https://github.com/ipython-contrib/jupyter\_contrib\_nbextensions" %}
+{% embed url="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html" %}
 
 Jupyter Notebook 插件。
 
