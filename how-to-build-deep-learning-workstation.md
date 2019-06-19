@@ -32,9 +32,9 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 
 有的主板如 [WS X299 SAGE](https://www.asus.com.cn/Motherboards/WS-X299-SAGE/overview/) 带有 PLX 桥接芯片，可以在 CPU 没有足够 PCI-E 的情况下达到四卡 x16 的速度：
 
-![WS X299 SAGE](.gitbook/assets/image%20%2814%29.png)
+![WS X299 SAGE](.gitbook/assets/image%20%2815%29.png)
 
-![WS X299 SAGE User Guide](.gitbook/assets/image%20%2828%29.png)
+![WS X299 SAGE User Guide](.gitbook/assets/image%20%2831%29.png)
 
 ## 硬盘
 
@@ -74,20 +74,32 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 | 型号 | 架构 | 价格\(元\) | 显存\(GB\) | CUDA核 | Tensor核 | FP32\(TFLOPS\) | FP16 | INT8 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | GTX 1080Ti | Pascal | 5299 | 11 | 3584 | NA | 11.3 | NA | NA |
-| RTX 2080 | Turing | 5099 | 8 | 2944 | 368 | 10 | 40.3 | 161.1 |
-| RTX 2080Ti | Turing | 8599 | 11 | 4532 | 544 | 13.4 | 53.8 | 215.2 |
-| TITAN RTX | Turing | 16499 | 24 | 4608 | 576 | 16.3 | 130 |  |
-| Tesla V100 | Volta | 79600 | 32 | 5120 | 640 | 15.7 | 125 | NA |
+| RTX 2080 | Turing | [5499](https://item.jd.com/8945581.html) | 8 | 2944 | 368 | 10 | 40.3 | 161.1 |
+| RTX 2080Ti | Turing | [8599](https://item.jd.com/100002166999.html) | 11 | 4532 | 544 | 13.4 | 53.8 | 215.2 |
+| TITAN RTX | Turing | [16499](https://item.jd.com/100001808707.html) | 24 | 4608 | 576 | 16.3 | 130 |  |
+| Tesla V100 | Volta | [79600](https://detail.tmall.com/item.htm?id=561577884286&skuId=3749195716874) | 32 | 5120 | 640 | 15.7 | 125 | NA |
 
 考虑成本可以买 RTX 2080Ti，想要高性能并且高性价比可以买 TITAN RTX。
 
-RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，不推荐。
+RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，网上都是二手卡，不推荐。
 
 参考链接：
 
 * [Turing 架构白皮书](https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/technologies/turing-architecture/NVIDIA-Turing-Architecture-Whitepaper.pdf)
 * [Volta 架构白皮书](https://images.nvidia.com/content/volta-architecture/pdf/volta-architecture-whitepaper.pdf)
 * [RTX 2080 Ti Deep Learning Benchmarks with TensorFlow - 2019](https://lambdalabs.com/blog/2080-ti-deep-learning-benchmarks/)
+
+#### 涡轮与风扇
+
+采购显卡的时候，一定要注意买涡轮版的，不要买两个或者三个风扇的版本，除非你只打算买一张卡。
+
+因为涡轮风扇的热是往外机箱外部吹的，所以可以很好地带走热量，散热比较好。如果买三个风扇的版本，插多卡的时候，上面的卡会把热量吹向第二张卡，导致第二张卡温度过高，影响性能。
+
+风扇显卡很有可能是超过双槽宽的，第二张卡可能插不上第二个 PCI-E 插槽，这个也需要注意。
+
+![&#x6DA1;&#x8F6E;&#x6563;&#x70ED;](.gitbook/assets/image%20%289%29.png)
+
+![&#x98CE;&#x6247;&#x6563;&#x70ED;](.gitbook/assets/image%20%2818%29.png)
 
 ## 电源
 

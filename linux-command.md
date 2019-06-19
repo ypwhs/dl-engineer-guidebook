@@ -219,7 +219,7 @@ sudo service network-manager restart
 ls -lh | grep .md
 ```
 
-![grep](.gitbook/assets/image%20%2812%29.png)
+![grep](.gitbook/assets/image%20%2813%29.png)
 
 ### vim
 
