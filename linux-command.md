@@ -157,19 +157,27 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 实时查看系统的运行状态，如 CPU、内存、进程的信息。
 
-### htop
-
-`top` 命令的增强版，使用更加简便，支持鼠标操作，可以纵向横向滑动鼠标浏览。
-
 ### uname
 
 显示当前的系统信息。
 
 `uname -a` 显示全部的信息，如内核版本号、硬件架构、主机名称和操作系统类型等。
 
+### ps
+
+`ps aux` 可以列出所有进程的详细信息。
+
+配合 grep 命令用比较好，比如 `ps aux | grep python`
+
 ### kill
 
-删除执行中的进程或程序。
+杀掉执行中的进程，刚才 ps 命令可以得到进程号，你可以根据进程号删除该进程，如 `kill 1431`
+
+### killall
+
+通过进程名来杀掉进程，请确保你不会影响其他人的情况下使用该命令。
+
+如果同事正在使用 python 跑程序，你也在使用 python 跑程序，在你执行完 `killall python` 以后，你们的 python 进程都会被杀掉。
 
 ### head
 
@@ -187,10 +195,6 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 Linux 下的帮助命令，可以查看 Linux 中的指令帮助、配置文件帮助和编程帮助等信息。
 
-### **screen**
-
-### tmux
-
 ### sudo
 
 以 root 权限执行命令，比如 `sudo reboot` 可以重启机器，普通权限无法重启。
@@ -199,27 +203,37 @@ Linux 下的帮助命令，可以查看 Linux 中的指令帮助、配置文件�
 
 切换用户，比如 `sudo su ypw` 可以将当前用户切换到 ypw 用户。
 
-### crontab
-
 ### service
+
+开启关闭服务的命令，如：
+
+```bash
+sudo service network-manager restart
+```
 
 ### grep
 
-### sed
+筛选命令，比如我想查找许多文件里面的 markdown 文件：
 
-### awk
+```bash
+ls -lh | grep .md
+```
 
-### diff
+![grep](.gitbook/assets/image%20%2812%29.png)
 
 ### vim
 
-### sort
-
-### args
-
-### ftp
+编辑文件的命令，学习曲线比较陡峭，建议搜索相关教程学习。
 
 ### free
+
+查看内存使用情况，如：`free -h`
+
+```text
+              total        used        free      shared  buff/cache   available
+Mem:            62G        404M         61G        9.4M        891M         61G
+Swap:          976M          0B        976M
+```
 
 ### df
 
@@ -259,6 +273,20 @@ tmpfs           6.3G   32K  6.3G   1% /run/user/1000
 
 ### mount
 
+挂载磁盘的命令，挂载硬盘：
+
+```bash
+sudo mount -t ext4 /dev/nvme0n1p1 /data
+```
+
+挂载 samba 网络盘：
+
+```bash
+sudo mount -t cifs -o username=ypw,password=**** //192.168.8.57/dataset /home/ypw/dataset
+```
+
+注意：此处需要 `sudo apt install cifs-utils` 。
+
 ### chmod
 
 修改权限的命令，比如：`sudo chmod -R 777 data` 可以把 data 文件夹修改为任何人可以读写。
@@ -275,11 +303,30 @@ tmpfs           6.3G   32K  6.3G   1% /run/user/1000
 
 ### whereis
 
+可以查找包含指定关键字的文件，如 `whereis python` 可以查找所有的文件名包含 python 的文件路径：
+
+```text
+➜  ~ whereis python
+python: /usr/bin/python2.7 /usr/bin/python3.5 /usr/bin/python /usr/bin/python3.5m /usr/lib/python2.7 /usr/lib/python3.5 /etc/python2.7 /etc/python3.5 /etc/python /usr/local/lib/python2.7 /usr/local/lib/python3.5 /usr/include/python3.5m /usr/share/python /home/ypw/anaconda3/bin/python3.6 /home/ypw/anaconda3/bin/python3.6m-config /home/ypw/anaconda3/bin/python3.6-config /home/ypw/anaconda3/bin/python3.6m /home/ypw/anaconda3/bin/python /usr/share/man/man1/python.1.gz
+```
+
 ### which
+
+可以查找当前使用的命令的绝对路径。
+
+如 `which python` 可以显示 `/home/ypw/anaconda3/bin/python`。
+
+但是当你激活一个新的环境以后，就会得到不一样的结果：
+
+```bash
+➜  ~ source activate tensorflow
+(tensorflow) ➜  ~ which python
+/home/ypw/anaconda3/envs/tensorflow/bin/python
+```
 
 ### locate
 
-### ps
+locate 命令会寻找包含关键字的所有文件路径。
 
 ### 
 

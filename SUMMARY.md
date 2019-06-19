@@ -4,7 +4,7 @@
 * [Windows、Ubuntu 还是 macOS？](windows-linux-or-macos.md)
 * [Mac 对比](mac-compare.md)
 * [macOS 软件](macos-software.md)
-* [macOS 环境](macos-huan-jing.md)
+* [macOS 环境](macos-environment.md)
 * [如何配置一台深度学习工作站?](how-to-build-deep-learning-workstation.md)
 * [如何安装 Ubuntu](how-to-install-ubuntu.md)
 * [常用 Linux 命令](linux-command.md)

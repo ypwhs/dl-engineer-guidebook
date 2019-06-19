@@ -54,3 +54,89 @@ pip3 install https://download.pytorch.org/whl/cu100/torch-1.1.0-cp36-cp36m-linux
 pip3 install https://download.pytorch.org/whl/cu100/torchvision-0.3.0-cp36-cp36m-linux_x86_64.whl
 ```
 
+## 必备命令
+
+`sudo apt install git htop nload curl tmux screen aria2 graphviz aptitude tree`
+
+git、htop、nload 参考 macOS 环境里的介绍。
+
+### curl
+
+curl 是一个多功能的网络操作命令，你可以使用它来发送 GET、POST 请求。
+
+在开发服务的时候，我们会经常使用这个命令来测试服务是否能返回预期的结果。
+
+GET：
+
+```bash
+curl https://dl.ypw.io
+```
+
+POST：
+
+```bash
+curl -d "param1=value1&param2=value2" -X POST http://localhost:3000/data
+```
+
+POST json：
+
+```bash
+curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json" -X POST http://localhost:3000/data
+```
+
+### tmux
+
+tmux 是一个优秀的终端复用器命令，用户可以通过tmux 在一个终端内管理多个分离的会话，窗口及面板，对于同时使用多个命令行，或多个任务时非常方便。
+
+#### 创建会话
+
+比如你想同时监控 CPU、内存、显卡使用情况，那么你可以在使用 iTerm2 的情况下，执行下面的命令开启一个 tmux 会话\(session\)：
+
+```bash
+tmux -CC new -s monitor
+```
+
+其中的 monitor 是这个会话的名字，你可以修改为自己喜欢的名字。
+
+#### 修改布局
+
+在弹出的窗口\(window\)中，你可以：
+
+* 使用 ⌘+D `Command + D` 横向分割这个窗口
+* 使用 ⌘+⇧+D `Command + Shift + D` 纵向分割这个窗口
+* 使用 ⌘+N `Command + N` 创建一个新的窗口
+
+当你调整好布局以后，可以在每个窗格\(panel\)里运行你想运行的命令。
+
+窗口大小可以使用鼠标进行调整，窗格大小也可以使用鼠标拖动修改。
+
+修改好以后，我们可以得到类似下图的效果：
+
+![tmux](.gitbook/assets/image%20%2811%29.png)
+
+#### 脱离会话
+
+如果你想让 python 脚本在后台运行，只需要在刚才创建会话的地方按一下 esc 键，就可以脱离这个会话。
+
+```text
+➜  ~ tmux -CC new -s monitor
+** tmux mode started **
+
+Command Menu
+----------------------------
+esc    Detach cleanly.
+  X    Force-quit tmux mode.
+  L    Toggle logging.
+  C    Run tmux command.
+```
+
+你也可以直接关闭开启会话的终端的窗口，效果一样。
+
+#### 恢复会话
+
+恢复会话可以使用这个命令：`tmux -CC attach -t monitor`
+
+#### 退出会话
+
+如果你想完全退出所有的终端，只需要在每个窗格里 ⌘+W `Command + W` 即可，关闭最后一个窗口以后，这个会话就结束了。 
+

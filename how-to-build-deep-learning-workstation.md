@@ -32,9 +32,9 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 
 有的主板如 [WS X299 SAGE](https://www.asus.com.cn/Motherboards/WS-X299-SAGE/overview/) 带有 PLX 桥接芯片，可以在 CPU 没有足够 PCI-E 的情况下达到四卡 x16 的速度：
 
-![WS X299 SAGE](.gitbook/assets/image%20%2811%29.png)
+![WS X299 SAGE](.gitbook/assets/image%20%2814%29.png)
 
-![WS X299 SAGE User Guide](.gitbook/assets/image%20%2825%29.png)
+![WS X299 SAGE User Guide](.gitbook/assets/image%20%2828%29.png)
 
 ## 硬盘
 
