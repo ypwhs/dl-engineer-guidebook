@@ -51,3 +51,38 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 chsh -s /bin/zsh
 ```
 
+## 必备命令
+
+`brew install git htop nload wget`
+
+### git
+
+git 是代码管理工具。
+
+### htop
+
+htop 是一个系统监控与进程管理软件， 如图：
+
+![htop](.gitbook/assets/image%20%281%29.png)
+
+### nload
+
+nload 是一个网速监控命令，如图：
+
+![nload](.gitbook/assets/image%20%2820%29.png)
+
+你可以用它查看比如打包 docker 的时候的网速如何，是否在下载依赖的软件包。
+
+### wget
+
+很方便的命令行下载工具，比如：
+
+```bash
+wget https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh
+bash Anaconda3-2019.03-MacOSX-x86_64.sh
+```
+
+通过上面的命令，你可以下载 Anaconda 安装包，然后安装 Anaconda。
+
+
+

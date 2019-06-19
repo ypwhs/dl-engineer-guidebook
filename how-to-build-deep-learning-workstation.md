@@ -26,15 +26,15 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 
 [GIGABYTE X299 AORUS MASTER \(rev. 1.0\)](https://www.gigabyte.cn/Motherboard/X299-AORUS-MASTER-rev-10) 使用了 4 组 2 槽间距显卡插槽设计，支持 1x16、2x16、2x16 + 1x8、1x16 + 3x8 四种配置（需要十核以上的 CPU），这里请参阅说明书安装显卡，安装在不同位置的速度是不一样的：
 
-![GIGABYTE X299 AORUS MASTER \(rev. 1.0\)](.gitbook/assets/image%20%281%29.png)
+![GIGABYTE X299 AORUS MASTER \(rev. 1.0\)](.gitbook/assets/image%20%282%29.png)
 
-![GIGABYTE X299 AORUS MASTER manual](.gitbook/assets/image%20%283%29.png)
+![GIGABYTE X299 AORUS MASTER manual](.gitbook/assets/image%20%284%29.png)
 
 有的主板如 [WS X299 SAGE](https://www.asus.com.cn/Motherboards/WS-X299-SAGE/overview/) 带有 PLX 桥接芯片，可以在 CPU 没有足够 PCI-E 的情况下达到四卡 x16 的速度：
 
-![WS X299 SAGE](.gitbook/assets/image%20%2810%29.png)
+![WS X299 SAGE](.gitbook/assets/image%20%2811%29.png)
 
-![WS X299 SAGE User Guide](.gitbook/assets/image%20%2823%29.png)
+![WS X299 SAGE User Guide](.gitbook/assets/image%20%2825%29.png)
 
 ## 硬盘
 
