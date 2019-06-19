@@ -30,7 +30,7 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
     * 实用工具
     * 虚拟机
 * 本地环境
-  * [macOS 环境](macos-huan-jing.md)
+  * [macOS 环境](macos-environment.md)
     * Homebrew
     * oh my zsh
   * [Python 环境](python-environment.md)

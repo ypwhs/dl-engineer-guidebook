@@ -79,6 +79,10 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 | TITAN RTX | Turing | 16499 | 24 | 4608 | 576 | 16.3 | 130 |  |
 | Tesla V100 | Volta | 79600 | 32 | 5120 | 640 | 15.7 | 125 | NA |
 
+考虑成本可以买 RTX 2080Ti，想要高性能并且高性价比可以买 TITAN RTX。
+
+RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，不推荐。
+
 参考链接：
 
 * [Turing 架构白皮书](https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/technologies/turing-architecture/NVIDIA-Turing-Architecture-Whitepaper.pdf)
