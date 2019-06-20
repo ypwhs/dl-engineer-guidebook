@@ -1,6 +1,10 @@
-# Windows、Ubuntu 还是 macOS？
+---
+description: >-
+  Windows、Ubuntu 和 macOS 这三个操作系统都有不可替代之处，我在工作中大部分情况下都会使用 macOS 作为终端，在使用 office
+  软件、百度云的时候会用到 Windows。虽然我直接使用的机器是 macOS 的操作系统，但是实际上运行程序的机器是 Ubuntu（Linux）操作系统。
+---
 
-这三个系统都是有必要的，我在工作中大部分情况下都会使用 macOS 作为终端，仅仅在使用 office 软件、百度云的时候会用到 Windows。虽然我直接使用的机器是 macOS 的操作系统，但是实际上运行程序的机器是 Ubuntu（Linux）操作系统。
+# Windows、Ubuntu 还是 macOS？
 
 ## Ubuntu
 

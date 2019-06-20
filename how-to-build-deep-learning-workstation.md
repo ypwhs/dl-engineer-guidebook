@@ -65,7 +65,7 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 
 ## 内存
 
-内存随便买，容量大于显存比较好，比如单卡配 16GB 内存，四卡配 64GB 内存。
+内存容量的选择通常大于显存，比如单卡配 16GB 内存，四卡配 64GB 内存。
 
 ## 显卡
 

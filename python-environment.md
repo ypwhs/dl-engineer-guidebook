@@ -1,6 +1,10 @@
-# Python 环境
+---
+description: >-
+  对于深度学习工程师来说，Python 是必不可少的工具，因为大多数深度学习框架都支持 Python（比如 tensorflow、pytorch、mxnet
+  等）。在模型开发阶段，使用 Python 非常方便，如果配合 jupyter 使用，还可以进一步提升开发效率。
+---
 
-对于深度学习工程师来说，Python 是必不可少的工具，因为大多数深度学习框架都支持 Python（比如 tensorflow、pytorch、mxnet 等）。在模型开发阶段，使用 Python 非常方便，如果配合 jupyter 使用，还可以进一步提升开发效率。
+# Python 环境
 
 ## Anaconda
 
