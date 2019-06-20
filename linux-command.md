@@ -223,7 +223,12 @@ sudo service network-manager restart
 ls -lh | grep .md
 ```
 
-![grep](.gitbook/assets/image%20%2813%29.png)
+```text
+➜  pytorch git:(ff608a9) ✗ ls -lh | grep .md
+-rw-rw-r--  1 ypw ypw  15K 12月  5  2018 CONTRIBUTING.md
+-rw-rw-r--  1 ypw ypw  285 12月  4  2018 mypy-README.md
+-rw-rw-r--  1 ypw ypw  14K 12月  5  2018 README.md
+```
 
 ### vim
 
