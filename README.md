@@ -21,19 +21,23 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
     * NAS
     * 移动硬盘
     * U盘
-* 本地软件
-  * [macOS 软件](macos-software.md)
-    * 终端
-    * 浏览器
-    * 编辑器
-    * 开发工具
-    * 实用工具
-    * 虚拟机
-* 本地环境
-  * [macOS 环境](macos-environment.md)
-    * Homebrew
-    * oh my zsh
-  * [Python 环境](python-environment.md)
+* [macOS 软件](macos-software.md)
+  * 终端
+  * 浏览器
+  * 编辑器
+  * 开发工具
+  * 实用工具
+  * 虚拟机
+* [macOS 环境](macos-environment.md)
+  * Homebrew
+  * oh my zsh
+  * 必备命令
+    * git
+    * htop
+    * nload
+* [Python 环境](python-environment.md)
+  * Anaconda
+  * Python 库
 * [如何配置一台深度学习工作站?](how-to-build-deep-learning-workstation.md)
   * CPU
   * 主板
@@ -50,11 +54,17 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
   * 在 macOS 上制作 Ubuntu 系统盘
   * 安装 Ubuntu
 * [Ubuntu 环境](ubuntu-environment.md)
-  * apt
   * oh my zsh
   * CUDA
   * cuDNN
-  * nccl
+  * TensorFlow
+  * PyTorch
+  * 必备命令
+    * curl
+    * tmux
+    * aria2
+    * aptitude
+    * tree
 * [常用 Linux 命令](linux-command.md)
   * 文件目录
   * 权限管理
@@ -62,14 +72,23 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
   * 磁盘管理
   * 系统监测
   * 网络通信
-* [Python 环境](python-environment.md)
-  * Anaconda
-  * Python 库
 * 常用数据集
   * MNIST
   * CIFAR-10
   * ImageNet
   * VOC
   * COCO
+  * CelebA
 * 常用预训练模型
+  * 大模型
+    * VGG16
+    * ResNet系列
+    * Inception系列
+    * DenseNet
+    * Xception
+    * NASNet
+  * 小模型
+    * MobileNet
+    * SqueezeNet
+    * MnasNet
 
