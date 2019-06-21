@@ -10,4 +10,5 @@
 * [常用 Linux 命令](linux-command.md)
 * [Ubuntu 环境](ubuntu-environment.md)
 * [Python 环境](python-environment.md)
+* [在 ImageNet 上表现出色的经典模型](zai-imagenet-shang-biao-xian-chu-se-de-jing-dian-mo-xing.md)
 
