@@ -79,7 +79,7 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
   * VOC
   * COCO
   * CelebA
-* 常用预训练模型
+* [在 ImageNet 上表现出色的经典模型](best-models-on-imagenet.md)
   * 大模型
     * VGG16
     * ResNet系列

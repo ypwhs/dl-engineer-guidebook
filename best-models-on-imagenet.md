@@ -7,6 +7,21 @@ description: >-
 
 # 在 ImageNet 上表现出色的经典模型
 
+## 预训练模型使用方法
+
+### TensorFlow
+
+* [https://www.tensorflow.org/lite/guide/hosted\_models](https://www.tensorflow.org/lite/guide/hosted_models)
+* [https://github.com/keras-team/keras-applications](https://github.com/keras-team/keras-applications)
+* [https://github.com/tensorflow/models/tree/master/research/slim\#pre-trained-models](https://github.com/tensorflow/models/tree/master/research/slim#pre-trained-models)
+
+### PyTorch
+
+* [https://pytorch.org/docs/stable/torchvision/models.html](https://pytorch.org/docs/stable/torchvision/models.html)
+* [https://github.com/Cadene/pretrained-models.pytorch](https://github.com/Cadene/pretrained-models.pytorch)
+
+## 模型论文
+
 ### VGG <a id="VGG"></a>
 
 **Very Deep Convolutional Networks for Large-Scale Image Recognition**  
@@ -49,6 +64,6 @@ Submitted on 7 Oct 2016
 [https://arxiv.org/abs/1611.01578](https://arxiv.org/abs/1611.01578)  
 Submitted on 5 Nov 2016
 
-这些模型都有 ImageNet 的预训练权值可以使用。  
+  
 
 
