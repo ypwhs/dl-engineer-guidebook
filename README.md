@@ -91,4 +91,5 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
     * DenseNet
     * Xception
     * NASNet
+    * AmoebaNet
 
