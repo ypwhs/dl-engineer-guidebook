@@ -97,7 +97,7 @@ Jupyter Notebook 插件。
 
 > 该`jupyter_contrib_nbextensions`软件包包含一系列社区贡献的非官方扩展，可为Jupyter笔记本添加功能。这些扩展大多是用Javascript编写的，将在您的浏览器中本地加载。
 
-我使用了代码执行时间插件和函数折叠插件。
+我使用了[代码执行时间插件](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execute_time/readme.html)和[函数折叠插件](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html)。
 
 ### numpy
 
@@ -148,7 +148,7 @@ OpenCV 的 Python 库，图像处理必备。
 
 {% embed url="https://pillow.readthedocs.io/en/stable/" %}
 
-PIL，另一个图像处理库，PyTorch 里的数据增强需要使用它读取图片。
+PIL，另一个图像处理库，PyTorch 里的 torchvision 有很多写好的数据增强类，它们的输入类型是 PIL.Image。
 
 > 该库提供广泛的文件格式支持，高效的内部表示和相当强大的图像处理功能。
 >
@@ -192,7 +192,7 @@ PIL，另一个图像处理库，PyTorch 里的数据增强需要使用它读取
 
 {% embed url="https://keras.io/" %}
 
-更高级的 API，和 tensorflow 联合使用很方便。
+更高级的 API，和 tensorflow 联合使用很方便。最新的 TensorFlow 2.0 非常推荐使用 Keras 作为模型搭建的高级 API，你不必直接安装 Keras，直接使用 tf.keras 即可。
 
 > Keras是一个高级神经网络API，用Python编写，能够在TensorFlow，CNTK或Theano之上运行。它的开发重点是实现快速实验。能够以最小的延迟从理念到结果是进行良好研究的关键。
 

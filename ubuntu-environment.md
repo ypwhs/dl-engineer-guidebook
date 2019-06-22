@@ -56,9 +56,11 @@ pip3 install https://download.pytorch.org/whl/cu100/torchvision-0.3.0-cp36-cp36m
 
 ## 必备命令
 
-`sudo apt install git htop nload curl tmux screen aria2 graphviz aptitude tree`
+```bash
+sudo apt install git htop nload curl tmux screen aria2 graphviz aptitude tree
+```
 
-git、htop、nload 参考 macOS 环境里的介绍。
+常见的 git、htop、nload 等命令在 [macOS 环境](macos-environment.md#bi-bei-ming-ling) 里已经介绍过了。
 
 ### curl
 
@@ -85,6 +87,8 @@ curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json"
 ```
 
 ### tmux
+
+tmux 最大的好处是可以让你的命令在后台运行，不会因为终端关闭而退出。比如在后台运行 jupyter、python 数据预处理脚本和训练脚本等。
 
 tmux 是一个优秀的终端复用器命令，用户可以通过tmux 在一个终端内管理多个分离的会话，窗口及面板，对于同时使用多个命令行，或多个任务时非常方便。
 
@@ -139,4 +143,59 @@ esc    Detach cleanly.
 #### 退出会话
 
 如果你想完全退出所有的终端，只需要在每个窗格里 ⌘+W `Command + W` 即可，关闭最后一个窗口以后，这个会话就结束了。 
+
+### screen
+
+screen 是另一个支持在后台运行命令的工具。
+
+#### 新建窗口
+
+```bash
+screen -S jupyter
+```
+
+其中 -S 后面跟的是 screen 的名字。
+
+#### 恢复窗口
+
+```bash
+screen -r jupyter
+```
+
+其中 -r 后面跟的是 screen 的名字。
+
+#### 退出窗口
+
+你可以在窗口中使用 exit 命令退出窗口，也可以使用下面的命令：
+
+```bash
+screen -X -S jupyter quit
+```
+
+其中 -S 后面跟的是 screen 的名字。
+
+#### 在 screen 里支持滚轮
+
+新建一个 `~/.screenrc` 文件，在里面添加一行 `termcapinfo xterm* ti@:te@` 并保存，重新连接 screen 就可以使用滚轮了。
+
+#### 进入拷贝模式
+
+输入快捷键 `Ctrl + a + [` 进入拷贝模式，然后你就可以使用方向键、翻页键进行翻页。
+
+下面是拷贝模式下的常用快捷键：
+
+```text
+h -    Move the cursor left by one character
+j -    Move the cursor down by one line
+k -    Move the cursor up by one line
+l -    Move the cursor right by one character
+0 -    Move to the beginning of the current line
+$ -    Move to the end of the current line.
+G -    Moves to the specified line
+       (defaults to the end of the buffer).
+C-u -  Scrolls a half page up.
+C-b -  Scrolls a full page up.
+C-d -  Scrolls a half page down.
+C-f -  Scrolls the full page down.
+```
 
