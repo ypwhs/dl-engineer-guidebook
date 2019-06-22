@@ -4,6 +4,18 @@ description: 这里介绍了最常用的 Linux 命令，有一些在工作中是
 
 # 常用 Linux 命令
 
+### man
+
+Linux 下的帮助命令。
+
+授人以鱼不如授人以渔，首先应该教会大家查文档，而不是教会大家所有命令的用法。
+
+如：`man ls`可以查看 ls 命令的帮助文档。
+
+提示：按 q 退出帮助页面。
+
+## 文件查看
+
 ### cd
 
 切换工作目录。
@@ -12,63 +24,15 @@ description: 这里介绍了最常用的 Linux 命令，有一些在工作中是
 
 `cd ..` 返回上一层目录。
 
-### ssh 
-
-连接远程服务器：`ssh user@192.168.1.100`
-
-映射远程端口：`ssh -L 本地端口:远程服务器:远程端口 远程服务器`
-
-例如：`ssh -L 8888:localhost:8888 192.168.1.100` 可以把服务器上的 jupyter 监听的 8888 端口映射到本地的 8888 端口，然后只需要在浏览器里输入`http://localhost:8888` 就可以连接远程服务器的 jupyter 了。
-
-### scp
-
-复制文件/文件夹到远程服务器，例如：`scp 文件 用户名@目标主机:目标主机路径`
-
-复制文件：`scp file user@192.168.1.100:/data`
-
-复制文件夹：`scp -r dir user@192.168.1.100:/data`
-
-当你复制大量小文件时，请使用`rsync` 命令。
-
 ### ls
 
 `ls` 是 list 的缩写，用来显示目标列表。
 
 `ll` 是`ls -lh` 的别名，列出的信息更加详细。
 
-### apt
-
-Ubuntu 系统的包管理器，用于安装和卸载软件包。
-
-安装：`sudo apt install curl`
-
-卸载：`sudo apt purge curl`
-
 ### pwd
 
 `pwd` 命令以绝对路径的方式显示用户当前工作目录。
-
-### mkdir
-
-创建文件夹。
-
-### rm
-
-移除文件。移除文件夹时需要使用`rm -r`，没有权限时需要`rm -rf` 。
-
-此命令比较危险，注意不要写成这样：`rm -rf / tmp`，这样会删除`/`下的所有文件，属于删库跑路行为。
-
-### mv
-
-移动命令。
-
-例如：`mv source destination`
-
-### cp
-
-复制文件：`cp src dst`
-
-复制文件夹：`cp -r src dst`
 
 ### cat
 
@@ -76,11 +40,93 @@ Ubuntu 系统的包管理器，用于安装和卸载软件包。
 
 当文件较大时，文本会在屏幕上快速滚动，可以使用`Ctrl+S`停止滚动，`Ctrl+Q`恢复滚动，`Ctrl+C`退出当前命令。
 
-### ping
+### head
 
-测试主机之间网络的连通性。
+显示文件开头的内容，比如：`head -n 5 train.csv` 可以显示训练集 csv 前五行内容。
 
-例如：`ping baidu.com`
+### tail
+
+显示文件尾部的内容。`tail` 和 `head` 默认显示 10 行。
+
+### find
+
+在指定目录下查找文件。
+
+### whereis
+
+可以查找包含指定关键字的文件，如 `whereis python` 可以查找所有的文件名包含 python 的文件路径：
+
+```text
+➜  ~ whereis python
+python: /usr/bin/python2.7 /usr/bin/python3.5 /usr/bin/python /usr/bin/python3.5m /usr/lib/python2.7 /usr/lib/python3.5 /etc/python2.7 /etc/python3.5 /etc/python /usr/local/lib/python2.7 /usr/local/lib/python3.5 /usr/include/python3.5m /usr/share/python /home/ypw/anaconda3/bin/python3.6 /home/ypw/anaconda3/bin/python3.6m-config /home/ypw/anaconda3/bin/python3.6-config /home/ypw/anaconda3/bin/python3.6m /home/ypw/anaconda3/bin/python /usr/share/man/man1/python.1.gz
+```
+
+### which
+
+可以查找当前使用的命令的绝对路径。
+
+如 `which python` 可以显示 `/home/ypw/anaconda3/bin/python`。
+
+但是当你激活一个新的环境以后，就会得到不一样的结果：
+
+```bash
+➜  ~ source activate tensorflow
+(tensorflow) ➜  ~ which python
+/home/ypw/anaconda3/envs/tensorflow/bin/python
+```
+
+### locate
+
+locate 命令会寻找包含关键字的所有文件路径。
+
+## 文件读写
+
+### mkdir
+
+创建文件夹。
+
+### touch
+
+创建空文件。
+
+### rm
+
+移除文件。移除文件夹时需要使用`rm -r`，没有权限时需要`rm -rf` 。
+
+此命令比较危险，注意不要写成这样：`rm -rf / tmp`，这样会删除`/`下的所有文件，属于删库跑路行为。
+
+### cp
+
+复制文件：`cp src dst`
+
+复制文件夹：`cp -r src dst`
+
+### mv
+
+移动命令。
+
+例如：`mv source destination`
+
+### grep
+
+筛选命令，比如我想查找许多文件里面的 markdown 文件：
+
+```bash
+ls -lh | grep .md
+```
+
+```text
+➜  pytorch git:(ff608a9) ✗ ls -lh | grep .md
+-rw-rw-r--  1 ypw ypw  15K 12月  5  2018 CONTRIBUTING.md
+-rw-rw-r--  1 ypw ypw  285 12月  4  2018 mypy-README.md
+-rw-rw-r--  1 ypw ypw  14K 12月  5  2018 README.md
+```
+
+### vim
+
+编辑文件的命令，学习曲线比较陡峭，建议搜索相关教程学习。
+
+## 打包压缩
 
 ### zip
 
@@ -110,62 +156,33 @@ Ubuntu 系统的包管理器，用于安装和卸载软件包。
 
 压缩文件夹：`tar -czvf files.tar.gz dir` 
 
-解压：`tar -xzvf files.tar.gz` 
+解压：`tar -xzvf files.tar.gz`
 
-### rsync
+## 权限管理
 
-同步文件/文件夹命令，带有增量备份功能，速度很快。
+### sudo
 
-参数：
+以 root 权限执行命令，比如 `sudo reboot` 可以重启机器，普通权限无法重启。
 
-* -a，--archive 归档模式，表示以递归方式传输文件，并保持所有文件属性，等于-rlptgoD。
-* -v，--verbose 详细模式输出。
-* -z，--compress 在传输时压缩数据，如果你传输的文件没有压缩过，并且带宽不够大，就可以开启压缩。如果你传输的是图像文件，那么压缩会拖慢传输速度。
-* --delete，在同步的时候删除多余的文件，这可以确保两个文件夹的一致性。
-* --exclude，排除文件，可以使用通配符
-* -P，等同于 --partial --progress，显示备份过程。
+### su
 
-同步文件夹：`rsync -avP 本地文件夹 用户名@远程服务器:远程地址`
+切换用户，比如 `sudo su ypw` 可以将当前用户切换到 ypw 用户。
 
-### export
+### chmod
 
-设置环境变量命令，一般写在 `.bashrc` 或 `.zshrc` 文件中，例如：
+修改权限的命令，比如：`sudo chmod -R 777 data` 可以把 data 文件夹修改为任何人可以读写。
 
-```bash
-export PATH=/usr/local/cuda/bin:$PATH
-```
+### chown
 
-的功能是把 `/usr/local/cuda/bin` 目录添加到 `PATH` 的最前面，这样就可以直接在命令行使用 `/usr/local/cuda/bin` 目录下的 `nvcc` 命令。
+修改所有者的命令，比如：`sudo chown -R ypw data` 可以把 data 文件夹的所有权改为 ypw。
 
-### echo
+### passwd
 
-可以输出环境变量。
+修改密码命令，直接执行 `passwd` 可以修改当前用户密码。
 
-例如：`echo $PATH`
+强制修改某个用户的密码：`sudo passwd ypw`
 
-### shutdown
-
-关机命令。
-
-例如：`sudo shutdown -t 0`
-
-### wget
-
-从指定的URL下载文件。
-
-下载单个文件：`wget url`
-
-下载并修改文件名：`wget -O filename.zip url`
-
-### top
-
-实时查看系统的运行状态，如 CPU、内存、进程的信息。
-
-### uname
-
-显示当前的系统信息。
-
-`uname -a` 显示全部的信息，如内核版本号、硬件架构、主机名称和操作系统类型等。
+## 进程管理
 
 ### ps
 
@@ -183,66 +200,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 如果同事正在使用 python 跑程序，你也在使用 python 跑程序，在你执行完 `killall python` 以后，你们的 python 进程都会被杀掉。
 
-### head
-
-显示文件开头的内容，比如：`head -n 5 train.csv` 可以显示训练集 csv 前五行内容。
-
-### tail
-
-显示文件尾部的内容。`tail` 和 `head` 默认显示 10 行。
-
-### find
-
-在指定目录下查找文件。
-
-### man
-
-Linux 下的帮助命令，可以查看 Linux 中的指令帮助、配置文件帮助和编程帮助等信息。
-
-### sudo
-
-以 root 权限执行命令，比如 `sudo reboot` 可以重启机器，普通权限无法重启。
-
-### su
-
-切换用户，比如 `sudo su ypw` 可以将当前用户切换到 ypw 用户。
-
-### service
-
-开启关闭服务的命令，如：
-
-```bash
-sudo service network-manager restart
-```
-
-### grep
-
-筛选命令，比如我想查找许多文件里面的 markdown 文件：
-
-```bash
-ls -lh | grep .md
-```
-
-```text
-➜  pytorch git:(ff608a9) ✗ ls -lh | grep .md
--rw-rw-r--  1 ypw ypw  15K 12月  5  2018 CONTRIBUTING.md
--rw-rw-r--  1 ypw ypw  285 12月  4  2018 mypy-README.md
--rw-rw-r--  1 ypw ypw  14K 12月  5  2018 README.md
-```
-
-### vim
-
-编辑文件的命令，学习曲线比较陡峭，建议搜索相关教程学习。
-
-### free
-
-查看内存使用情况，如：`free -h`
-
-```text
-              total        used        free      shared  buff/cache   available
-Mem:            62G        404M         61G        9.4M        891M         61G
-Swap:          976M          0B        976M
-```
+## 磁盘管理
 
 ### df
 
@@ -276,10 +234,6 @@ tmpfs           6.3G   32K  6.3G   1% /run/user/1000
 146G	ImageNet
 ```
 
-### ifconfig
-
-这个命令可以查看当前网卡的 ip 地址。
-
 ### mount
 
 挂载磁盘的命令，挂载硬盘：
@@ -296,46 +250,124 @@ sudo mount -t cifs -o username=ypw,password=**** //192.168.8.57/dataset /home/yp
 
 注意：此处需要 `sudo apt install cifs-utils` 。
 
-### chmod
+## 系统管理
 
-修改权限的命令，比如：`sudo chmod -R 777 data` 可以把 data 文件夹修改为任何人可以读写。
+### apt
 
-### chown
+Ubuntu 系统的包管理器，用于安装和卸载软件包。
 
-修改所有者的命令，比如：`sudo chown -R ypw data` 可以把 data 文件夹的所有权改为 ypw。
+安装：`sudo apt install curl`
 
-### passwd
+卸载：`sudo apt purge curl`
 
-修改密码命令，直接执行 `passwd` 可以修改当前用户密码。
+### export
 
-强制修改某个用户的密码：`sudo passwd ypw`
-
-### whereis
-
-可以查找包含指定关键字的文件，如 `whereis python` 可以查找所有的文件名包含 python 的文件路径：
-
-```text
-➜  ~ whereis python
-python: /usr/bin/python2.7 /usr/bin/python3.5 /usr/bin/python /usr/bin/python3.5m /usr/lib/python2.7 /usr/lib/python3.5 /etc/python2.7 /etc/python3.5 /etc/python /usr/local/lib/python2.7 /usr/local/lib/python3.5 /usr/include/python3.5m /usr/share/python /home/ypw/anaconda3/bin/python3.6 /home/ypw/anaconda3/bin/python3.6m-config /home/ypw/anaconda3/bin/python3.6-config /home/ypw/anaconda3/bin/python3.6m /home/ypw/anaconda3/bin/python /usr/share/man/man1/python.1.gz
-```
-
-### which
-
-可以查找当前使用的命令的绝对路径。
-
-如 `which python` 可以显示 `/home/ypw/anaconda3/bin/python`。
-
-但是当你激活一个新的环境以后，就会得到不一样的结果：
+设置环境变量命令，一般写在 `.bashrc` 或 `.zshrc` 文件中，例如：
 
 ```bash
-➜  ~ source activate tensorflow
-(tensorflow) ➜  ~ which python
-/home/ypw/anaconda3/envs/tensorflow/bin/python
+export PATH=/usr/local/cuda/bin:$PATH
 ```
 
-### locate
+的功能是把 `/usr/local/cuda/bin` 目录添加到 `PATH` 的最前面，这样就可以直接在命令行使用 `/usr/local/cuda/bin` 目录下的 `nvcc` 命令。
 
-locate 命令会寻找包含关键字的所有文件路径。
+### echo
 
-### 
+可以输出环境变量。
+
+例如：`echo $PATH`
+
+### service
+
+开启关闭服务的命令，如：
+
+```bash
+sudo service network-manager restart
+```
+
+### shutdown
+
+关机命令。
+
+例如：`sudo shutdown -t 0`
+
+### reboot
+
+重启命令。
+
+例如：`sudo reboot`
+
+## 系统监测
+
+### uname
+
+显示当前的系统信息。
+
+`uname -a` 显示全部的信息，如内核版本号、硬件架构、主机名称和操作系统类型等。
+
+### top
+
+实时查看系统的运行状态，如 CPU、内存、进程的信息。
+
+### ifconfig
+
+这个命令可以查看当前网卡的 ip 地址。
+
+### free
+
+查看内存使用情况，如：`free -h`
+
+```text
+              total        used        free      shared  buff/cache   available
+Mem:            62G        404M         61G        9.4M        891M         61G
+Swap:          976M          0B        976M
+```
+
+## 网络通信
+
+### ping
+
+测试主机之间网络的连通性。
+
+例如：`ping baidu.com`
+
+### ssh 
+
+连接远程服务器：`ssh user@192.168.1.100`
+
+映射远程端口：`ssh -L 本地端口:远程服务器:远程端口 远程服务器`
+
+例如：`ssh -L 8888:localhost:8888 192.168.1.100` 可以把服务器上的 jupyter 监听的 8888 端口映射到本地的 8888 端口，然后只需要在浏览器里输入`http://localhost:8888` 就可以连接远程服务器的 jupyter 了。
+
+### scp
+
+复制文件/文件夹到远程服务器，例如：`scp 文件 用户名@目标主机:目标主机路径`
+
+复制文件：`scp file user@192.168.1.100:/data`
+
+复制文件夹：`scp -r dir user@192.168.1.100:/data`
+
+当你复制大量小文件时，请使用`rsync` 命令。
+
+### rsync
+
+同步文件/文件夹命令，带有增量备份功能，速度很快。
+
+参数：
+
+* -a，--archive 归档模式，表示以递归方式传输文件，并保持所有文件属性，等于-rlptgoD。
+* -v，--verbose 详细模式输出。
+* -z，--compress 在传输时压缩数据，如果你传输的文件没有压缩过，并且带宽不够大，就可以开启压缩。如果你传输的是图像文件，那么压缩会拖慢传输速度。
+* --delete，在同步的时候删除多余的文件，这可以确保两个文件夹的一致性。
+* --exclude，排除文件，可以使用通配符
+* -P，等同于 --partial --progress，显示备份过程。
+
+同步文件夹：`rsync -avP 本地文件夹 用户名@远程服务器:远程地址`
+
+### wget
+
+从指定的URL下载文件。
+
+下载单个文件：`wget url`
+
+下载并修改文件名：`wget -O filename.zip url`
 
