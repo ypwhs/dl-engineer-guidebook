@@ -66,10 +66,13 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
     * aptitude
     * tree
 * [常用 Linux 命令](linux-command.md)
-  * 文件目录
+  * 文件查看
+  * 文件读写
+  * 打包压缩
   * 权限管理
   * 进程管理
   * 磁盘管理
+  * 系统管理
   * 系统监测
   * 网络通信
 * 常用数据集
