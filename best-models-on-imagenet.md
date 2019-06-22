@@ -64,6 +64,9 @@ Submitted on 7 Oct 2016
 [https://arxiv.org/abs/1611.01578](https://arxiv.org/abs/1611.01578)  
 Submitted on 5 Nov 2016
 
-  
+### AmobaeNet
 
+**Regularized Evolution for Image Classifier Architecture Search**  
+[https://arxiv.org/abs/1802.01548](https://arxiv.org/abs/1802.01548)  
+Submitted on 5 Feb 2018
 

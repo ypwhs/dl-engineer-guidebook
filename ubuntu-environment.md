@@ -35,6 +35,14 @@ cuDNN 是英伟达推出的专门用于深度学习加速计算的库，一般�
 
 如果没有设计特殊的结构，cuDNN 应该是你的首选。
 
+## TensorRT
+
+{% embed url="https://developer.nvidia.com/tensorrt" %}
+
+TensorRT 是英伟达推出的推断库（Inference），通常用于模型部署。
+
+使用 TensorRT 可以进行半精度推断，甚至对模型进行 int8 量化，从而得到数倍的性能提升，并且尽可能保证精度。由于此项目还在开发阶段，不同的版本可能不通用，请参考你所使用的深度学习框架的文档，找到你所需要安装的 TensorRT 版本。
+
 ## TensorFlow
 
 {% embed url="https://www.tensorflow.org/install/gpu" %}
