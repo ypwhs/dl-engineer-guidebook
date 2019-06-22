@@ -80,15 +80,15 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
   * COCO
   * CelebA
 * [在 ImageNet 上表现出色的经典模型](best-models-on-imagenet.md)
-  * 大模型
-    * VGG16
-    * ResNet系列
-    * Inception系列
+  * 预训练模型使用方法
+    * TensorFlow
+    * PyTorch
+  * 模型论文
+    * VGG
+    * ResNet
+    * InceptionV3
+    * InceptionResNetV2
     * DenseNet
     * Xception
     * NASNet
-  * 小模型
-    * MobileNet
-    * SqueezeNet
-    * MnasNet
 
