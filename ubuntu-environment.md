@@ -146,7 +146,7 @@ esc    Detach cleanly.
 
 ### screen
 
-screen 是另一个支持在后台运行命令的工具。
+screen 和 tmux 一样都是在后台运行命令的工具。
 
 #### 新建窗口
 
@@ -198,4 +198,6 @@ C-b -  Scrolls a full page up.
 C-d -  Scrolls a half page down.
 C-f -  Scrolls the full page down.
 ```
+
+如果你记不得这么多快捷键，推荐 iTerm2 + tmux 的组合。
 
