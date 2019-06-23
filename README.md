@@ -4,6 +4,8 @@ description: 持续更新中……
 
 # 深度学习工程师生存指南
 
+![Size](https://img.shields.io/github/repo-size/ypwhs/dl-engineer-guidebook.svg) ![Commits-per-week](https://img.shields.io/github/commit-activity/m/ypwhs/dl-engineer-guidebook.svg) ![Followers](https://img.shields.io/github/followers/ypwhs.svg) ![Stars](https://img.shields.io/github/stars/ypwhs/dl-engineer-guidebook.svg) ![Watchers](https://img.shields.io/github/watchers/ypwhs/dl-engineer-guidebook.svg)
+
 GitBook 在线阅读：[https://dl.ypw.io](https://dl.ypw.io/)  
 GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://github.com/ypwhs/dl-engineer-guidebook)  
 持续关注请点 Watch，收藏项目请点 Star，贡献内容请点 Fork，提问或建议请点 Issue。
