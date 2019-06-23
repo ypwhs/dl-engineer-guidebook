@@ -12,6 +12,17 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
 
 本书会讲述一个深度学习工程师所需的所有东西：
 
+* [如何配置一台深度学习工作站?](how-to-build-deep-learning-workstation.md)
+  * CPU
+  * 主板
+  * 显卡
+  * 硬盘
+  * 内存
+  * 电源
+  * 网卡
+  * 机箱
+  * 显示器
+  * 键盘鼠标
 * 本地设备
   * [Windows、Linux 还是 macOS？](windows-linux-or-macos.md)
   * [Mac 对比](mac-compare.md)
@@ -40,17 +51,6 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
 * [Python 环境](python-environment.md)
   * Anaconda
   * Python 库
-* [如何配置一台深度学习工作站?](how-to-build-deep-learning-workstation.md)
-  * CPU
-  * 主板
-  * 硬盘
-  * 内存
-  * 显卡
-  * 电源
-  * 网卡
-  * 机箱
-  * 显示器
-  * 键盘鼠标
 * [如何安装 Ubuntu](how-to-install-ubuntu.md)
   * 在 Windows 上制作 Ubuntu 系统盘
   * 在 macOS 上制作 Ubuntu 系统盘

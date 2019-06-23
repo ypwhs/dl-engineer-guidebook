@@ -158,7 +158,7 @@ PIL，另一个图像处理库，PyTorch 里的 torchvision 有很多写好的�
 
 {% embed url="https://github.com/tqdm/tqdm" %}
 
-进度条库，耗时长的函数最好在外面包一个 tqdm。
+进度条库，耗时长的任务可以使用 tqdm 直观地展示任务的进度，避免焦虑。
 
 > `tqdm`在阿拉伯语中是“进步”（_taqadum_，تقدم）的意思，在西班牙语中是“我太爱你了”（_te quiero demasiado_）的缩写。
 >
@@ -180,11 +180,11 @@ PIL，另一个图像处理库，PyTorch 里的 torchvision 有很多写好的�
 
 > [`torchvision`](https://pytorch.org/docs/stable/torchvision/index.html#module-torchvision)包含了流行的数据集，预训练模型和计算机视觉的常见的图像变换。
 
-### tensorflow-gpu
+### tensorflow
 
 {% embed url="https://www.tensorflow.org/" %}
 
-深度学习库，大而全。
+深度学习库，大而全。配备显卡的机器请按照 [Ubuntu 环境](ubuntu-environment.md) 进行配置。
 
 > TensorFlow是一个用于机器学习的端到端开源平台。 它拥有全面、灵活的工具、库和社区资源生态系统，可让研究人员推动ML的最新技术，开发人员可轻松构建和部署ML驱动的应用程序。
 

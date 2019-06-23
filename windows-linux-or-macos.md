@@ -33,6 +33,8 @@ description: >-
 * 更安全，全盘加密，不用担心被偷以后被窃取文件，并且由于占有率低，少有为 macOS 开发的病毒软件
 * 与其他苹果设备合作很紧密，比如桌面的文件可以在每台设备上同步，甚至可以直接在 iPhone 上查看
 
+有人可能考虑使用 macOS 外接 NVIDIA 显卡跑深度学习，这里不建议这样做。因为截止到 2019年 5 月15日，[英伟达驱动](https://www.nvidia.com/download/driverResults.aspx/147830/)只支持 2018年 7 月 9 日发布的 [macOS High Sierra 10.13.6](https://support.apple.com/kb/DL1969?locale=zh_CN)，所以我们无法用上最新版本的操作系统，官方表示[目前不支持在 macOS 10.14 上运行 CUDA](https://devtalk.nvidia.com/default/topic/1042279/cuda-10-and-macos-10-14/)，苹果也表示外接显卡[只支持 AMD 显卡](https://support.apple.com/zh-cn/HT208544)。
+
 ## Windows
 
 这个操作系统通常是大家最为熟悉的操作系统，所以这里就不再介绍它的优点，这里只提几个缺点：
