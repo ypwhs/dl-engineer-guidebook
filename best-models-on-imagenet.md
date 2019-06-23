@@ -70,3 +70,9 @@ Submitted on 5 Nov 2016
 [https://arxiv.org/abs/1802.01548](https://arxiv.org/abs/1802.01548)  
 Submitted on 5 Feb 2018
 
+### EfficientNet
+
+**EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks**  
+[https://arxiv.org/abs/1905.11946](https://arxiv.org/abs/1905.11946)  
+Submitted on 28 May 2019
+

@@ -124,7 +124,7 @@ tmux -CC new -s monitor
 
 修改好以后，我们可以得到类似下图的效果：
 
-![tmux](.gitbook/assets/image%20%2812%29.png)
+![tmux](.gitbook/assets/image%20%2816%29.png)
 
 #### 脱离会话
 

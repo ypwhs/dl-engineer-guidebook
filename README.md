@@ -4,10 +4,8 @@ description: 持续更新中……
 
 # 深度学习工程师生存指南
 
-GitBook 在线阅读：[https://dl.ypw.io](https://dl.ypw.io/)
-
-GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://github.com/ypwhs/dl-engineer-guidebook)
-
+GitBook 在线阅读：[https://dl.ypw.io](https://dl.ypw.io/)  
+GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://github.com/ypwhs/dl-engineer-guidebook)  
 持续关注请点 Watch，收藏项目请点 Star，贡献内容请点 Fork，提问或建议请点 Issue。
 
 本书会讲述一个深度学习工程师所需的所有东西：
@@ -78,8 +76,9 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
   * 系统监测
   * 网络通信
 * 常用数据集
+  * 数据集使用方法
   * MNIST
-  * CIFAR-10
+  * CIFAR
   * ImageNet
   * VOC
   * COCO

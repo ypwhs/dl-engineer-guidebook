@@ -63,13 +63,13 @@ git 是代码管理工具。
 
 htop 是一个系统监控与进程管理软件， 如图：
 
-![htop](.gitbook/assets/image%20%281%29.png)
+![htop](.gitbook/assets/image%20%283%29.png)
 
 ### nload
 
 nload 是一个网速监控命令，如图：
 
-![nload](.gitbook/assets/image%20%2826%29.png)
+![nload](.gitbook/assets/image%20%2831%29.png)
 
 你可以用它查看比如打包 docker 的时候的网速如何，是否在下载依赖的软件包。
 
