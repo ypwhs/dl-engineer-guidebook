@@ -61,17 +61,17 @@ git 是代码管理工具。
 
 ### htop
 
-htop 是一个系统监控与进程管理软件， 如图：
+htop 是一个系统监控与进程管理软件， 如：
 
-![htop](.gitbook/assets/image%20%283%29.png)
+[![asciicast](https://asciinema.org/a/eWBQp36f4KWmhMX1FAoQ8SQl4.svg)](https://asciinema.org/a/eWBQp36f4KWmhMX1FAoQ8SQl4)
 
 ### nload
 
-nload 是一个网速监控命令，如图：
+nload 是一个网速监控命令，你可以用它查看比如打包 docker 的时候的网速如何，是否在下载依赖的软件包。
 
-![nload](.gitbook/assets/image%20%2831%29.png)
+下面是运行 [https://www.speedtest.net](https://www.speedtest.net) 的时候监控 nload 的过程：
 
-你可以用它查看比如打包 docker 的时候的网速如何，是否在下载依赖的软件包。
+[![asciicast](https://asciinema.org/a/o2IpTuWi93dRo2E1SHP2rILKZ.svg)](https://asciinema.org/a/o2IpTuWi93dRo2E1SHP2rILKZ)
 
 ### wget
 
@@ -83,6 +83,12 @@ bash Anaconda3-2019.03-MacOSX-x86_64.sh
 ```
 
 通过上面的命令，你可以下载 Anaconda 安装包，然后安装 Anaconda。
+
+通过 `-c` 参数，可以接着上次的进度继续下载。
+
+如：
+
+[![asciicast](https://asciinema.org/a/5iHU0tVcLZxUGUubbPG7U8AoY.svg)](https://asciinema.org/a/5iHU0tVcLZxUGUubbPG7U8AoY)
 
 
 
