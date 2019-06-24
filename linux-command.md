@@ -54,6 +54,21 @@ Linux 下的帮助命令。
 
 在指定目录下查找文件。
 
+### grep
+
+筛选命令，比如我想查找许多文件里面的 markdown 文件：
+
+```bash
+ls -lh | grep .md
+```
+
+```text
+➜  pytorch git:(ff608a9) ✗ ls -lh | grep .md
+-rw-rw-r--  1 ypw ypw  15K 12月  5  2018 CONTRIBUTING.md
+-rw-rw-r--  1 ypw ypw  285 12月  4  2018 mypy-README.md
+-rw-rw-r--  1 ypw ypw  14K 12月  5  2018 README.md
+```
+
 ### whereis
 
 可以查找包含指定关键字的文件，如 `whereis python` 可以查找所有的文件名包含 python 的文件路径：
@@ -109,20 +124,7 @@ locate 命令会寻找包含关键字的所有文件路径。
 
 例如：`mv source destination`
 
-### grep
-
-筛选命令，比如我想查找许多文件里面的 markdown 文件：
-
-```bash
-ls -lh | grep .md
-```
-
-```text
-➜  pytorch git:(ff608a9) ✗ ls -lh | grep .md
--rw-rw-r--  1 ypw ypw  15K 12月  5  2018 CONTRIBUTING.md
--rw-rw-r--  1 ypw ypw  285 12月  4  2018 mypy-README.md
--rw-rw-r--  1 ypw ypw  14K 12月  5  2018 README.md
-```
+[![asciicast](https://asciinema.org/a/hWFuRKiWoggP8xIH7ZKQGmABR.svg)](https://asciinema.org/a/hWFuRKiWoggP8xIH7ZKQGmABR)
 
 ### vim
 
@@ -316,7 +318,14 @@ sudo service network-manager restart
 
 ### ifconfig
 
-这个命令可以查看当前网卡的 ip 地址。
+这个命令可以查看当前网卡的 ip 地址。如：
+
+```bash
+➜  ~ ifconfig | grep inet
+          inet addr:192.168.8.100  Bcast:192.168.8.255  Mask:255.255.255.0
+          inet6 addr: fe80::211d:78f6:888a:1/64 Scope:Link
+          inet addr:127.0.0.1  Mask:255.0.0.0
+```
 
 ### free
 
@@ -368,6 +377,8 @@ Swap:          976M          0B        976M
 * -P，等同于 --partial --progress，显示备份过程。
 
 同步文件夹：`rsync -avP 本地文件夹 用户名@远程服务器:远程地址`
+
+[![asciicast](https://asciinema.org/a/eQjKRxlhu5vOThczbmkcmgbqH.svg)](https://asciinema.org/a/eQjKRxlhu5vOThczbmkcmgbqH)
 
 ### wget
 
