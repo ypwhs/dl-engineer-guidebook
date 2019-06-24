@@ -14,6 +14,8 @@ Linux 下的帮助命令。
 
 提示：按 q 退出帮助页面。
 
+[![asciicast](https://asciinema.org/a/PFF2O1mkmPFMECrkunYHhjHvs.svg)](https://asciinema.org/a/PFF2O1mkmPFMECrkunYHhjHvs)
+
 ## 文件查看
 
 ### cd
@@ -188,11 +190,15 @@ ls -lh | grep .md
 
 `ps aux` 可以列出所有进程的详细信息。
 
-配合 grep 命令用比较好，比如 `ps aux | grep python`
+配合 grep 命令用比较好，比如 `ps aux | grep ipython | grep -v grep`
+
+首先使用 `ps aux` 获取所有的进程信息，然后用 `grep ipython` 查找带有 python 的进程，最后使用 `grep -v grep` 过滤 grep 进程本身。
 
 ### kill
 
-杀掉执行中的进程，刚才 ps 命令可以得到进程号，你可以根据进程号删除该进程，如 `kill 1431`
+杀掉执行中的进程，刚才 ps 命令可以得到进程号，你可以根据进程号删除该进程，如 `kill 8339`
+
+[![asciicast](https://asciinema.org/a/LI1QUFDERv148oZZ4qkDOhlIN.svg)](https://asciinema.org/a/LI1QUFDERv148oZZ4qkDOhlIN)
 
 ### killall
 
