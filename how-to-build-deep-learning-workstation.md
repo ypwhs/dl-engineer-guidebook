@@ -45,7 +45,7 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 | GTX 1080Ti | Pascal | 5299 | 11 | 3584 | NA | 11.3 | NA | NA |
 | RTX 2080 | Turing | [5499](https://item.jd.com/8945581.html) | 8 | 2944 | 368 | 10 | 40.3 | 161.1 |
 | RTX 2080Ti | Turing | [8599](https://item.jd.com/100002166999.html) | 11 | 4532 | 544 | 13.4 | 53.8 | 215.2 |
-| TITAN RTX | Turing | [16499](https://item.jd.com/100001808707.html) | 24 | 4608 | 576 | 16.3 | 130 |  |
+| TITAN RTX | Turing | [16499](https://item.jd.com/100001808707.html) | 24 | 4608 | 576 | 16.3 | 130 | 260 |
 | Tesla V100 | Volta | [79600](https://detail.tmall.com/item.htm?id=561577884286&skuId=3749195716874) | 32 | 5120 | 640 | 15.7 | 125 | NA |
 
 考虑成本可以买 RTX 2080Ti，想要高性能并且高性价比可以买 TITAN RTX。
