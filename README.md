@@ -77,7 +77,7 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
   * 系统管理
   * 系统监测
   * 网络通信
-* [常用 CV 数据集](chang-yong-cv-shu-ju-ji.md)
+* [常用 CV 数据集](cv_dataset.md)
   * 数据集使用方法
   * MNIST
   * CIFAR
