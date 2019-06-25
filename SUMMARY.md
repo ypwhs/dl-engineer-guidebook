@@ -10,6 +10,7 @@
 * [如何安装 Ubuntu](how-to-install-ubuntu.md)
 * [常用 Linux 命令](linux-command.md)
 * [Ubuntu 环境](ubuntu-environment.md)
+* [CV 学习资源](ru-he-ru-men-cv.md)
 * [常用 CV 数据集](cv_dataset.md)
 * [在 ImageNet 上表现出色的经典模型](best-models-on-imagenet.md)
 

@@ -77,6 +77,17 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
   * 系统管理
   * 系统监测
   * 网络通信
+* [如何入门 CV](ru-he-ru-men-cv.md)
+  * 公开课
+    * Coursera
+    * cs231n
+  * 资源
+    * paperswithcode
+  * 书籍
+    * 机器学习
+    * 解析深度学习：卷积神经网络原理与视觉实践
+    * 动手学深度学习
+    * 深度学习技术图像处理入门
 * [常用 CV 数据集](cv_dataset.md)
   * 数据集使用方法
   * MNIST
