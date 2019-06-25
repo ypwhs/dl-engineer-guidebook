@@ -77,11 +77,12 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
   * 系统管理
   * 系统监测
   * 网络通信
-* [如何入门 CV](ru-he-ru-men-cv.md)
+* [CV 学习资源](cv-resources.md)
   * 公开课
     * Coursera
     * cs231n
-  * 资源
+    * @爱可可-爱生活
+  * 网站
     * paperswithcode
   * 书籍
     * 机器学习

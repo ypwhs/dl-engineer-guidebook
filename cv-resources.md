@@ -43,8 +43,6 @@ description: 这里记录了为我提供了非常多的帮助的学习资源。
 
 比如这个页面可以查看 ImageNet 上最好的模型排名：[https://paperswithcode.com/sota/image-classification-on-imagenet](https://paperswithcode.com/sota/image-classification-on-imagenet)
 
-
-
 ## 书籍
 
 ### 机器学习
