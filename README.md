@@ -89,7 +89,7 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
     * 解析深度学习：卷积神经网络原理与视觉实践
     * 动手学深度学习
     * 深度学习技术图像处理入门
-* [常用 CV 数据集](cv_dataset.md)
+* [常用 CV 数据集](cv-dataset.md)
   * 数据集使用方法
   * MNIST
   * CIFAR
