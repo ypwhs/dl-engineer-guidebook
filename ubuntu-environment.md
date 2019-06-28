@@ -51,6 +51,31 @@ TensorRT 是英伟达推出的推断库（Inference），通常用于模型部�
 
 建议按照官方文档中的 apt 方法安装 CUDA。
 
+### 历史版本依赖环境
+
+| **TensorFlow** | **CUDA** | **cuDNN** | **NVIDIA Driver** | **NCCL** | **TensorRT** |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1.14 | 10.0 | 7.4.1 | 410 | 2.2 | 5.0 |
+| [1.13](https://github.com/tensorflow/docs/blob/r1.13/site/en/install/gpu.md#software-requirements) | 10.0 | 7.4.1 | 410 | 2.2 | 5.0 |
+| [1.12](https://github.com/tensorflow/docs/blob/r1.12/site/en/install/gpu.md#software-requirements) | 9.0 | 7.2 | 384 | 2.2 | 4.0 |
+| [1.11](https://github.com/tensorflow/docs/blob/r1.11/site/en/install/gpu.md#software-requirements) | 9.0 | 7.2 | 384 | 2.2 | 4.0 |
+| [1.10](https://github.com/tensorflow/docs/blob/r1.10/site/en/install/install_linux.md#tensorflow-gpu-support) | 9.0 | 7.1 | 384 | 2.2 | 4.0 |
+| [1.9](https://github.com/tensorflow/docs/blob/r1.9/site/en/install/install_linux.md#tensorflow-gpu-support) | 9.0 | 7.0 |  |  | 3.0 |
+| [1.8](https://github.com/tensorflow/docs/blob/r1.8/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 9.0 | 7.0 |  |  | 3.0 |
+| [1.7](https://github.com/tensorflow/docs/blob/r1.7/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 9.0 | 7.0 |  |  | 3.0 |
+| [1.6](https://github.com/tensorflow/docs/blob/r1.6/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 9.0 | 7.0 |  |  |  |
+| [1.5](https://github.com/tensorflow/docs/blob/r1.5/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 9.0 | 7.0 |  |  |  |
+| [1.4](https://github.com/tensorflow/docs/blob/r1.4/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 8.0 | 6.0 |  |  |  |
+| [1.3](https://github.com/tensorflow/docs/blob/r1.3/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 8.0 | 6.0 |  |  |  |
+| [1.2](https://github.com/tensorflow/docs/blob/r1.2/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 8.0 | 5.1 |  |  |  |
+| [1.1](https://github.com/tensorflow/docs/blob/r1.1/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 8.0 | 5.1 |  |  |  |
+| [1.0](%20https://github.com/tensorflow/docs/blob/r1.0/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 8.0 | 5.1 |  |  |  |
+
+提示：
+
+* NVIDIA Driver 为空，官方文档说的是只要安装满足 CUDA 版本的驱动即可
+* NCCL 和 TensorRT 为空，表示不需要安装
+
 ## PyTorch
 
 PyTorch 自带 CUDA 和 cuDNN，只需要安装驱动即可运行。
