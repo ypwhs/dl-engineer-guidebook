@@ -10,9 +10,15 @@ description: >-
 
 由于最近 AMD 和 Intel 频繁更新 CPU，因此大家选择新款的 CPU 比较好。
 
-CPU 瓶颈没有那么大，一般以一个 GPU 对应四个 CPU 核比较好，比如单卡机器买四核 CPU，四卡机器买 16核 CPU。
+### CPU 与 GPU 的关系
 
-除了核数，你还需要注意 PCI-E 支持情况，一般显卡是 PCI-E 3.0 x16，比如 [i9-9820X](https://ark.intel.com/content/www/cn/zh/ark/products/189121/intel-core-i9-9820x-x-series-processor-16-5m-cache-up-to-4-20-ghz.html) 的 PCI-E 通道数是 44 ，配置四卡的话，只能支持 1x16+3x8+1x4，也就是单卡全速，三卡半速，一个 NVMe 固态硬盘。
+CPU 瓶颈没有那么大，一般以一个 GPU 对应 2~4 个 CPU 核比较好，比如单卡机器买四核 CPU，四卡机器买十核 CPU。
+
+当你在训练的时候，只要数据生成器（DataLoader）的产出速度比 GPU 的消耗速度快，那么 CPU 就不会成为瓶颈，也就不会拖慢训练速度。
+
+### PCI-E 支持情况
+
+除了核数，你还需要注意 PCI-E 支持情况，一般显卡是 PCI-E 3.0 x16，比如 [i9-9820X](https://ark.intel.com/content/www/cn/zh/ark/products/189121/intel-core-i9-9820x-x-series-processor-16-5m-cache-up-to-4-20-ghz.html) 的 PCI-E 通道数是 44 ，配置四卡的话，只能支持 1x16+3x8+1x4，也就是单卡全速，三卡半速，一个 NVMe 固态硬盘。这种情况下可以考虑选择带有 PLX 桥接芯片的主板。
 
 AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper-2990wx) 有 64条 PCI-E，但是只支持 x16/x8/x16/x8 的四卡配置。
 
@@ -21,8 +27,10 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 主板需要注意：
 
 * CPU 接口是否能对上，如 LGA2066 和 SocketTR4
-* PCI-E 插槽的高度是否够插显卡，比如 PCI-E 插口之间的距离至少要满足双槽宽显卡的高度
+* PCI-E 插槽的高度是否够插显卡，比如 PCI-E 插口之间的距离至少要满足**双槽宽显卡的高度**
 * PCI-E 同时可以支持几张卡以什么样的速度运行，如 1x16 + 3x8 是常见的配置
+
+### 主板必看参数
 
 [GIGABYTE X299 AORUS MASTER \(rev. 1.0\)](https://www.gigabyte.cn/Motherboard/X299-AORUS-MASTER-rev-10) 使用了 4 组 2 槽间距显卡插槽设计，支持 1x16、2x16、2x16 + 1x8、1x16 + 3x8 四种配置（需要十核以上的 CPU），这里请参阅说明书安装显卡，安装在不同位置的速度是不一样的：
 
@@ -30,15 +38,19 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 
 ![GIGABYTE X299 AORUS MASTER manual](.gitbook/assets/image%20%287%29.png)
 
+### 带有桥接芯片的主板
+
 有的主板如 [WS X299 SAGE](https://www.asus.com.cn/Motherboards/WS-X299-SAGE/overview/) 带有 PLX 桥接芯片，可以在 CPU 没有足够 PCI-E 的情况下达到四卡 x16 的速度：
 
-![WS X299 SAGE](.gitbook/assets/image%20%2821%29.png)
+![WS X299 SAGE](.gitbook/assets/image%20%2822%29.png)
 
-![WS X299 SAGE User Guide](.gitbook/assets/image%20%2840%29.png)
+![WS X299 SAGE User Guide](.gitbook/assets/image%20%2842%29.png)
+
+在多卡并行训练的时候，PCI-E 的传输速度决定了梯度同步的速度，如果你训练的的模型比较大，希望搭建多卡机器，建议选择支持四路 PCI-E x16 的主板。
 
 ## 显卡
 
-首先上显卡性能表：
+### 显卡性能表
 
 | 型号 | 架构 | 价格\(元\) | 显存\(GB\) | CUDA核 | Tensor核 | FP32\(TFLOPS\) | FP16 | INT8 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -58,7 +70,7 @@ RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，网上都
 * [Volta 架构白皮书](https://images.nvidia.com/content/volta-architecture/pdf/volta-architecture-whitepaper.pdf)
 * [RTX 2080 Ti Deep Learning Benchmarks with TensorFlow - 2019](https://lambdalabs.com/blog/2080-ti-deep-learning-benchmarks/)
 
-#### 涡轮与风扇
+### 涡轮与风扇
 
 采购显卡的时候，一定要注意买涡轮版的，不要买两个或者三个风扇的版本，除非你只打算买一张卡。
 
@@ -68,15 +80,41 @@ RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，网上都
 
 ![&#x6DA1;&#x8F6E;&#x6563;&#x70ED;](.gitbook/assets/image%20%2814%29.png)
 
-![&#x98CE;&#x6247;&#x6563;&#x70ED;](.gitbook/assets/image%20%2824%29.png)
+![&#x98CE;&#x6247;&#x6563;&#x70ED;](.gitbook/assets/image%20%2826%29.png)
+
+### 服务器推断卡
+
+除了用于训练，还有一类卡是用于推断的（只预测，不训练），如：
+
+| 型号 | 架构 | 价格\(元\) | 显存\(GB\) | CUDA核 | Tensor核 | FP32\(TFLOPS\) | FP16 | INT8 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Tesla P4 | Pascal | [14500](https://detail.tmall.com/item.htm?id=551740053195) | 8 | 2560 | NA | 5.5 | NA | 22 |
+| Tesla P40 | Pascal | [43999](https://item.jd.com/6426833.html) | 24 | 3584 | NA | 12 | NA | 47 |
+| Tesla P100 | Pascal | [48900](https://item.jd.com/6362210.html) | 16 | 3584 | NA | 10.6 | 21.2 | NA |
+| Tesla V100 | Volta | [79600](https://detail.tmall.com/item.htm?id=561577884286&skuId=3749195716874) | 32 | 5120 | 640 | 15.7 | 125 | NA |
+| Tesla T4 | Turing | [19500](https://item.jd.com/100001630485.html) | 16 | 2560 | 320 | 8.1 | 65 | 130 |
+
+这些卡全部都是不带风扇的，但它们也需要散热，需要借助服务器强大的风扇被动散热，所以只能在专门设计的服务器上运行，具体请参考[英伟达官网的说明](https://www.nvidia.cn/object/where-to-buy-tesla-catalog-cn.html)。
+
+性价比之选应该是 Tesla T4，但是发挥全部性能需要使用 TensorRT 深度优化，目前仍然存在许多坑，比如当你的网络使用了不支持的运算符时，需要自己实现。
+
+参考链接：
+
+* [https://developer.nvidia.com/deep-learning-performance-training-inference](https://developer.nvidia.com/deep-learning-performance-training-inference)
+* [https://www.nvidia.cn/object/where-to-buy-tesla-catalog-cn.html](https://www.nvidia.cn/object/where-to-buy-tesla-catalog-cn.html)
+* [https://www.supermicro.org.cn/support/resources/gpu/](https://www.supermicro.org.cn/support/resources/gpu/)
 
 ## 硬盘
+
+### 硬盘类型
 
 常用硬盘接口有三种：
 
 * SATA3.0，速度 600MB/s
 * SAS，速度 1200MB/s
 * PCIE 3.0 x4（NVMe\)，速度 3.94GB/s
+
+### 参数对比
 
 下面是根据代表产品查询的参数：
 
@@ -97,21 +135,23 @@ RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，网上都
 
 如果你的主板不够新，没有NVMe 插槽，你可以使用 M.2 转接卡将 M.2 接口转为 PCI-E 接口。
 
+![M.2 &#x8F6C;&#x63A5;&#x5361;](.gitbook/assets/image%20%2817%29.png)
+
 ## 内存
 
-内存容量的选择通常大于显存，比如单卡配 16GB 内存，四卡配 64GB 内存。
+内存容量的选择通常大于显存，比如单卡配 16GB 内存，四卡配 64GB 内存。由于有数据生成器（DataLoader），数据不必全部加载到内存里，通常不会成为瓶颈。
 
 ## 电源
 
 先计算功率总和，如单卡 CPU 100W，显卡 250W，加上其他的大概 400W，那么就买 650W 的电源。
 
-双卡最好买 1000W 以上的电源，四卡最好买 1600W 的电源，我这里实测过 1500W 的电源，跑起来所有的卡以后会因为电源不足而自动关机。
+双卡最好买 1000W 以上的电源，四卡最好买 1600W 的电源，我这里实测过四卡机用 1500W 的电源来带，跑起来所有的卡以后会因为电源不足而自动关机。
 
-一般墙上的插座只支持 220V 10A，也就是 2200W 的交流电，由于电源要把交流电转直流电，所以会有一些损耗，最高只有 1600W，因此如果想要支持八卡，最好不要在家尝试。八卡一般是双电源，并且需要使用专用的PDU插座，并且使用的是 16A 插口，如果在家使用，会插不上墙上的插座。
+一般墙上的插座只支持 220V 10A，也就是 2200W 的交流电，由于电源要把交流电转直流电，所以会有一些损耗，最高只有 1600W，因此如果想要支持八卡，最好不要在家尝试。八卡一般是双电源，并且需要使用专用的 PDU 插座，并且使用的是 16A 插口，如果在家使用，会插不上墙上的插座。
 
 ## 网卡
 
-一般主板自带千兆网卡。
+一般主板自带千兆网卡。如果需要组建多机多卡集群，请联系供应商咨询专业的解决方案。
 
 ## 机箱
 
@@ -119,11 +159,13 @@ RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，网上都
 
 如果配四卡机器，建议买一个 [Air 540](https://item.jd.com/1024817.html) 机箱，因为我正在用这一款。
 
+![Air 540](.gitbook/assets/image%20%2824%29.png)
+
 ## 显示器
 
-深度学习工作站装好系统以后就不需要显示器了，使用手边的显示器就行。
+深度学习工作站装好系统以后就不需要显示器了，装系统的时候使用手边的显示器就行。
 
 ## 键盘鼠标
 
-深度学习工作站装好系统以后就不需要键盘鼠标了，使用手边的键盘鼠标就行。
+深度学习工作站装好系统以后就不需要键盘鼠标了，装系统的时候使用手边的键盘鼠标就行。
 

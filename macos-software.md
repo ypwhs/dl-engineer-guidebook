@@ -10,7 +10,7 @@
 
 终端首选 iTerm，最大的好处是可以结合 tmux 分屏使用，比如：
 
-![iTerm2](.gitbook/assets/image%20%2833%29.png)
+![iTerm2](.gitbook/assets/image%20%2835%29.png)
 
 ### 快捷键配置
 
@@ -18,7 +18,7 @@
 
 首先打开 iTerm2 的偏好设置（Preferences），然后切换到 Profiles，在右边找到 Keys 快捷键配置：
 
-![iTerm2-&amp;gt;Prefences-&amp;gt;Profiles-&amp;gt;Keys](.gitbook/assets/image%20%2837%29.png)
+![iTerm2-&amp;gt;Prefences-&amp;gt;Profiles-&amp;gt;Keys](.gitbook/assets/image%20%2839%29.png)
 
 点击 Key Mappings 下面的加号（+），按下面的表格添加快捷键：
 
@@ -71,7 +71,7 @@ MacDown 是一个 markdown 编辑器，支持 Markdown 以及 LaTeX，写文章�
 
 ### Hex Fiend
 
-![Hex Fiend](.gitbook/assets/image%20%2836%29.png)
+![Hex Fiend](.gitbook/assets/image%20%2838%29.png)
 
 {% embed url="http://ridiculousfish.com/hexfiend/" %}
 
@@ -114,7 +114,7 @@ GitHub Desktop 是 GitHub 官方客户端，新手必备。
 
 目前 Chrome 应该是最受欢迎的浏览器：
 
-![&#x56FE;&#x7247;&#x6765;&#x81EA;&#x7EF4;&#x57FA;&#x767E;&#x79D1;](.gitbook/assets/image%20%2841%29.png)
+![&#x56FE;&#x7247;&#x6765;&#x81EA;&#x7EF4;&#x57FA;&#x767E;&#x79D1;](.gitbook/assets/image%20%2843%29.png)
 
 这里建议使用 Chrome 作为主力浏览器，原因如下：
 
@@ -181,7 +181,7 @@ Karabiner-Elements 是一个改键工具，机械键盘必备软件。
 
 > 适用于macOS的功能强大且稳定的键盘定制器。
 
-![Karabiner-Elements](.gitbook/assets/image%20%2828%29.png)
+![Karabiner-Elements](.gitbook/assets/image%20%2830%29.png)
 
 我把我的机械键盘的 Command 键和 Option 键替换了，这样就可以像使用原生键盘一样使用我的机械键盘。你还可以把键盘上的 Windows 键和 Alt 键交换位置。
 
@@ -213,7 +213,7 @@ Karabiner-Elements 是一个改键工具，机械键盘必备软件。
 
 这是一个非常好用的磁盘空间整理工具，你可以检查你的 Mac 上占用空间较大的文件都在哪里，收费。
 
-![DaisyDisk](.gitbook/assets/image%20%2832%29.png)
+![DaisyDisk](.gitbook/assets/image%20%2834%29.png)
 
 ### TimeMachineEditor
 
