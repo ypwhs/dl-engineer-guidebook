@@ -98,11 +98,16 @@ RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，网上都
 
 性价比之选应该是 Tesla T4，但是发挥全部性能需要使用 TensorRT 深度优化，目前仍然存在许多坑，比如当你的网络使用了不支持的运算符时，需要自己实现。
 
+英伟达只允许这类卡在服务器上运行，像 GTX 1080Ti、RTX 2080Ti 都是不能在数据中心使用的。
+
+> No Datacenter Deployment. The SOFTWARE is not licensed for datacenter deployment, except that blockchain processing in a datacenter is permitted.
+
 参考链接：
 
 * [https://developer.nvidia.com/deep-learning-performance-training-inference](https://developer.nvidia.com/deep-learning-performance-training-inference)
 * [https://www.nvidia.cn/object/where-to-buy-tesla-catalog-cn.html](https://www.nvidia.cn/object/where-to-buy-tesla-catalog-cn.html)
 * [https://www.supermicro.org.cn/support/resources/gpu/](https://www.supermicro.org.cn/support/resources/gpu/)
+* [https://www.geforce.com/drivers/license/geforce](https://www.geforce.com/drivers/license/geforce)
 
 ## 硬盘
 
