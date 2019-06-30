@@ -1,8 +1,10 @@
+---
+description: 本文会介绍如何使用 tensorboard 进行可视化。
+---
+
 # 如何使用 TensorBoard
 
 ![tensorboardX](https://raw.githubusercontent.com/lanpa/tensorboardX/master/screenshots/Demo.gif)
-
-本文会介绍如何使用 tensorboard 进行可视化。
 
 ## 安装
 
@@ -185,6 +187,10 @@ OCR 问题既需要图像，又需要文本，所以这里我们使用 matplotli
 ![badcase](.gitbook/assets/image%20%2824%29.png)
 
 可以看到大部分图像都是因为 0 和 O 识别不对，其实前面几个图我也看不出来到底是 0 还是 O。
+
+### 完整代码
+
+以上几个例子的完整代码在 [https://github.com/ypwhs/captcha\_break](https://github.com/ypwhs/captcha_break) 项目中，文件名是 [ctc\_pytorch\_tensorboard.ipynb](https://github.com/ypwhs/captcha_break/blob/master/ctc_pytorch_tensorboard.ipynb) ，该项目解决了验证码识别的问题，最终训练到了 0.9957 的准确率。
 
 ## 总结
 
