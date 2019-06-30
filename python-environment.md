@@ -71,6 +71,8 @@ python -m ipykernel install --user --name python2 --display-name "Python 2"
 * torchvision
 * tensorflow-gpu
 * keras
+* tensorboard
+* tensorboardx
 
 ### jupyter
 
@@ -201,6 +203,28 @@ PIL，另一个图像处理库，PyTorch 里的 torchvision 有很多写好的�
 > Keras是一个高级神经网络API，用Python编写，能够在TensorFlow，CNTK或Theano之上运行。它的开发重点是实现快速实验。能够以最小的延迟从理念到结果是进行良好研究的关键。
 
 绘制模型结构需要 graphviz 和 pydot。 
+
+### tensorboard
+
+{% embed url="https://www.tensorflow.org/tensorboard" %}
+
+TensorBoard 是一个可视化工具，你可以使用它可视化：
+
+* loss、acc 曲线
+* 模型结构
+* 权重分布
+* 生成的图像
+* 生成的文字
+
+### tensorboardx
+
+{% embed url="https://github.com/lanpa/tensorboardX" %}
+
+tensorboardx 是一个框架无关的 tensorboard writer，支持 numpy 矩阵、pytorch 的 tensor 等格式。
+
+目前 pytorch 1.1 也有[官方支持](https://pytorch.org/docs/stable/tensorboard.html)，但是功能有限，所以目前我仍然在使用 tensorboardx。
+
+
 
 
 
