@@ -13,4 +13,5 @@
 * [CV 学习资源](cv-resources.md)
 * [常用 CV 数据集](cv-dataset.md)
 * [在 ImageNet 上表现出色的经典模型](best-models-on-imagenet.md)
+* [如何使用 tensorboard](how-to-use-tensorboard.md)
 

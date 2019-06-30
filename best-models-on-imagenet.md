@@ -19,8 +19,11 @@ description: >-
 
 * [https://pytorch.org/docs/stable/torchvision/models.html](https://pytorch.org/docs/stable/torchvision/models.html)
 * [https://github.com/Cadene/pretrained-models.pytorch](https://github.com/Cadene/pretrained-models.pytorch)
+* [https://pytorch.org/hub](https://pytorch.org/hub)
 
 ## 模型论文
+
+参考链接：[https://paperswithcode.com/sota/image-classification-on-imagenet](https://paperswithcode.com/sota/image-classification-on-imagenet)
 
 ### VGG <a id="VGG"></a>
 
