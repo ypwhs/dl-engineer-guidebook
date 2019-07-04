@@ -111,4 +111,16 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
     * NASNet
     * AmoebaNet
     * EfficientNet
+* [如何使用 TensorBoard](how-to-use-tensorboard.md)
+  * 安装
+  * 使用
+    * 创建文件对象（writer）
+    * 打开 TensorBoard 服务
+    * 可视化模型结构
+    * 记录标量（scalar）
+    * 记录多个标量（scalars）
+    * 记录图像（images）
+    * 完整代码
+  * 总结
+* 如何使用 PyCharm 远程调试
 
