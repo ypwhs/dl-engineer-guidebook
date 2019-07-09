@@ -18,6 +18,12 @@ Homebrew 是 macOS 上的一个包管理器，使用 Homebrew 安装 Apple 没�
 brew install wget
 ```
 
+更新大礼包：
+
+```bash
+brew update && brew upgrade && brew cleanup
+```
+
 ## Oh My Zsh
 
 {% embed url="https://ohmyz.sh" caption="Oh My Zsh" %}
@@ -51,9 +57,51 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 chsh -s /bin/zsh
 ```
 
+## 必备软件
+
+使用 [homebrew-cask](https://github.com/Homebrew/homebrew-cask) 可以轻松安装各种 macOS 软件，下面的命令可以安装一些必备软件：
+
+### 终端
+
+```bash
+brew cask install iTerm2
+```
+
+### 编辑器
+
+```bash
+brew cask install Sublime-Text MacDown Typora Hex-Fiend 
+```
+
+### 浏览器
+
+```bash
+brew cask install Google-Chrome
+```
+
+### 开发软件
+
+```bash
+brew cask install PyCharm GitHub Postman
+```
+
+### 实用工具
+
+```bash
+brew cask install Netron Karabiner-Elements The-Unarchiver Caffeine
+```
+
+### 日常应用
+
+```bash
+brew cask install WeChat QQ IINA
+```
+
 ## 必备命令
 
-`brew install git htop nload wget`
+```bash
+brew install git htop nload wget
+```
 
 ### git
 

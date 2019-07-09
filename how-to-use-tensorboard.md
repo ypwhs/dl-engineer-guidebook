@@ -98,7 +98,7 @@ writer.add_graph(model, inputs)
 
 双击 Model 就可以展开它，下面是展开到合理程度的模型结构图：
 
-![CRNN](.gitbook/assets/image%20%2825%29.png)
+![CRNN](.gitbook/assets/image%20%2827%29.png)
 
 ### 记录标量（scalar）
 
@@ -123,11 +123,11 @@ def train(model, optimizer, epoch, dataloader, writer):
 
 训练完以后的曲线如图：
 
-![scalar](.gitbook/assets/image%20%2836%29.png)
+![scalar](.gitbook/assets/image%20%2840%29.png)
 
 这里有一个小技巧，如果你想可视化正确率这种接近 1 的指标，最好使用错误率（1减正确率），因为当正确率非常接近 1 的时候，很难看出来趋势。使用 TensorBoard 切换到对数尺度下，就能轻松看出错误率的趋势了：
 
-![log scale](.gitbook/assets/image%20%288%29.png)
+![log scale](.gitbook/assets/image%20%289%29.png)
 
 在 30k 的时候，我把学习率降低了 10倍，继续训练了 10代，如果看上面的图，只能看出来 loss 更平缓了，但是下面的对数尺度下就可以明显看出来 loss 从 8e-3 下降到了 2e-3，下降了 4 倍。
 
@@ -145,7 +145,7 @@ for epoch in range(1, epochs + 1):
     writer.add_scalars('epoch/error_rate', {'train': 1 - train_acc, 'valid': 1 - valid_acc}, epoch)
 ```
 
-![scalars](.gitbook/assets/image%20%285%29.png)
+![scalars](.gitbook/assets/image%20%286%29.png)
 
 可以看到在对数尺度下，loss 和错误率还有向下走的趋势，可以继续训练。
 
@@ -184,7 +184,7 @@ OCR 问题既需要图像，又需要文本，所以这里我们使用 matplotli
 
 下面是训练过程中的 badcase：
 
-![badcase](.gitbook/assets/image%20%2824%29.png)
+![badcase](.gitbook/assets/image%20%2826%29.png)
 
 可以看到大部分图像都是因为 0 和 O 识别不对，其实前面几个图我也看不出来到底是 0 还是 O。
 

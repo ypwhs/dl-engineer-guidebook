@@ -4,7 +4,7 @@ description: 持续更新中……
 
 # 深度学习工程师生存指南
 
-![Size](https://img.shields.io/github/repo-size/ypwhs/dl-engineer-guidebook.svg) ![Followers](https://img.shields.io/github/followers/ypwhs.svg) ![Stars](https://img.shields.io/github/stars/ypwhs/dl-engineer-guidebook.svg)
+![Size](https://img.shields.io/github/repo-size/ypwhs/dl-engineer-guidebook.svg)  ![Stars](https://img.shields.io/github/stars/ypwhs/dl-engineer-guidebook.svg)
 
 GitBook 在线阅读：[https://dl.ypw.io](https://dl.ypw.io/)  
 GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://github.com/ypwhs/dl-engineer-guidebook)  
@@ -30,24 +30,28 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
     * 触控板
     * 机械键盘
     * iPad Pro
-    * ASUS 路由器
+    * 路由器
     * NAS
     * 移动硬盘
     * U盘
 * [macOS 软件](macos-software.md)
   * 终端
-  * 浏览器
   * 编辑器
-  * 开发工具
+  * 浏览器
+  * 开发软件
   * 实用工具
   * 虚拟机
 * [macOS 环境](macos-environment.md)
   * Homebrew
   * oh my zsh
+  * 必备软件
+    * 终端
+    * 编辑器
+    * 浏览器
+    * 开发软件
+    * 实用工具
+    * 日常应用
   * 必备命令
-    * git
-    * htop
-    * nload
 * [Python 环境](python-environment.md)
   * Anaconda
   * Python 库
@@ -62,11 +66,6 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
   * TensorFlow
   * PyTorch
   * 必备命令
-    * curl
-    * tmux
-    * aria2
-    * aptitude
-    * tree
 * [常用 Linux 命令](linux-command.md)
   * 文件查看
   * 文件读写
@@ -79,16 +78,8 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
   * 网络通信
 * [CV 学习资源](cv-resources.md)
   * 公开课
-    * Coursera
-    * cs231n
-    * @爱可可-爱生活
   * 网站
-    * paperswithcode
   * 书籍
-    * 机器学习
-    * 解析深度学习：卷积神经网络原理与视觉实践
-    * 动手学深度学习
-    * 深度学习技术图像处理入门
 * [常用 CV 数据集](cv-dataset.md)
   * 数据集使用方法
   * MNIST
@@ -102,15 +93,6 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
     * TensorFlow
     * PyTorch
   * 模型论文
-    * VGG
-    * ResNet
-    * InceptionV3
-    * InceptionResNetV2
-    * DenseNet
-    * Xception
-    * NASNet
-    * AmoebaNet
-    * EfficientNet
 * [如何使用 TensorBoard](how-to-use-tensorboard.md)
   * 安装
   * 使用
