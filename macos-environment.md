@@ -12,10 +12,10 @@ Homebrew 是 macOS 上的一个包管理器，使用 Homebrew 安装 Apple 没�
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-使用 Homebrew 安装一个 curl 吧：
+使用 Homebrew 安装一个 wget 吧：
 
 ```bash
-brew install curl
+brew install wget
 ```
 
 ## Oh My Zsh
