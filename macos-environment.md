@@ -94,7 +94,7 @@ brew cask install Netron Karabiner-Elements The-Unarchiver Caffeine
 ### 日常应用
 
 ```bash
-brew cask install WeChat QQ IINA
+brew cask install WeChat QQ IINA BaiduNetdisk
 ```
 
 ## 必备命令
