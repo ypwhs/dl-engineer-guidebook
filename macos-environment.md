@@ -4,7 +4,7 @@
 
 {% embed url="https://brew.sh/index\_zh-cn" caption="Homebrew" %}
 
-Homebrew 是 macOS 上的一个包管理器，使用 Homebrew 安装 Apple 没有预装但 [你需要的东西](https://formulae.brew.sh/formula/)。
+Homebrew 是 macOS 上的一个包管理器，你可以使用 Homebrew 安装 Apple 没有预装但[你需要的东西](https://formulae.brew.sh/formula/)。
 
 安装 Homebrew 只需要一行命令：
 

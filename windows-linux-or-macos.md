@@ -8,11 +8,13 @@ description: >-
 
 ## Ubuntu
 
-不管是深度学习还是其它的 Linux 学习，Ubuntu 都应该是首选的操作系统，原因如下：
+对于深度学习工程师来说，Ubuntu 都应该是首选的操作系统，原因如下：
 
 * 易用性强
 * 使用人数多，教程多，生态好
 * 各个深度学习框架的官方支持，比如 [TensorFlow GPU](https://www.tensorflow.org/install/gpu) 只介绍了在 Ubuntu 下的安装方法
+
+从开发环境到部署环境，Linux 系统贯穿始终，选择一款易用的 Linux 操作系统将会缩短开发周期。
 
 ## macOS
 
