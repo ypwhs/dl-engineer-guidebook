@@ -18,10 +18,28 @@ Homebrew 是 macOS 上的一个包管理器，你可以使用 Homebrew 安装 Ap
 brew install wget
 ```
 
-更新大礼包：
+当你需要更新的时候，可以使用下面的命令完成：
 
 ```bash
 brew update && brew upgrade && brew cleanup
+```
+
+### 切换源
+
+如果你觉得使用brew安装和更新软件的时候非常慢，可以使用其他的镜像，如[清华大学](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)：
+
+使用下面的命令可以加速 `brew update` ：
+
+```bash
+git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+brew update
+```
+
+设置下面的环境变量可以加速 `brew install` ：
+
+```bash
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 ```
 
 ## Oh My Zsh
