@@ -22,6 +22,12 @@ CPU 瓶颈没有那么大，一般以一个 GPU 对应 2~4 个 CPU 核比较好�
 
 AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper-2990wx) 有 64条 PCI-E，但是只支持 x16/x8/x16/x8 的四卡配置。
 
+### 英特尔CPU
+
+![&#x82F1;&#x7279;&#x5C14;CPU](.gitbook/assets/image%20%282%29.png)
+
+双卡机器选 i9-9900K，四卡机器按照预算选X系列的CPU。
+
 ## 主板
 
 主板需要注意：
@@ -34,17 +40,17 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 
 [GIGABYTE X299 AORUS MASTER \(rev. 1.0\)](https://www.gigabyte.cn/Motherboard/X299-AORUS-MASTER-rev-10) 使用了 4 组 2 槽间距显卡插槽设计，支持 1x16、2x16、2x16 + 1x8、1x16 + 3x8 四种配置（需要十核以上的 CPU），这里请参阅说明书安装显卡，安装在不同位置的速度是不一样的：
 
-![GIGABYTE X299 AORUS MASTER \(rev. 1.0\)](.gitbook/assets/image%20%288%29.png)
+![GIGABYTE X299 AORUS MASTER \(rev. 1.0\)](.gitbook/assets/image%20%289%29.png)
 
-![GIGABYTE X299 AORUS MASTER manual](.gitbook/assets/image%20%2811%29.png)
+![GIGABYTE X299 AORUS MASTER manual](.gitbook/assets/image%20%2812%29.png)
 
 ### 带有桥接芯片的主板
 
 有的主板如 [WS X299 SAGE](https://www.asus.com.cn/Motherboards/WS-X299-SAGE/overview/) 带有 PLX 桥接芯片，可以在 CPU 没有足够 PCI-E 的情况下达到四卡 x16 的速度：
 
-![WS X299 SAGE](.gitbook/assets/image%20%2833%29.png)
+![WS X299 SAGE](.gitbook/assets/image%20%2834%29.png)
 
-![WS X299 SAGE User Guide](.gitbook/assets/image%20%2856%29.png)
+![WS X299 SAGE User Guide](.gitbook/assets/image%20%2857%29.png)
 
 在多卡并行训练的时候，PCI-E 的传输速度决定了梯度同步的速度，如果你训练的的模型比较大，希望搭建多卡机器，建议选择支持四路 PCI-E x16 的主板。
 
@@ -60,7 +66,9 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 | TITAN RTX | Turing | [16499](https://item.jd.com/100001808707.html) | 24 | 4608 | 576 | 16.3 | 130 | 260 |
 | Tesla V100 | Volta | [79600](https://detail.tmall.com/item.htm?id=561577884286&skuId=3749195716874) | 32 | 5120 | 640 | 15.7 | 125 | NA |
 
-考虑成本可以买 RTX 2080Ti，想要高性能并且高性价比可以买 TITAN RTX。
+训练需要 FP32 和 FP16 的性能，推断需要 INT8 的性能。训练大模型需要注意显存大小。
+
+考虑成本可以买 RTX 2080Ti，想要高性能并且高性价比可以买 TITAN RTX，土豪可以选 Tesla V100。
 
 RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，网上都是二手卡，不推荐。
 
@@ -78,9 +86,9 @@ RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，网上都
 
 风扇显卡很有可能是超过双槽宽的，第二张卡可能插不上第二个 PCI-E 插槽，这个也需要注意。
 
-![&#x6DA1;&#x8F6E;&#x6563;&#x70ED;](.gitbook/assets/image%20%2819%29.png)
+![&#x6DA1;&#x8F6E;&#x6563;&#x70ED;](.gitbook/assets/image%20%2820%29.png)
 
-![&#x98CE;&#x6247;&#x6563;&#x70ED;](.gitbook/assets/image%20%2837%29.png)
+![&#x98CE;&#x6247;&#x6563;&#x70ED;](.gitbook/assets/image%20%2838%29.png)
 
 ### 服务器推断卡
 
@@ -140,7 +148,7 @@ RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，网上都
 
 如果你的主板不够新，没有NVMe 插槽，你可以使用 M.2 转接卡将 M.2 接口转为 PCI-E 接口。
 
-![M.2 &#x8F6C;&#x63A5;&#x5361;](.gitbook/assets/image%20%2822%29.png)
+![M.2 &#x8F6C;&#x63A5;&#x5361;](.gitbook/assets/image%20%2823%29.png)
 
 ## 内存
 
@@ -164,7 +172,7 @@ RTX 2080 显存较小，不推荐。GTX 1080Ti 已经出了太久了，网上都
 
 如果配四卡机器，建议买一个 [Air 540](https://item.jd.com/1024817.html) 机箱，因为我正在用这一款。
 
-![Air 540](.gitbook/assets/image%20%2835%29.png)
+![Air 540](.gitbook/assets/image%20%2836%29.png)
 
 ## 显示器
 

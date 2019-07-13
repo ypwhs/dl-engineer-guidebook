@@ -31,7 +31,7 @@ MNIST 是一个手写数字数据集，训练集60000张，测试集 10000张，
 
 
 
-![CIFAR-10 samples](.gitbook/assets/image%20%2814%29.png)
+![CIFAR-10 samples](.gitbook/assets/image%20%2815%29.png)
 
 CIFAR-10 是一个彩色图像数据集，训练集 60000张，测试集 10000张，共有 10 个类别，图像是尺寸为 \(32, 32\) 的彩图。
 
@@ -53,7 +53,7 @@ VGG、ResNet 和 DenseNet 的默认图像尺寸为 224，Inception 是 299 ，NA
 
 {% embed url="http://host.robots.ox.ac.uk/pascal/VOC/" caption="VOC" %}
 
-![VOC samples](.gitbook/assets/image%20%2844%29.png)
+![VOC samples](.gitbook/assets/image%20%2845%29.png)
 
 VOC 的全称是 The PASCAL Visual Object Classes Challenge，该数据集的标注很丰富，可以用于检测和分割等任务。该数据集共有 20个类别。在 YOLOv3 的训练中，使用了 VOC 2007 到 VOC 2012 的所有数据。
 
