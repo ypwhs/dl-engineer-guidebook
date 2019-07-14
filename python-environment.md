@@ -80,17 +80,23 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 * `jupyter_contrib_nbextensions`
 * numpy
 * pandas
-* sklearn
+* scikit-learn
 * matplotlib
 * opencv-python
 * pillow
 * tqdm
 * torch
 * torchvision
-* tensorflow-gpu
+* tensorflow
 * keras
 * tensorboard
 * tensorboardx
+
+安装大礼包：
+
+```bash
+pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow keras tensorboardx
+```
 
 ### jupyter
 
@@ -137,7 +143,7 @@ Jupyter Notebook 插件。
 
 > _pandas_是一个开源的，BSD许可的库，为Python编程语言提供高性能，易于使用的数据结构和数据分析工具。
 
-### sklearn
+### scikit-learn
 
 {% embed url="https://scikit-learn.org/" %}
 
