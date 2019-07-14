@@ -12,24 +12,37 @@ description: >-
 
 Anaconda 是一个 Pyhton 的包管理器，它可以简化 Python 环境的安装。由于 Ubuntu 系统、macOS 系统的局限性，我们尽量不要在系统自带的环境里安装深度学习库，不然可能会出现一些不可预料的问题。
 
+Anaconda 中的 numpy、scikit-learn 等库使用了 Intel MKL 进行加速，理论上会比 pip 直接安装的版本速度快。
+
 Anaconda 不需要 root 权限，所以可以很方便地安装在用户目录下，只要配置好环境变量即可使用，当你不需要它的时候，只需要直接删除它的目录，然后将对应的环境变量一起删除即可。
 
-还有一个好处就是，你可以直接 scp 整个环境文件夹到其他相同硬件的机器上，它们的环境可以保持绝对的统一，可以极大简化运维的工作。
+你可以直接 [rsync](linux-command.md#rsync) 整个 anaconda 文件夹到其他相同硬件和系统环境的机器上，它们的 Python 环境可以保持绝对的统一，在做分布式并行训练的时候非常有用。
 
 ### 安装 Anaconda
 
 Anaconda 官方下载页面：[https://www.anaconda.com/downloads](https://www.anaconda.com/downloads)
 
-你只需要下载对应系统的安装包，然后直接运行安装包即可。比如在 macOS 上安装 Anaconda：
+你只需要下载对应系统的安装包，然后直接运行安装包即可。
+
+#### 命令行安装
+
+在 macOS 上安装 Anaconda 可以使用下面的命令：
 
 ```bash
 wget https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh
 bash Anaconda3-2019.03-MacOSX-x86_64.sh
 ```
 
-**提示：**需要使用 brew 安装 wget 命令。
+* 需要使用 brew 安装 [wget](macos-environment.md#bi-bei-ming-ling) 命令
+* 如果遇到网络问题，可以使用[清华大学的镜像](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)，如 [https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2019.03-MacOSX-x86\_64.sh](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2019.03-MacOSX-x86_64.sh)
 
-当然，macOS 上还可以[使用 brew cask 安装](macos-environment.md#kai-fa-ruan-jian)。
+#### brew cask 安装
+
+macOS 上还可以[使用 brew cask 安装](macos-environment.md#kai-fa-ruan-jian)：
+
+```bash
+brew cask install Anaconda
+```
 
 ### 配置环境变量
 
@@ -64,9 +77,19 @@ python -m ipykernel install --user --name python2 --display-name "Python 2"
 
 参考链接：[https://ipython.readthedocs.io/en/stable/install/kernel\_install.html](https://ipython.readthedocs.io/en/stable/install/kernel_install.html)
 
+### 切换 anaconda 源
+
+如果遇到网络问题，可以使用[清华大学的镜像](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/)：
+
+```bash
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+```
+
 ### 切换 pip 源
 
-如果你使用 pip 安装的时候网速较慢，可以使用[清华大学的镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)：
+如果遇到网络问题，可以使用[清华大学的镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)：
 
 ```bash
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
