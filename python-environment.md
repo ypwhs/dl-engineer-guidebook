@@ -29,6 +29,8 @@ bash Anaconda3-2019.03-MacOSX-x86_64.sh
 
 **提示：**需要使用 brew 安装 wget 命令。
 
+当然，macOS 上还可以[使用 brew cask 安装](macos-environment.md#kai-fa-ruan-jian)。
+
 ### 使用 Anaconda 创建其他 Python 环境
 
 如果我们需要其他 Python 环境，可以使用 conda 创建：

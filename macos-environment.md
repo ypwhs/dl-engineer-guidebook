@@ -100,7 +100,7 @@ brew cask install Google-Chrome
 ### 开发软件
 
 ```bash
-brew cask install PyCharm GitHub Postman
+brew cask install PyCharm Anaconda GitHub Postman
 ```
 
 ### 实用工具
