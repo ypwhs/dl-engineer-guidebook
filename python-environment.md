@@ -31,6 +31,14 @@ bash Anaconda3-2019.03-MacOSX-x86_64.sh
 
 当然，macOS 上还可以[使用 brew cask 安装](macos-environment.md#kai-fa-ruan-jian)。
 
+### 配置环境变量
+
+安装好以后，有可能需要手动[配置环境变量](linux-command.md#export)，比如我安装在 `/usr/local/anaconda3` 目录下，所以我在 `~/.zshrc` 里添加里下面这句：
+
+```bash
+export PATH="/usr/local/anaconda3/bin:$PATH"
+```
+
 ### 使用 Anaconda 创建其他 Python 环境
 
 如果我们需要其他 Python 环境，可以使用 conda 创建：
@@ -55,6 +63,14 @@ python -m ipykernel install --user --name python2 --display-name "Python 2"
 其中的 python2 是你的虚拟环境的名字，display-name 可以取一个好听的名字，它会在 jupyter notebook 切换 kernel 的地方显示。
 
 参考链接：[https://ipython.readthedocs.io/en/stable/install/kernel\_install.html](https://ipython.readthedocs.io/en/stable/install/kernel_install.html)
+
+### 切换 pip 源
+
+如果你使用 pip 安装的时候网速较慢，可以使用[清华大学的镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)：
+
+```bash
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 ## Python 库
 
