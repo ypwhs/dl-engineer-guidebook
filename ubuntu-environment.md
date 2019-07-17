@@ -1,5 +1,22 @@
 # Ubuntu 环境
 
+## openssh-server
+
+刚装好 Ubuntu 以后，为了能够方便地在笔记本上远程连接安装各种软件，我一般会先装openssh-server。
+
+```bash
+sudo apt update
+sudo apt install openssh-server
+```
+
+装好了以后，就可以在终端里通过下面的命令连接服务器。
+
+```bash
+ssh 192.168.8.65
+```
+
+使用到的命令：[apt](linux-command.md#apt)、[ssh](linux-command.md#ssh)
+
 ## Oh My Zsh
 
 {% embed url="https://ohmyz.sh" caption="Oh My Zsh" %}
