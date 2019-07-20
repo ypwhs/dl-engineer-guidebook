@@ -1,19 +1,10 @@
 # Ubuntu 环境
 
-## Oh My Zsh
-
-{% embed url="https://ohmyz.sh" caption="Oh My Zsh" %}
-
-在 Ubuntu 下安装 oh my zsh 直接执行下面的命令即可：
-
-```bash
-sudo apt install -y git zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-
 ## CUDA
 
-{% embed url="https://developer.nvidia.com/cuda-downloads" caption="CUDA 10.1" %}
+* [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
+* [https://developer.nvidia.com/cuda-10.0-download-archive](https://developer.nvidia.com/cuda-10.0-download-archive)
+* [https://developer.nvidia.com/cuda-90-download-archive](https://developer.nvidia.com/cuda-90-download-archive)
 
 CUDA 是英伟达显卡进行各种高性能运算必备的库，不同软件包依赖的 CUDA 版本可能不同，请仔细阅读官方文档。
 
@@ -25,19 +16,16 @@ CUDA 是英伟达显卡进行各种高性能运算必备的库，不同软件包
 
 ## **cuDNN**
 
-{% embed url="https://developer.nvidia.com/cudnn" caption="cuDNN" %}
-
 最新版 cuDNN 下载需要注册，旧版 cuDNN 无需注册，地址如下：
 
-{% embed url="https://developer.nvidia.com/rdp/cudnn-archive" caption="cuDNN Archive" %}
+* [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn)
+* [https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
 
 cuDNN 是英伟达推出的专门用于深度学习加速计算的库，一般来说比使用纯 CUDA 速度要快不少。比如Keras 里有普通的 [LSTM](https://keras.io/layers/recurrent/#lstm) 以及 [CuDNNLSTM](https://keras.io/layers/recurrent/#cudnnlstm)，速度相差最高有十倍。
 
 如果没有设计特殊的结构，cuDNN 应该是你的首选。
 
-## TensorRT
-
-{% embed url="https://developer.nvidia.com/tensorrt" %}
+## [TensorRT](https://developer.nvidia.com/tensorrt)
 
 TensorRT 是英伟达推出的推断库（Inference），通常用于模型部署。
 
@@ -45,7 +33,8 @@ TensorRT 是英伟达推出的推断库（Inference），通常用于模型部�
 
 ## TensorFlow
 
-{% embed url="https://www.tensorflow.org/install/gpu" %}
+* [https://www.tensorflow.org](https://www.tensorflow.org)
+* [https://www.tensorflow.org/install/gpu](https://www.tensorflow.org/install/gpu)
 
 最新版的 TensorFlow 使用的是 CUDA 10.0 和 cuDNN 7.4.1，NVIDIA 驱动需要 410.x 或更高版本。
 
@@ -76,24 +65,32 @@ TensorRT 是英伟达推出的推断库（Inference），通常用于模型部�
 * NVIDIA Driver 为空，官方文档说的是只要安装满足 CUDA 版本的驱动即可
 * NCCL 和 TensorRT 为空，表示不需要安装
 
-## PyTorch
+## [PyTorch](https://pytorch.org/)
 
-PyTorch 自带 CUDA 和 cuDNN，只需要安装驱动即可运行。
+PyTorch 自带 CUDA 和 cuDNN，只需要安装 NVIDIA 驱动即可运行。
 
-目前 [PyPI](https://pypi.org/) 安装的 PyTorch 使用的是 CUDA9.0，如果你需要其他版本，请使用官网上的选择器找到你需要的版本，比如 Python 3.6 安装 CUDA10 的 PyTorch 需要使用下面的命令：
+目前 [PyPI](https://pypi.org/) 安装的 PyTorch 使用的是 CUDA9.0，如果你需要其他版本，请使用官网上的选择器找到你需要的版本，比如 Python 3.7 安装 CUDA10 的 PyTorch 需要使用下面的命令：
 
 ```bash
-pip3 install https://download.pytorch.org/whl/cu100/torch-1.1.0-cp36-cp36m-linux_x86_64.whl
-pip3 install https://download.pytorch.org/whl/cu100/torchvision-0.3.0-cp36-cp36m-linux_x86_64.whl
+pip3 install https://download.pytorch.org/whl/cu100/torch-1.1.0-cp37-cp37m-linux_x86_64.whl
+pip3 install https://download.pytorch.org/whl/cu100/torchvision-0.3.0-cp37-cp37m-linux_x86_64.whl
 ```
 
 ## 必备命令
 
 ```bash
-sudo apt install git htop nload curl tmux screen aria2 graphviz aptitude tree
+sudo apt install git curl htop nload tmux screen aria2 graphviz aptitude tree
 ```
 
-常见的 git、htop、nload 等命令在 [macOS 环境](macos-environment.md#bi-bei-ming-ling) 里已经介绍过了。
+常见的 git、htop、nload 等命令在 [macOS 环境](macos-environment.md#bi-bei-ming-ling) 里已经介绍过了。其实大部分命令在没有安装的时候，如果你使用它们，会自动提示需要安装，所以不用担心没有安装全：
+
+```bash
+ypw@ypw-ubuntu:~$ screen
+
+Command 'screen' not found, but can be installed with:
+
+sudo apt install screen
+```
 
 ### curl
 

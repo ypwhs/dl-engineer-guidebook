@@ -2,6 +2,12 @@
 
 * 安装 Ubuntu
 * 配置 ssh
+  * 安装 openssh-server
+  * 使用 ssh-keygen 生成一个 ssh key
+  * 在 Ubuntu 服务器上添加刚才生成的 ssh key
+  * 禁止密码登录
+* 配置 sudo 免密码
+* 安装 oh my zsh 以及常用命令（可省略）
 
 ## 如何安装 Ubuntu
 
@@ -11,7 +17,7 @@
 
 ## 配置 ssh
 
-### openssh-server
+### 安装 openssh-server
 
 刚装好 Ubuntu 以后，为了能够方便地在笔记本上远程连接安装各种软件，我一般会先装openssh-server。
 
@@ -28,7 +34,7 @@ ssh 192.168.8.65
 
 使用到的命令：[apt](linux-command.md#apt)、[ssh](linux-command.md#ssh)
 
-### 使用 ssh-keygen 生成一个 SSH key
+### 使用 ssh-keygen 生成一个 ssh key
 
 目前使用密码上不如使用 key 安全的，因为 key 的长度通常是 2048 或 4096 位，远超普通的密码。这里建议按照 GitHub 官方网站上的教程[生成新 SSH 密钥并添加到 ssh-agent](https://help.github.com/cn/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)，这样不仅可以用于登录 Linux 机器，也可以用于 git。
 
@@ -43,7 +49,7 @@ ssh 192.168.8.65
 
 > ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcfQD4nnaQrgC003C0ReAYqrm6XKEchuM6DwkNtHzRs2YhLolH6fEohWAp0mlW9yzQl258lA+FdoH51ONmvGUx/2Y953A6ujHrt7dOIpOkYW5HT6Rmvlwk+3uRmVNQqZTJeRWdblcSHmYY1fi1miawONZiVoLW14xhyH5bOwgwY/GB2yTaffDby451RLT5kQ7LHqiDJtWiRQekR5tKDKZ7mBhKZIKYLOoqAayCHw2scJYsgtw2tPt0/y7BlxO+RuDwuD2WOnthe1ewbwAbbTN17HiLvBd/MIWtVDoGGq6jdNDjNDNbTs8H2VohTc2mNtOOlycN6yzf3ZKZTN6/hNtl ypw@yangpeiendeiMac
 
-### 在 Ubuntu 服务器上配置刚才生成的 SSH key
+### 在 Ubuntu 服务器上添加刚才生成的 ssh key
 
 首先使用密码登录刚才的机器：
 
@@ -84,5 +90,24 @@ sudo nano /etc/sudoers
 ypw ALL=(ALL) NOPASSWD:ALL # 添加在最后一行
 ```
 
+## 安装 oh my zsh 以及常用命令
 
+### 安装 oh my zsh
+
+相比默认的 bash，zsh 有以下几个优点：
+
+* 当你使用 tab 提示的时候，如果有多个匹配项，你可以用 tab 进行切换
+* 当你想使用一个之前输入过的命令的时候，只需要输入首字母，然后按上方向键切换
+
+安装 oh my zsh 的步骤如下：
+
+* 安装 [zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
+* 安装 [oh my zsh](https://ohmyz.sh/)
+
+完整命令如下：
+
+```bash
+sudo apt install -y git curl zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
