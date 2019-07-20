@@ -7,6 +7,7 @@
   * 在 Ubuntu 服务器上添加刚才生成的 ssh key
   * 禁止密码登录
 * 配置 sudo 免密码
+* 配置 apt 源（推荐）
 * 安装 oh my zsh 以及常用命令（可省略）
 * 安装 NVIDIA 驱动
 * 安装 CUDA、cuDNN（PyTorch 用户可以忽略）
@@ -70,6 +71,12 @@ chmod 600 ~/.ssh/authorized_keys
 
 把刚才生成的公钥 `id_rsa.pub` 添加到 `~/.ssh/authorized_keys` 里，如果文件已经有内容，就添加在最后一行。这样以后**每次使用 ssh 登录机器都不需要再输入密码了**。
 
+```bash
+nano ~/.ssh/authorized_keys
+
+# 添加你的公钥，如 ssh-rsa AAAA...
+```
+
 使用到的命令：[mkdir](linux-command.md#mkdir)、[touch](linux-command.md#touch)、[chmod](linux-command.md#chmod)、[nano](linux-command.md#nano)
 
 ### 禁止密码登录
@@ -90,6 +97,42 @@ PasswordAuthentication no # 添加在最后一行
 sudo nano /etc/sudoers
 
 ypw ALL=(ALL) NOPASSWD:ALL # 添加在最后一行
+```
+
+## 配置 apt 源
+
+在使用 apt 的时候有可能因为网络原因导致安装过慢或失败，这时候可以配置一些 apt 源：
+
+* [https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/](https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/)
+* [https://opsx.alibaba.com/mirror](https://opsx.alibaba.com/mirror)
+
+下面以清华大学开源软件镜像站为例：
+
+```bash
+sudo mv /etc/apt/sources.list /etc/apt/sources_backup.list
+sudo nano /etc/apt/sources.list
+
+# 添加下面的内容，保存
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+```
+
+添加好以后，使用下面的命令更新 apt 以后，安装其他软件包的速度就会变快：
+
+```bash
+sudo apt update
+```
+
+恢复默认源：
+
+```bash
+sudo mv /etc/apt/sources_backup.list /etc/apt/sources.list
 ```
 
 ## 安装 oh my zsh 以及常用命令
