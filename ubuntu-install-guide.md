@@ -60,7 +60,29 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 ```
 
-把刚才生成的公钥 `id_rsa.pub` 添加到 `~/.ssh/authorized_keys` 里，如果文件已经有内容，就添加在最后一行。
+把刚才生成的公钥 `id_rsa.pub` 添加到 `~/.ssh/authorized_keys` 里，如果文件已经有内容，就添加在最后一行。这样以后**每次使用 ssh 登录机器都不需要再输入密码了**。
 
 使用到的命令：[mkdir](linux-command.md#mkdir)、[touch](linux-command.md#touch)、[chmod](linux-command.md#chmod)、[nano](linux-command.md#nano)
+
+### 禁止密码登录
+
+由于密码登录存在不安全因素，比如暴露在公网的 IP 会被扫描，而 key 是绝对安全的，所以我们可以禁止密码登录：
+
+```bash
+sudo nano /etc/ssh/sshd_config
+
+PasswordAuthentication no # 添加在最后一行
+```
+
+## 配置 sudo 免密码
+
+由于安装驱动等操作需要 sudo 权限，为了避免频繁输入密码，可以配置 sudo 免密码：
+
+```bash
+sudo nano /etc/sudoers
+
+ypw ALL=(ALL) NOPASSWD:ALL # 添加在最后一行
+```
+
+
 
