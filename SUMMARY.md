@@ -8,6 +8,7 @@
 * [macOS 环境](macos-environment.md)
 * [Python 环境](python-environment.md)
 * [如何安装 Ubuntu](how-to-install-ubuntu.md)
+* [Ubuntu 装机步骤](ubuntu-zhuang-ji-bu-zhou.md)
 * [常用 Linux 命令](linux-command.md)
 * [Ubuntu 环境](ubuntu-environment.md)
 * [CV 学习资源](cv-resources.md)

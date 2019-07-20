@@ -15,9 +15,7 @@ description: 计算机视觉方面常用的数据集。
 
 * [https://pytorch.org/docs/stable/torchvision/datasets.html](https://pytorch.org/docs/stable/torchvision/datasets.html)
 
-## MNIST
-
-{% embed url="http://yann.lecun.com/exdb/mnist/" caption="MNIST" %}
+## [MNIST](http://yann.lecun.com/exdb/mnist/)
 
 
 
@@ -25,9 +23,7 @@ description: 计算机视觉方面常用的数据集。
 
 MNIST 是一个手写数字数据集，训练集60000张，测试集 10000张，共有 10 个类别，图像是尺寸为 \(28, 28\) 的黑白图。
 
-## CIFAR
-
-{% embed url="https://www.cs.toronto.edu/~kriz/cifar.html" caption="CIFAR" %}
+## [CIFAR](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 
 
@@ -37,9 +33,7 @@ CIFAR-10 是一个彩色图像数据集，训练集 60000张，测试集 10000�
 
 此外还有 CIFAR-100 数据集，训练集有 60000张，测试集 10000张，共有 100个类别，图像也是 \(32, 32\) 的彩图。
 
-## ImageNet
-
-{% embed url="http://www.image-net.org/challenges/LSVRC/2012/nonpub-downloads" caption="ImageNet 2012" %}
+## [ImageNet](http://www.image-net.org/challenges/LSVRC/2012/nonpub-downloads)
 
 ![](http://cs231n.github.io/assets/cnnvis/tsne.jpeg)
 
@@ -49,9 +43,7 @@ ImageNet 2012 训练集共有约 120万张图像，验证集有 50000张，图�
 
 VGG、ResNet 和 DenseNet 的默认图像尺寸为 224，Inception 是 299 ，NASNet 是 331，最新的 EfficientNet 使用了从 224 到 600 的不同尺寸。尺寸越大的同时也会使精度越高。
 
-## VOC
-
-{% embed url="http://host.robots.ox.ac.uk/pascal/VOC/" caption="VOC" %}
+## [VOC](http://host.robots.ox.ac.uk/pascal/VOC/)
 
 ![VOC samples](.gitbook/assets/image%20%2845%29.png)
 
@@ -59,9 +51,7 @@ VOC 的全称是 The PASCAL Visual Object Classes Challenge，该数据集的标
 
 VOC 2007 有 9963 张图像，其中训练集 2501 张，验证集2510 张，测试集 4952 张。
 
-## COCO
-
-{% embed url="http://cocodataset.org" caption="COCO" %}
+## [COCO](http://cocodataset.org)
 
 ![](http://cocodataset.org/images/coco-examples.jpg)
 
@@ -71,9 +61,7 @@ COCO 2014 训练集有 83k 张图，验证集有 41k，测试集有 41k。
 COCO 2015 测试集有 81k。  
 COCO 2017 训练集有 118k ，验证集有 5k，测试集有 41k。
 
-## CelebA
-
-{% embed url="http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html" caption="CelebA" %}
+## [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
 
 ![](http://mmlab.ie.cuhk.edu.hk/projects/celeba/overview.png)
 

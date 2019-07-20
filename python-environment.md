@@ -6,9 +6,7 @@ description: >-
 
 # Python 环境
 
-## Anaconda
-
-{% embed url="https://www.anaconda.com/" %}
+## [Anaconda](https://www.anaconda.com/)
 
 Anaconda 是一个 Pyhton 的包管理器，它可以简化 Python 环境的安装。由于 Ubuntu 系统、macOS 系统的局限性，我们尽量不要在系统自带的环境里安装深度学习库，不然可能会出现一些不可预料的问题。
 
@@ -20,7 +18,7 @@ Anaconda 不需要 root 权限，所以可以很方便地安装在用户目录�
 
 ### 安装 Anaconda
 
-Anaconda 官方下载页面：[https://www.anaconda.com/downloads](https://www.anaconda.com/downloads)
+Anaconda 官方下载页面：[https://www.anaconda.com/downloads](https://www.anaconda.com/distribution/)
 
 你只需要下载对应系统的安装包，然后直接运行安装包即可。
 
@@ -121,9 +119,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow keras tensorboardx
 ```
 
-### jupyter
-
-{% embed url="https://jupyter.org/" %}
+### [jupyter](https://jupyter.org/)
 
 在实验阶段，强烈建议你使用 jupyter notebook 编写实验代码，因为它与写 Python 脚本的逻辑完全不同。
 
@@ -138,9 +134,7 @@ pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matpl
 * 不仅支持写代码，显示函数输出的文字，还支持显示图片，甚至实现简单的交互功能
 * 支持 Markdown 编写注释，还支持 latex 公式
 
-### jupyter\_contrib\_nbextensions
-
-{% embed url="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html" %}
+### [jupyter\_contrib\_nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
 
 Jupyter Notebook 插件。
 
@@ -148,27 +142,19 @@ Jupyter Notebook 插件。
 
 我使用了[代码执行时间插件](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execute_time/readme.html)和[函数折叠插件](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html)。
 
-### numpy
-
-{% embed url="https://www.numpy.org/" %}
-
-
+### [numpy](https://numpy.org/)
 
 科学计算必备库。
 
 > NumPy是Python语言的一个扩展程序库。支持高端大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。
 
-### pandas
-
-{% embed url="https://pandas.pydata.org/" %}
+### [pandas](https://pandas.pydata.org/)
 
 操作 csv 非常方便，python 里的 excel。
 
 > _pandas_是一个开源的，BSD许可的库，为Python编程语言提供高性能，易于使用的数据结构和数据分析工具。
 
-### scikit-learn
-
-{% embed url="https://scikit-learn.org/" %}
+### [scikit-learn](https://scikit-learn.org/)
 
 机器学习模型大全。
 
@@ -179,25 +165,29 @@ Jupyter Notebook 插件。
 > * 基于NumPy，SciPy和matplotlib构建
 > * 开源，商业上可用 - BSD许可证
 
-### matplotlib
+注意安装的时候不是 sklearn，而是 scikit-learn：
 
-{% embed url="https://matplotlib.org/" %}
+```python
+pip install scikit-learn
+```
+
+### [matplotlib](https://matplotlib.org/)
 
 画图工具。
 
 > Matplotlib是一个Python 2D绘图库，可以生成各种硬拷贝格式和跨平台的交互式环境的出版物质量数据。Matplotlib可用于Python脚本、IPython shell、Jupyter Notebook 和 Web应用程序服务器和四个图形用户界面工具包。
 
-### opencv-python
+### [opencv-python](https://pypi.org/project/opencv-python/)
 
-{% embed url="https://opencv.org/" %}
-
-OpenCV 的 Python 库，图像处理必备。
+[OpenCV](https://opencv.org/) 的 Python 库，图像处理必备。注意这不是官方的库，而是第三方编译的库。
 
 > OpenCV的全称是Open Source Computer Vision Library，是一个跨平台的计算机视觉库。
 
-### pillow
+官方建议是从源码编译：[https://docs.opencv.org/3.4.6/d2/de6/tutorial\_py\_setup\_in\_ubuntu.html](https://docs.opencv.org/3.4.6/d2/de6/tutorial_py_setup_in_ubuntu.html)
 
-{% embed url="https://pillow.readthedocs.io/en/stable/" %}
+如果你使用的功能不是很复杂，那么你可以直接使用 pip 安装 [opencv-python](https://pypi.org/project/opencv-python/)。如果你使用了 opencv-contrib 里的功能，可以安装 [opencv-contrib-python](https://pypi.org/project/opencv-contrib-python/)。
+
+### [pillow](https://pillow.readthedocs.io/en/stable/)
 
 PIL，另一个图像处理库，PyTorch 里的 torchvision 有很多写好的数据增强类，它们的输入类型是 PIL.Image。
 
@@ -205,9 +195,7 @@ PIL，另一个图像处理库，PyTorch 里的 torchvision 有很多写好的�
 >
 > 核心图像库旨在快速访问以几种基本像素格式存储的数据。它应该为一般的图像处理工具提供坚实的基础。
 
-### tqdm
-
-{% embed url="https://github.com/tqdm/tqdm" %}
+### [tqdm](https://github.com/tqdm/tqdm)
 
 进度条库，耗时长的任务可以使用 tqdm 直观地展示任务的进度，避免焦虑。
 
@@ -217,33 +205,25 @@ PIL，另一个图像处理库，PyTorch 里的 torchvision 有很多写好的�
 
 ![tqdm](https://raw.githubusercontent.com/tqdm/tqdm/master/images/tqdm.gif)
 
-### torch
-
-{% embed url="https://pytorch.org/" %}
+### [torch](https://pytorch.org/)
 
 深度学习库，推荐使用。
 
 > 一个开源深度学习平台，提供从研究原型到生产部署的无缝路径。
 
-### torchvision
-
-{% embed url="https://pytorch.org/docs/stable/torchvision/index.html" %}
+### [torchvision](https://pytorch.org/docs/stable/torchvision/index.html)
 
 和 PyTorch 配套使用。
 
 > [`torchvision`](https://pytorch.org/docs/stable/torchvision/index.html#module-torchvision)包含了流行的数据集，预训练模型和计算机视觉的常见的图像变换。
 
-### tensorflow
-
-{% embed url="https://www.tensorflow.org/" %}
+### [tensorflow](https://www.tensorflow.org/)
 
 深度学习库，大而全。配备显卡的机器请按照 [Ubuntu 环境](ubuntu-environment.md) 进行配置。
 
 > TensorFlow是一个用于机器学习的端到端开源平台。 它拥有全面、灵活的工具、库和社区资源生态系统，可让研究人员推动ML的最新技术，开发人员可轻松构建和部署ML驱动的应用程序。
 
-### keras
-
-{% embed url="https://keras.io/" %}
+### [keras](https://keras.io/)
 
 更高级的 API，和 tensorflow 联合使用很方便。最新的 TensorFlow 2.0 非常推荐使用 Keras 作为模型搭建的高级 API，你不必直接安装 Keras，直接使用 tf.keras 即可。
 
@@ -251,9 +231,7 @@ PIL，另一个图像处理库，PyTorch 里的 torchvision 有很多写好的�
 
 绘制模型结构需要 graphviz 和 pydot。 
 
-### tensorboard
-
-{% embed url="https://www.tensorflow.org/tensorboard" %}
+### [tensorboard](https://github.com/tensorflow/tensorboard)
 
 TensorBoard 是一个可视化工具，你可以使用它可视化：
 
@@ -263,13 +241,11 @@ TensorBoard 是一个可视化工具，你可以使用它可视化：
 * 生成的图像
 * 生成的文字
 
-### tensorboardx
+### [tensorboardX](https://github.com/lanpa/tensorboardX)
 
-{% embed url="https://github.com/lanpa/tensorboardX" %}
+tensorboardX 是一个框架无关的 tensorboard writer，支持 numpy 矩阵、pytorch 的 tensor 等格式。
 
-tensorboardx 是一个框架无关的 tensorboard writer，支持 numpy 矩阵、pytorch 的 tensor 等格式。
-
-目前 pytorch 1.1 也有[官方支持](https://pytorch.org/docs/stable/tensorboard.html)，但是功能有限，所以目前我仍然在使用 tensorboardx。
+目前 pytorch 1.1 也有[官方支持](https://pytorch.org/docs/stable/tensorboard.html)，但是功能有限，所以目前我仍然在使用 tensorboardX。
 
 
 

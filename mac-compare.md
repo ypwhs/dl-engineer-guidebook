@@ -25,9 +25,7 @@
 * iMac 不定制只能买到非固态硬盘
 * Mac Pro 暂未发售
 
-详细信息请查看官网：
-
-{% embed url="https://www.apple.com/cn/mac/" %}
+详细信息请查看官网：[https://www.apple.com/cn/mac/](https://www.apple.com/cn/mac/)
 
 下面让我们详细介绍这几个型号，以及我的体验和想法。
 

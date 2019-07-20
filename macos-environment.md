@@ -1,8 +1,6 @@
 # macOS 环境
 
-## Homebrew
-
-{% embed url="https://brew.sh/index\_zh-cn" caption="Homebrew" %}
+## [Homebrew](https://brew.sh/index_zh-cn)
 
 Homebrew 是 macOS 上的一个包管理器，你可以使用 Homebrew 安装 Apple 没有预装但[你需要的东西](https://formulae.brew.sh/formula/)。
 
@@ -42,9 +40,7 @@ brew update
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 ```
 
-## Oh My Zsh
-
-{% embed url="https://ohmyz.sh" caption="Oh My Zsh" %}
+## [Oh My Zsh](https://ohmyz.sh/)
 
 装好了终端软件以后，我们还需要安装一个好用的 shell 解释器，zsh 和 oh my zsh。
 

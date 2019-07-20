@@ -8,8 +8,6 @@ description: 这里记录了为我提供了非常多的帮助的学习资源。
 
 ### Coursera
 
-{% embed url="https://www.coursera.org/specializations/deep-learning" %}
-
 * [https://www.coursera.org/learn/machine-learning](https://www.coursera.org/learn/machine-learning)
 * [https://www.coursera.org/specializations/deep-learning](https://www.coursera.org/specializations/deep-learning)
 
@@ -17,27 +15,21 @@ description: 这里记录了为我提供了非常多的帮助的学习资源。
 
 如果在机器学习和深度学习方面，你是零基础或者基础十分薄弱的，那么推荐你学习这门课程，并完成里面的代码和作业任务。当你学完这门课就具有了一定的基础，可能会在更细致的领域进行研究，比如计算机视觉或者自然语言处理。
 
-### CS231n
-
-{% embed url="https://cs231n.github.io" %}
+### [CS231n](https://cs231n.github.io/)
 
 如果你感兴趣的领域是计算机视觉，那么斯坦福大学的 CS231n 课程是不能错过的，这是我的计算机视觉入门课程，我第一次从这里学会并理解卷积的基本概念。
 
 机器学习和深度学习的语言以 Python 为主，如果需要入门和练习 Python，这个课程中也提供了非常优秀的学习资源。
 
-### @爱可可-爱生活
+### [@爱可可-爱生活](https://www.weibo.com/fly51fly)
 
 @爱可可-爱生活 是北京邮电大学的老师的微博账户，每天会发布最新的论文和 GitHub 优秀项目等，可以通过它关注机器学习领域最新研究成果。
 
-同时，它的哔哩哔哩账号 fly51fly 下收录了非常多的优秀公开课，比如斯坦福 2019 最新的自然语言理解课程。当你对知识感到饥渴时就可以来这里充电。
-
-{% embed url="https://space.bilibili.com/23852932/" %}
+同时，它的哔哩哔哩账号 [fly51fly](https://space.bilibili.com/23852932/) 下收录了非常多的优秀公开课，比如斯坦福 2019 最新的自然语言理解课程。当你对知识感到饥渴时就可以来这里充电。
 
 ## 网站
 
-### paperswithcode
-
-{% embed url="https://paperswithcode.com" %}
+### [paperswithcode](https://paperswithcode.com/)
 
 这个网站总结了当前有开源代码的论文，以及它们在各项竞赛上的表现。
 
@@ -81,13 +73,12 @@ description: 这里记录了为我提供了非常多的帮助的学习资源。
 >
 > 本书同时覆盖深度学习的方法和实践，主要面向在校大学生、技术人员和研究人员。阅读本书需要读者了解基本的Python编程或附录中描述的线性代数、微分和概率基础。
 
-{% embed url="http://zh.d2l.ai/" %}
+* 官方网站：[https://zh.d2l.ai](https://zh.d2l.ai/)
+* 视频课程：[https://space.bilibili.com/209599371/channel/detail?cid=23541](https://space.bilibili.com/209599371/channel/detail?cid=23541)
 
 此书还在编写的时候，我正在做一个狗分类的 Kaggle 竞赛，然后关注到 Gluon 论坛正在以 kaggle 上的排名来发放云服务代金券，于是我就[参加了](https://discuss.gluon.ai/t/topic/2399?u=ypw)。然后版主问我有没有兴趣[写一个 gluon 版的](https://discuss.gluon.ai/t/topic/2399/6?u=ypw)，我就[用 gluon 写了一个](https://discuss.gluon.ai/t/topic/2399/111?u=ypw)，后来就在论坛和大家[一起互动](https://discuss.gluon.ai/t/topic/2399/117?u=ypw)，学到了许多东西，成为了论坛的版主。之后此书不断完善，我也贡献了自己的一份力量。出版后，我拿到了贡献者专享的《动手学深度学习》。
 
 如果你想使用 Gluon，这本书在合适不过了。即使你不用 Gluon，此书依然可以给你许多入门的概念，从最基础的矩阵运算，到分类、检测、分割和风格迁移等，值得一看。因为书中有大量的代码、图片、图表，建议购买全彩精装版。
-
-{% embed url="https://space.bilibili.com/209599371/channel/detail?cid=23541" %}
 
 ### 深度学习技术图像处理入门
 
