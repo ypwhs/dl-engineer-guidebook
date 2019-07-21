@@ -1,6 +1,6 @@
 # Ubuntu 装机步骤
 
-* 安装 Ubuntu 18.04
+* 安装 Ubuntu
 * 配置 ssh
 * 配置 sudo 免密码 和 apt 源（推荐）
 * 安装 oh my zsh 以及常用命令（推荐）
@@ -16,6 +16,10 @@
 * [安装 Ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
 
 如果你的主板支持 EFI，直接解压 ISO 到 U盘里即可制作好系统盘。
+
+目前我安装的版本是 [Ubuntu 18.04](http://releases.ubuntu.com/18.04/)
+
+如果遇到网络问题，可以使用清华大学的镜像：[https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/18.04.2/ubuntu-18.04.2-desktop-amd64.iso](https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/18.04.2/ubuntu-18.04.2-desktop-amd64.iso)
 
 ## 配置 ssh
 

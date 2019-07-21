@@ -55,10 +55,13 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
 * [Python 环境](python-environment.md)
   * Anaconda
   * Python 库
-* [如何安装 Ubuntu]()
-  * 在 Windows 上制作 Ubuntu 系统盘
-  * 在 macOS 上制作 Ubuntu 系统盘
+* [Ubuntu 装机步骤](ubuntu-install-guide.md)
   * 安装 Ubuntu
+  * 配置 ssh
+  * 配置 sudo 免密码 和 apt 源（推荐）
+  * 安装 oh my zsh 以及常用命令（推荐）
+  * 安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）
+  * 安装 Anaconda 和 Python 库
 * [Ubuntu 环境](ubuntu-environment.md)
   * oh my zsh
   * CUDA
