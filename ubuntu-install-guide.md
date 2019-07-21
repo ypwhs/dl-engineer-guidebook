@@ -2,15 +2,12 @@
 
 * 安装 Ubuntu 18.04
 * 配置 ssh
-  * 安装 openssh-server
-  * 使用 ssh-keygen 生成一个 ssh key
-  * 在 Ubuntu 服务器上添加刚才生成的 ssh key
-  * 禁止密码登录
-* 配置 sudo 免密码
-* 配置 apt 源（推荐）
-* 安装 oh my zsh 以及常用命令（可省略）
+* 配置 sudo 免密码 和 apt 源（推荐）
+* 安装 oh my zsh 以及常用命令（推荐）
 * 安装 NVIDIA 驱动
-* 安装 CUDA、cuDNN（PyTorch 用户可以忽略）
+* 安装 CUDA 和 cuDNN（PyTorch 用户可以忽略）
+* 安装 Anaconda
+* 安装 Python 库
 
 ## 如何安装 Ubuntu
 
@@ -67,15 +64,12 @@ mkdir -p ~/.ssh
 touch ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
-```
-
-把刚才生成的公钥 `id_rsa.pub` 添加到 `~/.ssh/authorized_keys` 里，如果文件已经有内容，就添加在最后一行。这样以后**每次使用 ssh 登录机器都不需要再输入密码了**。
-
-```bash
 nano ~/.ssh/authorized_keys
 
 # 添加你的公钥，如 ssh-rsa AAAA...
 ```
+
+把刚才生成的公钥 `id_rsa.pub` 添加到 `~/.ssh/authorized_keys` 里，如果文件已经有内容，就添加在最后一行。这样以后**每次使用 ssh 登录机器都不需要再输入密码了**。
 
 使用到的命令：[mkdir](linux-command.md#mkdir)、[touch](linux-command.md#touch)、[chmod](linux-command.md#chmod)、[nano](linux-command.md#nano)
 
@@ -89,7 +83,9 @@ sudo nano /etc/ssh/sshd_config
 PasswordAuthentication no # 添加在最后一行
 ```
 
-## 配置 sudo 免密码
+## 配置 sudo 免密码 和 apt 源
+
+### 配置 sudo 免密码
 
 由于安装驱动等操作需要 sudo 权限，为了避免频繁输入密码，可以配置 sudo 免密码：
 
@@ -99,7 +95,7 @@ sudo nano /etc/sudoers
 ypw ALL=(ALL) NOPASSWD:ALL # 添加在最后一行
 ```
 
-## 配置 apt 源
+### 配置 apt 源
 
 在使用 apt 的时候有可能因为网络原因导致安装过慢或失败，这时候可以配置一些 apt 源：
 
@@ -161,10 +157,91 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 这些是我眼中的[必备命令](ubuntu-environment.md#bi-bei-ming-ling)，你可以按照自己的需要安装：
 
 ```bash
-sudo apt install git curl htop nload tmux screen aria2 graphviz aptitude tree
+sudo apt install -y git curl htop nload tmux screen aria2 graphviz aptitude tree
 ```
 
-## 安装 NVIDIA 驱动
+## 安装 NVIDIA 驱动、CUDA 和 cuDNN（apt）
+
+安装驱动有两种方法，一种是使用apt安装，一种是直接下载驱动安装。
+
+### 使用 apt 安装驱动
+
+安装过程可以参考 TensorFlow 的教程：[https://www.tensorflow.org/install/gpu](https://www.tensorflow.org/install/gpu)
+
+下面是我安装的命令：
+
+```bash
+# Add NVIDIA package repositories
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo apt update
+wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+sudo apt install ./nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+sudo apt update
+
+# Install NVIDIA driver
+sudo aptitude install nvidia-driver-410
+# Reboot. Check that GPUs are visible using the command: nvidia-smi
+```
+
+如果因为网络原因导致下载很慢，可以使用下面的命令让 apt 使用代理：
+
+```bash
+sudo nano /etc/apt/apt.conf
+
+# 下面的内容按照实际情况进行修改
+Acquire::http::Proxy "http://192.168.8.246:1087";
+```
+
+为了避免重启以后鼠标键盘没反应，需要运行下面的命令：
+
+```bash
+sudo apt install --reinstall xserver-xorg-input-all
+```
+
+### 测试显卡
+
+装好系统以后需要重新启动机器，重启以后运行下面的命令即可测试显卡：
+
+```bash
+nvidia-smi
+```
+
+如果能看到类似的内容就说明显卡驱动装好了：
+
+```text
+Sun Jul 21 12:05:35 2019
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 410.104      Driver Version: 410.104      CUDA Version: 10.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce GTX 108...  On   | 00000000:0B:00.0 Off |                  N/A |
+|  0%   40C    P8    11W / 275W |      0MiB / 11178MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+```
+
+### 安装 CUDA 和 cuDNN
+
+注意：此步骤需下载较大的安装包。
+
+```bash
+sudo apt install --no-install-recommends \
+    cuda-10-0 \
+    libcudnn7=7.6.0.64-1+cuda10.0  \
+    libcudnn7-dev=7.6.0.64-1+cuda10.0
+```
+
+## 安装 NVIDIA 驱动、CUDA 和 cuDNN（run）
 
 ### 下载驱动
 
@@ -251,4 +328,18 @@ Sun Jul 21 10:37:16 2019
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+
 ```
+
+### 安装 CUDA 和 cuDNN
+
+由于不同的深度学习框架的 CUDA 和 cuDNN 版本依赖是不同的，所以请按照你所需要的深度学习框架官网上的说明为准。关于 CUDA 版本、cuDNN版本以及深度学习环境的介绍，请看 [Ubuntu 环境](ubuntu-environment.md)。
+
+### 安装 CUDA 10.0
+
+由于此安装包比较大，建议使用 aria2c 下载：
+
+```bash
+aria2c https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux
+```
+
+
 
