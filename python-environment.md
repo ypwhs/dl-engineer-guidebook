@@ -50,6 +50,25 @@ brew cask install Anaconda
 export PATH="/usr/local/anaconda3/bin:$PATH"
 ```
 
+在 Ubuntu 下，如果你使用的是 zsh，你需要在 `~/.zshrc` 里添加下面的内容，注意 `/home/ypw/anaconda3` 路径需要按照实际情况修改：
+
+```bash
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ypw/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ypw/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ypw/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ypw/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+```
+
 ### 使用 Anaconda 创建其他 Python 环境
 
 如果我们需要其他 Python 环境，可以使用 conda 创建：

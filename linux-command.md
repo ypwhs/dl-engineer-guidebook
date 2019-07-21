@@ -290,6 +290,16 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 的功能是把 `/usr/local/cuda/bin` 目录添加到 `PATH` 的最前面，这样就可以直接在命令行使用 `/usr/local/cuda/bin` 目录下的 `nvcc` 命令。
 
+### source
+
+更新环境变量。
+
+如 zsh 用户更新了 `~/.zshrc` 以后，可以使用下面的命令更新环境变量：
+
+```bash
+source ~/.zshrc
+```
+
 ### echo
 
 可以输出环境变量。

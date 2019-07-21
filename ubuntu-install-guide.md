@@ -4,10 +4,8 @@
 * 配置 ssh
 * 配置 sudo 免密码 和 apt 源（推荐）
 * 安装 oh my zsh 以及常用命令（推荐）
-* 安装 NVIDIA 驱动
-* 安装 CUDA 和 cuDNN（PyTorch 用户可以忽略）
-* 安装 Anaconda
-* 安装 Python 库
+* 安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）
+* 安装 Anaconda 和 Python 库
 
 ## 如何安装 Ubuntu
 
@@ -232,7 +230,10 @@ Sun Jul 21 12:05:35 2019
 
 ### 安装 CUDA 和 cuDNN
 
-注意：此步骤需下载较大的安装包。
+注意：
+
+* 此步骤需下载较大的安装包
+* PyTorch 用户可以不安装 CUDA 和 cuDNN
 
 ```bash
 sudo apt install --no-install-recommends \
@@ -333,6 +334,8 @@ Sun Jul 21 10:37:16 2019
 
 由于不同的深度学习框架的 CUDA 和 cuDNN 版本依赖是不同的，所以请按照你所需要的深度学习框架官网上的说明为准。关于 CUDA 版本、cuDNN版本以及深度学习环境的介绍，请看 [Ubuntu 环境](ubuntu-environment.md)。
 
+提示：PyTorch 用户可以不安装 CUDA 和 cuDNN。
+
 ### 安装 CUDA 10.0
 
 由于此安装包比较大，建议使用 aria2c 下载：
@@ -409,5 +412,161 @@ aria2c -x 16 http://developer.download.nvidia.com/compute/redist/cudnn/v7.6.0/cu
 
 ```bash
 sudo tar -xzf cudnn-10.0-linux-x64-v7.6.0.64.tgz -C /usr/local
+```
+
+## 安装 Anaconda 和 Python 库
+
+### 安装 Anaconda
+
+安装 Anaconda 和 Python 库的步骤都已经写在了 [Pyhton 环境](python-environment.md)，这里仅仅展示相关命令：
+
+```bash
+aria2c -x 16 https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2019.03-Linux-x86_64.shbash Anaconda2-2019.03-Linux-x86_64.sh
+bash Anaconda3-2019.03-Linux-x86_64.sh
+
+# 回车，然后按 q 退出 EULA
+
+Do you accept the license terms? [yes|no]
+[no] >>> yes
+
+Anaconda3 will now be installed into this location:
+/home/ypw/anaconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/home/ypw/anaconda3] >>>
+PREFIX=/home/ypw/anaconda3
+installing: python-3.7.3-h0371630_0 ...
+Python 3.7.3
+installing: conda-env-2.6.0-1 ...
+installing: blas-1.0-mkl ...
+......
+installing: anaconda-2019.03-py37_0 ...
+installation finished.
+Do you wish the installer to initialize Anaconda3
+by running conda init? [yes|no]
+[no] >>> yes
+
+......
+
+Thank you for installing Anaconda3!
+```
+
+安装完成以后，如果你使用的是bash，就不需要配置环境变量，如果你使用的是zsh，那么你还需要[配置环境变量](python-environment.md#pei-zhi-huan-jing-bian-liang)。配置好以后，可以重启机器，或者使用 `source ~/.zshrc` [更新环境变量](linux-command.md#source)。
+
+### 配置 pip 源
+
+在使用 pip 的时候有可能因为网络原因导致安装过慢或失败，这时候可以配置一些 pip 源：
+
+* [https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
+* [https://opsx.alibaba.com/mirror](https://opsx.alibaba.com/mirror)
+
+下面以清华大学开源软件镜像站为例：
+
+```bash
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+### Python 库
+
+使用下面的命令安装[常用 Python 库](python-environment.md#python-ku)：
+
+```bash
+pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow-gpu keras tensorboardx
+```
+
+### 测试 PyTorch
+
+```python
+import torch
+dummy = torch.zeros(1, 3, 5, 5).cuda()
+conv = torch.nn.Conv2d(in_channels=3, out_channels=1, kernel_size=3).cuda()
+print(conv(dummy))
+```
+
+期望输出：
+
+```python
+tensor([[[[0.0443, 0.0443, 0.0443],
+          [0.0443, 0.0443, 0.0443],
+          [0.0443, 0.0443, 0.0443]]]], device='cuda:0',
+       grad_fn=<CudnnConvolutionBackward>)
+```
+
+### 测试 TensorFlow
+
+```bash
+import tensorflow as tf
+mnist = tf.keras.datasets.mnist
+
+(x_train, y_train),(x_test, y_test) = mnist.load_data()
+x_train, x_test = x_train / 255.0, x_test / 255.0
+
+model = tf.keras.models.Sequential([
+  tf.keras.layers.Flatten(input_shape=(28, 28)),
+  tf.keras.layers.Dense(512, activation=tf.nn.relu),
+  tf.keras.layers.Dropout(0.2),
+  tf.keras.layers.Dense(10, activation=tf.nn.softmax)
+])
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+model.fit(x_train, y_train, epochs=5)
+model.evaluate(x_test, y_test)
+```
+
+期望输出（注意里面的 GeForce GTX 1080 Ti） ：
+
+```python
+>>> model.fit(x_train, y_train, epochs=5)
+2019-07-21 17:18:16.455944: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-07-21 17:18:16.460577: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3599995000 Hz
+2019-07-21 17:18:16.461013: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5606e83e4f40 executing computations on platform Host. Devices:
+2019-07-21 17:18:16.461032: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-07-21 17:18:16.462663: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-07-21 17:18:16.915819: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.916435: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5606e78c9a40 executing computations on platform CUDA. Devices:
+2019-07-21 17:18:16.916504: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2019-07-21 17:18:16.916782: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.918218: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.683
+pciBusID: 0000:0b:00.0
+2019-07-21 17:18:16.918581: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-07-21 17:18:16.920971: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-07-21 17:18:16.922961: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-07-21 17:18:16.923461: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-07-21 17:18:16.926265: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-07-21 17:18:16.928450: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-07-21 17:18:16.932250: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-07-21 17:18:16.932341: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.932899: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.933392: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-07-21 17:18:16.933426: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-07-21 17:18:16.934335: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-07-21 17:18:16.934353: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0
+2019-07-21 17:18:16.934363: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N
+2019-07-21 17:18:16.934444: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.934988: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.935504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:0b:00.0, compute capability: 6.1)
+Epoch 1/5
+2019-07-21 17:18:17.663035: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+60000/60000 [==============================] - 3s 49us/sample - loss: 0.2209 - acc: 0.9344
+Epoch 2/5import torch
+x = torch.rand(5, 3)
+print(x)
+60000/60000 [==============================] - 2s 39us/sample - loss: 0.0968 - acc: 0.9707
+Epoch 3/5
+60000/60000 [==============================] - 2s 38us/sample - loss: 0.0696 - acc: 0.9779
+Epoch 4/5
+60000/60000 [==============================] - 2s 38us/sample - loss: 0.0537 - acc: 0.9826
+Epoch 5/5
+60000/60000 [==============================] - 2s 38us/sample - loss: 0.0428 - acc: 0.9863
+<tensorflow.python.keras.callbacks.History object at 0x7f4ece4a2278>
+>>> model.evaluate(x_test, y_test)
+10000/10000 [==============================] - 0s 24us/sample - loss: 0.0698 - acc: 0.9804
+[0.06983174340333789, 0.9804]
 ```
 

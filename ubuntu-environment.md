@@ -4,7 +4,7 @@
 
 * [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
 * [https://developer.nvidia.com/cuda-10.0-download-archive](https://developer.nvidia.com/cuda-10.0-download-archive)
-* [https://developer.nvidia.com/cuda-90-download-archive](https://developer.nvidia.com/cuda-90-download-archive)
+* [https://developer.nvidia.com/cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive)
 
 CUDA 是英伟达显卡进行各种高性能运算必备的库，不同软件包依赖的 CUDA 版本可能不同，请仔细阅读你所使用的深度学习框架的官方文档。
 
