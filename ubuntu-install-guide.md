@@ -341,5 +341,61 @@ Sun Jul 21 10:37:16 2019
 aria2c https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux
 ```
 
+下载好了以后，直接运行安装即可：
+
+```bash
+sudo bash cuda_10.0.130_410.48_linux.run
+
+# 按 q 退出 EULA
+
+NVIDIA CUDA Toolkit
+Do you accept the previously read EULA?
+accept/decline/quit: accept
+
+Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48?
+(y)es/(n)o/(q)uit: n
+
+Install the CUDA 10.0 Toolkit?
+(y)es/(n)o/(q)uit: y
+
+Enter Toolkit Location
+ [ default is /usr/local/cuda-10.0 ]:
+
+Do you want to install a symbolic link at /usr/local/cuda?
+(y)es/(n)o/(q)uit: y
+
+Install the CUDA 10.0 Samples?
+(y)es/(n)o/(q)uit: n
+
+Installing the CUDA Toolkit in /usr/local/cuda-10.0 ...
+
+===========
+= Summary =
+===========
+
+Driver:   Not Selected
+Toolkit:  Installed in /usr/local/cuda-10.0
+Samples:  Not Selected
+```
+
+可以按照自己的需要请配置下面的选项，比如你想学习使用 C/C++ 编写 CUDA 程序，可以安装 Samples。
+
+注意：
+
+> Please make sure that
+>
+> * PATH includes /usr/local/cuda-10.0/bin
+> * LD\_LIBRARY\_PATH includes /usr/local/cuda-10.0/lib64, or, add /usr/local/cuda-10.0/lib64 to /etc/ld.so.conf and run ldconfig as root
+
+需要按照上面的指示添加相应的配置到[环境变量](linux-command.md#export)里，这里我以 `~/.zshrc` 为例：
+
+```bash
+nano ~/.zshrc
+
+# 添加下面的内容
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$PATH
+```
+
 
 
