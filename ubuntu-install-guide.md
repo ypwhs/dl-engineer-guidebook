@@ -338,7 +338,7 @@ Sun Jul 21 10:37:16 2019
 由于此安装包比较大，建议使用 aria2c 下载：
 
 ```bash
-aria2c https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux
+aria2c -x 16 https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux
 ```
 
 下载好了以后，直接运行安装即可：
@@ -397,5 +397,17 @@ export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$PATH
 ```
 
+### 安装 cuDNN
 
+同样，下载 cudnn-10.0-linux-x64-v7.6.0.64.tgz：
+
+```bash
+aria2c -x 16 http://developer.download.nvidia.com/compute/redist/cudnn/v7.6.0/cudnn-10.0-linux-x64-v7.6.0.64.tgz
+```
+
+然后安装到 `/usr/local` 目录下：
+
+```bash
+sudo tar -xzf cudnn-10.0-linux-x64-v7.6.0.64.tgz -C /usr/local
+```
 
