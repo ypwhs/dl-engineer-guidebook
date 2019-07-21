@@ -7,7 +7,6 @@
 * [macOS 软件](macos-software.md)
 * [macOS 环境](macos-environment.md)
 * [Python 环境](python-environment.md)
-* [如何安装 Ubuntu](how-to-install-ubuntu.md)
 * [Ubuntu 装机步骤](ubuntu-install-guide.md)
 * [常用 Linux 命令](linux-command.md)
 * [Ubuntu 环境](ubuntu-environment.md)

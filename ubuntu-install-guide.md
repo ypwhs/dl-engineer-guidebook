@@ -7,17 +7,21 @@
 * 安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）
 * 安装 Anaconda 和 Python 库
 
-## 如何安装 Ubuntu
+## 安装 Ubuntu
 
-* 准备系统 U 盘
-* 修改 BIOS 选择 U 盘启动
-* 安装 Ubuntu
+以下是 Ubuntu 官方网站上的教程：
+
+* [在 Windows 上制作 Ubuntu 系统盘](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows)
+* [在 macOS 上制作 Ubuntu 系统盘](https://tutorials.ubuntu.com/tutorial/tutorial-burn-a-dvd-on-macos)
+* [安装 Ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
+
+如果你的主板支持 EFI，直接解压 ISO 到 U盘里即可制作好系统盘。
 
 ## 配置 ssh
 
 ### 安装 openssh-server
 
-刚装好 Ubuntu 以后，为了能够方便地在笔记本上远程连接安装各种软件，我一般会先装openssh-server。
+装好 Ubuntu 以后，为了能够方便地在其他终端上远程连接，安装各种软件，我一般会先装 openssh-server。
 
 ```bash
 sudo apt update
@@ -41,7 +45,7 @@ ssh 192.168.8.65
 * `~/.ssh/id_rsa`
 * `~/.ssh/id_rsa.pub`
 
-其中 `id_rsa` 是私钥，`id_rsa.pub` 是公钥。
+其中 `id_rsa` 是私钥，`id_rsa.pub` 是公钥。不要把私钥发给任何人。
 
 ​公钥通常上这样的文本：
 
@@ -73,7 +77,7 @@ nano ~/.ssh/authorized_keys
 
 ### 禁止密码登录
 
-由于密码登录存在不安全因素，比如暴露在公网的 IP 会被扫描，而 key 是绝对安全的，所以我们可以禁止密码登录：
+由于密码登录存在不安全因素，比如暴露在公网的 IP 会被扫描，而 key 是相对安全的，所以我们可以禁止不安全的密码登录：
 
 ```bash
 sudo nano /etc/ssh/sshd_config
@@ -242,6 +246,26 @@ sudo apt install --no-install-recommends \
     libcudnn7-dev=7.6.0.64-1+cuda10.0
 ```
 
+### 配置环境变量
+
+安装好以后还需要[配置环境变量](linux-command.md#export)，这里我以 `~/.zshrc` 为例：
+
+```bash
+nano ~/.zshrc
+
+# 添加下面的内容
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$PATH
+```
+
+### 安装 TensorRT（可选）
+
+```bash
+sudo apt update
+sudo apt install -y --no-install-recommends libnvinfer5=5.1.5-1+cuda10.0
+sudo apt install -y --no-install-recommends libnvinfer-dev=5.1.5-1+cuda10.0
+```
+
 ## 安装 NVIDIA 驱动、CUDA 和 cuDNN（run）
 
 ### 下载驱动
@@ -390,7 +414,7 @@ Samples:  Not Selected
 > * PATH includes /usr/local/cuda-10.0/bin
 > * LD\_LIBRARY\_PATH includes /usr/local/cuda-10.0/lib64, or, add /usr/local/cuda-10.0/lib64 to /etc/ld.so.conf and run ldconfig as root
 
-需要按照上面的指示添加相应的配置到[环境变量](linux-command.md#export)里，这里我以 `~/.zshrc` 为例：
+需要按照上面的指示[配置环境变量](linux-command.md#export)，这里我以 `~/.zshrc` 为例：
 
 ```bash
 nano ~/.zshrc
@@ -421,7 +445,7 @@ sudo tar -xzf cudnn-10.0-linux-x64-v7.6.0.64.tgz -C /usr/local
 安装 Anaconda 和 Python 库的步骤都已经写在了 [Pyhton 环境](python-environment.md)，这里仅仅展示相关命令：
 
 ```bash
-aria2c -x 16 https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2019.03-Linux-x86_64.shbash Anaconda2-2019.03-Linux-x86_64.sh
+aria2c -x 16 https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2019.03-Linux-x86_64.sh
 bash Anaconda3-2019.03-Linux-x86_64.sh
 
 # 回车，然后按 q 退出 EULA
@@ -454,7 +478,30 @@ by running conda init? [yes|no]
 Thank you for installing Anaconda3!
 ```
 
-安装完成以后，如果你使用的是bash，就不需要配置环境变量，如果你使用的是zsh，那么你还需要[配置环境变量](python-environment.md#pei-zhi-huan-jing-bian-liang)。配置好以后，可以重启机器，或者使用 `source ~/.zshrc` [更新环境变量](linux-command.md#source)。
+安装完成以后，如果你使用的是bash，就不需要配置环境变量，如果你使用的是zsh，那么你还需要[配置环境变量](python-environment.md#pei-zhi-huan-jing-bian-liang)。
+
+```bash
+nano ~/.zshrc
+
+# 添加下面的内容
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ypw/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ypw/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ypw/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ypw/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+```
+
+配置好以后，可以重启机器，或者使用 `source ~/.zshrc` [更新环境变量](linux-command.md#source)。
 
 ### 配置 pip 源
 

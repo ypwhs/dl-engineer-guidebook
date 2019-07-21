@@ -55,7 +55,7 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
 * [Python 环境](python-environment.md)
   * Anaconda
   * Python 库
-* [如何安装 Ubuntu](how-to-install-ubuntu.md)
+* [如何安装 Ubuntu]()
   * 在 Windows 上制作 Ubuntu 系统盘
   * 在 macOS 上制作 Ubuntu 系统盘
   * 安装 Ubuntu
