@@ -29,7 +29,7 @@ cuDNN 下载需要注册，地址如下：
 * [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn)
 * [https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
 
-cuDNN 是英伟达推出的专门用于深度学习加速计算的库，一般来说比使用纯 CUDA 速度要快不少。比如Keras 里有普通的 [LSTM](https://keras.io/layers/recurrent/#lstm) 以及 [CuDNNLSTM](https://keras.io/layers/recurrent/#cudnnlstm)，速度相差最高有十倍。如果没有设计特殊的结构，cuDNN 应该是你的首选。
+cuDNN 是英伟达推出的专门用于深度学习加速计算的库，一般来说比使用纯 CUDA 速度要快不少。比如 Keras 里有普通的 [LSTM](https://keras.io/layers/recurrent/#lstm) 以及 [CuDNNLSTM](https://keras.io/layers/recurrent/#cudnnlstm)，速度相差最高有十倍。如果没有设计特殊的结构，cuDNN 应该是你的首选。
 
 | cuDNN | CUDA9.0 | CUDA9.2 | CUDA10.0 | CUDA10.1 |
 | :--- | :--- | :--- | :--- | :--- |

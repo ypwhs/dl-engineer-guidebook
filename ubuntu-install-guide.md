@@ -520,7 +520,7 @@ model.evaluate(x_test, y_test)
 
 期望输出（注意里面的 GeForce GTX 1080 Ti） ：
 
-```python
+```text
 >>> model.fit(x_train, y_train, epochs=5)
 2019-07-21 17:18:16.455944: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
 2019-07-21 17:18:16.460577: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3599995000 Hz
