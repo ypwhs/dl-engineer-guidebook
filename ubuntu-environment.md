@@ -2,11 +2,11 @@
 
 ## CUDA
 
-* [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
-* [https://developer.nvidia.com/cuda-10.0-download-archive](https://developer.nvidia.com/cuda-10.0-download-archive)
-* [https://developer.nvidia.com/cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive)
+* 最新版：[https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
+* CUDA 10.0：[https://developer.nvidia.com/cuda-10.0-download-archive](https://developer.nvidia.com/cuda-10.0-download-archive)
+* 旧版：[https://developer.nvidia.com/cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive)
 
-CUDA 是英伟达显卡进行各种高性能运算必备的库，不同软件包依赖的 CUDA 版本可能不同，请仔细阅读你所使用的深度学习框架的官方文档。
+CUDA 是英伟达显卡进行各种高性能运算必备的库，不同软件包依赖的 CUDA 版本可能不同，你需要根据你所使用的深度学习框架选择合适的 CUDA 和 cuDNN 版本。
 
 |  版本 | Windows 10 | Linux |
 | :--- | :--- | :--- |
@@ -26,10 +26,12 @@ CUDA 是英伟达显卡进行各种高性能运算必备的库，不同软件包
 
 cuDNN 下载需要注册，地址如下：
 
-* [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn)
-* [https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
+* 最新版：[https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn)
+* 旧版：[https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
 
 cuDNN 是英伟达推出的专门用于深度学习加速计算的库，一般来说比使用纯 CUDA 速度要快不少。比如 Keras 里有普通的 [LSTM](https://keras.io/layers/recurrent/#lstm) 以及 [CuDNNLSTM](https://keras.io/layers/recurrent/#cudnnlstm)，速度相差最高有十倍。如果没有设计特殊的结构，cuDNN 应该是你的首选。
+
+你需要根据你所使用的深度学习框架选择合适的 CUDA 和 cuDNN 版本。
 
 | cuDNN | CUDA9.0 | CUDA9.2 | CUDA10.0 | CUDA10.1 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -67,20 +69,17 @@ TensorRT 是英伟达推出的推断库（Inference），通常用于模型部�
 
 使用 TensorRT 可以进行半精度推断，甚至对模型进行 int8 量化，从而得到数倍的性能提升，并且尽可能保证精度。由于此项目还在开发阶段，不同的版本可能不通用，请参考你所使用的深度学习框架的文档，找到你所需要安装的 TensorRT 版本。
 
-## TensorFlow
+## [TensorFlow](https://www.tensorflow.org)
 
-* [https://www.tensorflow.org](https://www.tensorflow.org)
-* [https://www.tensorflow.org/install/gpu](https://www.tensorflow.org/install/gpu)
+安装教程：[https://www.tensorflow.org/install/gpu](https://www.tensorflow.org/install/gpu)
 
-最新版的 TensorFlow 使用的是 CUDA 10.0 和 cuDNN 7.4.1，NVIDIA 驱动需要 410.x 或更高版本。
-
-建议按照官方文档中的 apt 方法安装 CUDA。
+最新版的 TensorFlow 1.14.0 依赖 CUDA 10.0，并且 cuDNN 需要 7.4.1 或更高的版本，NVIDIA 驱动需要 410.x 或更高版本。
 
 ### 历史版本依赖环境
 
 | **TensorFlow** | **CUDA** | **cuDNN** | **NVIDIA Driver** | **NCCL** | **TensorRT** |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1.14 | 10.0 | 7.4.1 | 410 | 2.2 | 5.0 |
+| [1.14](https://github.com/tensorflow/docs/blob/r1.14/site/en/install/gpu.md#software-requirements) | 10.0 | 7.4.1 | 410 | 2.2 | 5.0 |
 | [1.13](https://github.com/tensorflow/docs/blob/r1.13/site/en/install/gpu.md#software-requirements) | 10.0 | 7.4.1 | 410 | 2.2 | 5.0 |
 | [1.12](https://github.com/tensorflow/docs/blob/r1.12/site/en/install/gpu.md#software-requirements) | 9.0 | 7.2 | 384 | 2.2 | 4.0 |
 | [1.11](https://github.com/tensorflow/docs/blob/r1.11/site/en/install/gpu.md#software-requirements) | 9.0 | 7.2 | 384 | 2.2 | 4.0 |
