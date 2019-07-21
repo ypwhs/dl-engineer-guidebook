@@ -6,13 +6,21 @@
 * [https://developer.nvidia.com/cuda-10.0-download-archive](https://developer.nvidia.com/cuda-10.0-download-archive)
 * [https://developer.nvidia.com/cuda-90-download-archive](https://developer.nvidia.com/cuda-90-download-archive)
 
-CUDA 是英伟达显卡进行各种高性能运算必备的库，不同软件包依赖的 CUDA 版本可能不同，请仔细阅读官方文档。
+CUDA 是英伟达显卡进行各种高性能运算必备的库，不同软件包依赖的 CUDA 版本可能不同，请仔细阅读你所使用的深度学习框架的官方文档。
 
 |  版本 | Windows 10 | Linux |
 | :--- | :--- | :--- |
 | [CUDA 10.1](https://developer.nvidia.com/cuda-downloads) | [cuda\_10.1.168\_425.25\_win10.exe](https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.168_425.25_win10.exe) | [cuda\_10.1.168\_418.67\_linux.run](https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.168_418.67_linux.run) |
 | [CUDA 10.0](https://developer.nvidia.com/cuda-10.0-download-archive) | [cuda\_10.0.130\_411.31\_win10.exe](https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_411.31_win10) | [cuda\_10.0.130\_410.48\_linux.run](https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux) |
+| [CUDA 9.2](https://developer.nvidia.com/cuda-92-download-archive) | [cuda\_9.2.148\_win10.exe](https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers2/cuda_9.2.148_win10) | [cuda\_9.2.148\_396.37\_linux.run](https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers/cuda_9.2.148_396.37_linux) |
+| [CUDA 9.1](https://developer.nvidia.com/cuda-91-download-archive) | [cuda\_9.1.85\_win10.exe](https://developer.nvidia.com/compute/cuda/9.1/Prod/local_installers/cuda_9.1.85_win10) | [cuda\_9.1.85\_387.26\_linux.run](https://developer.nvidia.com/compute/cuda/9.1/Prod/local_installers/cuda_9.1.85_387.26_linux) |
 | [CUDA 9.0](https://developer.nvidia.com/cuda-90-download-archive) | [cuda\_9.0.176\_win10.exe](https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_win10-exe) | [cuda\_9.0.176\_384.81\_linux.run](https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run) |
+|  | 以下版本较低，推荐使用上面的版本。 |  |
+| [CUDA 8.0 GA2](https://developer.nvidia.com/cuda-80-ga2-download-archive) | [cuda\_8.0.61\_win10.exe](https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda_8.0.61_win10-exe) | [cuda\_8.0.61\_375.26\_linux.run](https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda_8.0.61_375.26_linux-run) |
+| [CUDA 8.0 GA1](https://developer.nvidia.com/cuda-80-download-archive) | [cuda\_8.0.44\_win10.exe](https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda_8.0.44_win10-exe) | [cuda\_8.0.44\_linux.run](https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda_8.0.44_linux-run) |
+| [CUDA 7.5](https://developer.nvidia.com/cuda-75-downloads-archive) | [cuda\_7.5.18\_win10.exe](http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_win10.exe) | [cuda\_7.5.18\_linux.run](http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run) |
+| [CUDA 7.0](https://developer.nvidia.com/cuda-toolkit-70) | [cuda\_7.0.28\_windows.exe](http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/cuda_7.0.28_windows.exe) | [cuda\_7.0.28\_linux.run](http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/cuda_7.0.28_linux.run) |
+| [CUDA 6.5](https://developer.nvidia.com/cuda-toolkit-65) | [cuda\_6.5.14\_windows\_general\_64.exe](http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_6.5.14_windows_general_64.exe) | [cuda\_6.5.14\_linux\_64.run](http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_6.5.14_linux_64.run) |
 
 ## **cuDNN**
 
@@ -36,7 +44,7 @@ cuDNN 是英伟达推出的专门用于深度学习加速计算的库，一般�
 | 7.2.1 | [cudnn-9.0-linux-x64-v7.2.1.38.tgz](https://developer.download.nvidia.com/compute/redist/cudnn/v7.2.1/cudnn-9.0-linux-x64-v7.2.1.38.tgz) \(331.19MB\) | [cudnn-9.2-linux-x64-v7.2.1.38.tgz](https://developer.download.nvidia.com/compute/redist/cudnn/v7.2.1/cudnn-9.2-linux-x64-v7.2.1.38.tgz) \(337.08MB\) | - | - |
 | 7.1.4 | [cudnn-9.0-linux-x64-v7.1.tgz](https://developer.download.nvidia.com/compute/redist/cudnn/v7.1.4/cudnn-9.0-linux-x64-v7.1.tgz) \(390.26MB\) | [cudnn-9.2-linux-x64-v7.1.tgz](https://developer.download.nvidia.com/compute/redist/cudnn/v7.1.4/cudnn-9.2-linux-x64-v7.1.tgz) \(401.58MB\) | - | - |
 
-
+以下版本较低，推荐使用上面的版本。
 
 | cuDNN | CUDA6.5 | CUDA7.0 | CUDA7.5 | CUDA8.0 | CUDA9.0 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
