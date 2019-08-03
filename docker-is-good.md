@@ -39,6 +39,8 @@ sudo sh get-docker.sh
 sudo usermod -aG docker $USER
 ```
 
+添加以后，你需要重新登录机器才能生效。
+
 你可以运行下面的命令测试 docker：
 
 ```bash
