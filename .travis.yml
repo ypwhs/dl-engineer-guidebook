@@ -1,6 +1,5 @@
 language: python
 python: 3.6
-branches: master
 git:
   depth: false
 cache: 
