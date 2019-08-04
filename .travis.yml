@@ -1,18 +1,13 @@
 language: python
 python: 3.6
+branches: master
 cache: 
   directories:
     - $HOME/.cache/pip
-    - dl-engineer-guidebook
     - /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages
     - /home/travis/virtualenv/python3.6.3/bin
-branches: 
-  - master
-  - site
 install:
-  - git config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
-  - git fetch --unshallow --tags
   - pip install mkdocs mkdocs-material
   - echo -e "machine github.com\n  login ${github_token}" > ~/.netrc
 script:
-  - mkdocs gh-deploy
+  - mkdocs gh-deploy --force --clean
