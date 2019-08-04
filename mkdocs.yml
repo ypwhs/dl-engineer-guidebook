@@ -5,9 +5,9 @@ copyright: 杨培文
 site_url: https://dl.ypw.io
 repo_url: https://github.com/ypwhs/dl-engineer-guidebook
 repo_name: ypwhs/dl-engineer-guidebook
+edit_uri: edit/master/docs
 remote_name: git@github.com:ypwhs/dl-engineer-guidebook.git
 remote_branch: site
-edit_uri: blob/mkdocs/docs
 theme:
   name: 'material'
   language: 'zh'
