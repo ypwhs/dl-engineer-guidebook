@@ -125,7 +125,7 @@ git 是代码管理工具。
 
 htop 是一个系统监控与进程管理软件， 如：
 
-[![asciicast](https://asciinema.org/a/eWBQp36f4KWmhMX1FAoQ8SQl4.svg)](https://asciinema.org/a/eWBQp36f4KWmhMX1FAoQ8SQl4)
+<script id="asciicast-eWBQp36f4KWmhMX1FAoQ8SQl4" src="https://asciinema.org/a/eWBQp36f4KWmhMX1FAoQ8SQl4.js" async></script>
 
 ### nload
 
@@ -133,7 +133,7 @@ nload 是一个网速监控命令，你可以用它查看比如打包 docker 的
 
 下面是运行 [https://www.speedtest.net](https://www.speedtest.net) 的时候监控 nload 的过程：
 
-[![asciicast](https://asciinema.org/a/o2IpTuWi93dRo2E1SHP2rILKZ.svg)](https://asciinema.org/a/o2IpTuWi93dRo2E1SHP2rILKZ)
+<script id="asciicast-o2IpTuWi93dRo2E1SHP2rILKZ" src="https://asciinema.org/a/o2IpTuWi93dRo2E1SHP2rILKZ.js" async></script>
 
 ### wget
 
@@ -150,7 +150,5 @@ bash Anaconda3-2019.03-MacOSX-x86_64.sh
 
 如：
 
-[![asciicast](https://asciinema.org/a/5iHU0tVcLZxUGUubbPG7U8AoY.svg)](https://asciinema.org/a/5iHU0tVcLZxUGUubbPG7U8AoY)
-
-
+<script id="asciicast-5iHU0tVcLZxUGUubbPG7U8AoY" src="https://asciinema.org/a/5iHU0tVcLZxUGUubbPG7U8AoY.js" async></script>
 
