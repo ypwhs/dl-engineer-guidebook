@@ -4,13 +4,13 @@ branches: master
 cache: 
   directories:
     - $HOME/.cache/pip
-    - /data
+    - /home/travis/data
     - /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages
     - /home/travis/virtualenv/python3.6.3/bin
 install:
   - pip install mkdocs mkdocs-material
   - echo -e "machine github.com\n  login ${github_token}" > ~/.netrc
-  - cd /data
+  - cd /home/travis/data
   - git clone https://github.com/ypwhs/dl-engineer-guidebook
 script:
   - mkdocs gh-deploy
