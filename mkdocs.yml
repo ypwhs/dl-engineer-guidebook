@@ -2,13 +2,16 @@ site_name: 深度学习工程师生存指南
 repo_url: https://github.com/ypwhs/dl-engineer-guidebook
 repo_name: ypwhs/dl-engineer-guidebook
 remote_branch: mkdocs
-edit_uri: blob/master/docs
+edit_uri: blob/mkdocs/docs
 theme:
   name: 'material'
+  language: 'zh'
+  palette:
+    primary: 'pink'
+    accent: 'pink'
   feature:
     tabs: true
 extra:
-  language: 'zh'
   search:
     language: 'ja'
   social:
@@ -22,6 +25,10 @@ extra:
     - type: 'linkedin'
       link: 'https://www.linkedin.com/in/ypwhs/'
 markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.inlinehilite
+  - pymdownx.critic 
   - toc:
       permalink: false
 nav:
