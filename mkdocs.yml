@@ -6,14 +6,14 @@ edit_uri: blob/mkdocs/docs
 theme:
   name: 'material'
   language: 'zh'
+  font: false
   palette:
-    primary: 'pink'
-    accent: 'pink'
+    primary: 'light green'
+    accent: 'light green'
   feature:
     tabs: true
 extra:
   search:
-    language: 'ja'
   social:
     - type: 'github'
       link: 'https://github.com/ypwhs'
@@ -28,7 +28,7 @@ markdown_extensions:
   - admonition
   - codehilite
   - pymdownx.inlinehilite
-  - pymdownx.critic 
+  - pymdownx.critic
   - toc:
       permalink: false
 nav:
