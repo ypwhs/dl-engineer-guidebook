@@ -1,0 +1,13 @@
+language: python
+python: 3.6
+branches: master
+install:
+    - pip install mkdocs mkdocs-material
+    - echo -e "machine github.com\n  login ${github_token}" > ~/.netrc
+
+script:
+  - mkdocs gh-deploy --force --clean
+
+branches:
+  only:
+    - master
