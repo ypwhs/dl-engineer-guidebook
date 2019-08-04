@@ -5,13 +5,14 @@ git:
 cache: 
   directories:
     - $HOME/.cache/pip
-    - /home/travis/data
+#     - /home/travis/data
 install:
   - pip install mkdocs mkdocs-material
   - echo -e "machine github.com\n  login ${github_token}" > ~/.netrc
-  - cd /home/travis/data && rm -rf dl-engineer-guidebook
-  - git clone https://github.com/ypwhs/dl-engineer-guidebook
-  - git checkout site && git checkout master
+#   - cd /home/travis/data
+#   - rm -rf dl-engineer-guidebook && git clone https://github.com/ypwhs/dl-engineer-guidebook
+#   - cd dl-engineer-guidebook && 
 script:
-  - cd /home/travis/data/dl-engineer-guidebook
+#   - cd /home/travis/data/dl-engineer-guidebook
+  - git checkout site && git checkout master
   - mkdocs gh-deploy --clean
