@@ -15,6 +15,4 @@ install:
   - git clone https://github.com/ypwhs/dl-engineer-guidebook
 script:
   - cd /home/travis/data/dl-engineer-guidebook
-  - git checkout site
-  - git checkout master
   - mkdocs gh-deploy --clean
