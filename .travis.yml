@@ -8,6 +8,6 @@ cache:
 install:
   - pip install mkdocs mkdocs-material
   - echo -e "machine github.com\n  login ${github_token}" > ~/.netrc
-script:
   - git checkout site && git checkout master
+script:
   - mkdocs gh-deploy --clean
