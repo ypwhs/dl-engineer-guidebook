@@ -12,4 +12,5 @@ install:
   - pip install mkdocs mkdocs-material
   - echo -e "machine github.com\n  login ${github_token}" > ~/.netrc
 script:
+  - git checkout master
   - mkdocs gh-deploy --clean
