@@ -5,10 +5,10 @@
 在线阅读：[https://dl.ypw.io](https://dl.ypw.io/)  
 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://github.com/ypwhs/dl-engineer-guidebook)  
 
-* 持续关注请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch ypwhs/dl-engineer-guidebook on GitHub">Watch</a>
-* 收藏项目请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ypwhs/dl-engineer-guidebook on GitHub">Star</a>
-* 贡献内容请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork ypwhs/dl-engineer-guidebook on GitHub">Fork</a>
-* 提问或建议请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook/issues" data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue ypwhs/dl-engineer-guidebook on GitHub">Issue</a>
+* 持续关注请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook/subscription" data-icon="octicon-eye" data-show-count="true" aria-label="Watch ypwhs/dl-engineer-guidebook on GitHub">Watch</a>
+* 收藏项目请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook" data-icon="octicon-star" data data-show-count="true" aria-label="Star ypwhs/dl-engineer-guidebook on GitHub">Star</a>
+* 贡献内容请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork ypwhs/dl-engineer-guidebook on GitHub">Fork</a>
+* 提问或建议请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue ypwhs/dl-engineer-guidebook on GitHub">Issue</a>
 
 本书会讲述一个深度学习工程师所需的所有东西：
 
