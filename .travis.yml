@@ -10,6 +10,8 @@ branches:
   - master
   - site
 install:
+  - git config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+  - git fetch --unshallow --tags
   - pip install mkdocs mkdocs-material
   - echo -e "machine github.com\n  login ${github_token}" > ~/.netrc
 script:
