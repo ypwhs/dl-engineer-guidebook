@@ -17,6 +17,9 @@ theme:
     accent: 'light green'
   feature:
     tabs: true
+google_analytics:
+  - 'UA-111276663-2'
+  - 'auto'
 extra:
   search:
   social:
