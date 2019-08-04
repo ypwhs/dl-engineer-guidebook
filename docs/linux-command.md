@@ -14,7 +14,6 @@ Linux 下的帮助命令。
 
 提示：按 q 退出帮助页面。
 
-[![asciicast](https://asciinema.org/a/PFF2O1mkmPFMECrkunYHhjHvs.svg)](https://asciinema.org/a/PFF2O1mkmPFMECrkunYHhjHvs)
 <script id="asciicast-PFF2O1mkmPFMECrkunYHhjHvs" src="https://asciinema.org/a/PFF2O1mkmPFMECrkunYHhjHvs.js" async></script>
 
 ## 文件查看
