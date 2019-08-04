@@ -4,7 +4,7 @@ description: 持续更新中……
 
 # 深度学习工程师生存指南
 
-![Build](https://img.shields.io/travis/ypwhs/dl-engineer-guidebook.svg) ![Size](https://img.shields.io/github/repo-size/ypwhs/dl-engineer-guidebook.svg)  ![Stars](https://img.shields.io/github/stars/ypwhs/dl-engineer-guidebook.svg)
+[![Build Status](https://travis-ci.org/ypwhs/dl-engineer-guidebook.svg?branch=master)](https://travis-ci.org/ypwhs/dl-engineer-guidebook) ![Size](https://img.shields.io/github/repo-size/ypwhs/dl-engineer-guidebook.svg)  ![Stars](https://img.shields.io/github/stars/ypwhs/dl-engineer-guidebook.svg)
 
 GitBook 在线阅读：[https://dl.ypw.io](https://dl.ypw.io/)  
 GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://github.com/ypwhs/dl-engineer-guidebook)  
