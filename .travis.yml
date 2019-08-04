@@ -1,20 +1,15 @@
 language: python
 python: 3.6
 cache: 
-    directories:
-        - $HOME/.cache/pip
-        - /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages
-        - dl-engineer-guidebook
+  directories:
+    - $HOME/.cache/pip
+    - /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages
+    - dl-engineer-guidebook
 branches: 
-    - master
-    - site
+  - master
+  - site
 install:
-    - pip install mkdocs mkdocs-material
-    - echo -e "machine github.com\n  login ${github_token}" > ~/.netrc
-
+  - pip install mkdocs mkdocs-material
+  - echo -e "machine github.com\n  login ${github_token}" > ~/.netrc
 script:
   - mkdocs gh-deploy
-
-branches:
-  only:
-    - master
