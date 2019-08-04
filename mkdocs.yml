@@ -1,14 +1,13 @@
 site_name: 深度学习工程师生存指南
+site_description: 深度学习工程师生存指南
+site_author: 杨培文
+copyright: 杨培文
+site_url: https://dl.ypw.io
 repo_url: https://github.com/ypwhs/dl-engineer-guidebook
 repo_name: ypwhs/dl-engineer-guidebook
 remote_name: git@github.com:ypwhs/dl-engineer-guidebook.git
 remote_branch: mkdocs
 edit_uri: blob/mkdocs/docs
-site_description: 深度学习工程师生存指南
-site_author: 杨培文
-copyright: 杨培文
-docs_dir: docs
-site_dir: ../dl.ypw.io
 theme:
   name: 'material'
   language: 'zh'
