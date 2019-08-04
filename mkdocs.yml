@@ -6,7 +6,7 @@ site_url: https://dl.ypw.io
 repo_url: https://github.com/ypwhs/dl-engineer-guidebook
 repo_name: ypwhs/dl-engineer-guidebook
 edit_uri: edit/master/docs
-remote_name: git@github.com:ypwhs/dl-engineer-guidebook.git
+remote_name: https://github.com/ypwhs/dl-engineer-guidebook
 remote_branch: site
 theme:
   name: 'material'
