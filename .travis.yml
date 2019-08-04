@@ -5,7 +5,7 @@ cache:
     - $HOME/.cache/pip
     - dl-engineer-guidebook
     - /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages
-    - /home/travis/virtualenv/python3.6.3/bin/mkdocs
+    - /home/travis/virtualenv/python3.6.3/bin
 branches: 
   - master
   - site
