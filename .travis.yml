@@ -3,8 +3,9 @@ python: 3.6
 cache: 
   directories:
     - $HOME/.cache/pip
-    - /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages
     - dl-engineer-guidebook
+    - /home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages
+    - /home/travis/virtualenv/python3.6.3/bin/mkdocs
 branches: 
   - master
   - site
