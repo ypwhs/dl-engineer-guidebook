@@ -13,4 +13,5 @@ install:
   - cd /home/travis/data
   - git clone https://github.com/ypwhs/dl-engineer-guidebook
 script:
+  - cd /home/travis/data/dl-engineer-guidebook
   - mkdocs gh-deploy
