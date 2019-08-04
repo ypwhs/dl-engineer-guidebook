@@ -11,7 +11,6 @@ edit_uri: blob/mkdocs/docs
 theme:
   name: 'material'
   language: 'zh'
-  font: false
   palette:
     primary: 'light green'
     accent: 'light green'
@@ -27,7 +26,6 @@ extra:
       link: 'https://github.com/ypwhs'
     - type: 'book'
       link: 'https://www.zhihu.com/people/yangpw'
-      brand: false
     - type: 'globe'
       link: 'https://ypw.io'
     - type: 'linkedin'
