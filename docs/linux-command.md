@@ -15,6 +15,7 @@ Linux 下的帮助命令。
 提示：按 q 退出帮助页面。
 
 [![asciicast](https://asciinema.org/a/PFF2O1mkmPFMECrkunYHhjHvs.svg)](https://asciinema.org/a/PFF2O1mkmPFMECrkunYHhjHvs)
+<script id="asciicast-PFF2O1mkmPFMECrkunYHhjHvs" src="https://asciinema.org/a/PFF2O1mkmPFMECrkunYHhjHvs.js" async></script>
 
 ## 文件查看
 
@@ -124,7 +125,7 @@ locate 命令会寻找包含关键字的所有文件路径。
 
 例如：`mv source destination`
 
-[![asciicast](https://asciinema.org/a/hWFuRKiWoggP8xIH7ZKQGmABR.svg)](https://asciinema.org/a/hWFuRKiWoggP8xIH7ZKQGmABR)
+<script id="asciicast-hWFuRKiWoggP8xIH7ZKQGmABR" src="https://asciinema.org/a/hWFuRKiWoggP8xIH7ZKQGmABR.js" async></script>
 
 ### vim
 
@@ -212,7 +213,7 @@ nano ~/.ssh/authorized_keys
 
 杀掉执行中的进程，刚才 ps 命令可以得到进程号，你可以根据进程号删除该进程，如 `kill 8339`
 
-[![asciicast](https://asciinema.org/a/LI1QUFDERv148oZZ4qkDOhlIN.svg)](https://asciinema.org/a/LI1QUFDERv148oZZ4qkDOhlIN)
+<script id="asciicast-LI1QUFDERv148oZZ4qkDOhlIN" src="https://asciinema.org/a/LI1QUFDERv148oZZ4qkDOhlIN.js" async></script>
 
 ### killall
 
@@ -400,7 +401,7 @@ Swap:          976M          0B        976M
 
 同步文件夹：`rsync -avP 本地文件夹 用户名@远程服务器:远程地址`
 
-[![asciicast](https://asciinema.org/a/eQjKRxlhu5vOThczbmkcmgbqH.svg)](https://asciinema.org/a/eQjKRxlhu5vOThczbmkcmgbqH)
+<script id="asciicast-eQjKRxlhu5vOThczbmkcmgbqH" src="https://asciinema.org/a/eQjKRxlhu5vOThczbmkcmgbqH.js" async></script>
 
 ### wget
 
