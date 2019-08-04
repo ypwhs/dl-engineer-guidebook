@@ -93,7 +93,7 @@ TensorRT 是英伟达推出的推断库（Inference），通常用于模型部�
 | [1.3](https://github.com/tensorflow/docs/blob/r1.3/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 8.0 | 6.0 |  |  |  |
 | [1.2](https://github.com/tensorflow/docs/blob/r1.2/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 8.0 | 5.1 |  |  |  |
 | [1.1](https://github.com/tensorflow/docs/blob/r1.1/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 8.0 | 5.1 |  |  |  |
-| [1.0](%20https://github.com/tensorflow/docs/blob/r1.0/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 8.0 | 5.1 |  |  |  |
+| [1.0](https://github.com/tensorflow/docs/blob/r1.0/site/en/install/install_linux.md#nvidia-requirements-to-run-tensorflow-with-gpu-support) | 8.0 | 5.1 |  |  |  |
 
 提示：
 
