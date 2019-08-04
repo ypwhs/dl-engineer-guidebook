@@ -1,14 +1,11 @@
----
-description: 持续更新中……
----
-
 # 深度学习工程师生存指南
 
 [![Build Status](https://travis-ci.org/ypwhs/dl-engineer-guidebook.svg?branch=master)](https://travis-ci.org/ypwhs/dl-engineer-guidebook) ![Size](https://img.shields.io/github/repo-size/ypwhs/dl-engineer-guidebook.svg)  ![Stars](https://img.shields.io/github/stars/ypwhs/dl-engineer-guidebook.svg)
 
-GitBook 在线阅读：[https://dl.ypw.io](https://dl.ypw.io/)  
-GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://github.com/ypwhs/dl-engineer-guidebook)  
-持续关注请点 Watch，收藏项目请点 Star，贡献内容请点 Fork，提问或建议请点 Issue。
+在线阅读：[https://dl.ypw.io](https://dl.ypw.io/)  
+项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://github.com/ypwhs/dl-engineer-guidebook)  
+
+持续关注请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch ypwhs/dl-engineer-guidebook on GitHub">Watch</a>，收藏项目请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ypwhs/dl-engineer-guidebook on GitHub">Star</a>，贡献内容请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork ypwhs/dl-engineer-guidebook on GitHub">Fork</a>，提问或建议请点 <a class="github-button" href="https://github.com/ypwhs/dl-engineer-guidebook/issues" data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue ypwhs/dl-engineer-guidebook on GitHub">Issue</a>。
 
 本书会讲述一个深度学习工程师所需的所有东西：
 
@@ -109,3 +106,4 @@ GitHub 项目地址：[https://github.com/ypwhs/dl-engineer-guidebook](https://g
     * 总结
 * 如何使用 PyCharm 远程调试
 
+<script async defer src="https://buttons.github.io/buttons.js"></script>
