@@ -1,9 +1,6 @@
 language: python
 python: 3.6
-branches:
-  only:
-    - master
-    - site
+branches: master
 git:
   depth: false
 cache: 
@@ -14,5 +11,7 @@ cache:
 install:
   - pip install mkdocs mkdocs-material
   - echo -e "machine github.com\n  login ${github_token}" > ~/.netrc
+  - git config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+  - git fetch --unshallow --tags
 script:
   - mkdocs gh-deploy --clean
