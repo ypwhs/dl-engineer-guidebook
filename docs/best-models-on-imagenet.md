@@ -1,11 +1,6 @@
----
-description: >-
-  ImageNet 是由李飞飞主导建立的一个超大的计算机视觉数据集。基于此数据集，自 2010 年至 2017 年举办 ImageNet 挑战赛，即
-  ImageNet Large Scale Visual Recognition Challenge (ILSVRC)。这篇文章以时间顺序记录了在
-  ImageNet 上表现出色的模型，很多也是 ILSVRC 上的冠军。
----
-
 # 在 ImageNet 上表现出色的经典模型
+
+ImageNet 是由李飞飞主导建立的一个超大的计算机视觉数据集。基于此数据集，自 2010 年至 2017 年举办 ImageNet 挑战赛，即 ImageNet Large Scale Visual Recognition Challenge (ILSVRC)。这篇文章以时间顺序记录了在 ImageNet 上表现出色的模型，很多也是 ILSVRC 上的冠军。
 
 ## 预训练模型使用方法
 

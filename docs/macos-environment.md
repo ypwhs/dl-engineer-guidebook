@@ -1,5 +1,7 @@
 # macOS 环境
 
+这篇文章会介绍我在 macOS 的终端里安装的命令和软件。
+
 ## [Homebrew](https://brew.sh/index_zh-cn)
 
 Homebrew 是 macOS 上的一个包管理器，你可以使用 Homebrew 安装 Apple 没有预装但[你需要的东西](https://formulae.brew.sh/formula/)。
