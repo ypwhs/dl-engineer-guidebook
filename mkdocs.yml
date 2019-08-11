@@ -74,3 +74,4 @@ nav:
     - 如何使用 TensorBoard: how-to-use-tensorboard.md
     - 如何使用 PyCharm 远程调试: remote-debugging-with-pycharm.md
     - Docker 是个好东西: docker-is-good.md
+    - 离线 Python 环境: offline-python-environment.md
