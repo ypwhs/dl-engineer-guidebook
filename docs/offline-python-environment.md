@@ -91,7 +91,7 @@ cd /opt/conda/pkgs
 cp *.tar.bz2 /data/pkgs
 ```
 
-<a href="https://asciinema.org/a/3bdwK66YrFRVu5AJa5GemXK3Z" target="_blank"><img src="https://asciinema.org/a/3bdwK66YrFRVu5AJa5GemXK3Z.svg" /></a>
+<a href="https://asciinema.org/a/RXDdXjvhHVqbRgFiDbJzHMmN9" target="_blank"><img src="https://asciinema.org/a/RXDdXjvhHVqbRgFiDbJzHMmN9.svg" /></a>
 
 ## 配置 pip 源（可选）
 
@@ -131,6 +131,8 @@ rsync -avP ~/Downloads/offline fat:~/
 bash ~/offline/Miniconda3-latest-Linux-x86_64.sh
 ```
 
+<a href="https://asciinema.org/a/oDPnKVGHItMjVZ2RtzSOE916F" target="_blank"><img src="https://asciinema.org/a/oDPnKVGHItMjVZ2RtzSOE916F.svg" /></a>
+
 ## 创建 Python 虚拟环境
 
 先创建一个空环境，然后安装已经下载好的 pkg 文件，你就可以离线创建一个 Python 3.6 的环境。
@@ -148,3 +150,5 @@ conda install --offline ~/offline/pkgs/*
 ```sh
 pip install --no-index --find-links=file:///home/richinfo/offline/whls jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow-gpu keras tensorboardx
 ```
+
+<a href="https://asciinema.org/a/EHRE3XtioqXdTt5VLvRGWxzmQ" target="_blank"><img src="https://asciinema.org/a/EHRE3XtioqXdTt5VLvRGWxzmQ.svg" /></a>
