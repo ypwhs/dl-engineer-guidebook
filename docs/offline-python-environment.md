@@ -46,6 +46,8 @@ cd ~/Downloads/offline
 wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
+<script id="asciicast-sI5AYLfu71HaWTJiOLQrcauXJ" src="https://asciinema.org/a/sI5AYLfu71HaWTJiOLQrcauXJ.js" async></script>
+
 # 下载 pkg 文件和 whl 文件
 
 `pip download` 可以下载你所需要和依赖的 Python 库对应的 whl 安装包，但是你必须确保系统内核和 Python 版本一致。如果你使用的是 Mac，而目标机器是 Linux，那么你就不能够使用 `pip download` 命令很方便地下载所有依赖的 whl 文件。为了简化这一问题，我们可以使用 Docker 创建一个 Linux 环境来完成下载任务。
@@ -89,6 +91,8 @@ cd /opt/conda/pkgs
 cp *.tar.bz2 /data/pkgs
 ```
 
+<a href="https://asciinema.org/a/3bdwK66YrFRVu5AJa5GemXK3Z" target="_blank"><img src="https://asciinema.org/a/3bdwK66YrFRVu5AJa5GemXK3Z.svg" /></a>
+
 ## 配置 pip 源（可选）
 
 通过添加[清华大学开源软件镜像站的 Pypi 镜像](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)，我们可以加速下载过程。
@@ -106,6 +110,8 @@ mkdir -p /data/whls
 cd /data/whls
 pip download jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow-gpu keras tensorboardx
 ```
+
+<a href="https://asciinema.org/a/ZjK3RkkKLrTt10mMIrWMaPiLE" target="_blank"><img src="https://asciinema.org/a/ZjK3RkkKLrTt10mMIrWMaPiLE.svg" /></a>
 
 # 在离线机器上进行离线安装
 
