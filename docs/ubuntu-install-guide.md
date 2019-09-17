@@ -12,7 +12,7 @@
 以下是 Ubuntu 官方网站上的教程：
 
 * [在 Windows 上制作 Ubuntu 系统盘](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows)
-* [在 macOS 上制作 Ubuntu 系统盘](https://tutorials.ubuntu.com/tutorial/tutorial-burn-a-dvd-on-macos)
+* [在 macOS 上制作 Ubuntu 系统盘](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos)
 * [安装 Ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
 
 如果你的主板支持 EFI，直接解压 ISO 到 U盘里即可制作好系统盘。
