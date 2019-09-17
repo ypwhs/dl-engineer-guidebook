@@ -19,7 +19,7 @@
 
 目前我安装的版本是 [Ubuntu 18.04](http://releases.ubuntu.com/18.04/)
 
-如果遇到网络问题，可以使用清华大学的镜像：[https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/18.04.2/ubuntu-18.04.2-desktop-amd64.iso](https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/18.04.2/ubuntu-18.04.2-desktop-amd64.iso)
+如果遇到网络问题，可以使用清华大学的镜像：[https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/18.04.3/ubuntu-18.04.3-desktop-amd64.iso](https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/18.04.3/ubuntu-18.04.3-desktop-amd64.iso)
 
 ## 配置 ssh
 
