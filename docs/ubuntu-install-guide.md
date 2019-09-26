@@ -259,7 +259,7 @@ nano ~/.zshrc
 
 # 添加下面的内容
 export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 ```
 
 ### 安装 TensorRT（可选）
