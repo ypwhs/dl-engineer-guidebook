@@ -10,7 +10,7 @@ CUDA 是英伟达显卡进行各种高性能运算必备的库，不同软件包
 
 |  版本 | Windows 10 | Linux |
 | :--- | :--- | :--- |
-| [CUDA 10.1](https://developer.nvidia.com/cuda-downloads) | [cuda\_10.1.168\_425.25\_win10.exe](https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.168_425.25_win10.exe) | [cuda\_10.1.168\_418.67\_linux.run](https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.168_418.67_linux.run) |
+| [CUDA 10.1](https://developer.nvidia.com/cuda-downloads) | [cuda\_10.1.243\_426.00\_win10.exe](http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_426.00_win10.exe) | [cuda\_10.1.243\_418.87.00\_linux.run](http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run) |
 | [CUDA 10.0](https://developer.nvidia.com/cuda-10.0-download-archive) | [cuda\_10.0.130\_411.31\_win10.exe](https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_411.31_win10) | [cuda\_10.0.130\_410.48\_linux.run](https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux) |
 | [CUDA 9.2](https://developer.nvidia.com/cuda-92-download-archive) | [cuda\_9.2.148\_win10.exe](https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers2/cuda_9.2.148_win10) | [cuda\_9.2.148\_396.37\_linux.run](https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers/cuda_9.2.148_396.37_linux) |
 | [CUDA 9.1](https://developer.nvidia.com/cuda-91-download-archive) | [cuda\_9.1.85\_win10.exe](https://developer.nvidia.com/compute/cuda/9.1/Prod/local_installers/cuda_9.1.85_win10) | [cuda\_9.1.85\_387.26\_linux.run](https://developer.nvidia.com/compute/cuda/9.1/Prod/local_installers/cuda_9.1.85_387.26_linux) |
