@@ -68,9 +68,9 @@
     * TensorFlow
     * PyTorch
     * 必备命令
-      * curl
-      * tmux 与 iTerm2 结合使用
-      * screen 后台运行命令
+        * curl
+        * tmux 与 iTerm2 结合使用
+        * screen 后台运行命令
 * [常用 Linux 命令](linux-command.md)
     * 文件查看
     * 文件读写
