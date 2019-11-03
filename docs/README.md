@@ -63,12 +63,14 @@
     * 安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）
     * 安装 Anaconda 和 Python 库
 * [Ubuntu 环境](ubuntu-environment.md)
-    * oh my zsh
     * CUDA
     * cuDNN
     * TensorFlow
     * PyTorch
     * 必备命令
+      * curl
+      * tmux 与 iTerm2 结合使用
+      * screen 后台运行命令
 * [常用 Linux 命令](linux-command.md)
     * 文件查看
     * 文件读写
