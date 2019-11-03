@@ -109,6 +109,18 @@
         * 记录图像（images）
         * 完整代码
     * 总结
-* 如何使用 PyCharm 远程调试
+* [离线 Python 环境](offline-python-environment.md)
+    * 下载 conda 安装包
+    * 下载 pkg 文件和 whl 文件
+        * 启动 miniconda 容器
+        * 添加 conda 源（可选）
+        * 下载 pkg 文件
+        * 配置 pip 源（可选）
+        * 下载 whl 文件
+	* 在离线机器上进行安装
+	    * 将离线包传到离线机器上
+	    * 安装 conda
+	    * 创建 Python 虚拟环境
+	    * 安装 whl 库
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
