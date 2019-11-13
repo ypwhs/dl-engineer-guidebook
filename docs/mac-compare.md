@@ -2,20 +2,20 @@
 
 这部分主要介绍苹果公司的电脑产品，以及我正在使用的设备。
 
-下面的表格是介绍每个产品不同配置的情况（截止至 2019年11月3日）：
+下面的表格是介绍每个产品不同配置的情况（截止至 2019年11月13日）：
 
 | 型号 | CPU\(GHz\) | 内存\(GB\) | 存储容量\(GB\) | 屏幕\(寸\) | 重量\(千克\) | 价格\(元\) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | MacBook | 1.2\(3.0\)\*2 | 8 | 256 | 12 | 0.92 | 买不到了 |
 | [MacBook Air](https://www.apple.com/cn/macbook-air/specs/) | 1.6\(3.6\)\*2 | 8 | 128 | 13 | 1.25 | 8899 |
-| [MacBook Pro](https://www.apple.com/cn/macbook-pro/specs/) | 1.4\(3.9\)\*4 | 8 | 128 | 13 | 1.37 | 9999 |
-| [MacBook Pro](https://www.apple.com/cn/macbook-pro/specs/) | 2.4\(4.1\)\*4 | 8 | 256 | 13 | 1.37 | 13899 |
-| [MacBook Pro](https://www.apple.com/cn/macbook-pro/specs/) | 2.6\(4.5\)\*6 | 16 | 256 | 15 | 1.83 | 18199 |
-| [MacBook Pro](https://www.apple.com/cn/macbook-pro/specs/) | 2.3\(4.8\)\*8 | 16 | 512 | 15 | 1.83 | 21399 |
+| [MacBook Pro 13](https://www.apple.com/cn/macbook-pro-13/specs/) | 1.4\(3.9\)\*4 | 8 | 128 | 13 | 1.37 | 9999 |
+| [MacBook Pro 13](https://www.apple.com/cn/macbook-pro-13/specs/) | 2.4\(4.1\)\*4 | 8 | 256 | 13 | 1.37 | 13899 |
+| [MacBook Pro 16](https://www.apple.com/cn/macbook-pro-16/specs/) | 2.6\(4.5\)\*6 | 16 | 512 | 16 | 2.0 | 18199 |
+| [MacBook Pro 16](https://www.apple.com/cn/macbook-pro-16/specs/) | 2.3\(4.8\)\*8 | 16 | 1024 | 16 | 2.0 | 21399 |
 | [Mac mini](https://www.apple.com/cn/mac-mini/specs/) | 3.6\*4 | 8 | 128 | 无 | 1.3 | 6331 |
 | [Mac mini](https://www.apple.com/cn/mac-mini/specs/) | 3.0\(4.1\)\*6 | 8 | 256 | 无 | 1.3 | 8669 |
-| [iMac](https://www.apple.com/cn/imac/specs/) | 3.0\(4.1\)\*6 | 8 | 1024\(融合\) | 27 | 9.42 | 13832 |
-| [iMac](https://www.apple.com/cn/shop/buy-mac/imac/MRR12CH/A#) \(定制\) | 3.6\(5.0\)\*8 | 8 | 512 | 27 | 9.42 | 21398 |
+| [iMac 27](https://www.apple.com/cn/imac/specs/) | 3.0\(4.1\)\*6 | 8 | 1024\(融合\) | 27 | 9.42 | 13832 |
+| [iMac 27](https://www.apple.com/cn/shop/buy-mac/imac/MRR12CH/A#) \(定制\) | 3.6\(5.0\)\*8 | 8 | 512 | 27 | 9.42 | 21398 |
 | [iMac Pro](https://www.apple.com/cn/imac-pro/specs/) | 3.2\(4.2\)\*8 | 32 | 1024 | 27 | 9.7 | 38138 |
 | [Mac Pro](https://www.apple.com/cn/mac-pro/specs/) \(未发售\) | 3.5\(4\)\*8 | 32 | 256 | 无 | 18 | 约4万\(5999$\) |
 
@@ -54,7 +54,7 @@ MacBook Air 的价格比 MacBook 便宜一点，性能比 MacBook 好一点，�
 
 ### [MacBook Pro](https://www.apple.com/cn/macbook-pro/)
 
-![MacBookPro](mac-compare/mbp15touch-space-gallery2-201807_GEO_CN.jpg)
+![MacBookPro](mac-compare/mbp16touch-space-select-201911_GEO_CN.jpg)
 
 如果是学生党，主推 MacBook Pro。
 
@@ -62,7 +62,7 @@ MacBook Air 的价格比 MacBook 便宜一点，性能比 MacBook 好一点，�
 
 当你使用 PyCharm 写代码的时候，代码提示、Debug 下断点以及 Debug 变量内容的显示都会比较耗费CPU，尽可能买一个速度快的电脑能够节省生命。
 
-正常操作系统开机以后都会占用 6GB 左右的内存，PyCharm 默认消耗 750MB内存，不过我使用的时候通常会内存不足，所以我会调到 2GB，这样就会用光 8GB 内存，因此选择 16GB 内存是最好的。
+正常操作系统开机以后都会占用 6GB 左右的内存，PyCharm 默认消耗 750MB内存，不过我使用的时候通常会内存不足，所以我会调到 2GB，这样就会用光 8GB 内存，因此选择 16GB 内存是比较充裕的。
 
 个人觉得如果不放数据集，硬盘选 256GB 是够用的。如果你作为主力机使用，除了写代码还需要放电视剧、照片、手机备份等文件，那么最好按照自己的使用习惯去选择合适的容量。
 
