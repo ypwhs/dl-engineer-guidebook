@@ -10,8 +10,8 @@
 | [MacBook Air](https://www.apple.com/cn/macbook-air/specs/) | 1.6\(3.6\)\*2 | 8 | 128 | 13 | 1.25 | 8899 |
 | [MacBook Pro 13](https://www.apple.com/cn/macbook-pro-13/specs/) | 1.4\(3.9\)\*4 | 8 | 128 | 13 | 1.37 | 9999 |
 | [MacBook Pro 13](https://www.apple.com/cn/macbook-pro-13/specs/) | 2.4\(4.1\)\*4 | 8 | 256 | 13 | 1.37 | 13899 |
-| [MacBook Pro 16](https://www.apple.com/cn/macbook-pro-16/specs/) | 2.6\(4.5\)\*6 | 16 | 512 | 16 | 2.0 | 18199 |
-| [MacBook Pro 16](https://www.apple.com/cn/macbook-pro-16/specs/) | 2.3\(4.8\)\*8 | 16 | 1024 | 16 | 2.0 | 21399 |
+| [MacBook Pro 16](https://www.apple.com/cn/macbook-pro-16/specs/) | 2.6\(4.5\)\*6 | 16 | 512 | 16 | 2.0 | 18999 |
+| [MacBook Pro 16](https://www.apple.com/cn/macbook-pro-16/specs/) | 2.3\(4.8\)\*8 | 16 | 1024 | 16 | 2.0 | 22199 |
 | [Mac mini](https://www.apple.com/cn/mac-mini/specs/) | 3.6\*4 | 8 | 128 | 无 | 1.3 | 6331 |
 | [Mac mini](https://www.apple.com/cn/mac-mini/specs/) | 3.0\(4.1\)\*6 | 8 | 256 | 无 | 1.3 | 8669 |
 | [iMac 27](https://www.apple.com/cn/imac/specs/) | 3.0\(4.1\)\*6 | 8 | 1024\(融合\) | 27 | 9.42 | 13832 |
