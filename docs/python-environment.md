@@ -146,7 +146,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 安装大礼包：
 
 ```bash
-pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow keras tensorboardx
+pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow keras tensorboardx xlrd openpyxl
 ```
 
 ### [jupyter](https://jupyter.org/)
