@@ -40,18 +40,18 @@ brew cask install Anaconda
 
 ### 配置环境变量
 
-安装好以后，有可能需要手动[配置环境变量](linux-command.md#export)，比如我安装在 `/usr/local/anaconda3` 目录下，所以我在 `~/.zshrc` 里添加里下面这句：
+安装好以后，有可能需要手动[配置环境变量](linux-command.md#export)，如果你使用的是 zsh，你需要为 zsh 初始化：
 
-```bash
-export PATH="/usr/local/anaconda3/bin:$PATH"
+```sh
+anaconda3/bin/conda init zsh
 ```
 
-在 Ubuntu 下，如果你使用的是 zsh，你需要在 `~/.zshrc` 里添加下面的内容，注意 `/home/ypw/anaconda3` 路径需要按照实际情况修改：
+执行以后，在 `~/.zshrc` 中可以看到下面的内容：
 
-```bash
+```sh
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ypw/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/ypw/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
@@ -64,6 +64,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 ```
+
 
 ### 使用 Anaconda 创建其他 Python 环境
 
