@@ -525,7 +525,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 使用下面的命令安装[常用 Python 库](python-environment.md#python-ku)：
 
 ```bash
-pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow-gpu keras tensorboardx
+pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow-gpu keras tensorboardx xlrd openpyxl
 ```
 
 ### 测试 PyTorch
