@@ -42,13 +42,13 @@ brew cask install Anaconda
 
 安装好以后，有可能需要手动[配置环境变量](linux-command.md#export)，如果你使用的是 zsh，你需要为 zsh 初始化：
 
-```sh
+```bash
 anaconda3/bin/conda init zsh
 ```
 
 执行以后，在 `~/.zshrc` 中可以看到下面的内容：
 
-```sh
+```bash
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ypw/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -96,9 +96,23 @@ python -m ipykernel install --user --name python2 --display-name "Python 2"
 如果遇到网络问题，可以使用[清华大学的镜像](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/)：
 
 ```bash
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-conda config --set show_channel_urls yes
+nano ~/.condarc
+
+# 添加下面的内容
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 ```
 
 ### 切换 pip 源
