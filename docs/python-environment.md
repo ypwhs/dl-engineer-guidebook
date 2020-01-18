@@ -43,7 +43,7 @@ brew cask install Anaconda
 安装好以后，有可能需要手动[配置环境变量](linux-command.md#export)，如果你使用的是 zsh，你需要为 zsh 初始化：
 
 ```bash
-anaconda3/bin/conda init zsh
+/usr/local/anaconda3/bin/conda init zsh
 ```
 
 执行以后，在 `~/.zshrc` 中可以看到下面的内容：
