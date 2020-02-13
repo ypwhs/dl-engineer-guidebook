@@ -117,11 +117,19 @@ custom_channels:
 
 ### 切换 pip 源
 
-如果遇到网络问题，可以使用[清华大学的镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)：
+如果遇到网络问题，可以使用阿里云的镜像：
 
 ```bash
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 ```
+
+常用 pypi 镜像：
+
+* https://mirrors.aliyun.com/pypi/simple/
+* https://pypi.tuna.tsinghua.edu.cn/simple/
+* https://mirrors.163.com/pypi/simple/
+* https://pypi.doubanio.com/simple/
+* https://mirrors.ustc.edu.cn/pypi/web/simple/
 
 ## Python 库
 
