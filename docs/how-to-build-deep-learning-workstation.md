@@ -36,7 +36,7 @@ AMD 的 [2990WX](https://www.amd.com/zh-hans/products/cpu/amd-ryzen-threadripper
 
 [GIGABYTE X299 AORUS MASTER \(rev. 1.0\)](https://www.gigabyte.cn/Motherboard/X299-AORUS-MASTER-rev-10) 使用了 4 组 2 槽间距显卡插槽设计，支持 1x16、2x16、2x16 + 1x8、1x16 + 3x8 四种配置（需要十核以上的 CPU），这里请参阅说明书安装显卡，安装在不同位置的速度是不一样的：
 
-![GIGABYTEX299AORUSMASTER\(rev.1.0\)](how-to-build-deep-learning-workstation/4way.jpg)
+![GIGABYTEX299AORUSMASTER\(rev.1.0\)](how-to-build-deep-learning-workstation/4Way.jpg)
 
 ![GIGABYTEX299AORUSMASTERmanual](how-to-build-deep-learning-workstation/pcie.png)
 
