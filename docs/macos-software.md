@@ -150,7 +150,7 @@ GitHub Desktop 是 GitHub 官方客户端，新手必备。
 
 它是一个可视化模型结构的软件，支持的模型文件格式有：**ONNX** \(`.onnx`, `.pb`, `.pbtxt`\), **Keras** \(`.h5`, `.keras`\), **Core ML** \(`.mlmodel`\), **Caffe2**\(`predict_net.pb`, `predict_net.pbtxt`\), **MXNet** \(`.model`, `-symbol.json`\) and **TensorFlow Lite** \(`.tflite`\). Netron has experimental support for **Caffe** \(`.caffemodel`, `.prototxt`\), **PyTorch** \(`.pth`\), **Torch** \(`.t7`\), **CNTK** \(`.model`, `.cntk`\), **PaddlePaddle** \(`__model__`\), **Darknet** \(`.cfg`\), **scikit-learn** \(`.pkl`\), **TensorFlow.js** \(`model.json`, `.pb`\) and **TensorFlow**\(`.pb`, `.meta`, `.pbtxt`\).
 
-![Netron](https://raw.githubusercontent.com/lutzroeder/netron/master/media/screenshot.png)
+![Netron](https://raw.githubusercontent.com/lutzroeder/netron/master/.github/screenshot.png)
 
 ### [Karabiner-Elements](https://pqrs.org/osx/karabiner/)
 
