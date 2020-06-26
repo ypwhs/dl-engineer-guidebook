@@ -10,25 +10,26 @@ remote_name: https://github.com/ypwhs/dl-engineer-guidebook
 remote_branch: site
 theme:
   name: 'material'
+  features:
+    - instant
+    - tabs
   language: 'zh'
   palette:
     primary: 'light green'
     accent: 'light green'
-  feature:
-    tabs: true
 google_analytics:
   - 'UA-111276663-2'
   - 'auto'
 extra:
   search:
   social:
-    - type: 'github'
+    - icon: 'fontawesome/brands/github'
       link: 'https://github.com/ypwhs'
-    - type: 'book'
+    - icon: 'fontawesome/brands/zhihu'
       link: 'https://www.zhihu.com/people/yangpw'
-    - type: 'globe'
+    - icon: 'fontawesome/solid/blog'
       link: 'https://ypw.io'
-    - type: 'linkedin'
+    - icon: 'fontawesome/brands/linkedin'
       link: 'https://www.linkedin.com/in/ypwhs/'
 markdown_extensions:
   - admonition
