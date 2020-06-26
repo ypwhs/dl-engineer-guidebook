@@ -509,15 +509,15 @@ unset __conda_setup
 
 ### 配置 pip 源
 
-在使用 pip 的时候有可能因为网络原因导致安装过慢或失败，这时候可以配置一些 pip 源：
+在使用 pip 的时候有可能因为网络原因导致安装过慢或失败，这时候可以[配置国内的 pip 源](python-environment.md#pip)：
 
-* [https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
-* [https://opsx.alibaba.com/mirror](https://opsx.alibaba.com/mirror)
+* [https://developer.aliyun.com/mirror/pypi](https://developer.aliyun.com/mirror/pypi)
+* [https://mirror.tuna.tsinghua.edu.cn/help/pypi/](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
 
-下面以清华大学开源软件镜像站为例：
+下面以阿里云为例：
 
 ```bash
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 ```
 
 ### Python 库
