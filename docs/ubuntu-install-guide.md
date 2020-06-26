@@ -15,8 +15,6 @@
 * [在 macOS 上制作 Ubuntu 系统盘](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos)
 * [安装 Ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop)
 
-如果你的主板支持 EFI，直接解压 ISO 到 U盘里即可制作好系统盘。
-
 目前我安装的版本是 [Ubuntu 18.04](http://releases.ubuntu.com/18.04/)
 
 如果遇到网络问题，可以使用清华大学的镜像：[https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/18.04.3/ubuntu-18.04.3-desktop-amd64.iso](https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/18.04.3/ubuntu-18.04.3-desktop-amd64.iso)
