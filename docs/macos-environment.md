@@ -9,7 +9,7 @@ Homebrew 是 macOS 上的一个包管理器，你可以使用 Homebrew 安装 Ap
 安装 Homebrew 只需要一行命令：
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 使用 Homebrew 安装一个 wget 吧：
