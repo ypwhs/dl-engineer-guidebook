@@ -23,12 +23,12 @@ Anaconda 官方下载页面：[https://www.anaconda.com/downloads](https://www.a
 在 macOS 上安装 Anaconda 可以使用下面的命令：
 
 ```bash
-wget https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh
-bash Anaconda3-2019.03-MacOSX-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2020.02-MacOSX-x86_64.sh
+bash Anaconda3-2020.02-MacOSX-x86_64.sh
 ```
 
-* 需要使用 brew 安装 [wget](macos-environment.md#bi-bei-ming-ling) 命令
-* 如果遇到网络问题，可以使用[清华大学的镜像](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)，如 [https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2019.03-MacOSX-x86\_64.sh](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2019.03-MacOSX-x86_64.sh)
+* 需要使用 brew 安装 [wget](macos-environment.md#_9) 命令
+* 如果遇到网络问题，可以使用[清华大学的镜像](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)，如 [https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2020.02-MacOSX-x86\_64.sh](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2020.02-MacOSX-x86_64.sh)
 
 #### brew cask 安装
 
