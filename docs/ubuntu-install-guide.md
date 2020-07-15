@@ -325,7 +325,7 @@ sudo apt install -y build-essential gcc g++ make binutils linux-headers-`uname -
 ### 安装显卡驱动
 
 ```bash
-sudo bash NVIDIA-Linux-x86_64-430.34.run
+sudo bash NVIDIA-Linux-x86_64-440.82.run
 ```
 
 安装步骤很简单，一直下一步就好了。
