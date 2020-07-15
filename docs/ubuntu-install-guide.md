@@ -285,7 +285,7 @@ sudo apt install -y --no-install-recommends libnvinfer-dev=5.1.5-1+cuda10.0
 以上方法可以根据实际情况选择，这里我选择第三种方法：
 
 ```bash
-wget https://cn.download.nvidia.cn/XFree86/Linux-x86_64/430.34/NVIDIA-Linux-x86_64-430.34.run
+wget https://cn.download.nvidia.cn/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_64-440.82.run
 ```
 
 ### 屏蔽 Nouveau
