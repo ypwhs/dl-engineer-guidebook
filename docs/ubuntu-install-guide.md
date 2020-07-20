@@ -160,10 +160,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ### 常用命令
 
-这些是我眼中的[必备命令](ubuntu-environment.md#bi-bei-ming-ling)，你可以按照自己的需要安装：
+这些是我的[必备命令](ubuntu-environment.md#bi-bei-ming-ling)，你可以按照自己的需要安装：
 
 ```bash
-sudo apt install -y git curl htop nload tmux screen aria2 graphviz aptitude tree
+sudo apt install -y git curl htop nload tmux screen aria2 graphviz aptitude tree iotop
 ```
 
 ## 安装 NVIDIA 驱动、CUDA 和 cuDNN（apt）
