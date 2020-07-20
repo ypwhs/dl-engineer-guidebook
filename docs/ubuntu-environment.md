@@ -3,14 +3,17 @@
 ## CUDA
 
 * 最新版：[https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
+* CUDA 10.2：[https://developer.nvidia.com/cuda-10.2-download-archive](https://developer.nvidia.com/cuda-10.2-download-archive)
+* CUDA 10.1：[https://developer.nvidia.com/cuda-10.1-download-archive-update2](https://developer.nvidia.com/cuda-10.1-download-archive-update2)
 * CUDA 10.0：[https://developer.nvidia.com/cuda-10.0-download-archive](https://developer.nvidia.com/cuda-10.0-download-archive)
-* 旧版：[https://developer.nvidia.com/cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive)
+* 旧版列表：[https://developer.nvidia.com/cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive)
 
 CUDA 是英伟达显卡进行各种高性能运算必备的库，不同软件包依赖的 CUDA 版本可能不同，你需要根据你所使用的深度学习框架选择合适的 CUDA 和 cuDNN 版本。
 
 |  版本 | Windows 10 | Linux |
 | :--- | :--- | :--- |
-| [CUDA 10.1](https://developer.nvidia.com/cuda-downloads) | [cuda\_10.1.243\_426.00\_win10.exe](http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_426.00_win10.exe) | [cuda\_10.1.243\_418.87.00\_linux.run](http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run) |
+| [CUDA 10.2](https://developer.nvidia.com/cuda-10.2-download-archive) | [cuda\_10.2.89\_441.22\_win10.exe](http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_441.22_win10.exe) | [cuda\_10.2.89\_440.33.01\_linux.run](http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run) |
+| [CUDA 10.1](https://developer.nvidia.com/cuda-10.1-download-archive-update2) | [cuda\_10.1.243\_426.00\_win10.exe](http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_426.00_win10.exe) | [cuda\_10.1.243\_418.87.00\_linux.run](http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run) |
 | [CUDA 10.0](https://developer.nvidia.com/cuda-10.0-download-archive) | [cuda\_10.0.130\_411.31\_win10.exe](https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_411.31_win10) | [cuda\_10.0.130\_410.48\_linux.run](https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux) |
 | [CUDA 9.2](https://developer.nvidia.com/cuda-92-download-archive) | [cuda\_9.2.148\_win10.exe](https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers2/cuda_9.2.148_win10) | [cuda\_9.2.148\_396.37\_linux.run](https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers/cuda_9.2.148_396.37_linux) |
 | [CUDA 9.1](https://developer.nvidia.com/cuda-91-download-archive) | [cuda\_9.1.85\_win10.exe](https://developer.nvidia.com/compute/cuda/9.1/Prod/local_installers/cuda_9.1.85_win10) | [cuda\_9.1.85\_387.26\_linux.run](https://developer.nvidia.com/compute/cuda/9.1/Prod/local_installers/cuda_9.1.85_387.26_linux) |
