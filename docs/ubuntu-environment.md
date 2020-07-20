@@ -144,7 +144,7 @@ pip3 install https://download.pytorch.org/whl/cu100/torchvision-0.3.0-cp37-cp37m
 ## 必备命令
 
 ```bash
-sudo apt install git curl htop nload tmux screen aria2 graphviz aptitude tree
+sudo apt install -y git curl htop nload tmux screen aria2 graphviz aptitude tree iotop
 ```
 
 常见的 git、htop、nload 等命令在 [macOS 环境](macos-environment.md#bi-bei-ming-ling) 里已经介绍过了。其实大部分命令在没有安装的时候，如果你使用它们，会自动提示需要安装，所以不用担心没有安装全：
