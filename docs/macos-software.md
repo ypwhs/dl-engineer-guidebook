@@ -178,7 +178,7 @@ Karabiner-Elements 是一个改键工具，机械键盘必备软件。
 
 通过这个软件，我可以直观地查看我跑程序的时候 CPU 有没有全部用上，它在状态栏并不会占用太多空间，下载东西的时候也可以监控网速。
 
-### [DaisyDisk](https://daisydiskapp.com/)。
+### [DaisyDisk](https://daisydiskapp.com/)
 
 这是一个非常好用的磁盘空间整理工具，你可以检查你的 Mac 上占用空间较大的文件都在哪里。收费。
 
