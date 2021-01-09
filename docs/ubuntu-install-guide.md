@@ -168,7 +168,7 @@ sudo apt install -y git curl htop nload tmux screen aria2 graphviz aptitude tree
 
 ## 安装 NVIDIA 驱动、CUDA 和 cuDNN（apt）
 
-安装驱动有两种方法，一种是使用apt安装，一种是直接下载驱动安装。
+安装驱动有两种方法，一种是使用apt安装，一种是直接下载驱动安装。我一般会选择直接下载驱动。
 
 ### 使用 apt 安装驱动
 
