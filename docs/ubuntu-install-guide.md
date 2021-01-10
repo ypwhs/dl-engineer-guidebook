@@ -285,7 +285,7 @@ sudo apt install -y --no-install-recommends libnvinfer-dev=5.1.5-1+cuda10.0
 以上方法可以根据实际情况选择，这里我选择第三种方法：
 
 ```bash
-wget https://cn.download.nvidia.cn/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_64-440.82.run
+wget https://cn.download.nvidia.cn/XFree86/Linux-x86_64/450.80.02/NVIDIA-Linux-x86_64-450.80.02.run
 ```
 
 ### 屏蔽 Nouveau
@@ -325,7 +325,7 @@ sudo apt install -y build-essential gcc g++ make binutils linux-headers-`uname -
 ### 安装显卡驱动
 
 ```bash
-sudo bash NVIDIA-Linux-x86_64-440.82.run
+sudo bash NVIDIA-Linux-x86_64-450.80.02.run
 ```
 
 安装步骤很简单，一直下一步就好了。
@@ -339,20 +339,23 @@ nvidia-smi
 如果能看到类似的内容就说明显卡驱动装好了：
 
 ```text
-Sun Jul 21 10:37:16 2019
+Sun Jan 10 14:50:24 2021
 +-----------------------------------------------------------------------------+
-| NVIDIA-SMI 430.34       Driver Version: 430.34       CUDA Version: 10.1     |
+| NVIDIA-SMI 450.80.02    Driver Version: 450.80.02    CUDA Version: 11.0     |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
 |===============================+======================+======================|
 |   0  GeForce GTX 108...  Off  | 00000000:0B:00.0 Off |                  N/A |
-|  0%   43C    P0    62W / 275W |      0MiB / 11178MiB |      0%      Default |
+| 11%   42C    P5    33W / 275W |      0MiB / 11178MiB |      3%      Default |
+|                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
 
 +-----------------------------------------------------------------------------+
-| Processes:                                                       GPU Memory |
-|  GPU       PID   Type   Process name                             Usage      |
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
 |=============================================================================|
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+
