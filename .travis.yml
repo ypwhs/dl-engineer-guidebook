@@ -6,7 +6,7 @@ cache:
   directories:
     - $HOME/.cache/pip
 install:
-  - pip install mkdocs mkdocs-material
+  - pip install mkdocs==1.1.2 mkdocs-material==5.5.14
   - echo -e "machine github.com\n  login ${github_token}" > ~/.netrc
   - git checkout site && git checkout -qf $TRAVIS_COMMIT
 script:
