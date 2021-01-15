@@ -485,27 +485,13 @@ by running conda init? [yes|no]
 Thank you for installing Anaconda3!
 ```
 
-安装完成以后，如果你使用的是bash，就不需要配置环境变量，如果你使用的是zsh，那么你还需要[配置环境变量](python-environment.md#pei-zhi-huan-jing-bian-liang)。
+安装完成以后，你可能还需要[配置环境变量](python-environment.md#pei-zhi-huan-jing-bian-liang)。
 
 ```bash
-nano ~/.zshrc
+~/anaconda3/bin/conda init
 
-# 添加下面的内容
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ypw/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/ypw/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ypw/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/ypw/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# 如果你用的终端是zsh
+~/anaconda3/bin/conda init zsh
 ```
 
 配置好以后，可以重启机器，或者使用 `source ~/.zshrc` [更新环境变量](linux-command.md#source)。
