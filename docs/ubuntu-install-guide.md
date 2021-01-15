@@ -163,7 +163,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 这些是我的[必备命令](ubuntu-environment.md#bi-bei-ming-ling)，你可以按照自己的需要安装：
 
 ```bash
-sudo apt install -y git curl htop nload tmux screen aria2 graphviz aptitude tree iotop
+sudo apt install -y net-tools git curl htop nload tmux screen aria2 graphviz aptitude tree iotop
 ```
 
 ## 安装 NVIDIA 驱动、CUDA 和 cuDNN（apt）
@@ -217,22 +217,26 @@ nvidia-smi
 如果能看到类似的内容就说明显卡驱动装好了：
 
 ```text
-Sun Jul 21 12:05:35 2019
+Fri Jan 15 21:15:14 2021
 +-----------------------------------------------------------------------------+
-| NVIDIA-SMI 410.104      Driver Version: 410.104      CUDA Version: 10.0     |
+| NVIDIA-SMI 460.32.03    Driver Version: 460.32.03    CUDA Version: 11.2     |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
 |===============================+======================+======================|
-|   0  GeForce GTX 108...  On   | 00000000:0B:00.0 Off |                  N/A |
-|  0%   40C    P8    11W / 275W |      0MiB / 11178MiB |      0%      Default |
+|   0  GeForce RTX 3080    Off  | 00000000:01:00.0  On |                  N/A |
+| 31%   22C    P8     6W / 320W |    183MiB / 10015MiB |      0%      Default |
+|                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
 
 +-----------------------------------------------------------------------------+
-| Processes:                                                       GPU Memory |
-|  GPU       PID   Type   Process name                             Usage      |
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
 |=============================================================================|
-|  No running processes found                                                 |
+|    0   N/A  N/A      1151      G   /usr/lib/xorg/Xorg                142MiB |
+|    0   N/A  N/A      1454      G   /usr/bin/gnome-shell               38MiB |
 +-----------------------------------------------------------------------------+
 ```
 
@@ -339,16 +343,16 @@ nvidia-smi
 如果能看到类似的内容就说明显卡驱动装好了：
 
 ```text
-Sun Jan 10 14:50:24 2021
+Fri Jan 15 21:15:14 2021
 +-----------------------------------------------------------------------------+
-| NVIDIA-SMI 450.80.02    Driver Version: 450.80.02    CUDA Version: 11.0     |
+| NVIDIA-SMI 460.32.03    Driver Version: 460.32.03    CUDA Version: 11.2     |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
 |                               |                      |               MIG M. |
 |===============================+======================+======================|
-|   0  GeForce GTX 108...  Off  | 00000000:0B:00.0 Off |                  N/A |
-| 11%   42C    P5    33W / 275W |      0MiB / 11178MiB |      3%      Default |
+|   0  GeForce RTX 3080    Off  | 00000000:01:00.0  On |                  N/A |
+| 31%   22C    P8     6W / 320W |    183MiB / 10015MiB |      0%      Default |
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
 
@@ -357,7 +361,8 @@ Sun Jan 10 14:50:24 2021
 |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
 |        ID   ID                                                   Usage      |
 |=============================================================================|
-|  No running processes found                                                 |
+|    0   N/A  N/A      1151      G   /usr/lib/xorg/Xorg                142MiB |
+|    0   N/A  N/A      1454      G   /usr/bin/gnome-shell               38MiB |
 +-----------------------------------------------------------------------------+
 ```
 
