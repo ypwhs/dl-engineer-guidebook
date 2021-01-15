@@ -522,6 +522,12 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow-gpu keras tensorboardx xlrd openpyxl
 ```
 
+注意：如果是 30 系列的显卡，比如 3080、3090，需要使用CUDA11或以上的深度学习框架，比如 PyTorch 目前是这样安装的：
+
+```bash
+pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
 ### 测试 PyTorch
 
 ```python
