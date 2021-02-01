@@ -81,37 +81,37 @@ chsh -s /bin/zsh
 ### 终端
 
 ```bash
-brew cask install iTerm2
+brew install --cask iTerm2
 ```
 
 ### 编辑器
 
 ```bash
-brew cask install Sublime-Text MacDown Typora Hex-Fiend 
+brew install --cask Sublime-Text MacDown Typora Hex-Fiend 
 ```
 
 ### 浏览器
 
 ```bash
-brew cask install Google-Chrome
+brew install --cask Google-Chrome
 ```
 
 ### 开发软件
 
 ```bash
-brew cask install PyCharm Anaconda GitHub Postman
+brew install --cask PyCharm Anaconda GitHub Postman
 ```
 
 ### 实用工具
 
 ```bash
-brew cask install Netron Karabiner-Elements The-Unarchiver Caffeine
+brew install --cask Netron Karabiner-Elements The-Unarchiver Caffeine
 ```
 
 ### 日常应用
 
 ```bash
-brew cask install WeChat QQ IINA BaiduNetdisk
+brew install --cask WeChat QQ IINA BaiduNetdisk
 ```
 
 ## 必备命令
