@@ -2,7 +2,7 @@
 
 本文会介绍如何使用 tensorboard 进行可视化。
 
-![tensorboardX](https://raw.githubusercontent.com/lanpa/tensorboardX/master/screenshots/Demo.gif)
+![tensorboardX](how-to-use-tensorboard/Demo.gif)
 
 ## 安装
 
