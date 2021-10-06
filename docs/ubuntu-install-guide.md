@@ -7,6 +7,71 @@
 * 安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）
 * 安装 Anaconda 和 Python 库
 
+脚本式装机：
+
+```
+# 添加代理
+export https_proxy=http://dxd.ypw.io:7890
+
+# 添加 sudo 免密码
+if [[ $(grep -L $USER /etc/sudoers) ]]; then
+  echo "Add $USER to sudoers";
+  echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers;
+fi
+
+# 升级系统
+sudo apt update
+sudo apt upgrade -y
+
+# 安装常用命令和 oh-my-zsh
+sudo apt install -y git curl zsh net-tools git curl htop nload tmux screen aria2 graphviz aptitude tree iotop
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# 安装 Python 环境
+bash Miniconda3-latest-Linux-x86_64.sh -b
+~/miniconda3/bin/conda init bash
+~/miniconda3/bin/conda init zsh
+
+~/miniconda3/bin/conda activate
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
+pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm tensorboardx xlrd openpyxl openmim
+mim install mmdet
+
+# 安装 CUDA 11.1，ubuntu18.04
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin -O cuda-ubuntu1804.pin
+sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
+sudo apt-get update
+sudo apt-get -y install cuda-11-1
+
+# CUDA 环境变量
+
+if [[ $(grep -L "cuda" ~/.bashrc) ]]; then
+  echo "Add CUDA environment to ~/.bashrc"
+  echo "export PATH=/usr/local/cuda/bin:$PATH" | tee -a ~/.bashrc;
+  echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" | tee -a ~/.bashrc;
+fi
+
+if [[ $(grep -L "cuda" ~/.zshrc) ]]; then
+  echo "Add CUDA environment to ~/.zshrc"
+  echo "export PATH=/usr/local/cuda/bin:$PATH" | tee -a ~/.zshrc;
+  echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" | tee -a ~/.zshrc;
+fi
+```
+
+Ubuntu 20.04：
+
+```
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+sudo apt-get update
+sudo apt-get -y install cuda-11-1
+```
+
 ## 安装 Ubuntu
 
 以下是 Ubuntu 官方网站上的教程：
