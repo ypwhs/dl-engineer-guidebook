@@ -14,7 +14,7 @@
 export https_proxy=http://dxd.ypw.io:7890
 
 # 添加 sudo 免密码
-if [[ $(grep -L $USER /etc/sudoers) ]]; then
+if [[ $(sudo grep -L $USER /etc/sudoers) ]]; then
   echo "Add $USER to sudoers";
   echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers;
 fi
@@ -28,6 +28,7 @@ sudo apt install -y git curl zsh net-tools git curl htop nload tmux screen aria2
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # 安装 Python 环境
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh -b
 ~/miniconda3/bin/conda init bash
 ~/miniconda3/bin/conda init zsh
