@@ -40,5 +40,5 @@ jobs:
           remote_user: ${{ secrets.USERNAME }}
           remote_port: ${{ secrets.PORT }}
           remote_key: ${{ secrets.KEY }}
-          path: "."
-          remote_path: "/home/ypw/data/dl"
+          path: "./site/"
+          remote_path: "/home/ypw/data/dl.ypw.io"
