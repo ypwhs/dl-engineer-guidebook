@@ -11,17 +11,30 @@ remote_branch: site
 theme:
   name: 'material'
   features:
-    - instant
-    - tabs
+    - content.code.annotate
+    - content.tabs.link
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    # - toc.integrate
   language: 'zh'
   palette:
     primary: 'light green'
     accent: 'light green'
-google_analytics:
-  - 'UA-111276663-2'
-  - 'auto'
 extra:
   search:
+  analytics:
+    provider: google
+    property: 'UA-111276663-2'
   social:
     - icon: 'fontawesome/brands/github'
       link: 'https://github.com/ypwhs'
@@ -39,21 +52,22 @@ markdown_extensions:
   - toc:
       permalink: false
 nav:
-  - 首页: README.md
-  - 如何配置一台深度学习工作站?: how-to-build-deep-learning-workstation.md
-  - Windows、Ubuntu 还是 macOS？: windows-linux-or-macos.md
-  - Mac 对比: mac-compare.md
-  - macOS 软件: macos-software.md
-  - macOS 环境: macos-environment.md
-  - Python 环境: python-environment.md
-  - Ubuntu 装机步骤: ubuntu-install-guide.md
-  - Ubuntu 环境: ubuntu-environment.md
-  - 常用 Linux 命令: linux-command.md
-  - CV 学习资源: cv-resources.md
-  - 常用 CV 数据集: cv-dataset.md
-  - 在 ImageNet 上表现出色的经典模型: best-models-on-imagenet.md
-  - 如何使用 TensorBoard: how-to-use-tensorboard.md
-  - 离线安装 Python 环境: offline-python-environment.md
+  - 首页:
+    - 首页: README.md
+    - 如何配置一台深度学习工作站?: how-to-build-deep-learning-workstation.md
+    - Windows、Ubuntu 还是 macOS？: windows-linux-or-macos.md
+    - Mac 对比: mac-compare.md
+    - macOS 软件: macos-software.md
+    - macOS 环境: macos-environment.md
+    - Python 环境: python-environment.md
+    - Ubuntu 装机步骤: ubuntu-install-guide.md
+    - Ubuntu 环境: ubuntu-environment.md
+    - 常用 Linux 命令: linux-command.md
+    - CV 学习资源: cv-resources.md
+    - 常用 CV 数据集: cv-dataset.md
+    - 在 ImageNet 上表现出色的经典模型: best-models-on-imagenet.md
+    - 如何使用 TensorBoard: how-to-use-tensorboard.md
+    - 离线安装 Python 环境: offline-python-environment.md
   - 硬件:
     - 如何配置一台深度学习工作站?: how-to-build-deep-learning-workstation.md
     - Windows、Ubuntu 还是 macOS？: windows-linux-or-macos.md
