@@ -19,7 +19,7 @@ theme:
     # - navigation.instant
     - navigation.sections
     - navigation.tabs
-    # - navigation.tabs.sticky
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
@@ -30,11 +30,11 @@ theme:
   palette:
     primary: 'light green'
     accent: 'light green'
-google_analytics:
-  - 'UA-111276663-2'
-  - 'auto'
 extra:
   search:
+  analytics:
+    provider: google
+    property: 'UA-111276663-2'
   social:
     - icon: 'fontawesome/brands/github'
       link: 'https://github.com/ypwhs'
