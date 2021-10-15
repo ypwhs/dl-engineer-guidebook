@@ -2,6 +2,57 @@
 
 这篇文章会介绍我在 macOS 的终端里安装的命令和软件。
 
+脚本式装机：
+
+```
+# 添加代理
+export https_proxy=http://dxd.ypw.io:7890
+
+# 安装 brew，需要手动输入密码，按回车
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+# 添加环境变量
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ypw/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# 安装常用命令
+brew install aria2 cmake curl pv htop nano nload nmap p7zip tree wget watch zsh
+
+# 安装 Oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# 修改终端为zsh
+if [[ $(sudo grep -L /opt/homebrew/bin/zsh /etc/shells) ]]; then
+  echo "Add /opt/homebrew/bin/zsh to /etc/shells";
+  echo "/opt/homebrew/bin/zsh" | sudo tee -a /etc/shells;
+fi
+
+# 安装 iTerm2
+brew install --cask iterm2
+
+# 安装一些必备软件
+brew install --cask 1password baidunetdisk caffeine clash-for-windows dingtalk github google-chrome iina hex-fiend istat-menus karabiner-elements netron postman pycharm qbittorrent qq sublime-text macdown tinypng4mac typora visual-studio-code wechat wechatwork xquartz
+
+# Clash 解决已损坏问题
+sudo xattr -r -d com.apple.quarantine /Applications/Clash\ for\ Windows.app
+
+# 安装Chrome
+open https://www.google.cn/chrome/
+
+# 安装搜狗输入法
+open https://pinyin.sogou.com/mac/
+
+# 安装Python环境
+sudo softwareupdate --install-rosetta --agree-to-license
+
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+bash Miniconda3-latest-MacOSX-x86_64.sh -b
+
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm tensorboardx torch torchvision xlrd openpyxl openmim
+mim install mmdet
+```
+
 ## [Homebrew](https://brew.sh/index_zh-cn)
 
 Homebrew 是 macOS 上的一个包管理器，你可以使用 Homebrew 安装 Apple 没有预装但[你需要的东西](https://formulae.brew.sh/formula/)。
