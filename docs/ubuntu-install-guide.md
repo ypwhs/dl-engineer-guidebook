@@ -70,14 +70,14 @@ sudo apt-get -y install cuda-11-1
 # CUDA 环境变量
 if [[ $(grep -L "cuda" ~/.bashrc) ]]; then
   echo "Add CUDA environment to ~/.bashrc"
-  echo "export PATH=/usr/local/cuda/bin:$PATH" | tee -a ~/.bashrc;
-  echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" | tee -a ~/.bashrc;
+  echo "export PATH=/usr/local/cuda/bin:\$PATH" | tee -a ~/.bashrc;
+  echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:\$LD_LIBRARY_PATH" | tee -a ~/.bashrc;
 fi
 
 if [[ $(grep -L "cuda" ~/.zshrc) ]]; then
   echo "Add CUDA environment to ~/.zshrc"
-  echo "export PATH=/usr/local/cuda/bin:$PATH" | tee -a ~/.zshrc;
-  echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" | tee -a ~/.zshrc;
+  echo "export PATH=/usr/local/cuda/bin:\$PATH" | tee -a ~/.zshrc;
+  echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:\$LD_LIBRARY_PATH" | tee -a ~/.zshrc;
 fi
 ```
 
