@@ -37,8 +37,13 @@ bash Miniconda3-latest-Linux-x86_64.sh -b
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
 pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm tensorboardx xlrd openpyxl openmim
-mim install mmdet
+```
 
+安装 CUDA：
+
+Ubuntu 18.04：
+
+```
 # 安装 CUDA 11.1，ubuntu18.04
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin -O cuda-ubuntu1804.pin
 sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -46,9 +51,23 @@ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda
 sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
 sudo apt-get update
 sudo apt-get -y install cuda-11-1
+```
 
+Ubuntu 20.04：
+
+```
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+sudo apt-get update
+sudo apt-get -y install cuda-11-1
+```
+
+添加 CUDA 环境变量：
+
+```
 # CUDA 环境变量
-
 if [[ $(grep -L "cuda" ~/.bashrc) ]]; then
   echo "Add CUDA environment to ~/.bashrc"
   echo "export PATH=/usr/local/cuda/bin:$PATH" | tee -a ~/.bashrc;
@@ -62,15 +81,10 @@ if [[ $(grep -L "cuda" ~/.zshrc) ]]; then
 fi
 ```
 
-Ubuntu 20.04：
+安装 mmdet：
 
 ```
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
-sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
-sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
-sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
-sudo apt-get update
-sudo apt-get -y install cuda-11-1
+mim install mmdet
 ```
 
 ## 安装 Ubuntu
