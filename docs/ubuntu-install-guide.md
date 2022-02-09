@@ -36,7 +36,7 @@ bash Miniconda3-latest-Linux-x86_64.sh -b
 ~/miniconda3/bin/conda activate
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pip install torch==1.10.1+cu113 torchvision==0.11.2+cu113 torchaudio==0.10.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
-pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm tensorboardx xlrd openpyxl openmim
+pip install jupyter jupyter_contrib_nbextensions numpy pandas flask scikit-image scikit-learn matplotlib opencv-python pillow tqdm tensorboardx xlrd openpyxl openmim
 ```
 
 安装 CUDA：
