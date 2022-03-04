@@ -12,27 +12,38 @@
 ```
 # 添加代理
 export https_proxy=http://dxd.ypw.io:7890
+```
 
+```
 # 添加 sudo 免密码
 if [[ $(sudo grep -L $USER /etc/sudoers) ]]; then
   echo "Add $USER to sudoers";
   echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers;
 fi
+```
 
+```
 # 升级系统
 sudo apt update
 sudo apt upgrade -y
+```
 
+```
 # 安装常用命令和 oh-my-zsh
 sudo apt install -y openssh-server git curl zsh net-tools git curl htop nload tmux screen aria2 graphviz aptitude tree iotop
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
+```
 # 安装 Python 环境
 wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh -b
 ~/miniconda3/bin/conda init bash
 ~/miniconda3/bin/conda init zsh
+```
 
+```
+# reboot your terminal
 ~/miniconda3/bin/conda activate
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pip install torch==1.10.1+cu113 torchvision==0.11.2+cu113 torchaudio==0.10.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
