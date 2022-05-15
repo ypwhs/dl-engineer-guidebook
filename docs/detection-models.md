@@ -125,4 +125,5 @@ Attention 结构：
 | Swin R50               | 2021 | 46.0     | [![](detection-models/demo/mask_rcnn_swin-t-p4-w7_fpn_ms-crop-3x_coco_20210906_131725-bacf6f7b.jpg)](detection-models/demo/mask_rcnn_swin-t-p4-w7_fpn_ms-crop-3x_coco_20210906_131725-bacf6f7b.jpg)                                     |
 | QueryInst R50          | 2021 | 47.5     | [![](detection-models/demo/queryinst_r50_fpn_300_proposals_crop_mstrain_480-800_3x_coco_20210904_101802-85cffbd8.jpg)](detection-models/demo/queryinst_r50_fpn_300_proposals_crop_mstrain_480-800_3x_coco_20210904_101802-85cffbd8.jpg) |
 
+可以看到，不是 mAP 分数更高的模型就更准，目前基于 Anchor 的模型依然具备极大的优势。
 
