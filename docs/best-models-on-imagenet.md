@@ -6,15 +6,15 @@ ImageNet 是由李飞飞主导建立的一个超大的计算机视觉数据集�
 
 ### TensorFlow
 
-* [https://www.tensorflow.org/lite/guide/hosted\_models](https://www.tensorflow.org/lite/guide/hosted_models)
-* [https://github.com/keras-team/keras-applications](https://github.com/keras-team/keras-applications)
-* [https://github.com/tensorflow/models/tree/master/research/slim\#pre-trained-models](https://github.com/tensorflow/models/tree/master/research/slim#pre-trained-models)
+* [https://www.tensorflow.org/tutorials/images/transfer_learning](https://www.tensorflow.org/tutorials/images/transfer_learning)
+* [https://keras.io/api/applications/](https://keras.io/api/applications/)
 
 ### PyTorch
 
-* [https://pytorch.org/docs/stable/torchvision/models.html](https://pytorch.org/docs/stable/torchvision/models.html)
-* [https://github.com/Cadene/pretrained-models.pytorch](https://github.com/Cadene/pretrained-models.pytorch)
+* [https://pytorch.org/vision/stable/models.html](https://pytorch.org/vision/stable/models.html)
+* [https://github.com/rwightman/pytorch-image-models](https://github.com/rwightman/pytorch-image-models)
 * [https://pytorch.org/hub](https://pytorch.org/hub)
+* [https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
 
 ## 模型论文
 
@@ -61,12 +61,6 @@ Submitted on 7 Oct 2016
 **Neural Architecture Search with Reinforcement Learning**  
 [https://arxiv.org/abs/1611.01578](https://arxiv.org/abs/1611.01578)  
 Submitted on 5 Nov 2016
-
-### AmoebaNet
-
-**Regularized Evolution for Image Classifier Architecture Search**  
-[https://arxiv.org/abs/1802.01548](https://arxiv.org/abs/1802.01548)  
-Submitted on 5 Feb 2018
 
 ### EfficientNet
 
