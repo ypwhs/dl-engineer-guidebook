@@ -17,7 +17,9 @@ for meta_path in glob('configs/*/metafile.yml'):
         model_config_map[model['Config']] = model
 
 config_path_list = [
-    'configs/mask_rcnn/mask_rcnn_r50_fpn_2x_coco.py',
+    'configs/mask2former/mask2former_r50_lsj_8x2_50e_coco.py',
+    'configs/faster_rcnn/faster_rcnn_r50_fpn_mstrain_3x_coco.py',
+    'configs/mask_rcnn/mask_rcnn_r50_fpn_mstrain-poly_3x_coco.py',
     'configs/cascade_rcnn/cascade_mask_rcnn_r50_fpn_mstrain_3x_coco.py',
     'configs/ssd/ssdlite_mobilenetv2_scratch_600e_coco.py',
     'configs/yolo/yolov3_d53_fp16_mstrain-608_273e_coco.py',
@@ -40,7 +42,7 @@ for config_path in config_path_list:
     model.show_result(
         img_path,
         result,
-        score_thr=0.3,
+        score_thr=0.5,
         bbox_color=(72, 241, 72),
         mask_color='coco',
         text_color=(200, 200, 200),
