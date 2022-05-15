@@ -96,6 +96,7 @@ nav:
     - CV 学习资源: cv-resources.md
     - 常用 CV 数据集: cv-dataset.md
     - 在 ImageNet 上表现出色的经典模型: best-models-on-imagenet.md
+    - 检测模型: detection-models.md
   - 使用技巧:
     - 如何使用 TensorBoard: how-to-use-tensorboard.md
     - 如何使用 PyCharm 远程调试: remote-debugging-with-pycharm.md
