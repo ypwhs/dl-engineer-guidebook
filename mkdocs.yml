@@ -28,8 +28,18 @@ theme:
     # - toc.integrate
   language: 'zh'
   palette:
-    primary: 'light green'
-    accent: 'light green'
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: 打开深色模式
+    - scheme: slate 
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-outline
+        name: 关闭深色模式
 extra:
   search:
   analytics:
