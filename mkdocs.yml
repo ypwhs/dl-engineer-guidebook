@@ -61,6 +61,9 @@ markdown_extensions:
   - pymdownx.critic
   - toc:
       permalink: false
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - js/tablesort.js
 nav:
   - 首页:
     - 首页: README.md
