@@ -77,7 +77,6 @@ nav:
     - 常用 CV 数据集: cv-dataset.md
     - 在 ImageNet 上表现出色的经典模型: best-models-on-imagenet.md
     - 如何使用 TensorBoard: how-to-use-tensorboard.md
-    - 离线安装 Python 环境: offline-python-environment.md
   - 硬件:
     - 如何配置一台深度学习工作站?: how-to-build-deep-learning-workstation.md
     - Windows、Ubuntu 还是 macOS？: windows-linux-or-macos.md
