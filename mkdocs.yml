@@ -61,6 +61,10 @@ markdown_extensions:
   - pymdownx.critic
   - toc:
       permalink: false
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js
+  - js/tablesort.js
 nav:
   - 首页:
     - 首页: README.md
