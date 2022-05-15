@@ -13,8 +13,8 @@ theme:
   features:
     - content.code.annotate
     - content.tabs.link
-    # - header.autohide
-    # - navigation.expand
+    #    - header.autohide
+    #    - navigation.expand
     - navigation.indexes
     - navigation.instant
     - navigation.sections
@@ -25,7 +25,7 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
-    # - toc.integrate
+  #    - toc.integrate
   language: 'zh'
   palette:
     - scheme: default
@@ -34,7 +34,7 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: 打开深色模式
-    - scheme: slate 
+    - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
@@ -73,10 +73,11 @@ nav:
     - Ubuntu 装机步骤: ubuntu-install-guide.md
     - Ubuntu 环境: ubuntu-environment.md
     - 常用 Linux 命令: linux-command.md
+    - 如何使用 TensorBoard: how-to-use-tensorboard.md
     - CV 学习资源: cv-resources.md
     - 常用 CV 数据集: cv-dataset.md
     - 在 ImageNet 上表现出色的经典模型: best-models-on-imagenet.md
-    - 如何使用 TensorBoard: how-to-use-tensorboard.md
+    - 检测模型: detection-models.md
   - 硬件:
     - 如何配置一台深度学习工作站?: how-to-build-deep-learning-workstation.md
     - Windows、Ubuntu 还是 macOS？: windows-linux-or-macos.md
@@ -95,6 +96,7 @@ nav:
     - CV 学习资源: cv-resources.md
     - 常用 CV 数据集: cv-dataset.md
     - 在 ImageNet 上表现出色的经典模型: best-models-on-imagenet.md
+    - 检测模型: detection-models.md
   - 使用技巧:
     - 如何使用 TensorBoard: how-to-use-tensorboard.md
     - 如何使用 PyCharm 远程调试: remote-debugging-with-pycharm.md
