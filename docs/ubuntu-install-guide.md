@@ -36,8 +36,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ```
 # 安装 Python 环境
-wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh -b
+wget https://mirrors.bfsu.edu.cn/anaconda/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh
+bash Miniconda3-py39_4.12.0-Linux-x86_64.sh -b
 ~/miniconda3/bin/conda init bash
 ~/miniconda3/bin/conda init zsh
 ```
@@ -45,8 +45,10 @@ bash Miniconda3-latest-Linux-x86_64.sh -b
 ```
 # reboot your terminal
 ~/miniconda3/bin/conda activate
-pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+# pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 # pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple
 pip install torch==1.10.1+cu113 torchvision==0.11.2+cu113 torchaudio==0.10.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 pip install jupyter jupyter_contrib_nbextensions numpy pandas flask scikit-image scikit-learn matplotlib opencv-python pillow tqdm tensorboardx xlrd openpyxl openmim
 ```
