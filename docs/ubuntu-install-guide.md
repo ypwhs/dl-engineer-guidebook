@@ -10,11 +10,6 @@
 脚本式装机：
 
 ```
-# 添加代理
-export https_proxy=http://dxd.ypw.io:7890
-```
-
-```
 # 添加 sudo 免密码
 if [[ $(sudo grep -L $USER /etc/sudoers) ]]; then
   echo "Add $USER to sudoers";
