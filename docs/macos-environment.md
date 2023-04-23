@@ -55,12 +55,27 @@ mim install mmdet
 
 ## [Homebrew](https://brew.sh/index_zh-cn)
 
+安装 Homebrew 建议先通过 App Store 安装 Xcode 并接受 「Xcode and Apple SDKs Agreement」，不然就需要在安装过程中接受协议。
+
 Homebrew 是 macOS 上的一个包管理器，你可以使用 Homebrew 安装 Apple 没有预装但[你需要的东西](https://formulae.brew.sh/formula/)。
 
 安装 Homebrew 只需要一行命令：
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+在终端中运行以下两个命令，将 Homebrew 添加到你的 环境变量 PATH 中：
+
+```bash
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/lhy/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+通过 brew --version 测试 Homebrew 是否安装成功：
+
+```bash
+brew --version
 ```
 
 使用 Homebrew 安装一个 wget 吧：
