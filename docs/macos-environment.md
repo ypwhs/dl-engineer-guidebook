@@ -6,7 +6,7 @@
 
 ```
 # 添加代理
-export https_proxy=http://dxd.ypw.io:7890
+export https_proxy=your_proxy_address
 
 # 安装 brew，需要手动输入密码，按回车
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
