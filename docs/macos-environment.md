@@ -94,7 +94,7 @@ brew update
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 ```
 
-## [Oh My Zsh](https://ohmyz.sh/)
+## [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) 和 [Oh My Zsh](https://ohmyz.sh/)
 
 装好了终端软件以后，我们还需要安装一个好用的 shell 解释器，zsh 和 oh my zsh。
 
