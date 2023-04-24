@@ -109,7 +109,7 @@ brew update
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 ```
 
-## [Oh My Zsh](https://ohmyz.sh/)
+## [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) 和 [Oh My Zsh](https://ohmyz.sh/)
 
 装好了终端软件以后，我们还需要安装一个好用的 shell 解释器，zsh 和 oh my zsh。
 
@@ -139,6 +139,14 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ```bash
 chsh -s /bin/zsh
 ```
+
+检查 zsh 是否安装成功：
+
+```bash
+echo $SHELL
+```
+
+如果输出结果为 `/bin/zsh`，则表示你正在使用 zsh。
 
 ## 必备软件
 
