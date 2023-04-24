@@ -3,7 +3,7 @@
 对于深度学习工程师来说，Python 是必不可少的工具，因为大多数深度学习框架都支持 Python（比如 TensorFlow、PyTorch、MXNet 等）。在模型开发阶段，使用 Python 非常方便，如果配合 Jupyter Notebook 使用，还可以进一步提升开发效率。
 
 
-## miniconda  bash 安装
+## [Miniconda](https://docs.conda.io/en/latest/miniconda.html)  bash 安装
 
 [下载](https://docs.conda.io/en/latest/miniconda.html) 最新的 miniconda 安装包。
 
@@ -21,7 +21,7 @@ bash /Users/lhy/Downloads/Miniconda3-latest-MacOSX-arm64.sh
 source ~/.zshrc
 ```
 
-## miniconda  brew 安装
+## [Miniconda](https://docs.conda.io/en/latest/miniconda.html)  brew 安装
 
 
 #### 命令行安装
