@@ -125,6 +125,14 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 chsh -s /bin/zsh
 ```
 
+检查 zsh 是否安装成功：
+
+```bash
+echo $SHELL
+```
+
+如果输出结果为 `/bin/zsh`，则表示你正在使用 zsh。
+
 ## 必备软件
 
 使用 [homebrew-cask](https://github.com/Homebrew/homebrew-cask) 可以轻松安装各种 macOS 软件，下面的命令可以安装一些必备软件：
