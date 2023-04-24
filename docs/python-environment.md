@@ -2,6 +2,46 @@
 
 对于深度学习工程师来说，Python 是必不可少的工具，因为大多数深度学习框架都支持 Python（比如 TensorFlow、PyTorch、MXNet 等）。在模型开发阶段，使用 Python 非常方便，如果配合 Jupyter Notebook 使用，还可以进一步提升开发效率。
 
+
+## miniconda  bash 安装
+
+[下载](https://docs.conda.io/en/latest/miniconda.html) 最新的 miniconda 安装包。
+
+20230424 下载的是 `Miniconda3-latest-MacOSX-arm64.sh`
+
+#### 命令行安装
+```bash
+# bash 安装包路径
+bash /Users/lhy/Downloads/Miniconda3-latest-MacOSX-arm64.sh
+```
+
+安装 Miniconda 后，会自动将 Miniconda 的路径添加到环境变量中，但是需要关闭并重新打开 shell 才能生效。
+如果需要在当前终端会话中立即生效，可以使用以下命令：
+```bash
+source ~/.zshrc
+```
+
+## miniconda  brew 安装
+
+
+#### 命令行安装
+```bash
+brew install --cask miniconda
+```
+
+此时，conda 会安装在这个路径下 `/opt/homebrew/bin/conda`。
+
+#### 检查 miniconda 是否安装成功
+```bash
+conda --version
+```
+
+
+#### 卸载 miniconda
+```bash
+rm -rf conda
+```
+
 ## [Anaconda](https://www.anaconda.com/)
 
 Anaconda 是一个 Pyhton 的包管理器，它可以简化 Python 环境的安装。由于 Ubuntu 系统、macOS 系统的局限性，我们尽量不要在系统自带的环境里安装深度学习库，不然可能会出现一些不可预料的问题。

@@ -4,7 +4,7 @@
 
 脚本式装机：
 
-```
+```bash
 # 添加代理
 export https_proxy=your_proxy_address
 
@@ -55,7 +55,7 @@ mim install mmdet
 
 ## [Homebrew](https://brew.sh/index_zh-cn)
 
-安装 Homebrew 建议先通过 App Store 安装 Xcode 并接受 「Xcode and Apple SDKs Agreement」，不然就需要在安装过程中接受协议。
+安装 Homebrew 之前，建议先通过 App Store 安装 Xcode 并接受 「Xcode and Apple SDKs Agreement」，不然就需要在安装过程中接受协议。
 
 Homebrew 是 macOS 上的一个包管理器，你可以使用 Homebrew 安装 Apple 没有预装但[你需要的东西](https://formulae.brew.sh/formula/)。
 
@@ -65,14 +65,15 @@ Homebrew 是 macOS 上的一个包管理器，你可以使用 Homebrew 安装 Ap
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-在终端中运行以下两个命令，将 Homebrew 添加到你的 环境变量 PATH 中：
+在终端中运行以下两个命令，将 Homebrew 添加到你的环境变量 PATH 中：
 
 ```bash
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/lhy/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
+这里的 lhy 是用户文件夹，所以不要直接复制这里的命令，Homebrew 安装完成后会提示你需要使用的命令。
 
-通过 brew --version 测试 Homebrew 是否安装成功：
+通过 `brew --version` 测试 Homebrew 是否安装成功：
 
 ```bash
 brew --version
@@ -90,9 +91,19 @@ brew install wget
 brew update && brew upgrade && brew cleanup
 ```
 
+这是一条终端命令，用于更新和升级 Homebrew，同时清理过期的包和缓存。具体解释如下：
+
+`brew update`：更新 Homebrew 的本地包信息，使其与远程仓库同步。
+
+`brew upgrade`：升级已安装的包至最新版本。
+
+`brew cleanup`：清理已安装的包中过期的版本和无用的缓存，释放磁盘空间。
+
+这三个命令可以一起使用，以保持 Homebrew 的最新状态并清理不必要的文件。
+
 ### 切换源
 
-如果你觉得使用brew安装和更新软件的时候非常慢，可以使用其他的镜像，如[清华大学](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)：
+如果你觉得使用 brew 安装和更新软件的时候非常慢，可以使用其他的镜像，如[清华大学](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)：
 
 使用下面的命令可以加速 `brew update` ：
 
@@ -111,7 +122,7 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bott
 
 ## [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) 和 [Oh My Zsh](https://ohmyz.sh/)
 
-装好了终端软件以后，我们还需要安装一个好用的 shell 解释器，zsh 和 oh my zsh。
+终端软件安装以后，我们还需要安装一个好用的 shell 解释器，zsh 和 oh my zsh。
 
 它比默认的 bash 有以下几个优点：
 
@@ -122,7 +133,7 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bott
 
 在 macOS 下，首先需要安装 zsh，然后再安装 oh my zsh。
 
-安装 oh my zsh 的步骤如下：
+安装步骤如下：
 
 * 安装 [zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 * 安装 [oh my zsh](https://ohmyz.sh/)
@@ -130,7 +141,9 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bott
 完整命令如下：
 
 ```bash
+# 安装 zsh
 brew install zsh zsh-completions
+# 安装 oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
@@ -173,7 +186,7 @@ brew install --cask Google-Chrome
 ### 开发软件
 
 ```bash
-brew install --cask PyCharm Anaconda GitHub Postman
+brew install --cask PyCharm miniconda GitHub Postman
 ```
 
 ### 实用工具
