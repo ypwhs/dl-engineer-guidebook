@@ -298,6 +298,27 @@ export PATH=/usr/local/cuda/bin:$PATH
 source ~/.zshrc
 ```
 
+### update-alternatives
+
+切换命令版本。比如你装了很多个 CUDA 版本：
+
+```
+sudo update-alternatives --config cuda
+
+There are 3 choices for the alternative cuda (providing /usr/local/cuda).
+
+  Selection    Path                  Priority   Status
+------------------------------------------------------------
+  0            /usr/local/cuda-12.1   121       auto mode
+  1            /usr/local/cuda-11.3   113       manual mode
+* 2            /usr/local/cuda-11.7   117       manual mode
+  3            /usr/local/cuda-12.1   121       manual mode
+
+Press <enter> to keep the current choice[*], or type selection number:
+```
+
+你就可以使用 `sudo update-alternatives --config cuda` 命令选择你想用的版本，输入数字，然后回车，就可以切换过去。
+
 ### echo
 
 可以输出环境变量。
