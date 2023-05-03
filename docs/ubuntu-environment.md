@@ -153,7 +153,7 @@ tmux 最大的好处是可以让你的命令在后台运行，不会因为终端
 
 tmux 是一个优秀的终端复用器命令，用户可以通过tmux 在一个终端内管理多个分离的会话，窗口及面板，对于同时使用多个命令行，或多个任务时非常方便。
 
-#### 安装 tmux
+#### 安装 [tmux](https://github.com/tmux/tmux/wiki/Installing)
 
 ```bash
 brew install tmux
