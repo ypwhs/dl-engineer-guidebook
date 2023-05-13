@@ -16,16 +16,10 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ypw/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # 安装常用命令
-brew install aria2 cmake curl pv htop nano nload nmap p7zip tree wget watch zsh
+brew install aria2 cmake curl pv htop nano nload nmap p7zip tree wget watch
 
 # 安装 Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# 修改终端为zsh
-if [[ $(sudo grep -L /opt/homebrew/bin/zsh /etc/shells) ]]; then
-  echo "Add /opt/homebrew/bin/zsh to /etc/shells";
-  echo "/opt/homebrew/bin/zsh" | sudo tee -a /etc/shells;
-fi
 
 # 安装 iTerm2
 brew install --cask iterm2
