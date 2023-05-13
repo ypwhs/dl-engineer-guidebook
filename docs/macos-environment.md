@@ -36,11 +36,17 @@ open https://www.google.cn/chrome/
 # 安装搜狗输入法
 open https://pinyin.sogou.com/mac/
 
-# 安装Python环境
+# 安装 Python x86 （可选）
 sudo softwareupdate --install-rosetta --agree-to-license
 
 wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 bash Miniconda3-latest-MacOSX-x86_64.sh -b
+
+# 安装 Python arm64
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-MacOSX-arm64.sh
+bash Miniconda3-latest-MacOSX-arm64.sh -b
+
+# 安装 Python 环境
 
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm tensorboardx torch torchvision xlrd openpyxl openmim
