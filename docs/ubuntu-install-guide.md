@@ -31,8 +31,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ```
 # 安装 Python 环境
-wget https://mirrors.bfsu.edu.cn/anaconda/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh
-bash Miniconda3-py39_4.12.0-Linux-x86_64.sh -b
+wget https://mirrors.bfsu.edu.cn/anaconda/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
+bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh -b
 ~/miniconda3/bin/conda init bash
 ~/miniconda3/bin/conda init zsh
 ```
@@ -44,8 +44,8 @@ bash Miniconda3-py39_4.12.0-Linux-x86_64.sh -b
 # pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple
-pip install torch==1.10.1+cu113 torchvision==0.11.2+cu113 torchaudio==0.10.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
-pip install jupyter jupyter_contrib_nbextensions numpy pandas flask scikit-image scikit-learn matplotlib opencv-python pillow tqdm tensorboardx xlrd openpyxl openmim
+pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --index-url https://download.pytorch.org/whl/cu118
+pip install jupyter jupyter_contrib_nbextensions numpy pandas flask scikit-image scikit-learn matplotlib opencv-python pillow tqdm tensorboardx xlrd openpyxl openmim ninja
 ```
 
 安装 CUDA：
@@ -71,6 +71,15 @@ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda
 sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
 sudo apt-get update
 sudo apt-get -y install cuda-11-3
+```
+
+Ubuntu 22.04 [url](https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_network)：
+
+```
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
+sudo dpkg -i cuda-keyring_1.0-1_all.deb
+sudo apt-get update
+sudo apt-get -y install cuda-11-8
 ```
 
 添加 CUDA 环境变量：
