@@ -38,4 +38,4 @@ jobs:
           remote_port: ${{ secrets.PORT }}
           remote_key: ${{ secrets.KEY }}
           path: "./site/"
-          remote_path: "/home/ypw/data/dl.ypw.io"
+          remote_path: "/home/ypw/nginx/data/dl-engineer-guidebook"
