@@ -45,7 +45,7 @@ bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh -b
 
 pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple
 pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --index-url https://download.pytorch.org/whl/cu118
-pip install jupyter jupyter_contrib_nbextensions numpy pandas flask scikit-image scikit-learn matplotlib opencv-python pillow tqdm tensorboardx xlrd openpyxl openmim ninja
+pip install jupyter jupyter_contrib_nbextensions numpy pandas flask scikit-image scikit-learn matplotlib opencv-python pillow tqdm tensorboardx xlrd openpyxl openmim ninja xtcocotools json_tricks munkres shapely
 ```
 
 安装 CUDA：
