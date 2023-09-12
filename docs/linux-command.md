@@ -428,7 +428,15 @@ Swap:          976M          0B        976M
 * 将服务器上的文件夹同步到本地：`rsync -avP 用户名@远程服务器:远程路径 本地路径`
 * 本地拷贝文件夹：`rsync -avP 本地源路径 本地目的地路径`
 
-下面是一个把本地的文件夹同步到远程服务器的例子：
+注意：
+
+如果同步的源路径后面加了斜杠 `/`，则同步的目的地不会创建子文件夹。比如将一台服务器上的 home 目录同步另一台服务器：
+
+```sh
+rsync -avP 配好的服务器:/home/ypw/ .
+```
+
+下面是一个把远程服务器同步到本地的例子：
 
 <script id="asciicast-eQjKRxlhu5vOThczbmkcmgbqH" src="https://asciinema.org/a/eQjKRxlhu5vOThczbmkcmgbqH.js" async></script>
 
