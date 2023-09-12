@@ -420,7 +420,15 @@ Swap:          976M          0B        976M
 * --exclude，排除文件，可以使用通配符
 * -P，等同于 --partial --progress，显示备份过程。
 
-同步文件夹：`rsync -avP 本地文件夹 用户名@远程服务器:远程地址`
+命令：`rsync -avP 源路径 目的地路径`，其中源路径可以是本地文件夹路径，也可以是远程路径，目的地路径也可以是本地和远程路径。
+
+如：
+
+* 将本地的文件夹同步到服务器：`rsync -avP 本地路径 用户名@远程服务器:远程路径`
+* 将服务器上的文件夹同步到本地：`rsync -avP 用户名@远程服务器:远程路径 本地路径`
+* 本地拷贝文件夹：`rsync -avP 本地源路径 本地目的地路径`
+
+下面是一个把本地的文件夹同步到远程服务器的例子：
 
 <script id="asciicast-eQjKRxlhu5vOThczbmkcmgbqH" src="https://asciinema.org/a/eQjKRxlhu5vOThczbmkcmgbqH.js" async></script>
 
