@@ -25,7 +25,7 @@ sudo apt upgrade -y
 
 ```
 # 安装常用命令和 oh-my-zsh
-sudo apt install -y openssh-server git curl zsh net-tools git curl htop nload tmux screen aria2 graphviz aptitude tree iotop cifs-utils landscape-common
+sudo apt install -y openssh-server git curl zsh net-tools git curl htop nload tmux screen aria2 graphviz aptitude tree iotop cifs-utils landscape-common p7zip-full
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
