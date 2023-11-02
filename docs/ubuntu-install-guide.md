@@ -7,15 +7,29 @@
 * 安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）
 * 安装 Anaconda 和 Python 库
 
-脚本式装机：
+# 脚本式装机
+
+Ubuntu 22.04 以前：
 
 ```
 # 添加 sudo 免密码
 if [[ $(sudo grep -L $USER /etc/sudoers) ]]; then
-  echo "Add $USER to sudoers";
+  echo "Add $USER to sudoers"
   echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers;
 fi
 ```
+
+Ubuntu 22.04 及以后：
+
+```
+FILE="/etc/sudoers.d/$USER"
+if [ ! -f "$FILE" ]; then
+    echo "Create $FILE and add sudo permission"
+    echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee "$FILE"
+fi
+```
+
+----
 
 ```
 # 升级系统
@@ -193,12 +207,26 @@ PasswordAuthentication no # 添加在最后一行
 
 ### 配置 sudo 免密码
 
+Ubuntu 22.04 以前：
+
 由于安装驱动等操作需要 sudo 权限，为了避免频繁输入密码，可以配置 sudo 免密码：
 
 ```bash
 sudo nano /etc/sudoers
 
 ypw ALL=(ALL) NOPASSWD:ALL # 添加在最后一行
+```
+
+Ubuntu 22.04 及以后：
+
+`/etc/sudoers` 在 22.04 之后变得不可写： `[ /etc/sudoers is meant to be read-only ]`
+
+因此你需要在 `/etc/sudoers.d/` 文件夹下创建自己的文件：
+
+```
+sudo nano /etc/sudoers.d/ypw
+
+ypw ALL=(ALL) NOPASSWD:ALL # 写入到文件中
 ```
 
 ### 配置 apt 源
