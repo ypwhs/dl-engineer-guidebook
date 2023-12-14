@@ -117,7 +117,7 @@ pip download jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matp
 
 ### 将离线包传到离线机器上
 
-下载好所有需要的离线安装包以后，我们就需要将它们传到离线服务器上，然后逐个安装。如果你的机器不支持[rsync](../linux-command/#rsync) 命令，可以使用 [scp](../linux-command/#scp) 命令。
+下载好所有需要的离线安装包以后，我们就需要将它们传到离线服务器上，然后逐个安装。如果你的机器不支持[rsync](linux-command.md#rsync) 命令，可以使用 [scp](linux-command.md#scp) 命令。
 
 ```sh
 rsync -avP ~/Downloads/offline fat:~/
