@@ -1,25 +1,8 @@
 # Ubuntu 装机步骤
 
-* 安装 Ubuntu
-* 配置 ssh
-* 配置 sudo 免密码 和 apt 源（推荐）
-* 安装 oh my zsh 以及常用命令（推荐）
-* 安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）
-* 安装 Anaconda 和 Python 库
+本文分为两个部分，如果你比较熟悉 Linux，可以直接看脚本式装机，速度快，效果好。
 
-# 脚本式装机
-
-Ubuntu 22.04 以前：
-
-```
-# 添加 sudo 免密码
-if [[ $(sudo grep -L $USER /etc/sudoers) ]]; then
-  echo "Add $USER to sudoers"
-  echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers;
-fi
-```
-
-Ubuntu 22.04 及以后：
+## 脚本式装机
 
 ```
 FILE="/etc/sudoers.d/$USER"
@@ -28,8 +11,6 @@ if [ ! -f "$FILE" ]; then
     echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee "$FILE"
 fi
 ```
-
-----
 
 ```
 # 升级系统
@@ -66,25 +47,6 @@ mim install mmpretrain mmdet mmpose mmsegmentation
 
 安装 CUDA：
 
-Ubuntu 18.04：
-
-```
-# 安装 CUDA 11.8，ubuntu18.04
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-keyring_1.0-1_all.deb
-sudo dpkg -i cuda-keyring_1.0-1_all.deb
-sudo apt-get update
-sudo apt-get -y install cuda-11-8
-```
-
-Ubuntu 20.04：
-
-```
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.0-1_all.deb
-sudo dpkg -i cuda-keyring_1.0-1_all.deb
-sudo apt-get update
-sudo apt-get -y install cuda11-8
-```
-
 Ubuntu 22.04 [参考链接](https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_network)：
 
 ```
@@ -97,7 +59,7 @@ sudo apt-get -y install cuda-11-8
 安装指定版本的 cudnn：
 
 ```sh
-sudo apt install libcudnn8=8.7.0.84-1+cuda11.8 libcudnn8-dev=8.7.0.84-1+cuda11.8
+sudo apt install libcudnn8-dev=8.7.0.84-1+cuda11.8
 ```
 
 添加 CUDA 环境变量：
@@ -122,6 +84,19 @@ fi
 ```
 mim install mmdet
 ```
+
+## 分步骤安装
+
+以下是分步骤安装的方法，分为以下几个步骤：
+
+* 安装 Ubuntu
+* 配置 ssh
+* 配置 sudo 免密码 和 apt 源（推荐）
+* 安装 oh my zsh 以及常用命令（推荐）
+* 安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）
+* 安装 Anaconda 和 Python 库
+
+这些步骤可能存在滞后性，如果你发现某个步骤已经过时了，可以提 issue 告诉我，或者直接修改这个文档。
 
 ## 安装 Ubuntu
 
@@ -167,7 +142,7 @@ ssh 192.168.8.65
 
 其中 `id_rsa` 是私钥，`id_rsa.pub` 是公钥。不要把私钥发给任何人。
 
-​公钥通常上这样的文本：
+公钥通常上这样的文本：
 
 > ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcfQD4nnaQrgC003C0ReAYqrm6XKEchuM6DwkNtHzRs2YhLolH6fEohWAp0mlW9yzQl258lA+FdoH51ONmvGUx/2Y953A6ujHrt7dOIpOkYW5HT6Rmvlwk+3uRmVNQqZTJeRWdblcSHmYY1fi1miawONZiVoLW14xhyH5bOwgwY/GB2yTaffDby451RLT5kQ7LHqiDJtWiRQekR5tKDKZ7mBhKZIKYLOoqAayCHw2scJYsgtw2tPt0/y7BlxO+RuDwuD2WOnthe1ewbwAbbTN17HiLvBd/MIWtVDoGGq6jdNDjNDNbTs8H2VohTc2mNtOOlycN6yzf3ZKZTN6/hNtl ypw@yangpeiendeiMac
 
@@ -669,7 +644,7 @@ print(conv(dummy))
 
 期望输出：
 
-```python
+```
 tensor([[[[0.0443, 0.0443, 0.0443],
           [0.0443, 0.0443, 0.0443],
           [0.0443, 0.0443, 0.0443]]]], device='cuda:0',
@@ -750,4 +725,3 @@ Epoch 5/5
 10000/10000 [==============================] - 0s 24us/sample - loss: 0.0698 - acc: 0.9804
 [0.06983174340333789, 0.9804]
 ```
-
