@@ -1,0 +1,2438 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="深度学习工程师生存指南">
+      
+      
+      
+        <meta name="author" content="杨培文">
+      
+      
+        <link rel="canonical" href="https://dl.ypw.io/python-environment/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>Python 环境 - 深度学习工程师生存指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+  
+
+
+  
+
+  
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-111276663-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="深度学习工程师生存指南" class="md-header__button md-logo" aria-label="深度学习工程师生存指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            深度学习工程师生存指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python 环境
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="打开深色模式"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="打开深色模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="关闭深色模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="关闭深色模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m0-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/ypwhs/dl-engineer-guidebook/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ypwhs/dl-engineer-guidebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        首页
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-to-build-deep-learning-workstation/" class="md-tabs__link">
+        硬件
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../mac-compare/" class="md-tabs__link">
+        Mac
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ubuntu-install-guide/" class="md-tabs__link md-tabs__link--active">
+        Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cv-resources/" class="md-tabs__link">
+        CV
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-to-use-tensorboard/" class="md-tabs__link">
+        使用技巧
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="深度学习工程师生存指南" class="md-nav__button md-logo" aria-label="深度学习工程师生存指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    深度学习工程师生存指南
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/ypwhs/dl-engineer-guidebook/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ypwhs/dl-engineer-guidebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
+        首页
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="首页" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          首页
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-build-deep-learning-workstation/" class="md-nav__link">
+        如何配置一台深度学习工作站?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows-linux-or-macos/" class="md-nav__link">
+        Windows、Ubuntu 还是 macOS？
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mac-compare/" class="md-nav__link">
+        Mac 对比
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-software/" class="md-nav__link">
+        macOS 软件
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-environment/" class="md-nav__link">
+        macOS 环境
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python 环境
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python 环境
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#miniconda-bash" class="md-nav__link">
+    Miniconda  bash 安装
+  </a>
+  
+    <nav class="md-nav" aria-label="Miniconda  bash 安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miniconda-brew" class="md-nav__link">
+    Miniconda  brew 安装
+  </a>
+  
+    <nav class="md-nav" aria-label="Miniconda  brew 安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miniconda" class="md-nav__link">
+    检查 miniconda 是否安装成功
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miniconda_1" class="md-nav__link">
+    卸载 miniconda
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anaconda" class="md-nav__link">
+    Anaconda
+  </a>
+  
+    <nav class="md-nav" aria-label="Anaconda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anaconda_1" class="md-nav__link">
+    安装 Anaconda
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 Anaconda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brew-cask" class="md-nav__link">
+    brew cask 安装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    配置环境变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anaconda-python" class="md-nav__link">
+    使用 Anaconda 创建其他 Python 环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda-python-jupyter" class="md-nav__link">
+    把 Conda 的 Python 环境添加到 jupyter 里
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anaconda_2" class="md-nav__link">
+    切换 anaconda 源
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    切换 pip 源
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python 库
+  </a>
+  
+    <nav class="md-nav" aria-label="Python 库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    jupyter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter_contrib_nbextensions" class="md-nav__link">
+    jupyter_contrib_nbextensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy" class="md-nav__link">
+    numpy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    pandas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scikit-learn" class="md-nav__link">
+    scikit-learn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matplotlib" class="md-nav__link">
+    matplotlib
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opencv-python" class="md-nav__link">
+    opencv-python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pillow" class="md-nav__link">
+    pillow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tqdm" class="md-nav__link">
+    tqdm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torch" class="md-nav__link">
+    torch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torchvision" class="md-nav__link">
+    torchvision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorflow" class="md-nav__link">
+    tensorflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keras" class="md-nav__link">
+    keras
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorboard" class="md-nav__link">
+    tensorboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorboardx" class="md-nav__link">
+    tensorboardX
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-install-guide/" class="md-nav__link">
+        Ubuntu 装机步骤
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-environment/" class="md-nav__link">
+        Ubuntu 环境
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-command/" class="md-nav__link">
+        常用 Linux 命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-tensorboard/" class="md-nav__link">
+        如何使用 TensorBoard
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-resources/" class="md-nav__link">
+        CV 学习资源
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-dataset/" class="md-nav__link">
+        常用 CV 数据集
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-models-on-imagenet/" class="md-nav__link">
+        在 ImageNet 上表现出色的经典模型
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../detection-models/" class="md-nav__link">
+        检测模型
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        硬件
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="硬件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          硬件
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-build-deep-learning-workstation/" class="md-nav__link">
+        如何配置一台深度学习工作站?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows-linux-or-macos/" class="md-nav__link">
+        Windows、Ubuntu 还是 macOS？
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Mac
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mac" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mac
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mac-compare/" class="md-nav__link">
+        Mac 对比
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-software/" class="md-nav__link">
+        macOS 软件
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-environment/" class="md-nav__link">
+        macOS 环境
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python 环境
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python 环境
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#miniconda-bash" class="md-nav__link">
+    Miniconda  bash 安装
+  </a>
+  
+    <nav class="md-nav" aria-label="Miniconda  bash 安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miniconda-brew" class="md-nav__link">
+    Miniconda  brew 安装
+  </a>
+  
+    <nav class="md-nav" aria-label="Miniconda  brew 安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miniconda" class="md-nav__link">
+    检查 miniconda 是否安装成功
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miniconda_1" class="md-nav__link">
+    卸载 miniconda
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anaconda" class="md-nav__link">
+    Anaconda
+  </a>
+  
+    <nav class="md-nav" aria-label="Anaconda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anaconda_1" class="md-nav__link">
+    安装 Anaconda
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 Anaconda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brew-cask" class="md-nav__link">
+    brew cask 安装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    配置环境变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anaconda-python" class="md-nav__link">
+    使用 Anaconda 创建其他 Python 环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda-python-jupyter" class="md-nav__link">
+    把 Conda 的 Python 环境添加到 jupyter 里
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anaconda_2" class="md-nav__link">
+    切换 anaconda 源
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    切换 pip 源
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python 库
+  </a>
+  
+    <nav class="md-nav" aria-label="Python 库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    jupyter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter_contrib_nbextensions" class="md-nav__link">
+    jupyter_contrib_nbextensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy" class="md-nav__link">
+    numpy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    pandas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scikit-learn" class="md-nav__link">
+    scikit-learn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matplotlib" class="md-nav__link">
+    matplotlib
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opencv-python" class="md-nav__link">
+    opencv-python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pillow" class="md-nav__link">
+    pillow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tqdm" class="md-nav__link">
+    tqdm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torch" class="md-nav__link">
+    torch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torchvision" class="md-nav__link">
+    torchvision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorflow" class="md-nav__link">
+    tensorflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keras" class="md-nav__link">
+    keras
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorboard" class="md-nav__link">
+    tensorboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorboardx" class="md-nav__link">
+    tensorboardX
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-command/" class="md-nav__link">
+        常用 Linux 命令
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-install-guide/" class="md-nav__link">
+        Ubuntu 装机步骤
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-environment/" class="md-nav__link">
+        Ubuntu 环境
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python 环境
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python 环境
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#miniconda-bash" class="md-nav__link">
+    Miniconda  bash 安装
+  </a>
+  
+    <nav class="md-nav" aria-label="Miniconda  bash 安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miniconda-brew" class="md-nav__link">
+    Miniconda  brew 安装
+  </a>
+  
+    <nav class="md-nav" aria-label="Miniconda  brew 安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miniconda" class="md-nav__link">
+    检查 miniconda 是否安装成功
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miniconda_1" class="md-nav__link">
+    卸载 miniconda
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anaconda" class="md-nav__link">
+    Anaconda
+  </a>
+  
+    <nav class="md-nav" aria-label="Anaconda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anaconda_1" class="md-nav__link">
+    安装 Anaconda
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 Anaconda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brew-cask" class="md-nav__link">
+    brew cask 安装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    配置环境变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anaconda-python" class="md-nav__link">
+    使用 Anaconda 创建其他 Python 环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda-python-jupyter" class="md-nav__link">
+    把 Conda 的 Python 环境添加到 jupyter 里
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anaconda_2" class="md-nav__link">
+    切换 anaconda 源
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    切换 pip 源
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python 库
+  </a>
+  
+    <nav class="md-nav" aria-label="Python 库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    jupyter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter_contrib_nbextensions" class="md-nav__link">
+    jupyter_contrib_nbextensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy" class="md-nav__link">
+    numpy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    pandas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scikit-learn" class="md-nav__link">
+    scikit-learn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matplotlib" class="md-nav__link">
+    matplotlib
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opencv-python" class="md-nav__link">
+    opencv-python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pillow" class="md-nav__link">
+    pillow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tqdm" class="md-nav__link">
+    tqdm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torch" class="md-nav__link">
+    torch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torchvision" class="md-nav__link">
+    torchvision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorflow" class="md-nav__link">
+    tensorflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keras" class="md-nav__link">
+    keras
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorboard" class="md-nav__link">
+    tensorboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorboardx" class="md-nav__link">
+    tensorboardX
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-command/" class="md-nav__link">
+        常用 Linux 命令
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        CV
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CV" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          CV
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-resources/" class="md-nav__link">
+        CV 学习资源
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-dataset/" class="md-nav__link">
+        常用 CV 数据集
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-models-on-imagenet/" class="md-nav__link">
+        在 ImageNet 上表现出色的经典模型
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../detection-models/" class="md-nav__link">
+        检测模型
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        使用技巧
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="使用技巧" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          使用技巧
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-tensorboard/" class="md-nav__link">
+        如何使用 TensorBoard
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remote-debugging-with-pycharm/" class="md-nav__link">
+        如何使用 PyCharm 远程调试
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-is-good/" class="md-nav__link">
+        Docker 是个好东西
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#miniconda-bash" class="md-nav__link">
+    Miniconda  bash 安装
+  </a>
+  
+    <nav class="md-nav" aria-label="Miniconda  bash 安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miniconda-brew" class="md-nav__link">
+    Miniconda  brew 安装
+  </a>
+  
+    <nav class="md-nav" aria-label="Miniconda  brew 安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miniconda" class="md-nav__link">
+    检查 miniconda 是否安装成功
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miniconda_1" class="md-nav__link">
+    卸载 miniconda
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anaconda" class="md-nav__link">
+    Anaconda
+  </a>
+  
+    <nav class="md-nav" aria-label="Anaconda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anaconda_1" class="md-nav__link">
+    安装 Anaconda
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 Anaconda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    命令行安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brew-cask" class="md-nav__link">
+    brew cask 安装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    配置环境变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anaconda-python" class="md-nav__link">
+    使用 Anaconda 创建其他 Python 环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda-python-jupyter" class="md-nav__link">
+    把 Conda 的 Python 环境添加到 jupyter 里
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anaconda_2" class="md-nav__link">
+    切换 anaconda 源
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    切换 pip 源
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python 库
+  </a>
+  
+    <nav class="md-nav" aria-label="Python 库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    jupyter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter_contrib_nbextensions" class="md-nav__link">
+    jupyter_contrib_nbextensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy" class="md-nav__link">
+    numpy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    pandas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scikit-learn" class="md-nav__link">
+    scikit-learn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matplotlib" class="md-nav__link">
+    matplotlib
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opencv-python" class="md-nav__link">
+    opencv-python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pillow" class="md-nav__link">
+    pillow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tqdm" class="md-nav__link">
+    tqdm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torch" class="md-nav__link">
+    torch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torchvision" class="md-nav__link">
+    torchvision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorflow" class="md-nav__link">
+    tensorflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keras" class="md-nav__link">
+    keras
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorboard" class="md-nav__link">
+    tensorboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorboardx" class="md-nav__link">
+    tensorboardX
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ypwhs/dl-engineer-guidebook/edit/master/docs/python-environment.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="python">Python 环境</h1>
+<p>对于深度学习工程师来说，Python 是必不可少的工具，因为大多数深度学习框架都支持 Python（比如 TensorFlow、PyTorch、MXNet 等）。在模型开发阶段，使用 Python 非常方便，如果配合 Jupyter Notebook 使用，还可以进一步提升开发效率。</p>
+<h2 id="miniconda-bash"><a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>  bash 安装</h2>
+<p><a href="https://docs.conda.io/en/latest/miniconda.html">下载</a> 最新的 miniconda 安装包。</p>
+<p>20230424 下载的是 <code>Miniconda3-latest-MacOSX-arm64.sh</code></p>
+<h4 id="_1">命令行安装</h4>
+<div class="codehilite"><pre><span></span><code><span class="c1"># bash 安装包路径</span>
+bash /Users/lhy/Downloads/Miniconda3-latest-MacOSX-arm64.sh
+</code></pre></div>
+
+<p>安装 Miniconda 后，会自动将 Miniconda 的路径添加到环境变量中，但是需要关闭并重新打开 shell 才能生效。
+如果需要在当前终端会话中立即生效，可以使用以下命令：</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">source</span> ~/.zshrc
+</code></pre></div>
+
+<h2 id="miniconda-brew"><a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>  brew 安装</h2>
+<h4 id="_2">命令行安装</h4>
+<div class="codehilite"><pre><span></span><code>brew install --cask miniconda
+</code></pre></div>
+
+<p>此时，conda 会安装在这个路径下 <code>/opt/homebrew/bin/conda</code>。</p>
+<h4 id="miniconda">检查 miniconda 是否安装成功</h4>
+<div class="codehilite"><pre><span></span><code>conda --version
+</code></pre></div>
+
+<h4 id="miniconda_1">卸载 miniconda</h4>
+<div class="codehilite"><pre><span></span><code>rm -rf conda
+</code></pre></div>
+
+<h2 id="anaconda"><a href="https://www.anaconda.com/">Anaconda</a></h2>
+<p>Anaconda 是一个 Pyhton 的包管理器，它可以简化 Python 环境的安装。由于 Ubuntu 系统、macOS 系统的局限性，我们尽量不要在系统自带的环境里安装深度学习库，不然可能会出现一些不可预料的问题。</p>
+<p>Anaconda 中的 numpy、scikit-learn 等库使用了 Intel MKL 进行加速，理论上会比 pip 直接安装的版本速度快。</p>
+<p>Anaconda 不需要 root 权限，所以可以很方便地安装在用户目录下，只要配置好环境变量即可使用，当你不需要它的时候，只需要直接删除它的目录，然后将对应的环境变量一起删除即可。</p>
+<p>你可以直接 <a href="../linux-command/#rsync">rsync</a> 整个 anaconda 文件夹到其他相同硬件和系统环境的机器上，它们的 Python 环境可以保持绝对的统一，在做分布式并行训练的时候非常有用。</p>
+<h3 id="anaconda_1">安装 Anaconda</h3>
+<p>Anaconda 官方下载页面：<a href="https://www.anaconda.com/distribution/">https://www.anaconda.com/downloads</a></p>
+<p>你只需要下载对应系统的安装包，然后直接运行安装包即可。</p>
+<h4 id="_3">命令行安装</h4>
+<p>在 macOS 上安装 Anaconda 可以使用下面的命令：</p>
+<div class="codehilite"><pre><span></span><code>wget https://repo.anaconda.com/archive/Anaconda3-2020.02-MacOSX-x86_64.sh
+bash Anaconda3-2020.02-MacOSX-x86_64.sh
+</code></pre></div>
+
+<ul>
+<li>需要使用 brew 安装 <a href="../macos-environment/#_9">wget</a> 命令</li>
+<li>如果遇到网络问题，可以使用<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">清华大学的镜像</a>，如 <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2020.02-MacOSX-x86_64.sh">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2020.02-MacOSX-x86_64.sh</a></li>
+</ul>
+<h4 id="brew-cask">brew cask 安装</h4>
+<p>macOS 上还可以<a href="../macos-environment/#kai-fa-ruan-jian">使用 brew cask 安装</a>：</p>
+<div class="codehilite"><pre><span></span><code>brew cask install Anaconda
+</code></pre></div>
+
+<h3 id="_4">配置环境变量</h3>
+<p>安装好以后，有可能需要手动<a href="../linux-command/#export">配置环境变量</a>，如果你使用的是 zsh，你需要为 zsh 初始化：</p>
+<div class="codehilite"><pre><span></span><code>/usr/local/anaconda3/bin/conda init zsh
+</code></pre></div>
+
+<p>执行以后，在 <code>~/.zshrc</code> 中可以看到下面的内容：</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span>
+<span class="c1"># !! Contents within this block are managed by &#39;conda init&#39; !!</span>
+<span class="nv">__conda_setup</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="s1">&#39;/home/ypw/anaconda3/bin/conda&#39;</span> <span class="s1">&#39;shell.zsh&#39;</span> <span class="s1">&#39;hook&#39;</span> <span class="m">2</span>&gt; /dev/null<span class="k">)</span><span class="s2">&quot;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">eval</span> <span class="s2">&quot;</span><span class="nv">$__conda_setup</span><span class="s2">&quot;</span>
+<span class="k">else</span>
+    <span class="k">if</span> <span class="o">[</span> -f <span class="s2">&quot;/home/ypw/anaconda3/etc/profile.d/conda.sh&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        . <span class="s2">&quot;/home/ypw/anaconda3/etc/profile.d/conda.sh&quot;</span>
+    <span class="k">else</span>
+        <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/home/ypw/anaconda3/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+    <span class="k">fi</span>
+<span class="k">fi</span>
+<span class="nb">unset</span> __conda_setup
+<span class="c1"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span>
+</code></pre></div>
+
+<h3 id="anaconda-python">使用 Anaconda 创建其他 Python 环境</h3>
+<p>如果我们需要其他 Python 环境，可以使用 conda 创建：</p>
+<div class="codehilite"><pre><span></span><code>conda create -n python2 <span class="nv">python</span><span class="o">=</span><span class="m">2</span>.7
+<span class="nb">source</span> activate python2
+</code></pre></div>
+
+<p>参考链接：<a href="https://conda.io/docs/user-guide/tasks/manage-environments.html">https://conda.io/docs/user-guide/tasks/manage-environments.html</a></p>
+<h3 id="conda-python-jupyter">把 Conda 的 Python 环境添加到 jupyter 里</h3>
+<p>当你希望在 jupyter 里使用你的虚拟环境的时候，你需要执行下面的命令：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">conda</span> <span class="n">activate</span> <span class="n">python2</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">ipykernel</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">ipykernel</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="o">--</span><span class="n">name</span> <span class="n">python2</span> <span class="o">--</span><span class="n">display</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;Python 2&quot;</span>
+</code></pre></div>
+
+<p>其中的 python2 是你的虚拟环境的名字，display-name 可以取一个好听的名字，它会在 jupyter notebook 切换 kernel 的地方显示。</p>
+<p>参考链接：<a href="https://ipython.readthedocs.io/en/stable/install/kernel_install.html">https://ipython.readthedocs.io/en/stable/install/kernel_install.html</a></p>
+<h3 id="anaconda_2">切换 anaconda 源</h3>
+<p>如果遇到网络问题，可以使用<a href="https://mirror.tuna.tsinghua.edu.cn/help/anaconda/">清华大学的镜像</a>：</p>
+<div class="codehilite"><pre><span></span><code>nano ~/.condarc
+
+<span class="c1"># 添加下面的内容</span>
+channels:
+  - defaults
+show_channel_urls: <span class="nb">true</span>
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</code></pre></div>
+
+<h3 id="pip">切换 pip 源</h3>
+<p>如果遇到网络问题，可以使用阿里云的镜像：</p>
+<div class="codehilite"><pre><span></span><code>pip config <span class="nb">set</span> global.index-url https://mirrors.aliyun.com/pypi/simple/
+</code></pre></div>
+
+<p>常用 pypi 镜像：</p>
+<ul>
+<li>https://mirrors.aliyun.com/pypi/simple/</li>
+<li>https://pypi.tuna.tsinghua.edu.cn/simple/</li>
+<li>https://mirrors.163.com/pypi/simple/</li>
+<li>https://pypi.doubanio.com/simple/</li>
+<li>https://mirrors.ustc.edu.cn/pypi/web/simple/</li>
+</ul>
+<h2 id="python_1">Python 库</h2>
+<p>下面是我认为比较重要的 Python 库：</p>
+<ul>
+<li>jupyter</li>
+<li><code>jupyter_contrib_nbextensions</code></li>
+<li>numpy</li>
+<li>pandas</li>
+<li>scikit-learn</li>
+<li>matplotlib</li>
+<li>opencv-python</li>
+<li>pillow</li>
+<li>tqdm</li>
+<li>torch</li>
+<li>torchvision</li>
+<li>tensorflow</li>
+<li>keras</li>
+<li>tensorboard</li>
+<li>tensorboardx</li>
+</ul>
+<p>安装大礼包：</p>
+<div class="codehilite"><pre><span></span><code>pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow keras tensorboardx xlrd openpyxl
+</code></pre></div>
+
+<h3 id="jupyter"><a href="https://jupyter.org/">jupyter</a></h3>
+<p>在实验阶段，强烈建议你使用 jupyter notebook 编写实验代码，因为它与写 Python 脚本的逻辑完全不同。</p>
+<p>官方介绍：</p>
+<blockquote>
+<p>Jupyter Notebook是一个开源Web应用程序，允许您创建和共享包含实时代码，公式，可视化和叙述文本的文档。用途包括：数据清理和转换，数值模拟，统计建模，数据可视化，机器学习等。</p>
+</blockquote>
+<p>特点：</p>
+<ul>
+<li>web页面交互，在各个平台甚至是手机上都有同样的界面</li>
+<li>运行过的代码产生的变量、函数、类不会消失，除非你重启内核</li>
+<li>不仅支持写代码，显示函数输出的文字，还支持显示图片，甚至实现简单的交互功能</li>
+<li>支持 Markdown 编写注释，还支持 latex 公式</li>
+</ul>
+<h3 id="jupyter_contrib_nbextensions"><a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions">jupyter_contrib_nbextensions</a></h3>
+<p>Jupyter Notebook 插件。</p>
+<blockquote>
+<p>该<code>jupyter_contrib_nbextensions</code>软件包包含一系列社区贡献的非官方扩展，可为Jupyter笔记本添加功能。这些扩展大多是用Javascript编写的，将在您的浏览器中本地加载。</p>
+</blockquote>
+<p>我使用了<a href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execute_time/readme.html">代码执行时间插件</a>和<a href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html">函数折叠插件</a>。</p>
+<h3 id="numpy"><a href="https://numpy.org/">numpy</a></h3>
+<p>科学计算必备库。</p>
+<blockquote>
+<p>NumPy是Python语言的一个扩展程序库。支持高端大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。</p>
+</blockquote>
+<h3 id="pandas"><a href="https://pandas.pydata.org/">pandas</a></h3>
+<p>操作 csv 非常方便，python 里的 excel。</p>
+<blockquote>
+<p>_pandas_是一个开源的，BSD许可的库，为Python编程语言提供高性能，易于使用的数据结构和数据分析工具。</p>
+</blockquote>
+<h3 id="scikit-learn"><a href="https://scikit-learn.org/">scikit-learn</a></h3>
+<p>机器学习模型大全。</p>
+<blockquote>
+<p>Python中的机器学习</p>
+<ul>
+<li>简单有效的数据挖掘和数据分析工具</li>
+<li>可供所有人访问，并可在各种环境中重复使用</li>
+<li>基于NumPy，SciPy和matplotlib构建</li>
+<li>开源，商业上可用 - BSD许可证</li>
+</ul>
+</blockquote>
+<p>注意安装的时候不是 sklearn，而是 scikit-learn：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+</code></pre></div>
+
+<h3 id="matplotlib"><a href="https://matplotlib.org/">matplotlib</a></h3>
+<p>画图工具。</p>
+<blockquote>
+<p>Matplotlib是一个Python 2D绘图库，可以生成各种硬拷贝格式和跨平台的交互式环境的出版物质量数据。Matplotlib可用于Python脚本、IPython shell、Jupyter Notebook 和 Web应用程序服务器和四个图形用户界面工具包。</p>
+</blockquote>
+<h3 id="opencv-python"><a href="https://pypi.org/project/opencv-python/">opencv-python</a></h3>
+<p><a href="https://opencv.org/">OpenCV</a> 的 Python 库，图像处理必备。注意这不是官方的库，而是第三方编译的库。</p>
+<blockquote>
+<p>OpenCV的全称是Open Source Computer Vision Library，是一个跨平台的计算机视觉库。</p>
+</blockquote>
+<p>官方建议是从源码编译：<a href="https://docs.opencv.org/3.4.6/d2/de6/tutorial_py_setup_in_ubuntu.html">https://docs.opencv.org/3.4.6/d2/de6/tutorial_py_setup_in_ubuntu.html</a></p>
+<p>如果你使用的功能不是很复杂，那么你可以直接使用 pip 安装 <a href="https://pypi.org/project/opencv-python/">opencv-python</a>。如果你使用了 opencv-contrib 里的功能，可以安装 <a href="https://pypi.org/project/opencv-contrib-python/">opencv-contrib-python</a>。</p>
+<h3 id="pillow"><a href="https://pillow.readthedocs.io/en/stable/">pillow</a></h3>
+<p>PIL，另一个图像处理库，PyTorch 里的 torchvision 有很多写好的数据增强类，它们的输入类型是 PIL.Image。</p>
+<blockquote>
+<p>该库提供广泛的文件格式支持，高效的内部表示和相当强大的图像处理功能。</p>
+<p>核心图像库旨在快速访问以几种基本像素格式存储的数据。它应该为一般的图像处理工具提供坚实的基础。</p>
+</blockquote>
+<h3 id="tqdm"><a href="https://github.com/tqdm/tqdm">tqdm</a></h3>
+<p>进度条库，耗时长的任务可以使用 tqdm 直观地展示任务的进度，避免焦虑。</p>
+<blockquote>
+<p><code>tqdm</code>在阿拉伯语中是“进步”（<em>taqadum</em>，تقدم）的意思，在西班牙语中是“我太爱你了”（<em>te quiero demasiado</em>）的缩写。</p>
+<p>只需在任何迭代器外包一个 tqdm：<code>tqdm(iterable)</code>，就能立刻让你的循环显示一个聪明的进度条！</p>
+</blockquote>
+<p><img alt="tqdm" src="https://raw.githubusercontent.com/tqdm/tqdm/master/images/tqdm.gif" /></p>
+<h3 id="torch"><a href="https://pytorch.org/">torch</a></h3>
+<p>深度学习库，推荐使用。</p>
+<blockquote>
+<p>一个开源深度学习平台，提供从研究原型到生产部署的无缝路径。</p>
+</blockquote>
+<h3 id="torchvision"><a href="https://pytorch.org/docs/stable/torchvision/index.html">torchvision</a></h3>
+<p>和 PyTorch 配套使用。</p>
+<blockquote>
+<p><a href="https://pytorch.org/docs/stable/torchvision/index.html#module-torchvision"><code>torchvision</code></a>包含了流行的数据集，预训练模型和计算机视觉的常见的图像变换。</p>
+</blockquote>
+<h3 id="tensorflow"><a href="https://www.tensorflow.org/">tensorflow</a></h3>
+<p>深度学习库，大而全。配备显卡的机器请按照 <a href="../ubuntu-environment/">Ubuntu 环境</a> 进行配置。</p>
+<blockquote>
+<p>TensorFlow是一个用于机器学习的端到端开源平台。 它拥有全面、灵活的工具、库和社区资源生态系统，可让研究人员推动ML的最新技术，开发人员可轻松构建和部署ML驱动的应用程序。</p>
+</blockquote>
+<h3 id="keras"><a href="https://keras.io/">keras</a></h3>
+<p>更高级的 API，和 tensorflow 联合使用很方便。最新的 TensorFlow 2.0 非常推荐使用 Keras 作为模型搭建的高级 API，你不必直接安装 Keras，直接使用 tf.keras 即可。</p>
+<blockquote>
+<p>Keras是一个高级神经网络API，用Python编写，能够在TensorFlow，CNTK或Theano之上运行。它的开发重点是实现快速实验。能够以最小的延迟从理念到结果是进行良好研究的关键。</p>
+</blockquote>
+<p>绘制模型结构需要 graphviz 和 pydot。 </p>
+<h3 id="tensorboard"><a href="https://github.com/tensorflow/tensorboard">tensorboard</a></h3>
+<p>TensorBoard 是一个可视化工具，你可以使用它可视化：</p>
+<ul>
+<li>loss、acc 曲线</li>
+<li>模型结构</li>
+<li>权重分布</li>
+<li>生成的图像</li>
+<li>生成的文字</li>
+</ul>
+<h3 id="tensorboardx"><a href="https://github.com/lanpa/tensorboardX">tensorboardX</a></h3>
+<p>tensorboardX 是一个框架无关的 tensorboard writer，支持 numpy 矩阵、pytorch 的 tensor 等格式。</p>
+<p>目前 pytorch 1.1 也有<a href="https://pytorch.org/docs/stable/tensorboard.html">官方支持</a>，但是功能有限，所以目前我仍然在使用 tensorboardX。</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../ubuntu-environment/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Ubuntu 环境" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              Ubuntu 环境
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../linux-command/" class="md-footer__link md-footer__link--next" aria-label="下一页: 常用 Linux 命令" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              常用 Linux 命令
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            杨培文
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/ypwhs" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.zhihu.com/people/yangpw" target="_blank" rel="noopener" title="www.zhihu.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M170.54 148.13v217.54l23.43.01 7.71 26.37 42.01-26.37h49.53V148.13H170.54zm97.75 193.93h-27.94l-27.9 17.51-5.08-17.47-11.9-.04V171.75h72.82v170.31zm-118.46-94.39H97.5c1.74-27.1 2.2-51.59 2.2-73.46h51.16s1.97-22.56-8.58-22.31h-88.5c3.49-13.12 7.87-26.66 13.12-40.67 0 0-24.07 0-32.27 21.57-3.39 8.9-13.21 43.14-30.7 78.12 5.89-.64 25.37-1.18 36.84-22.21 2.11-5.89 2.51-6.66 5.14-14.53h28.87c0 10.5-1.2 66.88-1.68 73.44H20.83c-11.74 0-15.56 23.62-15.56 23.62h65.58C66.45 321.1 42.83 363.12 0 396.34c20.49 5.85 40.91-.93 51-9.9 0 0 22.98-20.9 35.59-69.25l53.96 64.94s7.91-26.89-1.24-39.99c-7.58-8.92-28.06-33.06-36.79-41.81L87.9 311.95c4.36-13.98 6.99-27.55 7.87-40.67h61.65s-.09-23.62-7.59-23.62v.01zm412.02-1.6c20.83-25.64 44.98-58.57 44.98-58.57s-18.65-14.8-27.38-4.06c-6 8.15-36.83 48.2-36.83 48.2l19.23 14.43zm-150.09-59.09c-9.01-8.25-25.91 2.13-25.91 2.13s39.52 55.04 41.12 57.45l19.46-13.73s-25.67-37.61-34.66-45.86h-.01zM640 258.35c-19.78 0-130.91.93-131.06.93v-101c4.81 0 12.42-.4 22.85-1.2 40.88-2.41 70.13-4 87.77-4.81 0 0 12.22-27.19-.59-33.44-3.07-1.18-23.17 4.58-23.17 4.58s-165.22 16.49-232.36 18.05c1.6 8.82 7.62 17.08 15.78 19.55 13.31 3.48 22.69 1.7 49.15.89 24.83-1.6 43.68-2.43 56.51-2.43v99.81H351.41s2.82 22.31 25.51 22.85h107.94v70.92c0 13.97-11.19 21.99-24.48 21.12-14.08.11-26.08-1.15-41.69-1.81 1.99 3.97 6.33 14.39 19.31 21.84 9.88 4.81 16.17 6.57 26.02 6.57 29.56 0 45.67-17.28 44.89-45.31v-73.32h122.36c9.68 0 8.7-23.78 8.7-23.78l.03-.01z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://ypw.io" target="_blank" rel="noopener" title="ypw.io" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M172.2 226.8c-14.6-2.9-28.2 8.9-28.2 23.8V301c0 10.2 7.1 18.4 16.7 22 18.2 6.8 31.3 24.4 31.3 45 0 26.5-21.5 48-48 48s-48-21.5-48-48V120c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24v248c0 89.5 82.1 160.2 175 140.7 54.4-11.4 98.3-55.4 109.7-109.7 17.4-82.9-37-157.2-112.5-172.2zM209 0c-9.2-.5-17 6.8-17 16v31.6c0 8.5 6.6 15.5 15 15.9 129.4 7 233.4 112 240.9 241.5.5 8.4 7.5 15 15.9 15h32.1c9.2 0 16.5-7.8 16-17C503.4 139.8 372.2 8.6 209 0zm.3 96c-9.3-.7-17.3 6.7-17.3 16.1v32.1c0 8.4 6.5 15.3 14.8 15.9 76.8 6.3 138 68.2 144.9 145.2.8 8.3 7.6 14.7 15.9 14.7h32.2c9.3 0 16.8-8 16.1-17.3-8.4-110.1-96.5-198.2-206.6-206.7z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/in/ypwhs/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tabs.link", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js"></script>
+      
+        <script src="../js/tablesort.js"></script>
+      
+    
+  </body>
+</html>

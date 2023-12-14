@@ -1,0 +1,2086 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="深度学习工程师生存指南">
+      
+      
+      
+        <meta name="author" content="杨培文">
+      
+      
+        <link rel="canonical" href="https://dl.ypw.io/macos-software/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>macOS 软件 - 深度学习工程师生存指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+  
+
+
+  
+
+  
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-111276663-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#macos" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="深度学习工程师生存指南" class="md-header__button md-logo" aria-label="深度学习工程师生存指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            深度学习工程师生存指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              macOS 软件
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="打开深色模式"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="打开深色模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="关闭深色模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="关闭深色模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m0-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/ypwhs/dl-engineer-guidebook/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ypwhs/dl-engineer-guidebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        首页
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-to-build-deep-learning-workstation/" class="md-tabs__link">
+        硬件
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../mac-compare/" class="md-tabs__link md-tabs__link--active">
+        Mac
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ubuntu-install-guide/" class="md-tabs__link">
+        Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cv-resources/" class="md-tabs__link">
+        CV
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-to-use-tensorboard/" class="md-tabs__link">
+        使用技巧
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="深度学习工程师生存指南" class="md-nav__button md-logo" aria-label="深度学习工程师生存指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    深度学习工程师生存指南
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/ypwhs/dl-engineer-guidebook/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ypwhs/dl-engineer-guidebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
+        首页
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="首页" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          首页
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-build-deep-learning-workstation/" class="md-nav__link">
+        如何配置一台深度学习工作站?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows-linux-or-macos/" class="md-nav__link">
+        Windows、Ubuntu 还是 macOS？
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mac-compare/" class="md-nav__link">
+        Mac 对比
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          macOS 软件
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        macOS 软件
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    终端
+  </a>
+  
+    <nav class="md-nav" aria-label="终端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterm2" class="md-nav__link">
+    iTerm2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    快捷键配置
+  </a>
+  
+    <nav class="md-nav" aria-label="快捷键配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    关闭默认非活跃窗口变灰的选项
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    编辑器
+  </a>
+  
+    <nav class="md-nav" aria-label="编辑器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sublime-text" class="md-nav__link">
+    Sublime Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macdown" class="md-nav__link">
+    MacDown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typora" class="md-nav__link">
+    Typora
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hex-fiend" class="md-nav__link">
+    Hex Fiend
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    浏览器
+  </a>
+  
+    <nav class="md-nav" aria-label="浏览器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chrome" class="md-nav__link">
+    Chrome
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    常用插件
+  </a>
+  
+    <nav class="md-nav" aria-label="常用插件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adblock-plus" class="md-nav__link">
+    Adblock Plus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tampermonkey" class="md-nav__link">
+    Tampermonkey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy-switchyomega" class="md-nav__link">
+    Proxy SwitchyOmega
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#octotree" class="md-nav__link">
+    Octotree
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    开发软件
+  </a>
+  
+    <nav class="md-nav" aria-label="开发软件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xcode" class="md-nav__link">
+    Xcode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pycharm" class="md-nav__link">
+    PyCharm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-desktop" class="md-nav__link">
+    GitHub Desktop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postman" class="md-nav__link">
+    Postman
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    实用工具
+  </a>
+  
+    <nav class="md-nav" aria-label="实用工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#netron" class="md-nav__link">
+    Netron
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#karabiner-elements" class="md-nav__link">
+    Karabiner-Elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-unarchiver" class="md-nav__link">
+    The Unarchiver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caffeine" class="md-nav__link">
+    Caffeine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#istat-menus" class="md-nav__link">
+    iStat Menus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daisydisk" class="md-nav__link">
+    DaisyDisk
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    虚拟机
+  </a>
+  
+    <nav class="md-nav" aria-label="虚拟机">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parallels-desktop" class="md-nav__link">
+    Parallels Desktop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-environment/" class="md-nav__link">
+        macOS 环境
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-environment/" class="md-nav__link">
+        Python 环境
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-install-guide/" class="md-nav__link">
+        Ubuntu 装机步骤
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-environment/" class="md-nav__link">
+        Ubuntu 环境
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-command/" class="md-nav__link">
+        常用 Linux 命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-tensorboard/" class="md-nav__link">
+        如何使用 TensorBoard
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-resources/" class="md-nav__link">
+        CV 学习资源
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-dataset/" class="md-nav__link">
+        常用 CV 数据集
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-models-on-imagenet/" class="md-nav__link">
+        在 ImageNet 上表现出色的经典模型
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../detection-models/" class="md-nav__link">
+        检测模型
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        硬件
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="硬件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          硬件
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-build-deep-learning-workstation/" class="md-nav__link">
+        如何配置一台深度学习工作站?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows-linux-or-macos/" class="md-nav__link">
+        Windows、Ubuntu 还是 macOS？
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Mac
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mac" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mac
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mac-compare/" class="md-nav__link">
+        Mac 对比
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          macOS 软件
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        macOS 软件
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    终端
+  </a>
+  
+    <nav class="md-nav" aria-label="终端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterm2" class="md-nav__link">
+    iTerm2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    快捷键配置
+  </a>
+  
+    <nav class="md-nav" aria-label="快捷键配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    关闭默认非活跃窗口变灰的选项
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    编辑器
+  </a>
+  
+    <nav class="md-nav" aria-label="编辑器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sublime-text" class="md-nav__link">
+    Sublime Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macdown" class="md-nav__link">
+    MacDown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typora" class="md-nav__link">
+    Typora
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hex-fiend" class="md-nav__link">
+    Hex Fiend
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    浏览器
+  </a>
+  
+    <nav class="md-nav" aria-label="浏览器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chrome" class="md-nav__link">
+    Chrome
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    常用插件
+  </a>
+  
+    <nav class="md-nav" aria-label="常用插件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adblock-plus" class="md-nav__link">
+    Adblock Plus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tampermonkey" class="md-nav__link">
+    Tampermonkey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy-switchyomega" class="md-nav__link">
+    Proxy SwitchyOmega
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#octotree" class="md-nav__link">
+    Octotree
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    开发软件
+  </a>
+  
+    <nav class="md-nav" aria-label="开发软件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xcode" class="md-nav__link">
+    Xcode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pycharm" class="md-nav__link">
+    PyCharm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-desktop" class="md-nav__link">
+    GitHub Desktop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postman" class="md-nav__link">
+    Postman
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    实用工具
+  </a>
+  
+    <nav class="md-nav" aria-label="实用工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#netron" class="md-nav__link">
+    Netron
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#karabiner-elements" class="md-nav__link">
+    Karabiner-Elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-unarchiver" class="md-nav__link">
+    The Unarchiver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caffeine" class="md-nav__link">
+    Caffeine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#istat-menus" class="md-nav__link">
+    iStat Menus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daisydisk" class="md-nav__link">
+    DaisyDisk
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    虚拟机
+  </a>
+  
+    <nav class="md-nav" aria-label="虚拟机">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parallels-desktop" class="md-nav__link">
+    Parallels Desktop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-environment/" class="md-nav__link">
+        macOS 环境
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-environment/" class="md-nav__link">
+        Python 环境
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-command/" class="md-nav__link">
+        常用 Linux 命令
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-install-guide/" class="md-nav__link">
+        Ubuntu 装机步骤
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-environment/" class="md-nav__link">
+        Ubuntu 环境
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-environment/" class="md-nav__link">
+        Python 环境
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-command/" class="md-nav__link">
+        常用 Linux 命令
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        CV
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CV" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          CV
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-resources/" class="md-nav__link">
+        CV 学习资源
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-dataset/" class="md-nav__link">
+        常用 CV 数据集
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-models-on-imagenet/" class="md-nav__link">
+        在 ImageNet 上表现出色的经典模型
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../detection-models/" class="md-nav__link">
+        检测模型
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        使用技巧
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="使用技巧" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          使用技巧
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-tensorboard/" class="md-nav__link">
+        如何使用 TensorBoard
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remote-debugging-with-pycharm/" class="md-nav__link">
+        如何使用 PyCharm 远程调试
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-is-good/" class="md-nav__link">
+        Docker 是个好东西
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    终端
+  </a>
+  
+    <nav class="md-nav" aria-label="终端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterm2" class="md-nav__link">
+    iTerm2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    快捷键配置
+  </a>
+  
+    <nav class="md-nav" aria-label="快捷键配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    关闭默认非活跃窗口变灰的选项
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    编辑器
+  </a>
+  
+    <nav class="md-nav" aria-label="编辑器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sublime-text" class="md-nav__link">
+    Sublime Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macdown" class="md-nav__link">
+    MacDown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typora" class="md-nav__link">
+    Typora
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hex-fiend" class="md-nav__link">
+    Hex Fiend
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    浏览器
+  </a>
+  
+    <nav class="md-nav" aria-label="浏览器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chrome" class="md-nav__link">
+    Chrome
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    常用插件
+  </a>
+  
+    <nav class="md-nav" aria-label="常用插件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adblock-plus" class="md-nav__link">
+    Adblock Plus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tampermonkey" class="md-nav__link">
+    Tampermonkey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy-switchyomega" class="md-nav__link">
+    Proxy SwitchyOmega
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#octotree" class="md-nav__link">
+    Octotree
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    开发软件
+  </a>
+  
+    <nav class="md-nav" aria-label="开发软件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xcode" class="md-nav__link">
+    Xcode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pycharm" class="md-nav__link">
+    PyCharm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-desktop" class="md-nav__link">
+    GitHub Desktop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postman" class="md-nav__link">
+    Postman
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    实用工具
+  </a>
+  
+    <nav class="md-nav" aria-label="实用工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#netron" class="md-nav__link">
+    Netron
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#karabiner-elements" class="md-nav__link">
+    Karabiner-Elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-unarchiver" class="md-nav__link">
+    The Unarchiver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caffeine" class="md-nav__link">
+    Caffeine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#istat-menus" class="md-nav__link">
+    iStat Menus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daisydisk" class="md-nav__link">
+    DaisyDisk
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    虚拟机
+  </a>
+  
+    <nav class="md-nav" aria-label="虚拟机">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parallels-desktop" class="md-nav__link">
+    Parallels Desktop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ypwhs/dl-engineer-guidebook/edit/master/docs/macos-software.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="macos">macOS 软件</h1>
+<p>下面是我安装的与工作有关的软件。</p>
+<p>本篇文章会介绍这些软件的作用，大部分软件可以通过命令直接安装，参考 <a href="../macos-environment/#bi-bei-ruan-jian">macOS 环境-必备软件</a>。</p>
+<h2 id="_1">终端</h2>
+<h3 id="iterm2"><a href="https://www.iterm2.com/">iTerm2</a></h3>
+<p>终端首选 iTerm，最大的好处是可以结合 tmux 分屏使用，比如：</p>
+<p><img alt="iTerm2" src="../imgs/image%2849%29.png" /></p>
+<h3 id="_2">快捷键配置</h3>
+<p>开启 ⌘←, ⌘→ 和 ⌥←, ⌥→ 快捷键，可以直接跳到行首，以及跳过单词，在输入很长的命令的时候很有用。</p>
+<p>首先打开 iTerm2 的偏好设置（Preferences），然后切换到 Profiles，在右边找到 Keys 快捷键配置：</p>
+<p><img alt="iTerm2-&gt;Prefences-&gt;Profiles-&gt;Keys" src="../imgs/image%285%29.png" /></p>
+<p>点击 Key Mappings 下面的加号（+），按下面的表格添加快捷键：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Keyboard Shortcut</th>
+<th align="left">Action</th>
+<th align="left">Esc+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">⌘←</td>
+<td align="left">Send Escape Sequence</td>
+<td align="left">OH</td>
+</tr>
+<tr>
+<td align="left">⌘→</td>
+<td align="left">Send Escape Sequence</td>
+<td align="left">OF</td>
+</tr>
+<tr>
+<td align="left">⌥←</td>
+<td align="left">Send Escape Sequenceb</td>
+<td align="left">b</td>
+</tr>
+<tr>
+<td align="left">⌥→</td>
+<td align="left">Send Escape Sequencef</td>
+<td align="left">f</td>
+</tr>
+</tbody>
+</table>
+<p>如图：</p>
+<p><img alt="" src="../imgs/image%2814%29.png" /></p>
+<p>如果弹出 Warning，直接点确定即可。如果点了确定没反应，不用管它，继续把配置加完，然后重新开启软件就行。</p>
+<h4 id="_3"><strong>关闭默认非活跃窗口变灰的选项</strong></h4>
+<p>取消勾选<code>Preferences -&gt; Appearance -&gt; Dim inactive split panes</code>即可。</p>
+<h2 id="_4">编辑器</h2>
+<h3 id="sublime-text"><a href="https://www.sublimetext.com/">Sublime Text</a></h3>
+<p>Sublime Text 是一个非常轻量化的文本编辑器，启动迅速，支持各种语言的代码高亮。</p>
+<p>当你只想打开庞大工程里的一个文件的时候，你就可以用它来阅读和修改代码。</p>
+<p><img alt="SublimeText3" src="https://www.sublimetext.com/screenshots/3.0/osx@2x.png" /></p>
+<h3 id="macdown"><a href="https://macdown.uranusjr.com/">MacDown</a></h3>
+<p><img alt="MacDown" src="https://macdown.uranusjr.com/static/images/macdown-demo.png" /></p>
+<p>MacDown 是一个 markdown 编辑器，支持 Markdown 以及 LaTeX，写文章必备。</p>
+<h3 id="typora"><a href="https://typora.io/">Typora</a></h3>
+<p>另一个 Markdown 编辑器，与 MacDown 不同在于，MacDown 是分栏编辑，左边 Markdown，右边实时渲染，而 Typora 只有一个编辑界面，实时写实时渲染。</p>
+<p><img alt="Typora" src="https://typora.io/img/new/toc.png" /></p>
+<h3 id="hex-fiend"><a href="http://ridiculousfish.com/hexfiend/">Hex Fiend</a></h3>
+<p><img alt="HexFiend" src="../imgs/image%2852%29.png" /></p>
+<p>Hex Fiend 是一个十六进制编辑器，当你想查看一个二进制文件的内容的时候就可以使用它，比如我会用它来检查我写出的模型权值文件。因为它可以秒开任何大小的文件，有时候我也会用它来查看几百兆的文本文件。</p>
+<h2 id="_5">浏览器</h2>
+<ul>
+<li>Chrome</li>
+<li>Chrome 插件</li>
+</ul>
+<h3 id="chrome"><a href="https://www.google.com/chrome/">Chrome</a></h3>
+<p>{% embed url="https://www.google.com/chrome/" %}</p>
+<p>目前 Chrome 应该是最受欢迎的浏览器：</p>
+<p><img alt="图片来自维基百科" src="../imgs/image%2858%29.png" /></p>
+<p>这里建议使用 Chrome 作为主力浏览器，原因如下：</p>
+<ul>
+<li>简洁</li>
+<li>插件强大且免费（Safari 的某些插件是收费的）</li>
+</ul>
+<h3 id="_6">常用插件</h3>
+<h4 id="adblock-plus"><a href="https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb">Adblock Plus</a></h4>
+<p>拦截广告的好工具。</p>
+<h4 id="tampermonkey"><a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a></h4>
+<p>脚本管理器，你可以找到支持各种功能的脚本，比如：</p>
+<ul>
+<li>去广告</li>
+<li>下载视频</li>
+<li>你可以自己写 js 脚本以实现一切功能</li>
+</ul>
+<h4 id="proxy-switchyomega"><a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif">Proxy SwitchyOmega</a></h4>
+<p>可以很方便地切换代理服务器。</p>
+<h4 id="octotree"><a href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc">Octotree</a></h4>
+<p>可以在 GitHub 页面展示代码文件结构，非常方便，如图：</p>
+<p><img alt="Octotree" src="../imgs/image%2813%29.png" /></p>
+<h2 id="_7">开发软件</h2>
+<h3 id="xcode"><a href="https://developer.apple.com/xcode/">Xcode</a></h3>
+<p>Xcode 是 macOS 上的 IDE，可以开发 macOS、iPhone、iPad、AppleWatch 等平台上的应用，如果你希望在 iPhone 进行调试，你还需要购买 99$ 的开发者证书。我们一般从 AppStore 上下载 Xcode。</p>
+<h3 id="pycharm"><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></h3>
+<p>PyCharm 是我经常使用的 Python IDE，它支持代码高亮、代码提示、调试断点等功能，专业版还支持远程调试，非常适合深度学习从业人员使用。</p>
+<p>因为大多数深度学习工程师都不是直接在训练机器上写代码，而是使用一个终端机器远程 ssh 进行代码调试。那么如果每次都是上传代码、运行 Python 脚本、看报错，那么就会非常低效，因为有可能你载入了五分钟的数据集以后，报错模型的某个层写错了，然后检查半天，上传一个新的代码，然后陷入上面的循环。</p>
+<p>高效一点的方法就是使用 jupyter notebook 进行开发，即使代码报错了也不会直接退出，我们可以在 jupyter notebook 里继续写代码，直到写出正确的代码。那么这仍然不是高效的方法，因为如果我们有一个错误发生在模型内部的 forward 部分，那么我们就需要用 print 大法在出错代码的前后输出矩阵尺寸、数据类型等关键数据，然后根据报错来修 bug。</p>
+<p>那么当我们出现这种报错的时候，使用 PyCharm 的远程调试功能就非常方便了，我们可以在出错的代码前面下断点，然后我们可以看到每个矩阵的尺寸，模型的每一层的参数，不需要写许多 print 去实现我们的想法。如果代码报错是一个除0错误，你还可以直接在变量监视器里面增加一个 <code>x.mean()</code> 的条目，然后实时查看 x 的均值，不需要重新运行代码。</p>
+<h3 id="github-desktop"><a href="https://desktop.github.com/">GitHub Desktop</a></h3>
+<p>GitHub Desktop 是 GitHub 官方客户端，新手必备。</p>
+<h3 id="postman"><a href="https://www.getpostman.com/">Postman</a></h3>
+<p>一款非常好用的 API 测试工具，它可以模拟发送 GET、POST 等请求，支持 JSON 语法高亮。</p>
+<p><img alt="Postman" src="../imgs/image%2826%29.png" /></p>
+<h2 id="_8">实用工具</h2>
+<ul>
+<li>Netron</li>
+<li>Karabiner-Elements</li>
+<li>The Unarchiver</li>
+<li>iStat Menus</li>
+<li>Caffeine</li>
+<li>DaisyDisk</li>
+</ul>
+<h3 id="netron"><a href="https://github.com/lutzroeder/netron">Netron</a></h3>
+<p>它是一个可视化模型结构的软件，支持的模型文件格式有：<strong>ONNX</strong> (<code>.onnx</code>, <code>.pb</code>, <code>.pbtxt</code>), <strong>Keras</strong> (<code>.h5</code>, <code>.keras</code>), <strong>Core ML</strong> (<code>.mlmodel</code>), <strong>Caffe2</strong>(<code>predict_net.pb</code>, <code>predict_net.pbtxt</code>), <strong>MXNet</strong> (<code>.model</code>, <code>-symbol.json</code>) and <strong>TensorFlow Lite</strong> (<code>.tflite</code>). Netron has experimental support for <strong>Caffe</strong> (<code>.caffemodel</code>, <code>.prototxt</code>), <strong>PyTorch</strong> (<code>.pth</code>), <strong>Torch</strong> (<code>.t7</code>), <strong>CNTK</strong> (<code>.model</code>, <code>.cntk</code>), <strong>PaddlePaddle</strong> (<code>__model__</code>), <strong>Darknet</strong> (<code>.cfg</code>), <strong>scikit-learn</strong> (<code>.pkl</code>), <strong>TensorFlow.js</strong> (<code>model.json</code>, <code>.pb</code>) and <strong>TensorFlow</strong>(<code>.pb</code>, <code>.meta</code>, <code>.pbtxt</code>).</p>
+<p><img alt="Netron" src="https://raw.githubusercontent.com/lutzroeder/netron/master/.github/screenshot.png" /></p>
+<h3 id="karabiner-elements"><a href="https://pqrs.org/osx/karabiner/">Karabiner-Elements</a></h3>
+<p>Karabiner-Elements 是一个改键工具，机械键盘必备软件。</p>
+<blockquote>
+<p>适用于macOS的功能强大且稳定的键盘定制器。</p>
+</blockquote>
+<p><img alt="Karabiner-Elements" src="../imgs/image%2843%29.png" /></p>
+<p>我把我的机械键盘的 Command 键和 Option 键替换了，这样就可以像使用原生键盘一样使用我的机械键盘。你还可以把键盘上的 Windows 键和 Alt 键交换位置。</p>
+<h3 id="the-unarchiver"><a href="https://theunarchiver.com/">The Unarchiver</a></h3>
+<p>这是一个解压缩软件，可以直接在 App Store 上下载，免费，支持 zip、rar、tar 等格式。</p>
+<blockquote>
+<p>The Unarchiver 是一款简单易用的小程序，可以解压许多不同类型的存档文件。 它能够打开 Zip、RAR（包括 v5）、7-zip、Tar、Gzip 和 Bzip2 等常见格式。 它还能打开许多旧格式，例如 StuffIt、DiskDoubler、LZH、ARJ 和 ARC。 它还能打开其他各种文件，例如 ISO 和 BIN 磁盘镜像、部分 Windows .EXE 安装程序。 该列表实际上很长 - 有关完整列表，请查看程序主页。</p>
+</blockquote>
+<h3 id="caffeine"><a href="http://lightheadsw.com/caffeine/">Caffeine</a></h3>
+<p>它可以防止你的电脑进入睡眠，你只需要在状态栏点一下就可以打开和关闭，比在设置里面操作方便不少。</p>
+<h3 id="istat-menus"><a href="https://bjango.com/mac/istatmenus/">iStat Menus</a></h3>
+<p>这个软件可以监控 Mac 的 CPU、内存、网速等信息。收费。</p>
+<p>通过这个软件，我可以直观地查看我跑程序的时候 CPU 有没有全部用上，它在状态栏并不会占用太多空间，下载东西的时候也可以监控网速。</p>
+<h3 id="daisydisk"><a href="https://daisydiskapp.com/">DaisyDisk</a></h3>
+<p>这是一个非常好用的磁盘空间整理工具，你可以检查你的 Mac 上占用空间较大的文件都在哪里。收费。</p>
+<p><img alt="DaisyDisk" src="../imgs/image%2848%29.png" /></p>
+<h2 id="_9">虚拟机</h2>
+<h3 id="parallels-desktop"><a href="https://www.parallels.com/products/desktop/">Parallels Desktop</a></h3>
+<p>这是一款非常优秀的虚拟机软件，收费。</p>
+<p>它创新的融合模式可以让你在 Mac 桌面下，在使用 Windows 软件的时候感觉像在使用 Mac 原生的软件，比如：</p>
+<p><img alt="CoherenceViewmode" src="../imgs/image%2817%29.png" /></p>
+<p>后面的窗口是 Finder，前面的窗口是一个 Windows 应用，使用 Parallels Desktop 可以让你无缝使用 Mac 和 Windows 的应用。</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../mac-compare/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Mac 对比" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              Mac 对比
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../macos-environment/" class="md-footer__link md-footer__link--next" aria-label="下一页: macOS 环境" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              macOS 环境
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            杨培文
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/ypwhs" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.zhihu.com/people/yangpw" target="_blank" rel="noopener" title="www.zhihu.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M170.54 148.13v217.54l23.43.01 7.71 26.37 42.01-26.37h49.53V148.13H170.54zm97.75 193.93h-27.94l-27.9 17.51-5.08-17.47-11.9-.04V171.75h72.82v170.31zm-118.46-94.39H97.5c1.74-27.1 2.2-51.59 2.2-73.46h51.16s1.97-22.56-8.58-22.31h-88.5c3.49-13.12 7.87-26.66 13.12-40.67 0 0-24.07 0-32.27 21.57-3.39 8.9-13.21 43.14-30.7 78.12 5.89-.64 25.37-1.18 36.84-22.21 2.11-5.89 2.51-6.66 5.14-14.53h28.87c0 10.5-1.2 66.88-1.68 73.44H20.83c-11.74 0-15.56 23.62-15.56 23.62h65.58C66.45 321.1 42.83 363.12 0 396.34c20.49 5.85 40.91-.93 51-9.9 0 0 22.98-20.9 35.59-69.25l53.96 64.94s7.91-26.89-1.24-39.99c-7.58-8.92-28.06-33.06-36.79-41.81L87.9 311.95c4.36-13.98 6.99-27.55 7.87-40.67h61.65s-.09-23.62-7.59-23.62v.01zm412.02-1.6c20.83-25.64 44.98-58.57 44.98-58.57s-18.65-14.8-27.38-4.06c-6 8.15-36.83 48.2-36.83 48.2l19.23 14.43zm-150.09-59.09c-9.01-8.25-25.91 2.13-25.91 2.13s39.52 55.04 41.12 57.45l19.46-13.73s-25.67-37.61-34.66-45.86h-.01zM640 258.35c-19.78 0-130.91.93-131.06.93v-101c4.81 0 12.42-.4 22.85-1.2 40.88-2.41 70.13-4 87.77-4.81 0 0 12.22-27.19-.59-33.44-3.07-1.18-23.17 4.58-23.17 4.58s-165.22 16.49-232.36 18.05c1.6 8.82 7.62 17.08 15.78 19.55 13.31 3.48 22.69 1.7 49.15.89 24.83-1.6 43.68-2.43 56.51-2.43v99.81H351.41s2.82 22.31 25.51 22.85h107.94v70.92c0 13.97-11.19 21.99-24.48 21.12-14.08.11-26.08-1.15-41.69-1.81 1.99 3.97 6.33 14.39 19.31 21.84 9.88 4.81 16.17 6.57 26.02 6.57 29.56 0 45.67-17.28 44.89-45.31v-73.32h122.36c9.68 0 8.7-23.78 8.7-23.78l.03-.01z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://ypw.io" target="_blank" rel="noopener" title="ypw.io" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M172.2 226.8c-14.6-2.9-28.2 8.9-28.2 23.8V301c0 10.2 7.1 18.4 16.7 22 18.2 6.8 31.3 24.4 31.3 45 0 26.5-21.5 48-48 48s-48-21.5-48-48V120c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24v248c0 89.5 82.1 160.2 175 140.7 54.4-11.4 98.3-55.4 109.7-109.7 17.4-82.9-37-157.2-112.5-172.2zM209 0c-9.2-.5-17 6.8-17 16v31.6c0 8.5 6.6 15.5 15 15.9 129.4 7 233.4 112 240.9 241.5.5 8.4 7.5 15 15.9 15h32.1c9.2 0 16.5-7.8 16-17C503.4 139.8 372.2 8.6 209 0zm.3 96c-9.3-.7-17.3 6.7-17.3 16.1v32.1c0 8.4 6.5 15.3 14.8 15.9 76.8 6.3 138 68.2 144.9 145.2.8 8.3 7.6 14.7 15.9 14.7h32.2c9.3 0 16.8-8 16.1-17.3-8.4-110.1-96.5-198.2-206.6-206.7z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/in/ypwhs/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tabs.link", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js"></script>
+      
+        <script src="../js/tablesort.js"></script>
+      
+    
+  </body>
+</html>
