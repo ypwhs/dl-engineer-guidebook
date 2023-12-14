@@ -1,11 +1,6 @@
 # Ubuntu 装机步骤
 
-* 安装 Ubuntu
-* 配置 ssh
-* 配置 sudo 免密码 和 apt 源（推荐）
-* 安装 oh my zsh 以及常用命令（推荐）
-* 安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）
-* 安装 Anaconda 和 Python 库
+本文分为两个部分，如果你比较熟悉 Linux，可以直接看脚本式装机，速度快，效果好。
 
 ## 脚本式装机
 
@@ -91,6 +86,17 @@ mim install mmdet
 ```
 
 ## 分步骤安装
+
+以下是分步骤安装的方法，分为以下几个步骤：
+
+* 安装 Ubuntu
+* 配置 ssh
+* 配置 sudo 免密码 和 apt 源（推荐）
+* 安装 oh my zsh 以及常用命令（推荐）
+* 安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）
+* 安装 Anaconda 和 Python 库
+
+这些步骤可能存在滞后性，如果你发现某个步骤已经过时了，可以提 issue 告诉我，或者直接修改这个文档。
 
 ## 安装 Ubuntu
 
