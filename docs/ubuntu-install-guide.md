@@ -7,7 +7,7 @@
 * 安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）
 * 安装 Anaconda 和 Python 库
 
-# 脚本式装机
+## 脚本式装机
 
 ```
 FILE="/etc/sudoers.d/$USER"
@@ -90,7 +90,7 @@ fi
 mim install mmdet
 ```
 
-# 分步骤安装
+## 分步骤安装
 
 ## 安装 Ubuntu
 
@@ -719,4 +719,3 @@ Epoch 5/5
 10000/10000 [==============================] - 0s 24us/sample - loss: 0.0698 - acc: 0.9804
 [0.06983174340333789, 0.9804]
 ```
-
