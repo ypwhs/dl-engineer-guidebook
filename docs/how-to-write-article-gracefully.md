@@ -78,3 +78,11 @@ mkdocs serve
 
 ![](how-to-write-article-gracefully/image-4.png)
 
+# 提交合并请求
+
+写完文章以后，可以提交合并请求：
+
+![](how-to-write-article-gracefully/image-5.png)
+
+也可以在 GitHub 网页上操作。
+
