@@ -10,9 +10,13 @@ remote_name: https://github.com/ypwhs/dl-engineer-guidebook
 remote_branch: site
 theme:
   name: 'material'
+  icon:
+    repo: fontawesome/brands/github
   features:
     - content.code.annotate
     - content.tabs.link
+    - content.action.edit
+    - content.action.view
     #    - header.autohide
     #    - navigation.expand
     - navigation.indexes
