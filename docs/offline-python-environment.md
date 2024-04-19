@@ -1,154 +1,127 @@
-# 离线 Python 环境
+# Windows 离线 Python 环境
 
-有时因为限制，我们不能够在目标机器上使用网络安装 Python 环境，那么如何离线构建 Anaconda 虚拟环境，以及如何离线安装各种 Python 库，就是一个必须要思考的问题。我会在这篇文章里介绍我在离线安装 Anaconda 和配置 Python 环境方面的一些经验。
+## 背景
 
-离线构建 Python 环境的构建需要：
+我们做好了一个程序，想要分发给用户时，用户可能没有网络，无法使用 pip 安装相应的依赖，有时也只是为了方便分发，避免一整天都在处理各种不同的环境问题，那么我们就需要做一个离线 Python 环境。一个离线环境包可以让用户使用和我们一样的 Python 环境，用户只需要学会解压，无需学习 Python，pip 等概念，就可以使用我们的程序。
 
-在有网的机器上：
+我在做 CreativeChatGLM 项目时，需要把整个环境打包成一个离线包，因此写了这个教程，链接：[https://github.com/ypwhs/CreativeChatGLM](https://github.com/ypwhs/CreativeChatGLM)
 
-* 下载服务器对应的 conda 安装包
-* 下载 Python 虚拟环境 pkg 文件
-* 下载 Python 库的 whl 文件
+制作过程分为以下几个步骤：
 
-在离线服务器上：
+* 准备 Python
+* 准备 get-pip.py
+* 准备环境变量脚本 env_offline.bat
+* 准备安装依赖脚本 setup_offline.bat
+* 安装依赖
+* 准备运行脚本 start_offline.bat
 
-* 安装 conda
-* 安装 Python 虚拟环境
-* 安装 Python 库
+## 准备 Python
 
-提示：
+首先去 Python 官网下载：[https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-* 如果离线服务器已经安装 conda，可以不用重复安装
-* 如果离线服务器已经有你需要的 Python 版本对应的虚拟环境，可以使用 `conda create --clone` 克隆旧的虚拟环境
+这里我选择的是 Python 3.10.10：
 
+![](offline-python-environment/image.png)
 
-## 下载 conda 安装包
+点进去之后，要下载 Windows embeddable package (64-bit) 版本，代表可以嵌入到其他程序中，这里我选择的是 python-3.10.10-embed-amd64.zip。
 
-如果你使用的 Python 版本是 Python 3.7，那么直接下载最新的 Anaconda 即可，自带 Python 3.7 以及许多机器学习环境，只需要离线安装一些深度学习库，这部分内容可以参考下面的下载whl文件。
+![](offline-python-environment/image-1.png)
 
-如果你使用 Python 3.7 以下的版本，如 Python 3.6，那么你可以只下载 Miniconda，然后通过 pkg 里先安装你想要的Python 版本。为什么不下载 Anaconda 呢？因为它很大，而且里面的 Python 版本并不是我们需要的版本。
+解压到工程目录下即可，这里我解压到了 `./system/python` 目录下：
 
-目前最新的 Anaconda 和 Miniconda 下载链接：
+![](offline-python-environment/image-2.png)
 
-* https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
-* https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+## 准备 get-pip.py
 
-如果你遇到了网络问题，可以使用[清华大学开源软件镜像站的 Anaconda 镜像](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)：
+去官网下载：[https://bootstrap.pypa.io/get-pip.py](https://bootstrap.pypa.io/get-pip.py)
 
-* https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2019.07-Linux-x86_64.sh
-* https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
+保存到 `./system/python` 目录下。
 
-可以使用下面的命令来下载：
+!!! 注意
+    解压之后，记得删除 pth 文件，以解决安装依赖的问题。
 
-```sh
-mkdir -p ~/Downloads/offline
-cd ~/Downloads/offline
-wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
+比如我删除的文件路径是 `./system/python/python310._pth`
+
+![](offline-python-environment/image-3.png)
+
+## 准备环境变量脚本 env_offline.bat
+
+一个软件如果有很多依赖，要想运行起来就必须正确配置环境变量。可以这么说，一个软件的安装过程，就是解压 + 配置环境变量（Windows 还有注册表）。
+
+这里我写了一个脚本，用于配置 Python 所需的环境变量，保存到工程目录下即可：
+
+```bat
+@echo off
+
+echo Activate offline environment
+
+set DIR=%~dp0system
+
+set PATH=C:\Windows\system32;C:\Windows;%DIR%\git\bin;%DIR%\python;%DIR%\python\Scripts;%DIR%\python\Lib\site-packages\torch\lib
+set PIP_INSTALLER_LOCATION=%DIR%\python\get-pip.py
 ```
 
-<script id="asciicast-sI5AYLfu71HaWTJiOLQrcauXJ" src="https://asciinema.org/a/sI5AYLfu71HaWTJiOLQrcauXJ.js" async></script>
+## 准备安装依赖脚本 setup_offline.bat
 
-## 下载 pkg 文件和 whl 文件
+安装依赖我也写了个脚本，主要是检查 pip、安装 pytorch 和 requirements.txt 中的依赖，你可以根据你的需要，修改 torch 的版本，或者添加其他依赖：
 
-`pip download` 可以下载你所需要和依赖的 Python 库对应的 whl 安装包，但是你必须确保系统内核和 Python 版本一致。如果你使用的是 Mac，而目标机器是 Linux，那么你就不能够使用 `pip download` 命令很方便地下载所有依赖的 whl 文件。为了简化这一问题，我们可以使用 Docker 创建一个 Linux 环境来完成下载任务。
+```bat
+cd /D "%~dp0"
 
-### 启动 miniconda 容器
+echo Setup offline environment
+call env_offline.bat
 
-通过 `-v` 参数，我们可以将 Docker 内部的 `/data` 路径和本地的 `~/Downloads/offline` 路径链接起来，这样当我们下载到 `/data` 时，就可以在本机的 `~/Downloads/offline` 文件夹里看到。
+:install_pip
+if exist %DIR%\python\Scripts\pip.exe goto :install_python_packages
+echo Install pip...
+python %PIP_INSTALLER_LOCATION%
 
-```sh
-docker run -it -v ~/Downloads/offline:/data -w /data continuumio/miniconda
+:install_python_packages
+echo Install dependencies...
+pip install torch==2.0.0+cu118 --index-url https://download.pytorch.org/whl/cu118 --extra-index-url https://mirrors.bfsu.edu.cn/pypi/web/simple
+pip install -r requirements.txt -i https://mirrors.bfsu.edu.cn/pypi/web/simple
+
+echo Install finished.
+pause
 ```
 
-### 添加 conda 源（可选）
+## 安装依赖
 
-通过添加[清华大学开源软件镜像站的 Anaconda 镜像](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)，我们可以加速下载过程。
+运行 setup_offline.bat 脚本，安装依赖，可以看到类似下面的输出：
 
-```sh
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-conda config --set show_channel_urls yes
+![](offline-python-environment/image-4.png)
+
+## 准备运行脚本 start_offline.bat
+
+运行脚本就是激活运行环境，以及运行你的程序，这里我写了一个简单的脚本，你可以根据你的需要修改：
+
+```bat
+@echo off
+
+cd /D "%~dp0"
+
+call env_offline.bat
+call start.bat
 ```
 
-### 下载 pkg 文件
+start.bat 是你的程序启动脚本，这里我只是简单的调用了一个 Python 脚本：
 
-Anaconda 所有的库都是通过 pkg 安装的，我们只要下载这些 pkg 文件，即可创建我们想要的环境。
+```bat
+@echo off
 
-首先删除 miniconda docker 里已有的 pkg 文件，因为 miniconda 默认安装了 Python 2.7，我们不希望在安装 Python 3.6 的时候有 Python 2.7 的 pkg 文件。
+cd /D "%~dp0"
 
-然后我们创建一个 Python 3.6 环境。如果你希望安装 Python 的其他版本，可以在创建环境的时候自行修改版本号。
+echo Start app.py
+python app.py %*
 
-创建好环境以后，所有需要的 pkg 文件（后缀名是 `.tar.bz2`）就会下载到 `/opt/conda/pkgs` 目录下，我们只需要把它们拷到 `/data` 目录下，即可在本机的下载文件夹里看见。
-
-```sh
-rm -rf /opt/conda/pkgs
-
-conda create -n ypw python=3.6
-source activate ypw
-
-mkdir -p /data/pkgs
-cd /opt/conda/pkgs
-cp *.tar.bz2 /data/pkgs
+pause
 ```
 
-<script id="asciicast-RXDdXjvhHVqbRgFiDbJzHMmN9" src="https://asciinema.org/a/RXDdXjvhHVqbRgFiDbJzHMmN9.js" async></script>
+## 运行程序
 
-### 配置 pip 源（可选）
+使用 start_offline.bat 启动服务：
 
-通过添加[清华大学开源软件镜像站的 Pypi 镜像](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)，我们可以加速下载过程。
+![](offline-python-environment/image-5.png)
 
-```sh
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-```
+从图上可以看到，服务正常启动，它使用了我们在桌面上的打包文件夹里的 python，并且 pytorch 和其他依赖也和我们配置的一样，这样就可以保证用户使用我们的程序时，不会出现各种环境问题。就算你把这个文件夹放在其他位置，程序也能根据相对路径，正确配置环境变量。
 
-### 下载 whl 文件
-
-whl 文件就是我们常说的 Python 库的安装文件，下面是我常用的 Python 库，你可以根据自己的需要进行修改。
-
-```sh
-mkdir -p /data/whls
-cd /data/whls
-pip download jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow-gpu keras tensorboardx
-```
-
-<script id="asciicast-ZjK3RkkKLrTt10mMIrWMaPiLE" src="https://asciinema.org/a/ZjK3RkkKLrTt10mMIrWMaPiLE.js" async></script>
-
-## 在离线机器上进行离线安装
-
-### 将离线包传到离线机器上
-
-下载好所有需要的离线安装包以后，我们就需要将它们传到离线服务器上，然后逐个安装。如果你的机器不支持[rsync](linux-command.md#rsync) 命令，可以使用 [scp](linux-command.md#scp) 命令。
-
-```sh
-rsync -avP ~/Downloads/offline fat:~/
-```
-
-### 安装 conda
-
-安装 conda 直接使用 bash 运行，然后按照提示进行即可。
-
-```sh
-bash ~/offline/Miniconda3-latest-Linux-x86_64.sh
-```
-
-<script id="asciicast-oDPnKVGHItMjVZ2RtzSOE916F" src="https://asciinema.org/a/oDPnKVGHItMjVZ2RtzSOE916F.js" async></script>
-
-### 创建 Python 虚拟环境
-
-先创建一个空环境，然后安装已经下载好的 pkg 文件，你就可以离线创建一个 Python 3.6 的环境。
-
-```sh
-conda create -n ypw --offline
-source activate ypw
-conda install --offline ~/offline/pkgs/*
-```
-
-### 安装 whl 库
-
-最后，使用 pip 离线安装下载好的 whl 文件。
-
-```sh
-pip install --no-index --find-links=file:///home/richinfo/offline/whls jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow-gpu keras tensorboardx
-```
-
-<script id="asciicast-EHRE3XtioqXdTt5VLvRGWxzmQ" src="https://asciinema.org/a/EHRE3XtioqXdTt5VLvRGWxzmQ.js" async></script>
