@@ -56,9 +56,11 @@ extra:
       link: 'https://www.linkedin.com/in/ypwhs/'
 markdown_extensions:
   - admonition
-  - codehilite
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.critic
+  - codehilite
   - toc:
       permalink: false
 extra_javascript:
