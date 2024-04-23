@@ -8,7 +8,8 @@ Windows、Ubuntu 和 macOS 这三个操作系统都有不可替代之处，我�
 
 * 易用性强
 * 使用人数多，教程多，生态好
-* 各个深度学习框架的官方支持，比如 [PyTorch 直到 2022 年都没有支持 NCCL 多卡训练](https://github.com/pytorch/pytorch/issues/42095)
+* 各个深度学习框架的官方支持
+* 各类最新技术的最先支持平台
 
 从开发环境到部署环境，Linux 系统贯穿始终，选择一款易用的 Linux 操作系统将会缩短开发周期。
 
@@ -39,10 +40,16 @@ Windows、Ubuntu 和 macOS 这三个操作系统都有不可替代之处，我�
 这个操作系统通常是大家最为熟悉的操作系统，所以这里就不再介绍它的优点，这里只提几个缺点：
 
 * 深度学习框架的官方支持不够及时，TensorFlow 于 2015年11月发布，但是一年之后才首次支持 Windows：[TensorFlow now builds and runs on Microsoft Windows](https://github.com/tensorflow/tensorflow/releases/tag/0.12.0-rc0)
+* [PyTorch 直到 2024 年都没有支持 Windows 多卡训练](https://github.com/pytorch/pytorch/issues/42095)
 * 其他学者开发的新模型的代码通常需要进行修改才能在 Windows 上运行，如果他们的代码涉及 CUDA 编程，自定义算子，这种修改会很困难
 * 路径的斜杠与其他操作系统不同，Windows 使用的是 `\`，容易作为转义字符解析成其他字符导致 bug
 * 换行符与其他操作系统不同，Windows 使用的不是 `\n`，而是 `\r\n`
 * 命令行与其他操作系统不同，许多命令功能一样，但是名字不同，比如 ifconfig 与 ipconfig，rm 与 del 等
 
-**为了能够使用大多数深度学习工程师开源的代码，我们建议使用 Ubuntu 作为运行代码的机器。**
+![](windows-linux-or-macos/image1.png)
 
+![](windows-linux-or-macos/image2.png)
+
+[bitsandbytes](https://github.com/TimDettmers/bitsandbytes) 是一个大模型量化的库，它的 8bit Adam 优化器对小显存的训练非常有用，这个库 2021 年 10 月就发布了，但是直到 2024 年 3 月才支持 Windows：[https://github.com/TimDettmers/bitsandbytes/releases/tag/0.43.0](https://github.com/TimDettmers/bitsandbytes/releases/tag/0.43.0)
+
+**为了能够使用大多数深度学习工程师开源的代码，我们建议使用 Ubuntu 作为运行代码的机器。**
