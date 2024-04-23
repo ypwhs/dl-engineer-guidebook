@@ -1,81 +1,50 @@
 # Python 环境
 
-对于深度学习工程师来说，Python 是必不可少的工具，因为大多数深度学习框架都支持 Python（比如 TensorFlow、PyTorch、MXNet 等）。在模型开发阶段，使用 Python 非常方便，如果配合 Jupyter Notebook 使用，还可以进一步提升开发效率。
+更新时间：2024-4-23
 
+对于深度学习工程师来说，Python 是必不可少的工具，因为大多数深度学习框架都支持 Python（比如 PyTorch 等）。在模型开发阶段，使用 Python 非常方便，如果配合 Jupyter Notebook 使用，还可以进一步提升开发效率。
 
-## [Miniconda](https://docs.conda.io/en/latest/miniconda.html)  bash 安装
+## [Miniconda](https://docs.anaconda.com/free/miniconda/)
 
-[下载](https://docs.conda.io/en/latest/miniconda.html) 最新的 miniconda 安装包。
+Miniconda 是一个 Python 环境管理工具，它可以帮助你创建多个 Python 环境，每个环境可以有不同的 Python 版本和库。它的大小比 Anaconda 小很多，Anaconda 是一个大礼包，里面包含了很多库，而 Miniconda 只包含了 Python 和 conda，你可以根据自己的需求安装其他库。我个人比较喜欢安装 Miniconda。
 
-20230424 下载的是 `Miniconda3-latest-MacOSX-arm64.sh`
+你可以先下载安装包，然后使用 bash 安装 Miniconda，也可以使用 brew 安装。
 
-#### 命令行安装
+### bash 安装
+
+[下载](https://docs.anaconda.com/free/miniconda/) 最新的 miniconda 安装包。
+
+20240423 下载的是 `Miniconda3-latest-MacOSX-arm64.sh`
+
+* 需要使用 brew 安装 [wget](macos-environment.md#_9) 命令
+* 如果遇到网络问题，可以使用[清华大学的镜像](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/，如 [https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-MacOSX-arm64.sh](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-MacOSX-arm64.sh)
+
 ```bash
-# bash 安装包路径
-bash /Users/lhy/Downloads/Miniconda3-latest-MacOSX-arm64.sh
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-MacOSX-arm64.sh
+bash Miniconda3-latest-MacOSX-arm64.sh
 ```
+
+默认安装路径是 `~/miniconda3`，如果你的用户名是 ypw，那么安装路径就是 `/Users/ypw/miniconda3`。
 
 安装 Miniconda 后，会自动将 Miniconda 的路径添加到环境变量中，但是需要关闭并重新打开 shell 才能生效。
 如果需要在当前终端会话中立即生效，可以使用以下命令：
+
 ```bash
 source ~/.zshrc
 ```
 
-## [Miniconda](https://docs.conda.io/en/latest/miniconda.html)  brew 安装
+### brew 安装
 
-
-#### 命令行安装
 ```bash
 brew install --cask miniconda
 ```
 
 此时，conda 会安装在这个路径下 `/opt/homebrew/bin/conda`。
 
-#### 检查 miniconda 是否安装成功
+检查 miniconda 是否安装成功：
+
 ```bash
 conda --version
-```
-
-
-#### 卸载 miniconda
-```bash
-rm -rf conda
-```
-
-## [Anaconda](https://www.anaconda.com/)
-
-Anaconda 是一个 Pyhton 的包管理器，它可以简化 Python 环境的安装。由于 Ubuntu 系统、macOS 系统的局限性，我们尽量不要在系统自带的环境里安装深度学习库，不然可能会出现一些不可预料的问题。
-
-Anaconda 中的 numpy、scikit-learn 等库使用了 Intel MKL 进行加速，理论上会比 pip 直接安装的版本速度快。
-
-Anaconda 不需要 root 权限，所以可以很方便地安装在用户目录下，只要配置好环境变量即可使用，当你不需要它的时候，只需要直接删除它的目录，然后将对应的环境变量一起删除即可。
-
-你可以直接 [rsync](linux-command.md#rsync) 整个 anaconda 文件夹到其他相同硬件和系统环境的机器上，它们的 Python 环境可以保持绝对的统一，在做分布式并行训练的时候非常有用。
-
-### 安装 Anaconda
-
-Anaconda 官方下载页面：[https://www.anaconda.com/downloads](https://www.anaconda.com/distribution/)
-
-你只需要下载对应系统的安装包，然后直接运行安装包即可。
-
-#### 命令行安装
-
-在 macOS 上安装 Anaconda 可以使用下面的命令：
-
-```bash
-wget https://repo.anaconda.com/archive/Anaconda3-2020.02-MacOSX-x86_64.sh
-bash Anaconda3-2020.02-MacOSX-x86_64.sh
-```
-
-* 需要使用 brew 安装 [wget](macos-environment.md#_9) 命令
-* 如果遇到网络问题，可以使用[清华大学的镜像](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)，如 [https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2020.02-MacOSX-x86\_64.sh](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2020.02-MacOSX-x86_64.sh)
-
-#### brew cask 安装
-
-macOS 上还可以[使用 brew cask 安装](macos-environment.md#kai-fa-ruan-jian)：
-
-```bash
-brew cask install Anaconda
 ```
 
 ### 配置环境变量
@@ -83,7 +52,7 @@ brew cask install Anaconda
 安装好以后，有可能需要手动[配置环境变量](linux-command.md#export)，如果你使用的是 zsh，你需要为 zsh 初始化：
 
 ```bash
-/usr/local/anaconda3/bin/conda init zsh
+~/miniconda3/bin/conda init zsh
 ```
 
 执行以后，在 `~/.zshrc` 中可以看到下面的内容：
@@ -91,47 +60,32 @@ brew cask install Anaconda
 ```bash
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ypw/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/ypw/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/ypw/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ypw/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/ypw/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/ypw/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/ypw/anaconda3/bin:$PATH"
+        export PATH="/Users/ypw/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 ```
 
-
-### 使用 Anaconda 创建其他 Python 环境
+### 使用 conda 创建其他 Python 环境
 
 如果我们需要其他 Python 环境，可以使用 conda 创建：
 
 ```bash
-conda create -n python2 python=2.7
-source activate python2
+conda create -n python310 python=3.10
+conda activate python310
 ```
 
-参考链接：[https://conda.io/docs/user-guide/tasks/manage-environments.html](https://conda.io/docs/user-guide/tasks/manage-environments.html)
+参考链接：[https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
-### 把 Conda 的 Python 环境添加到 jupyter 里
-
-当你希望在 jupyter 里使用你的虚拟环境的时候，你需要执行下面的命令：
-
-```python
-conda activate python2
-conda install ipykernel
-python -m ipykernel install --user --name python2 --display-name "Python 2"
-```
-
-其中的 python2 是你的虚拟环境的名字，display-name 可以取一个好听的名字，它会在 jupyter notebook 切换 kernel 的地方显示。
-
-参考链接：[https://ipython.readthedocs.io/en/stable/install/kernel\_install.html](https://ipython.readthedocs.io/en/stable/install/kernel_install.html)
-
-### 切换 anaconda 源
+### 切换 conda 源
 
 如果遇到网络问题，可以使用[清华大学的镜像](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/)：
 
@@ -144,15 +98,17 @@ channels:
 show_channel_urls: true
 default_channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
 custom_channels:
   conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 ```
 
 ### 切换 pip 源
@@ -176,25 +132,20 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 下面是我认为比较重要的 Python 库：
 
 * jupyter
-* `jupyter_contrib_nbextensions`
 * numpy
-* pandas
-* scikit-learn
 * matplotlib
 * opencv-python
 * pillow
 * tqdm
 * torch
 * torchvision
-* tensorflow
-* keras
-* tensorboard
-* tensorboardx
+* pytorch-lightning
+* wandb
 
 安装大礼包：
 
 ```bash
-pip install jupyter jupyter_contrib_nbextensions numpy pandas scikit-learn matplotlib opencv-python pillow tqdm torch torchvision tensorflow keras tensorboardx xlrd openpyxl
+pip install jupyter jupyter_contrib_nbextensions numpy pandas flask fastapi scikit-image scikit-learn matplotlib opencv-python pillow tqdm openpyxl ninja xtcocotools json_tricks munkres shapely ftfy pytest regex pyyaml yapf cython build twine memory_profiler transformers accelerate datasets pytorch-lightning wandb
 ```
 
 ### [jupyter](https://jupyter.org/)
@@ -295,19 +246,11 @@ PIL，另一个图像处理库，PyTorch 里的 torchvision 有很多写好的�
 
 > [`torchvision`](https://pytorch.org/docs/stable/torchvision/index.html#module-torchvision)包含了流行的数据集，预训练模型和计算机视觉的常见的图像变换。
 
-### [tensorflow](https://www.tensorflow.org/)
+### [pytorch-lightning](https://lightning.ai/docs/pytorch/stable/)
 
-深度学习库，大而全。配备显卡的机器请按照 [Ubuntu 环境](ubuntu-environment.md) 进行配置。
+pytorch-lightning 是一个 pytorch 的高级封装，它自带分布式训练的功能，是一个非常好用的工具。你只需要关注模型本身，无需关注模型存储、训练循环、分布式训练等问题。
 
-> TensorFlow是一个用于机器学习的端到端开源平台。 它拥有全面、灵活的工具、库和社区资源生态系统，可让研究人员推动ML的最新技术，开发人员可轻松构建和部署ML驱动的应用程序。
-
-### [keras](https://keras.io/)
-
-更高级的 API，和 tensorflow 联合使用很方便。最新的 TensorFlow 2.0 非常推荐使用 Keras 作为模型搭建的高级 API，你不必直接安装 Keras，直接使用 tf.keras 即可。
-
-> Keras是一个高级神经网络API，用Python编写，能够在TensorFlow，CNTK或Theano之上运行。它的开发重点是实现快速实验。能够以最小的延迟从理念到结果是进行良好研究的关键。
-
-绘制模型结构需要 graphviz 和 pydot。 
+![](python-environment/image-2.png)
 
 ### [tensorboard](https://github.com/tensorflow/tensorboard)
 
@@ -319,13 +262,11 @@ TensorBoard 是一个可视化工具，你可以使用它可视化：
 * 生成的图像
 * 生成的文字
 
-### [tensorboardX](https://github.com/lanpa/tensorboardX)
+### [wandb](https://wandb.ai/site)
 
-tensorboardX 是一个框架无关的 tensorboard writer，支持 numpy 矩阵、pytorch 的 tensor 等格式。
+wandb 是另一个可视化工具，同样的你可以使用它可视化 loss、acc 曲线、查看生成的图像和文字：
 
-目前 pytorch 1.1 也有[官方支持](https://pytorch.org/docs/stable/tensorboard.html)，但是功能有限，所以目前我仍然在使用 tensorboardX。
+![](python-environment/image.png)
 
-
-
-
+![](python-environment/image-1.png)
 
