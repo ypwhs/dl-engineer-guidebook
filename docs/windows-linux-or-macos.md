@@ -13,6 +13,12 @@ Windows、Ubuntu 和 macOS 这三个操作系统都有不可替代之处，我�
 
 从开发环境到部署环境，Linux 系统贯穿始终，选择一款易用的 Linux 操作系统将会缩短开发周期。
 
+建议选择目前最新的 LTS 版本，参考链接：[https://wiki.ubuntu.com/Releases](https://wiki.ubuntu.com/Releases)
+
+比如现在我会选择 Ubuntu 22.04.4 LTS：
+
+![](windows-linux-or-macos/image.png)
+
 ## macOS
 
 使用 macOS 的原因有很多，下面我们逐一分析。
