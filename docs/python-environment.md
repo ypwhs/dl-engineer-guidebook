@@ -133,23 +133,19 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 
 * jupyter
 * numpy
-* pandas
-* scikit-learn
 * matplotlib
 * opencv-python
 * pillow
 * tqdm
 * torch
 * torchvision
-* tensorflow
-* keras
-* tensorboard
-* tensorboardx
+* pytorch-lightning
+* wandb
 
 安装大礼包：
 
 ```bash
-pip install jupyter jupyter_contrib_nbextensions numpy pandas flask scikit-image scikit-learn matplotlib opencv-python pillow tqdm openpyxl ninja xtcocotools json_tricks munkres shapely ftfy pytest regex pyyaml yapf cython build twine memory_profiler wandb
+pip install jupyter jupyter_contrib_nbextensions numpy pandas flask fastapi scikit-image scikit-learn matplotlib opencv-python pillow tqdm openpyxl ninja xtcocotools json_tricks munkres shapely ftfy pytest regex pyyaml yapf cython build twine memory_profiler transformers accelerate datasets pytorch-lightning wandb
 ```
 
 ### [jupyter](https://jupyter.org/)
@@ -249,6 +245,12 @@ PIL，另一个图像处理库，PyTorch 里的 torchvision 有很多写好的�
 和 PyTorch 配套使用。
 
 > [`torchvision`](https://pytorch.org/docs/stable/torchvision/index.html#module-torchvision)包含了流行的数据集，预训练模型和计算机视觉的常见的图像变换。
+
+### [pytorch-lightning](https://lightning.ai/docs/pytorch/stable/)
+
+pytorch-lightning 是一个 pytorch 的高级封装，它自带分布式训练的功能，是一个非常好用的工具。你只需要关注模型本身，无需关注模型存储、训练循环、分布式训练等问题。
+
+![](python-environment/image-2.png)
 
 ### [tensorboard](https://github.com/tensorflow/tensorboard)
 
