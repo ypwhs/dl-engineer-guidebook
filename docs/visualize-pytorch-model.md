@@ -94,6 +94,46 @@ torch.onnx.export(model, dummy_input, "model.onnx")
 
 模型可视化挺好看，跨层连接也很清晰。
 
+## torchview
+
+1 年未更新，目前可用。
+
+### 安装 torchview
+
+```bash
+pip install torchview
+```
+
+### 安装 graphviz
+
+安装 graphviz：
+
+Mac
+
+```bash
+brew install graphviz
+```
+
+Ubuntu：
+
+```bash
+sudo apt-get install graphviz
+```
+
+参考链接：https://graphviz.readthedocs.io/en/stable/manual.html
+
+### 使用 torchview
+
+```python
+from torchview import draw_graph
+
+model_graph = draw_graph(model, input_size=(1, 1, 28, 28), device='meta', save_graph=True, expand_nested=True)
+```
+
+可视化结果：
+
+![torchview](visualize-pytorch-model/model.gv.png)
+
 ## torchviz
 
 这个可视化工具比较传统，已经三年未更新：
@@ -124,6 +164,8 @@ Ubuntu：
 sudo apt-get install graphviz
 ```
 
+参考链接：https://graphviz.readthedocs.io/en/stable/manual.html
+
 ### 使用 torchviz
 
 使用 torchviz 可视化模型：
@@ -147,3 +189,44 @@ dot.save('vis.dot')
 使用这个网站可以在线编辑 dot 文件：[https://dreampuf.github.io/GraphvizOnline](https://dreampuf.github.io/GraphvizOnline)
 
 缺点：看到的是反向传播的路径，不是模型结构。
+
+## 其他失效工具
+
+### tensorwatch
+
+10 个 commit 之前是四年前的代码，已不支持 PyTorch 2.x。
+
+报错：
+
+```
+File ~/miniconda3/lib/python3.11/site-packages/tensorwatch/model_graph/hiddenlayer/summary_graph.py:85, in SummaryGraph.__init__(self, model, dummy_input, apply_scope_name_workarounds)
+     81 # Switch all instances of torch.nn.ModuleList in the model to our DistillerModuleList
+     82 # See documentation of _DistillerModuleList class for details on why this is done
+     83 model_clone, converted_module_names_map = _to_distiller_modulelist(model_clone)
+---> 85 with torch.onnx.set_training(model_clone, False):
+     87     device = distiller.model_device(model_clone)
+     88     dummy_input = distiller.convert_tensors_recursively_to(dummy_input, device=device)
+
+AttributeError: module 'torch.onnx' has no attribute 'set_training'
+```
+
+### hiddenlayer
+
+4 年未更新，10 个 commit 之前是 6 年前的代码。
+
+报错：
+
+```
+File ~/miniconda3/lib/python3.11/site-packages/hiddenlayer/pytorch_builder.py:71, in import_graph(hl_graph, model, args, input_names, verbose)
+     66 def import_graph(hl_graph, model, args, input_names=None, verbose=False):
+     67     # TODO: add input names to graph
+     68
+     69     # Run the Pytorch graph to get a trace and generate a graph from it
+     70     trace, out = torch.jit._get_trace_graph(model, args)
+---> 71     torch_graph = torch.onnx._optimize_trace(trace, torch.onnx.OperatorExportTypes.ONNX)
+     73     # Dump list of nodes (DEBUG only)
+     74     if verbose:
+
+AttributeError: module 'torch.onnx' has no attribute '_optimize_trace'
+```
+
