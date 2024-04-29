@@ -80,6 +80,8 @@ Model(
 
 Netron 是一个经典的模型可视化工具，官网：[https://netron.app/](https://netron.app/)
 
+代码：[https://github.com/lutzroeder/netron](https://github.com/lutzroeder/netron)
+
 这个工具可以直接在线可视化模型，不需要安装 python 包，你只需要将模型保存为 `.onnx` 格式，然后上传到网站即可。
 
 ### 保存为 onnx 格式
@@ -93,6 +95,47 @@ torch.onnx.export(model, dummy_input, "model.onnx")
 ![netron](visualize-pytorch-model/model.onnx.png)
 
 模型可视化挺好看，跨层连接也很清晰。
+
+## TensorBoard
+
+官网：[https://www.tensorflow.org/tensorboard/get_started?hl=zh-cn](https://www.tensorflow.org/tensorboard/get_started?hl=zh-cn)
+
+代码：[https://github.com/tensorflow/tensorboard](https://github.com/tensorflow/tensorboard)
+
+代码更新频繁，每天都有更新。
+
+### 安装 tensorboard
+
+```bash
+pip install tensorboard
+```
+
+### 使用 tensorboard
+
+首先保存模型结构：
+
+```py
+from torch.utils.tensorboard import SummaryWriter
+
+with SummaryWriter(comment='model') as w:
+    w.add_graph(model, dummy_input)
+```
+
+然后在终端里运行 tensorboard：
+
+```bash 
+tensorboard --logdir=.
+```
+
+最后在浏览器里打开 `http://localhost:6006/` 即可看到模型结构。
+
+![tensorboard](visualize-pytorch-model/image-1.png)
+
+这个模型结构是可以交互式展开的，比如：
+
+![expand model](visualize-pytorch-model/expand_model.png)
+
+不仅可以看到最里面的模型，也能看到每一层的输入输出尺寸。
 
 ## torchview
 
@@ -190,45 +233,6 @@ dot.save('vis.dot')
 
 缺点：看到的是反向传播的路径，不是模型结构。
 
-## TensorBoard
-
-官网：[https://www.tensorflow.org/tensorboard/get_started?hl=zh-cn](https://www.tensorflow.org/tensorboard/get_started?hl=zh-cn)
-
-代码更新频繁，每天都有更新。
-
-### 安装 tensorboard
-
-```bash
-pip install tensorboard
-```
-
-### 使用 tensorboard
-
-首先保存模型结构：
-
-```py
-from torch.utils.tensorboard import SummaryWriter
-
-with SummaryWriter(comment='model') as w:
-    w.add_graph(model, dummy_input)
-```
-
-然后在终端里运行 tensorboard：
-
-```bash 
-tensorboard --logdir=.
-```
-
-最后在浏览器里打开 `http://localhost:6006/` 即可看到模型结构。
-
-![tensorboard](visualize-pytorch-model/image-1.png)
-
-这个模型结构是可以交互式展开的，比如：
-
-![expand model](visualize-pytorch-model/expand_model.png)
-
-不仅可以看到最里面的模型，也能看到每一层的输入输出。
-
 ## 其他失效工具
 
 ### tensorwatch
@@ -268,3 +272,15 @@ File ~/miniconda3/lib/python3.11/site-packages/hiddenlayer/pytorch_builder.py:71
 
 AttributeError: module 'torch.onnx' has no attribute '_optimize_trace'
 ```
+
+## 总结
+
+| 工具 | 是否可用 | 更新频率 | 优点 | 缺点 |
+| --- | --- | --- | --- | --- |
+| Netron | 可用 | 高 | 在线可视化，不用安装 | 需要保存为 onnx 格式，看不到输入输出的尺寸 |
+| tensorboard | 可用 | 高 | 可交互式展开，可视化效果好 | 需要安装 tensorboard，并且启动后台服务 |
+| torchview | 可用 | 1 年 | 可以看到每一层的输入输出尺寸 | 需要安装 torchview 和 graphviz |
+| torchviz | 可用 | 3 年 | 无 | 看到的是反向传播的路径，不是模型结构 |
+| print 大法 | 永久可用 | 无 | 永久可用，不会失效 | 只有文字，无法展示跨层连接 |
+| tensorwatch | 失效 | 4 年 | 无 | 无 |
+| hiddenlayer | 失效 | 4 年 | 无 | 无 |
