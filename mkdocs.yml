@@ -91,6 +91,7 @@ nav:
   - 硬件:
     - 如何配置一台深度学习工作站?: how-to-build-deep-learning-workstation.md
     - Windows、Ubuntu 还是 macOS？: windows-linux-or-macos.md
+    - 涡轮卡的使用技巧-风扇调速: turbo-fan-control.md
   - Mac:
     - Mac 对比: mac-compare.md
     - macOS 软件: macos-software.md
