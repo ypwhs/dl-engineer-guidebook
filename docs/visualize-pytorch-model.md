@@ -127,7 +127,7 @@ sudo apt-get install graphviz
 ```python
 from torchview import draw_graph
 
-model_graph = draw_graph(model, input_size=(1, 1, 28, 28), device='meta', save_graph=True, expand_nested=True)
+model_graph = draw_graph(model, input_size=(1, 1, 28, 28), save_graph=True, expand_nested=True)
 ```
 
 可视化结果：
@@ -190,6 +190,45 @@ dot.save('vis.dot')
 
 缺点：看到的是反向传播的路径，不是模型结构。
 
+## TensorBoard
+
+官网：[https://www.tensorflow.org/tensorboard/get_started?hl=zh-cn](https://www.tensorflow.org/tensorboard/get_started?hl=zh-cn)
+
+代码更新频繁，每天都有更新。
+
+### 安装 tensorboard
+
+```bash
+pip install tensorboard
+```
+
+### 使用 tensorboard
+
+首先保存模型结构：
+
+```py
+from torch.utils.tensorboard import SummaryWriter
+
+with SummaryWriter(comment='model') as w:
+    w.add_graph(model, dummy_input)
+```
+
+然后在终端里运行 tensorboard：
+
+```bash 
+tensorboard --logdir=.
+```
+
+最后在浏览器里打开 `http://localhost:6006/` 即可看到模型结构。
+
+![tensorboard](visualize-pytorch-model/image-1.png)
+
+这个模型结构是可以交互式展开的，比如：
+
+![expand model](visualize-pytorch-model/expand_model.png)
+
+不仅可以看到最里面的模型，也能看到每一层的输入输出。
+
 ## 其他失效工具
 
 ### tensorwatch
@@ -229,4 +268,3 @@ File ~/miniconda3/lib/python3.11/site-packages/hiddenlayer/pytorch_builder.py:71
 
 AttributeError: module 'torch.onnx' has no attribute '_optimize_trace'
 ```
-
