@@ -1,2 +1,149 @@
 # 如何可视化 PyTorch 模型
 
+更新时间：2024 年 4 月
+
+## 准备模型
+
+首先我们搭建一个简单的模型，用于演示如何可视化 PyTorch 模型。为了演示复杂模型的结构，我们在模型中加入了一个跨层连接。
+
+```python
+import torch
+import torch.nn as nn
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.cnn = nn.Sequential(
+            nn.Conv2d(1, 32, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(2),
+            nn.Conv2d(32, 64, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(2),
+            nn.Flatten(),
+        )
+        self.mlp1 = nn.Sequential(
+            nn.Linear(7*7*64, 128),
+            nn.ReLU(),
+        )
+        self.mlp2 = nn.Sequential(
+            nn.Linear(7*7*64, 128),
+            nn.ReLU(),
+        )
+        self.fc = nn.Linear(256, 10)
+    
+    def forward(self, x):
+        x = self.cnn(x)
+        x1 = self.mlp1(x)
+        x2 = self.mlp2(x)
+        x = torch.cat([x1, x2], dim=1)
+        x = self.fc(x)
+        return x
+
+model = Model()
+
+dummy_input = torch.randn(1, 1, 28, 28)
+```
+
+这里我们以 28x28 的输入为例，搭建了一个简单的卷积神经网络。
+
+## print 大法
+
+我们可以直接使用 print 打印模型：
+
+```
+Model(
+  (cnn): Sequential(
+    (0): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU()
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Flatten(start_dim=1, end_dim=-1)
+  )
+  (mlp1): Sequential(
+    (0): Linear(in_features=3136, out_features=128, bias=True)
+    (1): ReLU()
+  )
+  (mlp2): Sequential(
+    (0): Linear(in_features=3136, out_features=128, bias=True)
+    (1): ReLU()
+  )
+  (fc): Linear(in_features=256, out_features=10, bias=True)
+)
+```
+
+缺点：只能看到线性结构，看不到跨层连接。
+
+## Netron 在线可视化
+
+Netron 是一个经典的模型可视化工具，官网：[https://netron.app/](https://netron.app/)
+
+这个工具可以直接在线可视化模型，不需要安装 python 包，你只需要将模型保存为 `.onnx` 格式，然后上传到网站即可。
+
+### 保存为 onnx 格式
+
+```python
+torch.onnx.export(model, dummy_input, "model.onnx")
+```
+
+### 使用 Netron 可视化 onnx 模型
+
+![netron](visualize-pytorch-model/model.onnx.png)
+
+模型可视化挺好看，跨层连接也很清晰。
+
+## torchviz
+
+这个可视化工具比较传统，已经三年未更新：
+
+![](visualize-pytorch-model/image.png)
+
+### 安装 torchviz
+
+安装 torchviz：
+
+```bash
+pip install torchviz
+```
+
+### 安装 graphviz
+
+安装 graphviz：
+
+Mac
+
+```bash
+brew install graphviz
+```
+
+Ubuntu：
+
+```bash
+sudo apt-get install graphviz
+```
+
+### 使用 torchviz
+
+使用 torchviz 可视化模型：
+
+```python
+from torchviz import make_dot
+
+dot = make_dot(model(dummy_input), params=dict(model.named_parameters()))
+
+dot.render("model", format="png")
+```
+
+![torchviz](visualize-pytorch-model/model.png)
+
+你也可以存储 dot 文件，然后手动修改样式：
+
+```py
+dot.save('vis.dot')
+```
+
+使用这个网站可以在线编辑 dot 文件：[https://dreampuf.github.io/GraphvizOnline](https://dreampuf.github.io/GraphvizOnline)
+
+缺点：看到的是反向传播的路径，不是模型结构。
