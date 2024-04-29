@@ -8,7 +8,7 @@ Python是一种高级、通用的编程语言，由Guido van Rossum于1989年底
 
 ![](why-use-python/image.png)
 
-数据来源：https://www.tiobe.com/tiobe-index/
+数据来源：[https://www.tiobe.com/tiobe-index/](https://www.tiobe.com/tiobe-index/)
 
 # C++、C#、Python 有什么不同
 
@@ -284,7 +284,7 @@ def train(dataloader, model, loss_fn, optimizer):
 
 该训练流程适应所有 PyTorch 搭建的模型。
 
-参考链接：https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html
+参考链接：[https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html](https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html)
 
 # 一个巨星的陨落
 
@@ -294,12 +294,12 @@ def train(dataloader, model, loss_fn, optimizer):
 
 在 YOLOv3之后，所有的 YOLO 都是 PyTorch 写的：
 
-* YOLOv4：https://github.com/WongKinYiu/PyTorch_YOLOv4
-* YOLOv5：https://github.com/ultralytics/yolov5
-* YOLOv6：https://github.com/meituan/YOLOv6
-* YOLOv7：https://github.com/WongKinYiu/yolov7
-* YOLOv8：https://github.com/ultralytics/ultralytics
-* YOLOv9：https://github.com/WongKinYiu/yolov9
+* YOLOv4：[https://github.com/WongKinYiu/PyTorch_YOLOv4](https://github.com/WongKinYiu/PyTorch_YOLOv4)
+* YOLOv5：[https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5)
+* YOLOv6：[https://github.com/meituan/YOLOv6](https://github.com/meituan/YOLOv6)
+* YOLOv7：[https://github.com/WongKinYiu/yolov7](https://github.com/WongKinYiu/yolov7)
+* YOLOv8：[https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)
+* YOLOv9：[https://github.com/WongKinYiu/yolov9](https://github.com/WongKinYiu/yolov9)
 
 # 总结
 
