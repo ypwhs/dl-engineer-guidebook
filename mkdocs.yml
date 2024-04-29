@@ -112,5 +112,6 @@ nav:
     - 如何使用 PyCharm 远程调试: remote-debugging-with-pycharm.md
     - Docker 是个好东西: docker-is-good.md
     - Windows 离线 Python 环境: offline-python-environment.md
+    - 如何可视化 PyTorch 模型: visualize-pytorch-model.md
   - 关于本站:
     - 如何优雅地写文章: how-to-write-article-gracefully.md
