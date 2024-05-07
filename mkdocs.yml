@@ -67,6 +67,14 @@ markdown_extensions:
   - codehilite
   - toc:
       permalink: false
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: iso_date
+      enable_creation_date: true
+  - git-committers:
+      repository: ypwhs/dl-engineer-guidebook
+      branch: master
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js
