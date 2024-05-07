@@ -133,4 +133,6 @@ Attention 结构：
 | DINO Swin-L | 2022 | 58.4 | [![](detection-models/demo/dino-5scale_swin-l_8xb2-36e_coco_58.4.jpg)](detection-models/demo/dino-5scale_swin-l_8xb2-36e_coco_58.4.jpg) |
 | Grounding DINO Swin-L | 2023 | 59.7 | [![](detection-models/demo/grounding_dino_swin-b_finetune_16xb2_1x_coco_59.7.jpg)](detection-models/demo/grounding_dino_swin-b_finetune_16xb2_1x_coco_59.7.jpg) |
 
+本表格的数据可以使用此脚本跑出：[visualize_models_mmdet3.py](detection-models/visualize_models_mmdet3.py)
+
 可以看到，不是 mAP 分数更高的模型就更准，目前基于 Anchor 的模型依然具备极大的优势。
