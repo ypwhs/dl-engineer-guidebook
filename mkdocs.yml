@@ -69,6 +69,7 @@ markdown_extensions:
       permalink: false
 plugins:
   - search
+  - glightbox
   - git-revision-date-localized:
       type: iso_date
       enable_creation_date: true
