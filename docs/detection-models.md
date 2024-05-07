@@ -5,6 +5,8 @@ hide:
 
 # 检测模型
 
+更新时间：2024 年 5 月
+
 ## 模型概览
 
 ### 目标检测模型
@@ -122,13 +124,13 @@ Attention 结构：
 | YOLOv3                 | 2018 | 33.7     | [![](detection-models/demo/yolov3_d53_fp16_mstrain-608_273e_coco_20210517_213542-4bc34944.jpg)](detection-models/demo/yolov3_d53_fp16_mstrain-608_273e_coco_20210517_213542-4bc34944.jpg)                                               |
 | YOLOv5s                | 2022 | 37.4     | [![](detection-models/demo/yolov5s.jpg)](detection-models/demo/yolov5s.jpg)                                                                                                                                                             |
 | YOLOv5x6               | 2022 | 55.0     | [![](detection-models/demo/yolov5x6.jpg)](detection-models/demo/yolov5x6.jpg)                                                                                                                                                           |
-| Faster R-CNN R50       | 2015 | 40.3     | [![](detection-models/demo/faster_rcnn_r50_fpn_mstrain_3x_coco_20210524_110822-e10bd31c.jpg)](detection-models/demo/faster_rcnn_r50_fpn_mstrain_3x_coco_20210524_110822-e10bd31c.jpg)                                                   |
-| Mask R-CNN R50         | 2017 | 40.9     | [![](detection-models/demo/mask_rcnn_r50_fpn_mstrain-poly_3x_coco_20210524_201154-21b550bb.jpg)](detection-models/demo/mask_rcnn_r50_fpn_mstrain-poly_3x_coco_20210524_201154-21b550bb.jpg)                                             |
+| Faster R-CNN R50       | 2015 | 38.4     | [![](detection-models/demo/faster-rcnn_r50_fpn_2x_coco_38.4.jpg)](detection-models/demo/faster-rcnn_r50_fpn_2x_coco_38.4.jpg)                                                   |
+| Mask R-CNN R50         | 2017 | 39.2     | [![](detection-models/demo/mask-rcnn_r50_fpn_2x_coco_39.2.jpg)](detection-models/demo/mask-rcnn_r50_fpn_2x_coco_39.2.jpg)                                             |
 | Cascade Mask R-CNN R50 | 2019 | 44.3     | [![](detection-models/demo/cascade_mask_rcnn_r50_fpn_mstrain_3x_coco_20210628_164719-5bdc3824.jpg)](detection-models/demo/cascade_mask_rcnn_r50_fpn_mstrain_3x_coco_20210628_164719-5bdc3824.jpg)                                       |
-| DETR R50               | 2020 | 40.1     | [![](detection-models/demo/detr_r50_8x2_150e_coco_20201130_194835-2c4b8974.jpg)](detection-models/demo/detr_r50_8x2_150e_coco_20201130_194835-2c4b8974.jpg)                                                                             |
-| Mask2Former R50        | 2021 | 44.8     | [![](detection-models/demo/mask2former_r50_lsj_8x2_50e_coco_20220326_224516-0091ce2b.jpg)](detection-models/demo/mask2former_r50_lsj_8x2_50e_coco_20220326_224516-0091ce2b.jpg)                                                         |
+| DETR R50               | 2020 | 39.9     | [![](detection-models/demo/detr_r50_8xb2-150e_coco_39.9.jpg)](detection-models/demo/detr_r50_8xb2-150e_coco_39.9.jpg)                                                                             |
 | Swin R50               | 2021 | 46.0     | [![](detection-models/demo/mask_rcnn_swin-t-p4-w7_fpn_ms-crop-3x_coco_20210906_131725-bacf6f7b.jpg)](detection-models/demo/mask_rcnn_swin-t-p4-w7_fpn_ms-crop-3x_coco_20210906_131725-bacf6f7b.jpg)                                     |
 | QueryInst R50          | 2021 | 47.5     | [![](detection-models/demo/queryinst_r50_fpn_300_proposals_crop_mstrain_480-800_3x_coco_20210904_101802-85cffbd8.jpg)](detection-models/demo/queryinst_r50_fpn_300_proposals_crop_mstrain_480-800_3x_coco_20210904_101802-85cffbd8.jpg) |
+| DINO Swin-L | 2022 | 58.4 | [![](detection-models/demo/dino-5scale_swin-l_8xb2-36e_coco_58.4.jpg)](detection-models/demo/dino-5scale_swin-l_8xb2-36e_coco_58.4.jpg) |
+| Grounding DINO Swin-L | 2023 | 59.7 | [![](detection-models/demo/grounding_dino_swin-b_finetune_16xb2_1x_coco_59.7.jpg)](detection-models/demo/grounding_dino_swin-b_finetune_16xb2_1x_coco_59.7.jpg) |
 
 可以看到，不是 mAP 分数更高的模型就更准，目前基于 Anchor 的模型依然具备极大的优势。
-
