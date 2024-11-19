@@ -25,6 +25,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```
 
 ```
+# 清华源安装 ohmyzsh
+git clone https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git
+cd ohmyzsh/tools
+REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
+```
+
+```
 # 安装 Python 环境
 wget https://mirrors.bfsu.edu.cn/anaconda/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
 bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh -b
