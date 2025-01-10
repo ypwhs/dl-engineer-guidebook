@@ -33,8 +33,8 @@ REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
 
 ```
 # 安装 Python 环境
-wget https://mirrors.bfsu.edu.cn/anaconda/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
-bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh -b
+wget https://mirrors.cqupt.edu.cn/anaconda/miniconda/Miniconda3-py311_24.11.1-0-Linux-x86_64.sh
+bash Miniconda3-py311_24.11.1-0-Linux-x86_64.sh -b
 ~/miniconda3/bin/conda init bash
 ~/miniconda3/bin/conda init zsh
 ```
@@ -46,10 +46,10 @@ bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh -b
 # pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple
-pip install torch==2.1.1+cu118 torchvision==0.16.1+cu118 --index-url https://download.pytorch.org/whl/cu118
+pip install torch==2.4.1 torchvision==0.19.1
 pip install jupyter jupyter_contrib_nbextensions numpy pandas flask scikit-image scikit-learn matplotlib opencv-python pillow tqdm openpyxl ninja xtcocotools json_tricks munkres shapely ftfy pytest regex pyyaml yapf cython build twine memory_profiler
-pip install openmim
-mim install mmpretrain mmdet mmpose mmsegmentation
+pip install mmcv==2.2.0 -f https://download.openmmlab.com/mmcv/dist/cu121/torch2.4/index.html
+pip install mmpretrain mmdet mmpose mmsegmentation
 ```
 
 安装 CUDA：
