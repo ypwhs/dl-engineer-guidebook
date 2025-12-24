@@ -1,0 +1,3643 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="深度学习工程师生存指南">
+      
+      
+        <meta name="author" content="杨培文">
+      
+      
+        <link rel="canonical" href="https://dl.ypw.io/ubuntu-install-guide/">
+      
+      
+        <link rel="prev" href="../linux-command/">
+      
+      
+        <link rel="next" href="../ubuntu-environment/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Ubuntu 装机步骤 - 深度学习工程师生存指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","UA-111276663-2"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","UA-111276663-2",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=UA-111276663-2",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ubuntu" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="深度学习工程师生存指南" class="md-header__button md-logo" aria-label="深度学习工程师生存指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            深度学习工程师生存指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ubuntu 装机步骤
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="打开深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="打开深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="关闭深色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="关闭深色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4m0-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ypwhs/dl-engineer-guidebook" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ypwhs/dl-engineer-guidebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../how-to-build-deep-learning-workstation/" class="md-tabs__link">
+          
+  
+    
+  
+  硬件
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../mac-compare/" class="md-tabs__link">
+          
+  
+    
+  
+  Mac
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  Linux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cv-resources/" class="md-tabs__link">
+          
+  
+    
+  
+  CV
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../windows-linux-or-macos/" class="md-tabs__link">
+          
+  
+    
+  
+  常识
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../how-to-use-tensorboard/" class="md-tabs__link">
+          
+  
+    
+  
+  使用技巧
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../how-to-write-article-gracefully/" class="md-tabs__link">
+          
+  
+    
+  
+  关于本站
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="深度学习工程师生存指南" class="md-nav__button md-logo" aria-label="深度学习工程师生存指南" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    深度学习工程师生存指南
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ypwhs/dl-engineer-guidebook" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ypwhs/dl-engineer-guidebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            首页
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-build-deep-learning-workstation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何配置一台深度学习工作站?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows-linux-or-macos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows、Ubuntu 还是 macOS？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mac-compare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mac 对比
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    macOS 软件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    macOS 环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ubuntu 装机步骤
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu 装机步骤
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      脚本式装机
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      分步骤安装
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Ubuntu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 ssh
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置 ssh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openssh-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 openssh-server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-keygen-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 ssh-keygen 生成一个 ssh key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 Ubuntu 服务器上添加刚才生成的 ssh key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      禁止密码登录
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sudo-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 sudo 免密码 和 apt 源
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置 sudo 免密码 和 apt 源">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 sudo 免密码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 apt 源
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oh-my-zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 oh my zsh 以及常用命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 oh my zsh 以及常用命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oh-my-zsh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 oh my zsh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-cuda-cudnnapt" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 NVIDIA 驱动、CUDA 和 cuDNN（apt）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 NVIDIA 驱动、CUDA 和 cuDNN（apt）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 apt 安装驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试显卡
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda-cudnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 CUDA 和 cuDNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置环境变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 TensorRT（可选）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-cuda-cudnnrun" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 NVIDIA 驱动、CUDA 和 cuDNN（run）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 NVIDIA 驱动、CUDA 和 cuDNN（run）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      下载驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nouveau" class="md-nav__link">
+    <span class="md-ellipsis">
+      屏蔽 Nouveau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装必要的编译工具
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装显卡驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试显卡
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda-cudnn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 CUDA 和 cuDNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 CUDA 10.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cudnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 cuDNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anaconda-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Anaconda 和 Python 库
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 Anaconda 和 Python 库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anaconda" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Anaconda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 pip 源
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python 库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试 PyTorch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试 TensorFlow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu 环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常用 Linux 命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-tensorboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何使用 TensorBoard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CV 学习资源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常用 CV 数据集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-models-on-imagenet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    在 ImageNet 上表现出色的经典模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../detection-models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    检测模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    硬件
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            硬件
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-build-deep-learning-workstation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何配置一台深度学习工作站?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows-linux-or-macos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows、Ubuntu 还是 macOS？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../turbo-fan-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    涡轮卡的使用技巧-风扇调速
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mac
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mac
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mac-compare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mac 对比
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    macOS 软件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    macOS 环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常用 Linux 命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ubuntu 装机步骤
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu 装机步骤
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      脚本式装机
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      分步骤安装
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Ubuntu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 ssh
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置 ssh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openssh-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 openssh-server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-keygen-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 ssh-keygen 生成一个 ssh key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 Ubuntu 服务器上添加刚才生成的 ssh key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      禁止密码登录
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sudo-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 sudo 免密码 和 apt 源
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置 sudo 免密码 和 apt 源">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 sudo 免密码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 apt 源
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oh-my-zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 oh my zsh 以及常用命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 oh my zsh 以及常用命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oh-my-zsh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 oh my zsh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-cuda-cudnnapt" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 NVIDIA 驱动、CUDA 和 cuDNN（apt）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 NVIDIA 驱动、CUDA 和 cuDNN（apt）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 apt 安装驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试显卡
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda-cudnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 CUDA 和 cuDNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置环境变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 TensorRT（可选）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-cuda-cudnnrun" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 NVIDIA 驱动、CUDA 和 cuDNN（run）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 NVIDIA 驱动、CUDA 和 cuDNN（run）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      下载驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nouveau" class="md-nav__link">
+    <span class="md-ellipsis">
+      屏蔽 Nouveau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装必要的编译工具
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装显卡驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试显卡
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda-cudnn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 CUDA 和 cuDNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 CUDA 10.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cudnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 cuDNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anaconda-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Anaconda 和 Python 库
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 Anaconda 和 Python 库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anaconda" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Anaconda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 pip 源
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python 库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试 PyTorch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试 TensorFlow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu 环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常用 Linux 命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CV
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            CV
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CV 学习资源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv-dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常用 CV 数据集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-models-on-imagenet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    在 ImageNet 上表现出色的经典模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../detection-models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    检测模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    常识
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            常识
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows-linux-or-macos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows、Ubuntu 还是 macOS？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-use-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    为什么我们要用 Python 语言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    使用技巧
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            使用技巧
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-tensorboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何使用 TensorBoard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remote-debugging-with-pycharm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何使用 PyCharm 远程调试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-is-good/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker 是个好东西
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../offline-python-environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows 离线 Python 环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualize-pytorch-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何可视化 PyTorch 模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    关于本站
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            关于本站
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-write-article-gracefully/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何优雅地写文章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      脚本式装机
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      分步骤安装
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Ubuntu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 ssh
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置 ssh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openssh-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 openssh-server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-keygen-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 ssh-keygen 生成一个 ssh key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 Ubuntu 服务器上添加刚才生成的 ssh key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      禁止密码登录
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sudo-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 sudo 免密码 和 apt 源
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置 sudo 免密码 和 apt 源">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 sudo 免密码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 apt 源
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oh-my-zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 oh my zsh 以及常用命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 oh my zsh 以及常用命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oh-my-zsh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 oh my zsh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-cuda-cudnnapt" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 NVIDIA 驱动、CUDA 和 cuDNN（apt）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 NVIDIA 驱动、CUDA 和 cuDNN（apt）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 apt 安装驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试显卡
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda-cudnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 CUDA 和 cuDNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置环境变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 TensorRT（可选）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-cuda-cudnnrun" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 NVIDIA 驱动、CUDA 和 cuDNN（run）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 NVIDIA 驱动、CUDA 和 cuDNN（run）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      下载驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nouveau" class="md-nav__link">
+    <span class="md-ellipsis">
+      屏蔽 Nouveau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装必要的编译工具
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装显卡驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试显卡
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda-cudnn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 CUDA 和 cuDNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 CUDA 10.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cudnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 cuDNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anaconda-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Anaconda 和 Python 库
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 Anaconda 和 Python 库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anaconda" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Anaconda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 pip 源
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python 库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试 PyTorch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试 TensorFlow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/ypwhs/dl-engineer-guidebook/edit/master/docs/ubuntu-install-guide.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/ypwhs/dl-engineer-guidebook/raw/master/docs/ubuntu-install-guide.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="ubuntu">Ubuntu 装机步骤</h1>
+<p>本文分为两个部分，如果你比较熟悉 Linux，可以直接看脚本式装机，速度快，效果好。</p>
+<h2 id="_1">脚本式装机</h2>
+<div class="highlight"><pre><span></span><code>FILE=&quot;/etc/sudoers.d/$USER&quot;
+if [ ! -f &quot;$FILE&quot; ]; then
+    echo &quot;Create $FILE and add sudo permission&quot;
+    echo &quot;$USER ALL=(ALL) NOPASSWD:ALL&quot; | sudo tee &quot;$FILE&quot;
+fi
+</code></pre></div>
+<div class="highlight"><pre><span></span><code># 升级系统
+sudo apt update
+sudo apt upgrade -y
+</code></pre></div>
+<div class="highlight"><pre><span></span><code># 安装常用命令和 oh-my-zsh
+sudo apt install -y openssh-server git curl zsh net-tools git curl htop nload tmux screen aria2 graphviz aptitude tree iotop cifs-utils landscape-common p7zip-full
+sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code># 清华源安装 ohmyzsh
+git clone https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git
+cd ohmyzsh/tools
+REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
+</code></pre></div>
+<div class="highlight"><pre><span></span><code># 安装 Python 环境
+wget https://mirrors.cqupt.edu.cn/anaconda/miniconda/Miniconda3-py311_24.11.1-0-Linux-x86_64.sh
+bash Miniconda3-py311_24.11.1-0-Linux-x86_64.sh -b
+~/miniconda3/bin/conda init bash
+~/miniconda3/bin/conda init zsh
+</code></pre></div>
+<div class="highlight"><pre><span></span><code># reboot your terminal
+~/miniconda3/bin/conda activate
+# pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+# pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple
+pip install torch==2.4.1 torchvision==0.19.1
+pip install jupyter jupyter_contrib_nbextensions numpy pandas flask scikit-image scikit-learn matplotlib opencv-python pillow tqdm openpyxl ninja xtcocotools json_tricks munkres shapely ftfy pytest regex pyyaml yapf cython build twine memory_profiler
+pip install mmcv==2.2.0 -f https://download.openmmlab.com/mmcv/dist/cu121/torch2.4/index.html
+pip install mmpretrain mmdet mmpose mmsegmentation
+</code></pre></div>
+<p>安装 CUDA：</p>
+<p>Ubuntu 22.04 <a href="https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&amp;target_arch=x86_64&amp;Distribution=Ubuntu&amp;target_version=22.04&amp;target_type=deb_network">参考链接</a>：</p>
+<div class="highlight"><pre><span></span><code>wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
+sudo dpkg -i cuda-keyring_1.0-1_all.deb
+sudo apt-get update
+sudo apt-get -y install cuda-11-8
+</code></pre></div>
+<p>安装指定版本的 cudnn：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libcudnn8-dev<span class="o">=</span><span class="m">8</span>.7.0.84-1+cuda11.8
+</code></pre></div>
+<p>添加 CUDA 环境变量：</p>
+<div class="highlight"><pre><span></span><code># CUDA 环境变量
+if [[ $(grep -L &quot;cuda&quot; ~/.bashrc) ]]; then
+  echo &quot;Add CUDA environment to ~/.bashrc&quot;
+  echo &quot;export PATH=/usr/local/cuda/bin:\$PATH&quot; | tee -a ~/.bashrc;
+  echo &quot;export LD_LIBRARY_PATH=/usr/local/cuda/lib64:\$LD_LIBRARY_PATH&quot; | tee -a ~/.bashrc;
+fi
+
+if [[ $(grep -L &quot;cuda&quot; ~/.zshrc) ]]; then
+  echo &quot;Add CUDA environment to ~/.zshrc&quot;
+  echo &quot;export PATH=/usr/local/cuda/bin:\$PATH&quot; | tee -a ~/.zshrc;
+  echo &quot;export LD_LIBRARY_PATH=/usr/local/cuda/lib64:\$LD_LIBRARY_PATH&quot; | tee -a ~/.zshrc;
+fi
+</code></pre></div>
+<p>安装 mmdet：</p>
+<div class="highlight"><pre><span></span><code>mim install mmdet
+</code></pre></div>
+<h2 id="_2">分步骤安装</h2>
+<p>以下是分步骤安装的方法，分为以下几个步骤：</p>
+<ul>
+<li>安装 Ubuntu</li>
+<li>配置 ssh</li>
+<li>配置 sudo 免密码 和 apt 源（推荐）</li>
+<li>安装 oh my zsh 以及常用命令（推荐）</li>
+<li>安装 NVIDIA 驱动、CUDA 和 cuDNN（分为 apt 和 run 两种安装方式）</li>
+<li>安装 Anaconda 和 Python 库</li>
+</ul>
+<p>这些步骤可能存在滞后性，如果你发现某个步骤已经过时了，可以提 issue 告诉我，或者直接修改这个文档。</p>
+<h2 id="ubuntu_1">安装 Ubuntu</h2>
+<p>以下是 Ubuntu 官方网站上的教程：</p>
+<ul>
+<li><a href="https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows">在 Windows 上制作 Ubuntu 系统盘</a></li>
+<li><a href="https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos">在 macOS 上制作 Ubuntu 系统盘</a></li>
+<li><a href="https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop">安装 Ubuntu</a></li>
+</ul>
+<p>目前我安装的版本是 <a href="http://releases.ubuntu.com/18.04/">Ubuntu 18.04</a></p>
+<p>如果遇到网络问题，可以使用清华大学的镜像：<a href="https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/18.04.4/ubuntu-18.04.4-desktop-amd64.iso">https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/18.04.4/ubuntu-18.04.4-desktop-amd64.iso</a></p>
+<p>如果上面的链接失效了，说明 ubuntu 出新版了，你可以在这里查找新版：<a href="https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/">https://mirror.tuna.tsinghua.edu.cn/ubuntu-releases/</a>。</p>
+<h2 id="ssh">配置 ssh</h2>
+<h3 id="openssh-server">安装 openssh-server</h3>
+<p>装好 Ubuntu 以后，为了能够方便地在其他终端上远程连接，安装各种软件，我一般会先装 openssh-server。</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openssh-server
+</code></pre></div>
+<p>装好了以后，就可以在终端里通过下面的命令连接服务器。</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span><span class="m">192</span>.168.8.65
+</code></pre></div>
+<p>使用到的命令：<a href="../linux-command/#apt">apt</a>、<a href="../linux-command/#ssh">ssh</a></p>
+<h3 id="ssh-keygen-ssh-key">使用 ssh-keygen 生成一个 ssh key</h3>
+<p>目前使用密码上不如使用 key 安全的，因为 key 的长度通常是 2048 或 4096 位，远超普通的密码。这里建议按照 GitHub 官方网站上的教程<a href="https://help.github.com/cn/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">生成新 SSH 密钥并添加到 ssh-agent</a>，这样不仅可以用于登录 Linux 机器，也可以用于 git。</p>
+<p>使用 <code>ssh-keygen</code> 生成了密钥以后，你会得到两个文件：</p>
+<ul>
+<li><code>~/.ssh/id_rsa</code></li>
+<li><code>~/.ssh/id_rsa.pub</code></li>
+</ul>
+<p>其中 <code>id_rsa</code> 是私钥，<code>id_rsa.pub</code> 是公钥。不要把私钥发给任何人。</p>
+<p>公钥通常上这样的文本：</p>
+<blockquote>
+<p>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcfQD4nnaQrgC003C0ReAYqrm6XKEchuM6DwkNtHzRs2YhLolH6fEohWAp0mlW9yzQl258lA+FdoH51ONmvGUx/2Y953A6ujHrt7dOIpOkYW5HT6Rmvlwk+3uRmVNQqZTJeRWdblcSHmYY1fi1miawONZiVoLW14xhyH5bOwgwY/GB2yTaffDby451RLT5kQ7LHqiDJtWiRQekR5tKDKZ7mBhKZIKYLOoqAayCHw2scJYsgtw2tPt0/y7BlxO+RuDwuD2WOnthe1ewbwAbbTN17HiLvBd/MIWtVDoGGq6jdNDjNDNbTs8H2VohTc2mNtOOlycN6yzf3ZKZTN6/hNtl ypw@yangpeiendeiMac</p>
+</blockquote>
+<h3 id="ubuntu-ssh-key">在 Ubuntu 服务器上添加刚才生成的 ssh key</h3>
+<p>首先使用密码登录刚才的机器：</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span><span class="m">192</span>.168.8.65
+</code></pre></div>
+<p>然后创建 <code>~/.ssh</code> 目录，并且创建 <code>~/.ssh/authorized_keys</code> 文件，配置好相应的权限：</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.ssh
+touch<span class="w"> </span>~/.ssh/authorized_keys
+chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
+nano<span class="w"> </span>~/.ssh/authorized_keys
+
+<span class="c1"># 添加你的公钥，如 ssh-rsa AAAA...</span>
+</code></pre></div>
+<p>把刚才生成的公钥 <code>id_rsa.pub</code> 添加到 <code>~/.ssh/authorized_keys</code> 里，如果文件已经有内容，就添加在最后一行。这样以后<strong>每次使用 ssh 登录机器都不需要再输入密码了</strong>。</p>
+<p>使用到的命令：<a href="../linux-command/#mkdir">mkdir</a>、<a href="../linux-command/#touch">touch</a>、<a href="../linux-command/#chmod">chmod</a>、<a href="../linux-command/#nano">nano</a></p>
+<h3 id="_3">禁止密码登录</h3>
+<p>由于密码登录存在不安全因素，比如暴露在公网的 IP 会被扫描，而 key 是相对安全的，所以我们可以禁止不安全的密码登录：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/ssh/sshd_config
+
+PasswordAuthentication<span class="w"> </span>no<span class="w"> </span><span class="c1"># 添加在最后一行</span>
+</code></pre></div>
+<h2 id="sudo-apt">配置 sudo 免密码 和 apt 源</h2>
+<h3 id="sudo">配置 sudo 免密码</h3>
+<p>Ubuntu 22.04 以前：</p>
+<p>由于安装驱动等操作需要 sudo 权限，为了避免频繁输入密码，可以配置 sudo 免密码：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/sudoers
+
+ypw<span class="w"> </span><span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span><span class="w"> </span>NOPASSWD:ALL<span class="w"> </span><span class="c1"># 添加在最后一行</span>
+</code></pre></div>
+<p>Ubuntu 22.04 及以后：</p>
+<p><code>/etc/sudoers</code> 在 22.04 之后变得不可写： <code>[ /etc/sudoers is meant to be read-only ]</code></p>
+<p>因此你需要在 <code>/etc/sudoers.d/</code> 文件夹下创建自己的文件：</p>
+<div class="highlight"><pre><span></span><code>sudo nano /etc/sudoers.d/ypw
+
+ypw ALL=(ALL) NOPASSWD:ALL # 写入到文件中
+</code></pre></div>
+<h3 id="apt">配置 apt 源</h3>
+<p>在使用 apt 的时候有可能因为网络原因导致安装过慢或失败，这时候可以配置一些 apt 源：</p>
+<ul>
+<li><a href="https://mirrors.ustc.edu.cn/help/ubuntu.html">https://mirrors.ustc.edu.cn/help/ubuntu.html</a></li>
+<li><a href="https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/">https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/</a></li>
+<li><a href="https://opsx.alibaba.com/mirror">https://opsx.alibaba.com/mirror</a></li>
+</ul>
+<p>配置文件生成器：<a href="https://mirrors.ustc.edu.cn/repogen/">https://mirrors.ustc.edu.cn/repogen/</a></p>
+<p>下面以中国科学技术大学开源软件镜像（USTC）为例：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/apt/sources.list<span class="w"> </span>/etc/apt/sources_backup.list
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g&#39;</span><span class="w"> </span>/etc/apt/sources.list
+</code></pre></div>
+<p>添加好以后，使用下面的命令更新 apt 以后，安装其他软件包的速度就会变快：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+<p>恢复默认源：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/apt/sources_backup.list<span class="w"> </span>/etc/apt/sources.list
+</code></pre></div>
+<h2 id="oh-my-zsh">安装 oh my zsh 以及常用命令</h2>
+<h3 id="oh-my-zsh_1">安装 oh my zsh</h3>
+<p>相比默认的 bash，zsh 有以下几个优点：</p>
+<ul>
+<li>当你使用 tab 提示的时候，如果有多个匹配项，你可以用 tab 进行切换</li>
+<li>当你想使用一个之前输入过的命令的时候，只需要输入首字母，然后按上方向键切换</li>
+</ul>
+<p>安装 oh my zsh 的步骤如下：</p>
+<ul>
+<li>安装 <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH">zsh</a></li>
+<li>安装 <a href="https://ohmyz.sh/">oh my zsh</a></li>
+</ul>
+<p>完整命令如下：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>curl<span class="w"> </span>zsh
+sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
+<h3 id="_4">常用命令</h3>
+<p>这些是我的<a href="../ubuntu-environment/#bi-bei-ming-ling">必备命令</a>，你可以按照自己的需要安装：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>net-tools<span class="w"> </span>git<span class="w"> </span>curl<span class="w"> </span>htop<span class="w"> </span>nload<span class="w"> </span>tmux<span class="w"> </span>screen<span class="w"> </span>aria2<span class="w"> </span>graphviz<span class="w"> </span>aptitude<span class="w"> </span>tree<span class="w"> </span>iotop
+</code></pre></div>
+<h2 id="nvidia-cuda-cudnnapt">安装 NVIDIA 驱动、CUDA 和 cuDNN（apt）</h2>
+<p>安装驱动有两种方法，一种是使用apt安装，一种是直接下载驱动安装。我一般会选择直接下载驱动。</p>
+<h3 id="apt_1">使用 apt 安装驱动</h3>
+<p>安装过程可以参考 TensorFlow 的教程：<a href="https://www.tensorflow.org/install/gpu">https://www.tensorflow.org/install/gpu</a></p>
+<p>下面是我安装的命令：</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Add NVIDIA package repositories</span>
+wget<span class="w"> </span>https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+sudo<span class="w"> </span>apt-key<span class="w"> </span>adv<span class="w"> </span>--fetch-keys<span class="w"> </span>https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+wget<span class="w"> </span>http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+<span class="c1"># Install NVIDIA driver</span>
+sudo<span class="w"> </span>aptitude<span class="w"> </span>install<span class="w"> </span>nvidia-driver-410
+<span class="c1"># Reboot. Check that GPUs are visible using the command: nvidia-smi</span>
+</code></pre></div>
+<p>如果因为网络原因导致下载很慢，可以使用下面的命令让 apt 使用代理：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apt/apt.conf
+
+<span class="c1"># 下面的内容按照实际情况进行修改</span>
+Acquire::http::Proxy<span class="w"> </span><span class="s2">&quot;http://192.168.8.246:1087&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>为了避免重启以后鼠标键盘没反应，需要运行下面的命令：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>--reinstall<span class="w"> </span>xserver-xorg-input-all
+</code></pre></div>
+<h3 id="_5">测试显卡</h3>
+<p>装好系统以后需要重新启动机器，重启以后运行下面的命令即可测试显卡：</p>
+<div class="highlight"><pre><span></span><code>nvidia-smi
+</code></pre></div>
+<p>如果能看到类似的内容就说明显卡驱动装好了：</p>
+<div class="highlight"><pre><span></span><code>Fri Jan 15 21:15:14 2021
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.32.03    Driver Version: 460.32.03    CUDA Version: 11.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  GeForce RTX 3080    Off  | 00000000:01:00.0  On |                  N/A |
+| 31%   22C    P8     6W / 320W |    183MiB / 10015MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A      1151      G   /usr/lib/xorg/Xorg                142MiB |
+|    0   N/A  N/A      1454      G   /usr/bin/gnome-shell               38MiB |
++-----------------------------------------------------------------------------+
+</code></pre></div>
+<h3 id="cuda-cudnn">安装 CUDA 和 cuDNN</h3>
+<p>注意：</p>
+<ul>
+<li>此步骤需下载较大的安装包</li>
+<li>PyTorch 用户可以不安装 CUDA 和 cuDNN</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>--no-install-recommends<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>cuda-10-0<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">libcudnn7</span><span class="o">=</span><span class="m">7</span>.6.0.64-1+cuda10.0<span class="w">  </span><span class="se">\</span>
+<span class="w">    </span>libcudnn7-dev<span class="o">=</span><span class="m">7</span>.6.0.64-1+cuda10.0
+</code></pre></div>
+<h3 id="_6">配置环境变量</h3>
+<p>安装好以后还需要<a href="../linux-command/#export">配置环境变量</a>，这里我以 <code>~/.zshrc</code> 为例：</p>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>~/.zshrc
+
+<span class="c1"># 添加下面的内容</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/cuda/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda/lib64:<span class="nv">$LD_LIBRARY_PATH</span>
+</code></pre></div>
+<h3 id="tensorrt">安装 TensorRT（可选）</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>--no-install-recommends<span class="w"> </span><span class="nv">libnvinfer5</span><span class="o">=</span><span class="m">5</span>.1.5-1+cuda10.0
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>--no-install-recommends<span class="w"> </span>libnvinfer-dev<span class="o">=</span><span class="m">5</span>.1.5-1+cuda10.0
+</code></pre></div>
+<h2 id="nvidia-cuda-cudnnrun">安装 NVIDIA 驱动、CUDA 和 cuDNN（run）</h2>
+<h3 id="_7">下载驱动</h3>
+<p>首先去官网下载驱动：<a href="https://www.nvidia.com/Download/index.aspx?lang=cn">https://www.nvidia.com/Download/index.aspx?lang=cn</a></p>
+<p>有下面几种方法可以下载：</p>
+<ul>
+<li>在 Ubuntu 机器上直接使用浏览器下载</li>
+<li>在自己机器上下载，然后通过 <a href="../linux-command/#scp">scp</a> 传到 Ubuntu 机器上</li>
+<li>在自己机器上找到下载地址，然后在 Ubuntu 机器上使用 wget 命令下载</li>
+</ul>
+<p>以上方法可以根据实际情况选择，这里我选择第三种方法：</p>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://cn.download.nvidia.cn/XFree86/Linux-x86_64/450.80.02/NVIDIA-Linux-x86_64-450.80.02.run
+</code></pre></div>
+<h3 id="nouveau">屏蔽 Nouveau</h3>
+<p>如果你没有屏蔽，就会出现以下提示：</p>
+<blockquote>
+<p>ERROR: The Nouveau kernel driver is currently in use by your system. This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. Please consult the NVIDIA driver README and your Linux distribution's documentation for details on how to correctly disable the Nouveau kernel driver.</p>
+</blockquote>
+<p>命令：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/modprobe.d/blacklist-nouveau.conf
+
+<span class="c1"># 添加以下内容</span>
+
+blacklist<span class="w"> </span>nouveau
+options<span class="w"> </span>nouveau<span class="w"> </span><span class="nv">modeset</span><span class="o">=</span><span class="m">0</span>
+
+<span class="c1"># 保存</span>
+
+sudo<span class="w"> </span>update-initramfs<span class="w"> </span>-u
+sudo<span class="w"> </span>reboot
+</code></pre></div>
+<h3 id="_8">安装必要的编译工具</h3>
+<p>如果没有安装 gcc 等编译工具，就会出现以下提示：</p>
+<blockquote>
+<p>ERROR: Unable to find the development tool <code>cc</code> in your path; please make sure that you have the package 'gcc' installed. If gcc is installed on your system, then please check that <code>cc</code> is in your PATH.</p>
+</blockquote>
+<p>命令：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>build-essential<span class="w"> </span>gcc<span class="w"> </span>g++<span class="w"> </span>make<span class="w"> </span>binutils<span class="w"> </span>linux-headers-<span class="sb">`</span>uname<span class="w"> </span>-r<span class="sb">`</span>
+</code></pre></div>
+<h3 id="_9">安装显卡驱动</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>bash<span class="w"> </span>NVIDIA-Linux-x86_64-450.80.02.run
+</code></pre></div>
+<p>安装步骤很简单，一直下一步就好了。</p>
+<h3 id="_10">测试显卡</h3>
+<div class="highlight"><pre><span></span><code>nvidia-smi
+</code></pre></div>
+<p>如果能看到类似的内容就说明显卡驱动装好了：</p>
+<div class="highlight"><pre><span></span><code>Fri Jan 15 21:15:14 2021
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.32.03    Driver Version: 460.32.03    CUDA Version: 11.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  GeForce RTX 3080    Off  | 00000000:01:00.0  On |                  N/A |
+| 31%   22C    P8     6W / 320W |    183MiB / 10015MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A      1151      G   /usr/lib/xorg/Xorg                142MiB |
+|    0   N/A  N/A      1454      G   /usr/bin/gnome-shell               38MiB |
++-----------------------------------------------------------------------------+
+</code></pre></div>
+<h3 id="cuda-cudnn_1">安装 CUDA 和 cuDNN</h3>
+<p>由于不同的深度学习框架的 CUDA 和 cuDNN 版本依赖是不同的，所以请按照你所需要的深度学习框架官网上的说明为准。关于 CUDA 版本、cuDNN版本以及深度学习环境的介绍，请看 <a href="../ubuntu-environment/">Ubuntu 环境</a>。</p>
+<p>提示：PyTorch 用户可以不安装 CUDA 和 cuDNN。</p>
+<h3 id="cuda-100">安装 CUDA 10.0</h3>
+<p>由于此安装包比较大，建议使用 aria2c 下载：</p>
+<div class="highlight"><pre><span></span><code>aria2c<span class="w"> </span>-x<span class="w"> </span><span class="m">16</span><span class="w"> </span>https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux
+</code></pre></div>
+<p>下载好了以后，直接运行安装即可：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>bash<span class="w"> </span>cuda_10.0.130_410.48_linux.run
+
+<span class="c1"># 按 q 退出 EULA</span>
+
+NVIDIA<span class="w"> </span>CUDA<span class="w"> </span>Toolkit
+Do<span class="w"> </span>you<span class="w"> </span>accept<span class="w"> </span>the<span class="w"> </span>previously<span class="w"> </span><span class="nb">read</span><span class="w"> </span>EULA?
+accept/decline/quit:<span class="w"> </span>accept
+
+Install<span class="w"> </span>NVIDIA<span class="w"> </span>Accelerated<span class="w"> </span>Graphics<span class="w"> </span>Driver<span class="w"> </span><span class="k">for</span><span class="w"> </span>Linux-x86_64<span class="w"> </span><span class="m">410</span>.48?
+<span class="o">(</span>y<span class="o">)</span>es/<span class="o">(</span>n<span class="o">)</span>o/<span class="o">(</span>q<span class="o">)</span>uit:<span class="w"> </span>n
+
+Install<span class="w"> </span>the<span class="w"> </span>CUDA<span class="w"> </span><span class="m">10</span>.0<span class="w"> </span>Toolkit?
+<span class="o">(</span>y<span class="o">)</span>es/<span class="o">(</span>n<span class="o">)</span>o/<span class="o">(</span>q<span class="o">)</span>uit:<span class="w"> </span>y
+
+Enter<span class="w"> </span>Toolkit<span class="w"> </span>Location
+<span class="w"> </span><span class="o">[</span><span class="w"> </span>default<span class="w"> </span>is<span class="w"> </span>/usr/local/cuda-10.0<span class="w"> </span><span class="o">]</span>:
+
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>install<span class="w"> </span>a<span class="w"> </span>symbolic<span class="w"> </span>link<span class="w"> </span>at<span class="w"> </span>/usr/local/cuda?
+<span class="o">(</span>y<span class="o">)</span>es/<span class="o">(</span>n<span class="o">)</span>o/<span class="o">(</span>q<span class="o">)</span>uit:<span class="w"> </span>y
+
+Install<span class="w"> </span>the<span class="w"> </span>CUDA<span class="w"> </span><span class="m">10</span>.0<span class="w"> </span>Samples?
+<span class="o">(</span>y<span class="o">)</span>es/<span class="o">(</span>n<span class="o">)</span>o/<span class="o">(</span>q<span class="o">)</span>uit:<span class="w"> </span>n
+
+Installing<span class="w"> </span>the<span class="w"> </span>CUDA<span class="w"> </span>Toolkit<span class="w"> </span><span class="k">in</span><span class="w"> </span>/usr/local/cuda-10.0<span class="w"> </span>...
+
+<span class="o">===========</span>
+<span class="o">=</span><span class="w"> </span><span class="nv">Summary</span><span class="w"> </span><span class="o">=</span>
+<span class="o">===========</span>
+
+Driver:<span class="w">   </span>Not<span class="w"> </span>Selected
+Toolkit:<span class="w">  </span>Installed<span class="w"> </span><span class="k">in</span><span class="w"> </span>/usr/local/cuda-10.0
+Samples:<span class="w">  </span>Not<span class="w"> </span>Selected
+</code></pre></div>
+<p>可以按照自己的需要请配置下面的选项，比如你想学习使用 C/C++ 编写 CUDA 程序，可以安装 Samples。</p>
+<p>注意：</p>
+<blockquote>
+<p>Please make sure that</p>
+<ul>
+<li>PATH includes /usr/local/cuda-10.0/bin</li>
+<li>LD_LIBRARY_PATH includes /usr/local/cuda-10.0/lib64, or, add /usr/local/cuda-10.0/lib64 to /etc/ld.so.conf and run ldconfig as root</li>
+</ul>
+</blockquote>
+<p>需要按照上面的指示<a href="../linux-command/#export">配置环境变量</a>，这里我以 <code>~/.zshrc</code> 为例：</p>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>~/.zshrc
+
+<span class="c1"># 添加下面的内容</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/cuda/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda/lib64:<span class="nv">$PATH</span>
+</code></pre></div>
+<h3 id="cudnn">安装 cuDNN</h3>
+<p>同样，下载 cudnn-10.0-linux-x64-v7.6.0.64.tgz：</p>
+<div class="highlight"><pre><span></span><code>aria2c<span class="w"> </span>-x<span class="w"> </span><span class="m">16</span><span class="w"> </span>http://developer.download.nvidia.com/compute/redist/cudnn/v7.6.0/cudnn-10.0-linux-x64-v7.6.0.64.tgz
+</code></pre></div>
+<p>然后安装到 <code>/usr/local</code> 目录下：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tar<span class="w"> </span>-xzf<span class="w"> </span>cudnn-10.0-linux-x64-v7.6.0.64.tgz<span class="w"> </span>-C<span class="w"> </span>/usr/local
+</code></pre></div>
+<h2 id="anaconda-python">安装 Anaconda 和 Python 库</h2>
+<h3 id="anaconda">安装 Anaconda</h3>
+<p>安装 Anaconda 和 Python 库的步骤都已经写在了 <a href="../python-environment/">Pyhton 环境</a>，这里仅仅展示相关命令：</p>
+<div class="highlight"><pre><span></span><code>aria2c<span class="w"> </span>-x<span class="w"> </span><span class="m">16</span><span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2019.03-Linux-x86_64.sh
+bash<span class="w"> </span>Anaconda3-2019.03-Linux-x86_64.sh
+
+<span class="c1"># 回车，然后按 q 退出 EULA</span>
+
+Do<span class="w"> </span>you<span class="w"> </span>accept<span class="w"> </span>the<span class="w"> </span>license<span class="w"> </span>terms?<span class="w"> </span><span class="o">[</span>yes<span class="p">|</span>no<span class="o">]</span>
+<span class="o">[</span>no<span class="o">]</span><span class="w"> </span>&gt;&gt;&gt;<span class="w"> </span>yes
+
+Anaconda3<span class="w"> </span>will<span class="w"> </span>now<span class="w"> </span>be<span class="w"> </span>installed<span class="w"> </span>into<span class="w"> </span>this<span class="w"> </span>location:
+/home/ypw/anaconda3
+
+<span class="w">  </span>-<span class="w"> </span>Press<span class="w"> </span>ENTER<span class="w"> </span>to<span class="w"> </span>confirm<span class="w"> </span>the<span class="w"> </span>location
+<span class="w">  </span>-<span class="w"> </span>Press<span class="w"> </span>CTRL-C<span class="w"> </span>to<span class="w"> </span>abort<span class="w"> </span>the<span class="w"> </span>installation
+<span class="w">  </span>-<span class="w"> </span>Or<span class="w"> </span>specify<span class="w"> </span>a<span class="w"> </span>different<span class="w"> </span>location<span class="w"> </span>below
+
+<span class="o">[</span>/home/ypw/anaconda3<span class="o">]</span><span class="w"> </span>&gt;&gt;&gt;
+<span class="nv">PREFIX</span><span class="o">=</span>/home/ypw/anaconda3
+installing:<span class="w"> </span>python-3.7.3-h0371630_0<span class="w"> </span>...
+Python<span class="w"> </span><span class="m">3</span>.7.3
+installing:<span class="w"> </span>conda-env-2.6.0-1<span class="w"> </span>...
+installing:<span class="w"> </span>blas-1.0-mkl<span class="w"> </span>...
+......
+installing:<span class="w"> </span>anaconda-2019.03-py37_0<span class="w"> </span>...
+installation<span class="w"> </span>finished.
+Do<span class="w"> </span>you<span class="w"> </span>wish<span class="w"> </span>the<span class="w"> </span>installer<span class="w"> </span>to<span class="w"> </span>initialize<span class="w"> </span>Anaconda3
+by<span class="w"> </span>running<span class="w"> </span>conda<span class="w"> </span>init?<span class="w"> </span><span class="o">[</span>yes<span class="p">|</span>no<span class="o">]</span>
+<span class="o">[</span>no<span class="o">]</span><span class="w"> </span>&gt;&gt;&gt;<span class="w"> </span>yes
+
+......
+
+Thank<span class="w"> </span>you<span class="w"> </span><span class="k">for</span><span class="w"> </span>installing<span class="w"> </span>Anaconda3!
+</code></pre></div>
+<p>安装完成以后，你可能还需要<a href="../python-environment/#pei-zhi-huan-jing-bian-liang">配置环境变量</a>。</p>
+<div class="highlight"><pre><span></span><code>~/anaconda3/bin/conda<span class="w"> </span>init
+
+<span class="c1"># 如果你用的终端是zsh</span>
+~/anaconda3/bin/conda<span class="w"> </span>init<span class="w"> </span>zsh
+</code></pre></div>
+<p>配置好以后，可以重启机器，或者使用 <code>source ~/.zshrc</code> <a href="../linux-command/#source">更新环境变量</a>。</p>
+<h3 id="pip">配置 pip 源</h3>
+<p>在使用 pip 的时候有可能因为网络原因导致安装过慢或失败，这时候可以<a href="../python-environment/#pip">配置国内的 pip 源</a>：</p>
+<ul>
+<li><a href="https://developer.aliyun.com/mirror/pypi">https://developer.aliyun.com/mirror/pypi</a></li>
+<li><a href="https://mirror.tuna.tsinghua.edu.cn/help/pypi/">https://mirror.tuna.tsinghua.edu.cn/help/pypi/</a></li>
+</ul>
+<p>下面以阿里云为例：</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>https://mirrors.aliyun.com/pypi/simple/
+</code></pre></div>
+<h3 id="python">Python 库</h3>
+<p>使用下面的命令安装<a href="../python-environment/#python-ku">常用 Python 库</a>：</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>jupyter<span class="w"> </span>jupyter_contrib_nbextensions<span class="w"> </span>numpy<span class="w"> </span>pandas<span class="w"> </span>scikit-learn<span class="w"> </span>matplotlib<span class="w"> </span>opencv-python<span class="w"> </span>pillow<span class="w"> </span>tqdm<span class="w"> </span>torch<span class="w"> </span>torchvision<span class="w"> </span>tensorflow-gpu<span class="w"> </span>keras<span class="w"> </span>tensorboardx<span class="w"> </span>xlrd<span class="w"> </span>openpyxl
+</code></pre></div>
+<p>注意：如果是 30 系列的显卡，比如 3080、3090，需要使用CUDA11或以上的深度学习框架，比如 PyTorch 目前是这样安装的：</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">torch</span><span class="o">==</span><span class="m">1</span>.7.1+cu110<span class="w"> </span><span class="nv">torchvision</span><span class="o">==</span><span class="m">0</span>.8.2+cu110<span class="w"> </span><span class="nv">torchaudio</span><span class="o">===</span><span class="m">0</span>.7.2<span class="w"> </span>-f<span class="w"> </span>https://download.pytorch.org/whl/torch_stable.html
+</code></pre></div>
+<h3 id="pytorch">测试 PyTorch</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="n">dummy</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">conv</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="n">in_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">out_channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conv</span><span class="p">(</span><span class="n">dummy</span><span class="p">))</span>
+</code></pre></div>
+<p>期望输出：</p>
+<div class="highlight"><pre><span></span><code>tensor([[[[0.0443, 0.0443, 0.0443],
+          [0.0443, 0.0443, 0.0443],
+          [0.0443, 0.0443, 0.0443]]]], device=&#39;cuda:0&#39;,
+       grad_fn=&lt;CudnnConvolutionBackward&gt;)
+</code></pre></div>
+<h3 id="tensorflow">测试 TensorFlow</h3>
+<div class="highlight"><pre><span></span><code>import<span class="w"> </span>tensorflow<span class="w"> </span>as<span class="w"> </span>tf
+<span class="nv">mnist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>tf.keras.datasets.mnist
+
+<span class="o">(</span>x_train,<span class="w"> </span>y_train<span class="o">)</span>,<span class="o">(</span>x_test,<span class="w"> </span>y_test<span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>mnist.load_data<span class="o">()</span>
+x_train,<span class="w"> </span><span class="nv">x_test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>x_train<span class="w"> </span>/<span class="w"> </span><span class="m">255</span>.0,<span class="w"> </span>x_test<span class="w"> </span>/<span class="w"> </span><span class="m">255</span>.0
+
+<span class="nv">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>tf.keras.models.Sequential<span class="o">([</span>
+<span class="w">  </span>tf.keras.layers.Flatten<span class="o">(</span><span class="nv">input_shape</span><span class="o">=(</span><span class="m">28</span>,<span class="w"> </span><span class="m">28</span><span class="o">))</span>,
+<span class="w">  </span>tf.keras.layers.Dense<span class="o">(</span><span class="m">512</span>,<span class="w"> </span><span class="nv">activation</span><span class="o">=</span>tf.nn.relu<span class="o">)</span>,
+<span class="w">  </span>tf.keras.layers.Dropout<span class="o">(</span><span class="m">0</span>.2<span class="o">)</span>,
+<span class="w">  </span>tf.keras.layers.Dense<span class="o">(</span><span class="m">10</span>,<span class="w"> </span><span class="nv">activation</span><span class="o">=</span>tf.nn.softmax<span class="o">)</span>
+<span class="o">])</span>
+model.compile<span class="o">(</span><span class="nv">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span>,
+<span class="w">              </span><span class="nv">loss</span><span class="o">=</span><span class="s1">&#39;sparse_categorical_crossentropy&#39;</span>,
+<span class="w">              </span><span class="nv">metrics</span><span class="o">=[</span><span class="s1">&#39;accuracy&#39;</span><span class="o">])</span>
+
+model.fit<span class="o">(</span>x_train,<span class="w"> </span>y_train,<span class="w"> </span><span class="nv">epochs</span><span class="o">=</span><span class="m">5</span><span class="o">)</span>
+model.evaluate<span class="o">(</span>x_test,<span class="w"> </span>y_test<span class="o">)</span>
+</code></pre></div>
+<p>期望输出（注意里面的 GeForce GTX 1080 Ti） ：</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; model.fit(x_train, y_train, epochs=5)
+2019-07-21 17:18:16.455944: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-07-21 17:18:16.460577: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3599995000 Hz
+2019-07-21 17:18:16.461013: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5606e83e4f40 executing computations on platform Host. Devices:
+2019-07-21 17:18:16.461032: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): &lt;undefined&gt;, &lt;undefined&gt;
+2019-07-21 17:18:16.462663: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-07-21 17:18:16.915819: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.916435: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5606e78c9a40 executing computations on platform CUDA. Devices:
+2019-07-21 17:18:16.916504: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2019-07-21 17:18:16.916782: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.918218: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.683
+pciBusID: 0000:0b:00.0
+2019-07-21 17:18:16.918581: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-07-21 17:18:16.920971: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-07-21 17:18:16.922961: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2019-07-21 17:18:16.923461: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2019-07-21 17:18:16.926265: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2019-07-21 17:18:16.928450: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2019-07-21 17:18:16.932250: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-07-21 17:18:16.932341: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.932899: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.933392: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2019-07-21 17:18:16.933426: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-07-21 17:18:16.934335: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-07-21 17:18:16.934353: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0
+2019-07-21 17:18:16.934363: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N
+2019-07-21 17:18:16.934444: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.934988: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-07-21 17:18:16.935504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -&gt; physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:0b:00.0, compute capability: 6.1)
+Epoch 1/5
+2019-07-21 17:18:17.663035: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+60000/60000 [==============================] - 3s 49us/sample - loss: 0.2209 - acc: 0.9344
+Epoch 2/5import torch
+x = torch.rand(5, 3)
+print(x)
+60000/60000 [==============================] - 2s 39us/sample - loss: 0.0968 - acc: 0.9707
+Epoch 3/5
+60000/60000 [==============================] - 2s 38us/sample - loss: 0.0696 - acc: 0.9779
+Epoch 4/5
+60000/60000 [==============================] - 2s 38us/sample - loss: 0.0537 - acc: 0.9826
+Epoch 5/5
+60000/60000 [==============================] - 2s 38us/sample - loss: 0.0428 - acc: 0.9863
+&lt;tensorflow.python.keras.callbacks.History object at 0x7f4ece4a2278&gt;
+&gt;&gt;&gt; model.evaluate(x_test, y_test)
+10000/10000 [==============================] - 0s 24us/sample - loss: 0.0698 - acc: 0.9804
+[0.06983174340333789, 0.9804]
+</code></pre></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-12-24</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-12-24</span>
+  </span>
+
+    
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="贡献者">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/ypwhs" class="md-author" title="@ypwhs">
+          
+          <img src="https://avatars.githubusercontent.com/u/10473170?v=4&size=72" alt="ypwhs">
+        </a>
+      
+        <a href="https://github.com/maplelost" class="md-author" title="@maplelost">
+          
+          <img src="https://avatars.githubusercontent.com/u/62323046?v=4&size=72" alt="maplelost">
+        </a>
+      
+        <a href="https://github.com/ypw-rich" class="md-author" title="@ypw-rich">
+          
+          <img src="https://avatars.githubusercontent.com/u/50283848?v=4&size=72" alt="ypw-rich">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      杨培文
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ypwhs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/yangpw" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M170.54 148.13v217.54l23.43.01 7.71 26.37 42.01-26.37h49.53V148.13H170.54zm97.75 193.93h-27.94l-27.9 17.51-5.08-17.47-11.9-.04V171.75h72.82v170.31zm-118.46-94.39H97.5c1.74-27.1 2.2-51.59 2.2-73.46h51.16s1.97-22.56-8.58-22.31h-88.5c3.49-13.12 7.87-26.66 13.12-40.67 0 0-24.07 0-32.27 21.57-3.39 8.9-13.21 43.14-30.7 78.12 5.89-.64 25.37-1.18 36.84-22.21 2.11-5.89 2.51-6.66 5.14-14.53h28.87c0 10.5-1.2 66.88-1.68 73.44H20.83c-11.74 0-15.56 23.62-15.56 23.62h65.58C66.45 321.1 42.83 363.12 0 396.34c20.49 5.85 40.91-.93 51-9.9 0 0 22.98-20.9 35.59-69.25l53.96 64.94s7.91-26.89-1.24-39.99c-7.58-8.92-28.06-33.06-36.79-41.81L87.9 311.95c4.36-13.98 6.99-27.55 7.87-40.67h61.65s-.09-23.62-7.59-23.62v.01zm412.02-1.6c20.83-25.64 44.98-58.57 44.98-58.57s-18.65-14.8-27.38-4.06c-6 8.15-36.83 48.2-36.83 48.2l19.23 14.43zm-150.09-59.09c-9.01-8.25-25.91 2.13-25.91 2.13s39.52 55.04 41.12 57.45l19.46-13.73s-25.67-37.61-34.66-45.86h-.01zM640 258.35c-19.78 0-130.91.93-131.06.93v-101c4.81 0 12.42-.4 22.85-1.2 40.88-2.41 70.13-4 87.77-4.81 0 0 12.22-27.19-.59-33.44-3.07-1.18-23.17 4.58-23.17 4.58s-165.22 16.49-232.36 18.05c1.6 8.82 7.62 17.08 15.78 19.55 13.31 3.48 22.69 1.7 49.15.89 24.83-1.6 43.68-2.43 56.51-2.43v99.81H351.41s2.82 22.31 25.51 22.85h107.94v70.92c0 13.97-11.19 21.99-24.48 21.12-14.08.11-26.08-1.15-41.69-1.81 1.99 3.97 6.33 14.39 19.31 21.84 9.88 4.81 16.17 6.57 26.02 6.57 29.56 0 45.67-17.28 44.89-45.31v-73.32h122.36c9.68 0 8.7-23.78 8.7-23.78l.03-.01z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://ypw.io" target="_blank" rel="noopener" title="ypw.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M192 32c0 17.7 14.3 32 32 32 123.7 0 224 100.3 224 224 0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32zm0 96c0 17.7 14.3 32 32 32 70.7 0 128 57.3 128 128 0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192-17.7 0-32 14.3-32 32zm-96 16c0-26.5-21.5-48-48-48S0 117.5 0 144v224c0 79.5 64.5 144 144 144s144-64.5 144-144-64.5-144-144-144h-16v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48V144z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/ypwhs/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tabs.link", "content.action.edit", "content.action.view", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js"></script>
+      
+        <script src="../js/tablesort.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
