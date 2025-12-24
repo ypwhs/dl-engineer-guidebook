@@ -217,24 +217,17 @@ ypw ALL=(ALL) NOPASSWD:ALL # 写入到文件中
 
 在使用 apt 的时候有可能因为网络原因导致安装过慢或失败，这时候可以配置一些 apt 源：
 
+* [https://mirrors.ustc.edu.cn/help/ubuntu.html](https://mirrors.ustc.edu.cn/help/ubuntu.html)
 * [https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/](https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/)
 * [https://opsx.alibaba.com/mirror](https://opsx.alibaba.com/mirror)
 
-下面以清华大学开源软件镜像站为例：
+配置文件生成器：[https://mirrors.ustc.edu.cn/repogen/](https://mirrors.ustc.edu.cn/repogen/)
+
+下面以中国科学技术大学开源软件镜像（USTC）为例：
 
 ```bash
-sudo mv /etc/apt/sources.list /etc/apt/sources_backup.list
-sudo nano /etc/apt/sources.list
-
-# 添加下面的内容，保存
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+sudo cp /etc/apt/sources.list /etc/apt/sources_backup.list
+sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list
 ```
 
 添加好以后，使用下面的命令更新 apt 以后，安装其他软件包的速度就会变快：
@@ -246,7 +239,7 @@ sudo apt update
 恢复默认源：
 
 ```bash
-sudo mv /etc/apt/sources_backup.list /etc/apt/sources.list
+sudo cp /etc/apt/sources_backup.list /etc/apt/sources.list
 ```
 
 ## 安装 oh my zsh 以及常用命令
